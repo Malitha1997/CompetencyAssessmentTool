@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\GovofficialController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TopLayerController;
+use App\Http\Controllers\GovofficialController;
 
 
 
@@ -33,6 +34,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Auth::routes();
 
 Route::resource('govofficials', GovofficialController::class);
@@ -50,6 +55,7 @@ All Normal Users Routes List
 Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('userHome');
     Route::get('/signup', [GovofficialController::class, 'create'])->name('signup');
+    Route::get('/toplayer', [TopLayerController::class, 'top'])->name('toplayer');
 });
 
 Route::controller(SearchController::class)->group(function(){

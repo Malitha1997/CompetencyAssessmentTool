@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Govorganizationname;
 use App\Models\Govorganizationdetail;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -18,5 +19,9 @@ class Govofficial extends Model
     public function govorganizationdetail()
     {
         return $this->belongsTo(Govorganizationdetail::class);
+    }
+
+    public function govorganizationname(){
+        return $this->belongsTo(Govorganizationname::class);
     }
 }

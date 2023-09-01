@@ -1,6 +1,69 @@
 @extends('layouts.govofficialnavbar')
 
 @section('content')
+<style>
+    /* Popup container - can be anything you want */
+    .popup {
+      position: relative;
+      display:flex;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: #F5F5F5;
+      width: 783px;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0 10px;
+      position:absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    .popup .popuptext .first{
+        color: #ff0000
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+    </style>
 
 <section style="height: 1250px;">
     <div class="container-fluid d-table float-none" data-aos="fade-down" data-aos-duration="1000" style="margin-top: 200px;background: #5f2b84;width: 1177px;height: 1100px;border-radius: 10px;">
@@ -76,7 +139,15 @@
                         <div class="col"><span style="font-family: Poppins, sans-serif;color: #000000;">Employment Layer</span></div>
                     </div>
                     <div class="row">
-                        <div class="col"><input class="form-control-lg" id="employment_layer" name="employment_layer" type="text" placeholder="Select the Employment Layer" style="width: 500px;" value="{{ old('employment_layer')}}"></div>
+                        <div class="col">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="employment_layer" name="employment_layer" style="width: 500px;margin-top:10px" value="{{ old('employment_layer')}}">
+                            <option disabled style="font-color: #787474" selected>Select the Employment Layer</option>
+                            <option value="top">Top and Second Tier Management</option>
+                            <option value="cdio">Chief Digital Information Officer (CDIO)</option>
+                            <option value="middle">Middle and Junior Management</option>
+                            <option value="operational">Operational Staff</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
