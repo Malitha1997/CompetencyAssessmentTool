@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TopLayerController;
+use App\Http\Controllers\OperationalLayerController;
 use App\Http\Controllers\GovofficialController;
 
 
@@ -56,6 +57,19 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('userHome');
     Route::get('/signup', [GovofficialController::class, 'create'])->name('signup');
     Route::get('/toplayer', [TopLayerController::class, 'top'])->name('toplayer');
+
+    Route::get('/operationallayer', [OperationalLayerController::class, 'operational'])->name('operationallayer');
+    Route::get('/operational/digitalGovernment/page01', [OperationalLayerController::class, 'digitalGovernmentPage01'])->name('operationalDigitalGovernmentPage01');
+    Route::get('/operational/digitalGovernment/page02', [OperationalLayerController::class, 'digitalGovernmentPage02'])->name('operationalDigitalGovernmentPage02');
+    Route::get('/operational/digitalGovernment/page03', [OperationalLayerController::class, 'digitalGovernmentPage03'])->name('operationalDigitalGovernmentPage03');
+    Route::get('/operational/digitalGovernment/page04', [OperationalLayerController::class, 'digitalGovernmentPage04'])->name('operationalDigitalGovernmentPage04');
+    Route::get('/operational/digitalGovernment/page05', [OperationalLayerController::class, 'digitalGovernmentPage05'])->name('operationalDigitalGovernmentPage05');
+
+    Route::post('storeOpChangeManagement', [OperationalLayerController::class, 'storeOpChangeManagement'])->name('storeOpChangeManagement');
+    Route::post('storeOpCollaboration', [OperationalLayerController::class, 'storeOpCollaboration'])->name('storeOpCollaboration');
+    Route::post('storeOpOrientation', [OperationalLayerController::class, 'storeOpOrientation'])->name('storeOpOrientation');
+    Route::post('storeOpQualityManagement', [OperationalLayerController::class, 'storeOpQualityManagement'])->name('storeOpQualityManagement');
+    Route::post('storeOpInitiative', [OperationalLayerController::class, 'storeOpInitiative'])->name('storeOpInitiative');
 });
 
 Route::controller(SearchController::class)->group(function(){

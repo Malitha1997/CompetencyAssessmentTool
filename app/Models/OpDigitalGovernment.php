@@ -2,37 +2,21 @@
 
 namespace App\Models;
 
-use App\Models\User;
-use App\Models\Govorganizationname;
-use App\Models\Govorganizationdetail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use App\Models\Operational;
 use App\Models\OpChangeManagement;
 use App\Models\OpCollaboration;
 use App\Models\OpOrientation;
 use App\Models\OpQualityManagement;
 use App\Models\OpInitiative;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Govofficial extends Model
+class OpDigitalGovernment extends Model
 {
     use HasFactory;
 
-    public function user(){
-        return $this->belongsTo(User::class);
-    }
-
-    public function govorganizationdetail()
-    {
-        return $this->belongsTo(Govorganizationdetail::class);
-    }
-
-    public function govorganizationname(){
-        return $this->belongsTo(Govorganizationname::class);
-    }
-
     public function operational(){
-        return $this->hasOne(Operational::class);
+        return $this->belongsTo(Operational::class);
     }
 
     public function opChangeManagement(){
