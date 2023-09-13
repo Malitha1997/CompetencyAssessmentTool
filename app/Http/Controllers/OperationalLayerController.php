@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\OpChangeManagement;
-use App\Models\OpCollaboration;
-use App\Models\OpOrientation;
-use App\Models\OpQualityManagement;
 use App\Models\OpInitiative;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use App\Models\OpOrientation;
+use App\Models\OpCollaboration;
+use App\Models\OpChangeManagement;
 use Illuminate\Support\Facades\DB;
+use App\Models\OpDigitalGovernment;
+use App\Models\OpQualityManagement;
+use Illuminate\Support\Facades\Auth;
 
 class OperationalLayerController extends Controller
 {
@@ -71,8 +72,12 @@ class OperationalLayerController extends Controller
 
     public function operational()
     {
+        $opChangeManagementDataExists = Auth::user()->govofficial->opChangeManagement;
+        $opCollaborationDataExists = Auth::user()->govofficial->opCollaboration;
+        $opOrientationDataExists = Auth::user()->govofficial->opOrientation;
+        $opQualityManagementDataExists = Auth::user()->govofficial->opQualityManagement;
         $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
-        return view('govOfficials.Operational.main',compact('digitalGovDataExists'));
+        return view('govOfficials.Operational.main',compact('digitalGovDataExists','opChangeManagementDataExists','opCollaborationDataExists','opOrientationDataExists','opQualityManagementDataExists'));
     }
 
     public function digitalGovernmentPage01()
@@ -195,7 +200,8 @@ class OperationalLayerController extends Controller
         return redirect()->route('operationalDigitalGovernmentPage05');
     }
 
-    public function storeOpInitiative(Request $request){
+    public function storeOpInitiative(Request $request)
+    {//dd($request);
         request()->validate([
             'govofficial_id'=> 'required|string',
             'dg10'=>'required|string',
@@ -207,6 +213,10 @@ class OperationalLayerController extends Controller
             'dg15'=>'required|string',
             'dg16'=>'required|string',
             'dg17'=>'required|string',
+            'totOpChangeManagement'=>'required|string',
+            'totOpCollaboaration'=>'required|string',
+            'totOpOrientation'=>'required|string',
+            'totOpQualityManagement'=>'required|string',
         ]);
 
         $opInitiative = new OpInitiative;
@@ -224,7 +234,36 @@ class OperationalLayerController extends Controller
 
         $opInitiative->save();
 
+        $d10=$request->dg10;
+        $d11=$request->dg11;
+        $d12=$request->dg12;
+        $d13=$request->dg13;
+        $d14_1=$request->dg14_1;
+        $d14_2=$request->dg14_2;
+        $d15=$request->dg15;
+        $d16=$request->dg16;
+        $d17=$request->dg17;
+        $totOpInitiative=$d10 + $d11 + $d12 + $d13 + $d14_1 + $d14_2 + $d15 + $d16 + $d17;
+
+        $marksOpDigitalGovernment=$request->totOpChangeManagement + $request->totOpCollaboaration + $request->totOpOrientation + $request->totOpQualityManagement + $totOpInitiative;
+
+        $opDigitalGovernment=new OpDigitalGovernment;
+        
+        $opDigitalGovernment->op_change_management=$request->totOpChangeManagement;
+        $opDigitalGovernment->op_collaboration=$request->totOpCollaboaration;
+        $opDigitalGovernment->op_orientation=$request->totOpOrientation;
+        $opDigitalGovernment->op_quality_management=$request->totOpQualityManagement;
+        $opDigitalGovernment->op_initiative=$totOpInitiative;
+        $opDigitalGovernment->marks_op_digital_government=$marksOpDigitalGovernment;
+        $opDigitalGovernment->govofficial_id=$request->govofficial_id;
+
+        $opDigitalGovernment->save();
+        
         return redirect()->route('operationallayer');
+    }
+
+    public function results(){
+        return view('govOfficials.Operational.DigitalGovernment.results');
     }
 
 }

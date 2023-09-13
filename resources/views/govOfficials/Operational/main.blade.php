@@ -36,7 +36,15 @@
                     <div class="card-body" style="background: rgba(244,140,67,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;margin-top: -16px;">
                         <p class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and capabilities to drive an ICT-enabled transformation of the public sector. And making it possible to carry out the public sector’s tasks more efficiently and effectively.<br><br></p>
                         @if($digitalGovDataExists)
-                        <a class="btn btn-primary" href="/preliminaryResults" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px">View Results</a>
+                        <a class="btn btn-primary" href="/operational/digitalgovernment/results" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px">View Results</a>
+                        @elseif($opChangeManagementDataExists)
+                        <a class="btn btn-primary" href="/operational/digitalGovernment/page02" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;font-family: poppins;">Get Started</a>
+                        @elseif($opCollaborationDataExists)
+                        <a class="btn btn-primary" href="/operational/digitalGovernment/page03" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;font-family: poppins;">Get Started</a>
+                        @elseif($opOrientationDataExists)
+                        <a class="btn btn-primary" href="/operational/digitalGovernment/page04" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;font-family: poppins;">Get Started</a>
+                        @elseif($opQualityManagementDataExists)
+                        <a class="btn btn-primary" href="/operational/digitalGovernment/page05" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;font-family: poppins;">Get Started</a>
                         @else
                         <a class="btn btn-primary" href="/operational/digitalGovernment/page01" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;font-family: poppins;">Get Started</a>
                         @endif

@@ -230,7 +230,7 @@
             <div class="row" style="margin-top: -10px;">
                 <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 100px;"><br>17) What do you understand by "delegation of authority"? ("අධිකාරිය පැවරීම" යන්නෙන් ඔබ තේරුම් ගන්නේ කුමක්ද?&nbsp; )</span></div>
             </div>
-            <div class="row d-flex flex-column" id="choise" style="text-align: center;">
+            <div class="row d-flex flex-column" style="text-align: center;">
                 <div class="col">
                     <div class="row d-flex flex-column" style="text-align: center;">
                         <div class="col">
@@ -250,11 +250,11 @@
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="dg17" id="dg17_4" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="6"><label class="form-label" for="dg17_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above (ඉහත සියල්ල)</label></div>
                                             </div>
-                                            <input class="form-control" type="" id="totOpChangeManagement" name="govofficial_id" value="{{$totOpChangeManagement}}" readonly>
-                                            <input class="form-control" type="" id="totOpCollaboaration" name="govofficial_id" value="{{$totOpCollaboaration}}" readonly>
-                                            <input class="form-control" type="" id="totOpOrientation" name="govofficial_id" value="{{$totOpOrientation}}" readonly>
-                                            <input class="form-control" type="" id="totOpQualityManagement" name="govofficial_id" value="{{$totOpQualityManagement}}" readonly>
-                                            <input class="form-control" type="" id="totOpInitiative" name="govofficial_id" readonly>
+                                            <input class="form-control" type="hidden" id="totOpChangeManagement" name="totOpChangeManagement" value="{{$totOpChangeManagement}}" readonly>
+                                            <input class="form-control" type="hidden" id="totOpCollaboaration" name="totOpCollaboaration" value="{{$totOpCollaboaration}}" readonly>
+                                            <input class="form-control" type="hidden" id="totOpOrientation" name="totOpOrientation" value="{{$totOpOrientation}}" readonly>
+                                            <input class="form-control" type="hidden" id="totOpQualityManagement" name="totOpQualityManagement" value="{{$totOpQualityManagement}}" readonly>
+                                            {{--  <input class="form-control" type="" id="totOpInitiative" name="totOpInitiative" readonly>  --}}
                                         </div>
                                     </div>
                                 </div>
@@ -272,18 +272,7 @@
     <div class="col" style="margin-top: 0px;"><a class="btn btn-primary" type="button" href="/operationallayer" style="font-family: Poppins, sans-serif;color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
         <button class="btn btn-primary" type="submit" style="font-family: Poppins, sans-serif;width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Submit</button></div>
 </div>
-<script type="text/javascript">
-    $('#choise').find(":radio").on('click', e => {
-        op1 = document.getElementById("totOpChangeManagement").value;
-        op2 = document.getElementById("totOpCollaboaration").value;
-        op3 = document.getElementById("totOpOrientation").value;
-        op4 = document.getElementById("totOpQualityManagement").value;
-
-        var a=Number(op1) + Number(op2) + Number(op3) + Number(op4);
-        document.getElementById("totOpInitiative").value= b;
-
-    });
-</script>
 </form>
+
 
 @endsection
