@@ -3,14 +3,15 @@
 namespace App\Models;
 
 use App\Models\User;
-use App\Models\Govorganizationname;
-use App\Models\Govorganizationdetail;
 use App\Models\Operational;
-use App\Models\OpChangeManagement;
-use App\Models\OpCollaboration;
-use App\Models\OpOrientation;
-use App\Models\OpQualityManagement;
 use App\Models\OpInitiative;
+use App\Models\OpOrientation;
+use App\Models\OpCollaboration;
+use App\Models\OpChangeManagement;
+use App\Models\Govorganizationname;
+use App\Models\OpDigitalGovernment;
+use App\Models\OpQualityManagement;
+use App\Models\Govorganizationdetail;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -53,5 +54,9 @@ class Govofficial extends Model
 
     public function opInitiative(){
         return $this->hasOne(OpInitiative::class);
+    }
+
+    public function opDigitalGovernment(){
+        return $this->hasOne(OpDigitalGovernment::class);
     }
 }

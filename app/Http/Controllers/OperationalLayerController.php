@@ -248,7 +248,7 @@ class OperationalLayerController extends Controller
         $marksOpDigitalGovernment=$request->totOpChangeManagement + $request->totOpCollaboaration + $request->totOpOrientation + $request->totOpQualityManagement + $totOpInitiative;
 
         $opDigitalGovernment=new OpDigitalGovernment;
-        
+
         $opDigitalGovernment->op_change_management=$request->totOpChangeManagement;
         $opDigitalGovernment->op_collaboration=$request->totOpCollaboaration;
         $opDigitalGovernment->op_orientation=$request->totOpOrientation;
@@ -258,12 +258,98 @@ class OperationalLayerController extends Controller
         $opDigitalGovernment->govofficial_id=$request->govofficial_id;
 
         $opDigitalGovernment->save();
-        
-        return redirect()->route('operationallayer');
+
+        return redirect()->route('operationalDigitalgovernmentResults');
     }
 
     public function results(){
-        return view('govOfficials.Operational.DigitalGovernment.results');
+        $opDigitalGov = Auth::user()->govofficial->opDigitalGovernment;
+
+        $opChangeManagement=$opDigitalGov->op_change_management;
+        $a=$opChangeManagement/11;
+        $avgOpChangeManagement=round($a*100);
+
+        $opCollaboration=$opDigitalGov->op_collaboration;
+        $b=$opCollaboration/11;
+        $avgOpCollaboration=round($b*100);
+
+        $opOrientatiion=$opDigitalGov->op_orientation;
+        $c=$opOrientatiion/12;
+        $avgOpOrientatiion=round($c*100);
+
+        $opQualityManagement=$opDigitalGov->op_quality_management;
+        $d=$opQualityManagement/18;
+        $avgOpQualityManagement=round($d*100);
+
+        $opInitiative=$opDigitalGov->op_initiative;
+        $e=$opInitiative/46;
+        $avgOpInitiative=round($e*100);
+
+    $result = [
+        ['Category', 'Value'],
+        ['Change Management', (int) $avgOpChangeManagement],
+        ['Collaboration and Partnership', (int) $avgOpCollaboration],
+        ['Results Orientation', (int) $avgOpOrientatiion],
+        ['Quality Management', (int) $avgOpQualityManagement],
+        ['Execute Digital Government Initiatives', (int) $avgOpInitiative],
+    ];
+
+    $govOfficial=Auth::user()->govofficial;
+
+    $opChangeManagement2=$govOfficial->opChangeManagement;
+    $opCollaboration2=$govOfficial->opCollaboration;
+    $opOrientation2=$govOfficial->opOrientation;
+    $opQualityManagement2=$govOfficial->opQualityManagement;
+    $opInitiative2=$govOfficial->opInitiative;
+
+        return view('govOfficials.Operational.DigitalGovernment.results',compact('result','avgOpChangeManagement','avgOpCollaboration','avgOpOrientatiion','avgOpQualityManagement','avgOpInitiative','opChangeManagement2','opCollaboration2','opOrientation2','opQualityManagement2','opInitiative2'));
+    }
+
+    public function digitalGovernmentReport(){
+        $govOfficial=Auth::user()->govofficial;
+        $opDigitalGov = Auth::user()->govofficial->opDigitalGovernment;
+
+        $opChangeManagement=$opDigitalGov->op_change_management;
+        $a=$opChangeManagement/11;
+        $avgOpChangeManagement=round($a*100);
+
+        $opCollaboration=$opDigitalGov->op_collaboration;
+        $b=$opCollaboration/11;
+        $avgOpCollaboration=round($b*100);
+
+        $opOrientatiion=$opDigitalGov->op_orientation;
+        $c=$opOrientatiion/12;
+        $avgOpOrientatiion=round($c*100);
+
+        $opQualityManagement=$opDigitalGov->op_quality_management;
+        $d=$opQualityManagement/18;
+        $avgOpQualityManagement=round($d*100);
+
+        $opInitiative=$opDigitalGov->op_initiative;
+        $e=$opInitiative/46;
+        $avgOpInitiative=round($e*100);
+
+    $result = [
+        ['Category', 'Value'],
+        ['Change Management', (int) $avgOpChangeManagement],
+        ['Collaboration and Partnership', (int) $avgOpCollaboration],
+        ['Results Orientation', (int) $avgOpOrientatiion],
+        ['Quality Management', (int) $avgOpQualityManagement],
+        ['Execute Digital Government Initiatives', (int) $avgOpInitiative],
+    ];
+
+    $govOfficial=Auth::user()->govofficial;
+
+    $opChangeManagement2=$govOfficial->opChangeManagement;
+    $opCollaboration2=$govOfficial->opCollaboration;
+    $opOrientation2=$govOfficial->opOrientation;
+    $opQualityManagement2=$govOfficial->opQualityManagement;
+    $opInitiative2=$govOfficial->opInitiative;
+        return view('govOfficials.Operational.DigitalGovernment.report',compact('result','govOfficial','avgOpChangeManagement','avgOpCollaboration','avgOpOrientatiion','avgOpQualityManagement','avgOpInitiative','opChangeManagement2','opCollaboration2','opOrientation2','opQualityManagement2','opInitiative2'));
+    }
+
+    public function ictPage01(){
+        return view('govOfficials.Operational.ICT.page01');
     }
 
 }

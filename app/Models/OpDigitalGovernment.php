@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Govofficial;
 use App\Models\Operational;
-use App\Models\OpChangeManagement;
-use App\Models\OpCollaboration;
-use App\Models\OpOrientation;
-use App\Models\OpQualityManagement;
 use App\Models\OpInitiative;
+use App\Models\OpOrientation;
+use App\Models\OpCollaboration;
+use App\Models\OpChangeManagement;
+use App\Models\OpQualityManagement;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class OpDigitalGovernment extends Model
 {
@@ -37,5 +38,9 @@ class OpDigitalGovernment extends Model
 
     public function opInitiative(){
         return $this->hasOne(OpInitiative::class);
+    }
+
+    public function govofficial(){
+        return $this->belongsTo(Govofficial::class);
     }
 }

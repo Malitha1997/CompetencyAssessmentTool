@@ -71,6 +71,9 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('storeOpQualityManagement', [OperationalLayerController::class, 'storeOpQualityManagement'])->name('storeOpQualityManagement');
     Route::post('storeOpInitiative', [OperationalLayerController::class, 'storeOpInitiative'])->name('storeOpInitiative');
     Route::get('/operational/digitalgovernment/results', [OperationalLayerController::class, 'results'])->name('operationalDigitalgovernmentResults');
+    Route::get('/operational/digitalgovernment/report', [OperationalLayerController::class, 'digitalGovernmentReport'])->name('operationalDigitalgovernmentReport');
+
+    Route::get('/operational/ict/page01', [OperationalLayerController::class, 'ictPage01'])->name('operationalIctPage01');
 });
 
 Route::controller(SearchController::class)->group(function(){

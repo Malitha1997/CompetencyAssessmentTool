@@ -93,5 +93,9 @@ class GovOrganizationNameSeeder extends Seeder
             'gov_org_name' => 'Department of Agriculture',
         ]);
 
+        DB::table('govorganizationnames')->insert([
+            'gov_org_name' => 'Airport & Aviation Services Ltd',
+        ]);
+
     }
 }

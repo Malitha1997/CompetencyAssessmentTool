@@ -24,7 +24,7 @@
                 <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                     <div class="card-body" style="background: rgba(244,140,67,0.27);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;">
                         <p class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and skills in ICT to enable more efficient, cost-effective, and participatory government, facilitate more convenient government services, allow greater public access to information, and make government more accountable to citizens.<br><br></p>
-                        <button class="btn btn-primary" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;margin-top: -18px;">Get Started</button>
+                        <a class="btn btn-primary" href="{{ route('operationalIctPage01') }}" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;margin-top: -18px;">Get Started</a>
                     </div>
                 </div>
             </div>

@@ -152,13 +152,13 @@
                     <tbody>
                         <tr style="margin-top: 10px;">
                             <td style="color: rgb(0,0,0);width: 900px;">a) National digital transformation plan should be available with all key stakeholders&nbsp;(ජාතික ඩිජිටල් සංවර්තනය - transformation සැලැස්ම සියලුම ප්‍රධාන පාර්ශවකරුවන් සමඟ සම්බන්දව තිබිය යුතුය)</td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg14_1" style="margin-left:20px;width:20px;height:20px;margin-right: 10px;" value="2"> </td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg14_1" style="margin-left:20px;width:20px;height:20px;margin-right: 10px;" value="3"> </td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg14_1" style="margin-left:20px;width:20px;height:20px;margin-right: 10px;" value="0"></td>
                         </tr>
                         <tr>
                             <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) Before implementing, all digital solutions should be validated with the national digital transformation plan (ක්‍රියාත්මක කිරීමට පෙර, සියලුම ඩිජිටල් විසඳුම් ජාතික ඩිජිටල් සංවර්තන(transformation)&nbsp;සැලැස්ම සමඟ වලංගු කළ යුතුය) </td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg14_2" style="margin-left:20px;width:20px;height:20px;margin-right: 10px;" value="0"></td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg14_2" style="margin-left:20px;width:20px;height:20px;margin-right: 10px;" value="2"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg14_2" style="margin-left:20px;width:20px;height:20px;margin-right: 10px;" value="3"></td>
                         </tr>
                         <tr></tr>
                         <tr></tr>
