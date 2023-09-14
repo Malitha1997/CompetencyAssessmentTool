@@ -352,4 +352,12 @@ class OperationalLayerController extends Controller
         return view('govOfficials.Operational.ICT.page01');
     }
 
+    public function ictPage02(){
+        return view('govOfficials.Operational.ICT.page02');
+    }
+
+    public function ictPage03(){
+        return view('govOfficials.Operational.ICT.page03');
+    }
+
 }

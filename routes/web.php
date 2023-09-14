@@ -74,6 +74,8 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/operational/digitalgovernment/report', [OperationalLayerController::class, 'digitalGovernmentReport'])->name('operationalDigitalgovernmentReport');
 
     Route::get('/operational/ict/page01', [OperationalLayerController::class, 'ictPage01'])->name('operationalIctPage01');
+    Route::get('/operational/ict/page02', [OperationalLayerController::class, 'ictPage02'])->name('operationalIctPage02');
+    Route::get('/operational/ict/page03', [OperationalLayerController::class, 'ictPage03'])->name('operationalIctPage03');
 });
 
 Route::controller(SearchController::class)->group(function(){
