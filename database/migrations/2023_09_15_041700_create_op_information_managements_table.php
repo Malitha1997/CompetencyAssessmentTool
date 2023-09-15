@@ -11,13 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('op_icts', function (Blueprint $table) {
+        Schema::create('op_information_managements', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('op_ict_in_workplace');
-            $table->string('op_information_management');
-            $table->string('op_digital_citizenship');
-            $table->string('marks_op_ict');
+            $table->string('ict10_1');
+            $table->string('ict10_2');
+            $table->string('ict10_3');
+            $table->string('ict11');
+            $table->string('ict12');
+            $table->string('ict13_1');
+            $table->string('ict13_2');
+            $table->string('ict13_3');
+            $table->string('ict14');
             $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
@@ -27,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('op_icts');
+        Schema::dropIfExists('op_information_managements');
     }
 };

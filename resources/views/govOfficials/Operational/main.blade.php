@@ -24,7 +24,11 @@
                 <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                     <div class="card-body" style="background: rgba(244,140,67,0.27);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;">
                         <p class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and skills in ICT to enable more efficient, cost-effective, and participatory government, facilitate more convenient government services, allow greater public access to information, and make government more accountable to citizens.<br><br></p>
-                        <a class="btn btn-primary" href="{{ route('operationalIctPage01') }}" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;margin-top: -18px;">Get Started</a>
+                        @if($ictDataExists)
+                        <a class="btn btn-primary" href="/operational/ict/results" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                        @else
+                        <a class="btn btn-primary" href="{{ route('operationalIctPage01') }}" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;">Get Started</a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -60,7 +64,8 @@
             <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">Management Assessment</p><img width="336" height="250" src="{{ asset('img/12146032_Wavy_Gen-03_Single-07 1.png ')}}" style="width: 367px;height: 242px;">
             <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                 <div class="card-body" style="background: rgba(244,140,67,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;">
-                    <p class="card-text" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></p><button class="btn btn-primary" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;">Get Started</button>
+                    <p class="card-text" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></p>
+                    <a class="btn btn-primary" href="{{route ('operationalManagementPage01') }}" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;">Get Started</a>
                 </div>
             </div>
         </div>

@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\OpIct;
+use App\Models\Govofficial;
 use App\Models\OpInitiative;
 use Illuminate\Http\Request;
 use App\Models\OpOrientation;
 use App\Models\OpCollaboration;
+use App\Models\OpIctInWorkplace;
 use App\Models\OpChangeManagement;
 use Illuminate\Support\Facades\DB;
 use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
+use App\Models\OpDigitalCitizenship;
 use Illuminate\Support\Facades\Auth;
+use App\Models\OpInformationManagements;
 
 class OperationalLayerController extends Controller
 {
@@ -77,7 +82,8 @@ class OperationalLayerController extends Controller
         $opOrientationDataExists = Auth::user()->govofficial->opOrientation;
         $opQualityManagementDataExists = Auth::user()->govofficial->opQualityManagement;
         $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
-        return view('govOfficials.Operational.main',compact('digitalGovDataExists','opChangeManagementDataExists','opCollaborationDataExists','opOrientationDataExists','opQualityManagementDataExists'));
+        $ictDataExists = Auth::user()->govofficial->opIct;
+        return view('govOfficials.Operational.main',compact('digitalGovDataExists','opChangeManagementDataExists','opCollaborationDataExists','opOrientationDataExists','opQualityManagementDataExists','ictDataExists'));
     }
 
     public function digitalGovernmentPage01()
@@ -357,7 +363,227 @@ class OperationalLayerController extends Controller
     }
 
     public function ictPage03(){
-        return view('govOfficials.Operational.ICT.page03');
+        $ict1_1=Auth::user()->govofficial->opIctInWorkPlace->ict1_1;
+        $ict1_2=Auth::user()->govofficial->opIctInWorkPlace->ict1_2;
+        $ict1_3=Auth::user()->govofficial->opIctInWorkPlace->ict1_3;
+        $ict2=Auth::user()->govofficial->opIctInWorkPlace->ict2;
+        $ict3_1=Auth::user()->govofficial->opIctInWorkPlace->ict3_1;
+        $ict3_2=Auth::user()->govofficial->opIctInWorkPlace->ict3_2;
+        $ict3_3=Auth::user()->govofficial->opIctInWorkPlace->ict3_3;
+        $ict4=Auth::user()->govofficial->opIctInWorkPlace->ict4;
+        $ict5=Auth::user()->govofficial->opIctInWorkPlace->ict5;
+        $ict6=Auth::user()->govofficial->opIctInWorkPlace->ict6;
+        $ict7=Auth::user()->govofficial->opIctInWorkPlace->ict7;
+        $ict8=Auth::user()->govofficial->opIctInWorkPlace->ict8;
+        $ict9=Auth::user()->govofficial->opIctInWorkPlace->ict9;
+
+        $totOpIctInWorPlace=$ict1_1+$ict1_2+$ict1_3+$ict2+$ict3_1+$ict3_2+$ict3_3+$ict4+$ict5+$ict6+$ict7+$ict8+$ict9;
+
+        $ict10_1=Auth::user()->govofficial->opInformationManagement->ict10_1;
+        $ict10_2=Auth::user()->govofficial->opInformationManagement->ict10_2;
+        $ict10_3=Auth::user()->govofficial->opInformationManagement->ict10_3;
+        $ict11=Auth::user()->govofficial->opInformationManagement->ict11;
+        $ict12=Auth::user()->govofficial->opInformationManagement->ict12;
+        $ict13_1=Auth::user()->govofficial->opInformationManagement->ict13_1;
+        $ict13_2=Auth::user()->govofficial->opInformationManagement->ict13_2;
+        $ict13_3=Auth::user()->govofficial->opInformationManagement->ict13_3;
+        $ict14=Auth::user()->govofficial->opInformationManagement->ict14;
+
+        $totOpInformationManagement=$ict10_1+$ict10_2+$ict10_3+$ict11+$ict12+$ict13_1+$ict13_2+$ict13_3+$ict14;
+
+        return view('govOfficials.Operational.ICT.page03',compact('totOpIctInWorPlace','totOpInformationManagement'));
+    }
+
+    public function storeOpIctInWorkPlace(Request $request)
+    {//dd($request);
+        request()->validate([
+            'ict1_1'=>'required|string',
+            'ict1_2'=>'required|string',
+            'ict1_3'=>'required|string',
+            'ict2'=>'required|string',
+            'ict3_1'=>'required|string',
+            'ict3_2'=>'required|string',
+            'ict3_3'=>'required|string',
+            'ict4'=>'required|string',
+            'ict5'=>'required|string',
+            'ict6'=>'required|string',
+            'ict7'=>'required|string',
+            'ict8'=>'required|string',
+            'ict9'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $opIctInWorkPlace = new OpIctInWorkplace;
+
+        $opIctInWorkPlace->ict1_1=$request->ict1_1;
+        $opIctInWorkPlace->ict1_2=$request->ict1_2;
+        $opIctInWorkPlace->ict1_3=$request->ict1_3;
+        $opIctInWorkPlace->ict2=$request->ict2;
+        $opIctInWorkPlace->ict3_1=$request->ict3_1;
+        $opIctInWorkPlace->ict3_2=$request->ict3_2;
+        $opIctInWorkPlace->ict3_3=$request->ict3_3;
+        $opIctInWorkPlace->ict4=$request->ict4;
+        $opIctInWorkPlace->ict5=$request->ict5;
+        $opIctInWorkPlace->ict6=$request->ict6;
+        $opIctInWorkPlace->ict7=$request->ict7;
+        $opIctInWorkPlace->ict8=$request->ict8;
+        $opIctInWorkPlace->ict9=$request->ict9;
+        $opIctInWorkPlace->govofficial_id=$request->govofficial_id;
+
+        $opIctInWorkPlace->save();
+
+        return redirect()->route('operationalIctPage02');
+
+    }
+
+    public function storeOpInformationManagement(Request $request){
+        request()->validate([
+            'ict10_1'=>'required|string',
+            'ict10_2'=>'required|string',
+            'ict10_3'=>'required|string',
+            'ict11'=>'required|string',
+            'ict12'=>'required|string',
+            'ict13_1'=>'required|string',
+            'ict13_2'=>'required|string',
+            'ict13_3'=>'required|string',
+            'ict14'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $opInformationManagement = new OpInformationManagements;
+
+        $opInformationManagement->ict10_1=$request->ict10_1;
+        $opInformationManagement->ict10_2=$request->ict10_2;
+        $opInformationManagement->ict10_3=$request->ict10_3;
+        $opInformationManagement->ict11=$request->ict11;
+        $opInformationManagement->ict12=$request->ict12;
+        $opInformationManagement->ict13_1=$request->ict13_1;
+        $opInformationManagement->ict13_2=$request->ict13_2;
+        $opInformationManagement->ict13_3=$request->ict13_3;
+        $opInformationManagement->ict14=$request->ict14;
+        $opInformationManagement->govofficial_id=$request->govofficial_id;
+
+        $opInformationManagement->save();
+
+        return redirect()->route('operationalIctPage03');
+    }
+
+    public function storeOpDigitalCitizenship(Request $request){
+        request()->validate([
+            'ict15'=>'required|string',
+            'ict16'=>'required|string',
+            'ict17'=>'required|string',
+            'ict18'=>'required|string',
+            'ict19'=>'required|string',
+            'ict20_1'=>'required|string',
+            'ict20_2'=>'required|string',
+            'ict20_3'=>'required|string',
+            'ict21'=>'required|string',
+            'ict22'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $storeOpDigitalCitizenship = new OpDigitalCitizenship;
+
+        $storeOpDigitalCitizenship->ict15=$request->ict15;
+        $storeOpDigitalCitizenship->ict16=$request->ict16;
+        $storeOpDigitalCitizenship->ict17=$request->ict17;
+        $storeOpDigitalCitizenship->ict18=$request->ict18;
+        $storeOpDigitalCitizenship->ict19=$request->ict19;
+        $storeOpDigitalCitizenship->ict20_1=$request->ict20_1;
+        $storeOpDigitalCitizenship->ict20_2=$request->ict20_2;
+        $storeOpDigitalCitizenship->ict20_3=$request->ict20_3;
+        $storeOpDigitalCitizenship->ict21=$request->ict21;
+        $storeOpDigitalCitizenship->ict22=$request->ict22;
+        $storeOpDigitalCitizenship->govofficial_id=$request->govofficial_id;
+
+        $storeOpDigitalCitizenship->save();
+
+        $marksOpDigitalCitizenship=$request->ict15+$request->ict16+$request->ict17+$request->ict18+$request->ict19+$request->ict20_1+$request->ict20_2+$request->ict20_3+$request->ict21+$request->ict22;
+        $marks_op_ict=$request->totOpIctInWorkplace+$request->totOpInformationManagement+$marksOpDigitalCitizenship;
+
+        $opIct = new OpIct;
+
+        $opIct->op_ict_in_workplace=$request->totOpIctInWorkplace;
+        $opIct->op_information_management=$request->totOpInformationManagement;
+        $opIct->op_digital_citizenship=$marksOpDigitalCitizenship;
+        $opIct->marks_op_ict=$marks_op_ict;
+        $opIct->govofficial_id=$request->govofficial_id;
+
+        $opIct->save();
+
+        return redirect()->route('operationalIctResults');
+    }
+
+    public function opIctResults(){
+        $opDigitalGov = Auth::user()->govofficial->opIct;
+
+        $opIctInWorkplace=$opDigitalGov->op_ict_in_workplace;
+        $a=$opIctInWorkplace/40;
+        $avgOpIctInWorkplace=round($a*100);
+
+        $opInformationManagement=$opDigitalGov->op_information_management;
+        $b=$opInformationManagement/24;
+        $avgOpInformationManagement=round($b*100);
+
+        $opDigitalCitizenship=$opDigitalGov->op_digital_citizenship;
+        $c=$opDigitalCitizenship/36;
+        $avgOpDigitalCitizenship=round($c*100);
+
+
+
+    $result = [
+        ['Category', 'Value'],
+        ['ICT in Workplace', (int) $avgOpIctInWorkplace],
+        ['Information Management', (int) $avgOpInformationManagement],
+        ['Digital Citizenship', (int) $avgOpDigitalCitizenship],
+    ];
+
+    $govOfficial=Auth::user()->govofficial;
+
+    $opIctInWorkplace2=$govOfficial->opIctInWorkplace;
+    $opInformationManagement2=$govOfficial->opInformationManagement;
+    $opDigitalCitizenship2=$govOfficial->opDigitalCitizenship;
+
+        return view('govOfficials.Operational.ICT.results',compact('result','opIctInWorkplace2','opInformationManagement2','opDigitalCitizenship2','avgOpIctInWorkplace','avgOpInformationManagement','avgOpDigitalCitizenship'));
+    }
+
+    public function opIctReport(){
+        $opDigitalGov = Auth::user()->govofficial->opIct;
+
+        $opIctInWorkplace=$opDigitalGov->op_ict_in_workplace;
+        $a=$opIctInWorkplace/40;
+        $avgOpIctInWorkplace=round($a*100);
+
+        $opInformationManagement=$opDigitalGov->op_information_management;
+        $b=$opInformationManagement/24;
+        $avgOpInformationManagement=round($b*100);
+
+        $opDigitalCitizenship=$opDigitalGov->op_digital_citizenship;
+        $c=$opDigitalCitizenship/36;
+        $avgOpDigitalCitizenship=round($c*100);
+
+
+
+    $result = [
+        ['Category', 'Value'],
+        ['ICT in Workplace', (int) $avgOpIctInWorkplace],
+        ['Information Management', (int) $avgOpInformationManagement],
+        ['Digital Citizenship', (int) $avgOpDigitalCitizenship],
+    ];
+
+    $govOfficial=Auth::user()->govofficial;
+
+    $opIctInWorkplace2=$govOfficial->opIctInWorkplace;
+    $opInformationManagement2=$govOfficial->opInformationManagement;
+    $opDigitalCitizenship2=$govOfficial->opDigitalCitizenship;
+
+        return view('govOfficials.Operational.ICT.report',compact('result','opIctInWorkplace2','opInformationManagement2','opDigitalCitizenship2','avgOpIctInWorkplace','avgOpInformationManagement','avgOpDigitalCitizenship','govOfficial'));
+    }
+
+    public function opManagementPage01()
+    {
+        return view('govOfficials.Operational.Management.page01');
     }
 
 }

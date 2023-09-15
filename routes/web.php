@@ -76,6 +76,15 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/operational/ict/page01', [OperationalLayerController::class, 'ictPage01'])->name('operationalIctPage01');
     Route::get('/operational/ict/page02', [OperationalLayerController::class, 'ictPage02'])->name('operationalIctPage02');
     Route::get('/operational/ict/page03', [OperationalLayerController::class, 'ictPage03'])->name('operationalIctPage03');
+
+    Route::post('storeOpIctInWorkPlace', [OperationalLayerController::class, 'storeOpIctInWorkPlace'])->name('storeOpIctInWorkPlace');
+    Route::post('storeOpInformationManagement', [OperationalLayerController::class, 'storeOpInformationManagement'])->name('storeOpInformationManagement');
+    Route::post('storeOpDigitalCitizenship', [OperationalLayerController::class, 'storeOpDigitalCitizenship'])->name('storeOpDigitalCitizenship');
+    Route::get('/operational/ict/results', [OperationalLayerController::class, 'opIctResults'])->name('operationalIctResults');
+    Route::get('/operational/ict/report', [OperationalLayerController::class, 'opIctReport'])->name('operationalIctReport');
+
+    Route::get('/operational/management/page05', [OperationalLayerController::class, 'opManagementPage01'])->name('operationalManagementPage01');
+
 });
 
 Route::controller(SearchController::class)->group(function(){
