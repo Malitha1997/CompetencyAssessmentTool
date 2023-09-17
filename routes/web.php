@@ -63,7 +63,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/operational/digitalGovernment/page02', [OperationalLayerController::class, 'digitalGovernmentPage02'])->name('operationalDigitalGovernmentPage02');
     Route::get('/operational/digitalGovernment/page03', [OperationalLayerController::class, 'digitalGovernmentPage03'])->name('operationalDigitalGovernmentPage03');
     Route::get('/operational/digitalGovernment/page04', [OperationalLayerController::class, 'digitalGovernmentPage04'])->name('operationalDigitalGovernmentPage04');
-    Route::get('/operational/digitalGovernment/page05', [OperationalLayerController::class, 'digitalGovernmentPage05'])->name('operationalDigitalGovernmentPage05');
+    Route::get('/operational/digitalGovernment/page2', [OperationalLayerController::class, 'digitalGovernmentPage05'])->name('operationalDigitalGovernmentPage05');
 
     Route::post('storeOpChangeManagement', [OperationalLayerController::class, 'storeOpChangeManagement'])->name('storeOpChangeManagement');
     Route::post('storeOpCollaboration', [OperationalLayerController::class, 'storeOpCollaboration'])->name('storeOpCollaboration');
@@ -83,7 +83,11 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/operational/ict/results', [OperationalLayerController::class, 'opIctResults'])->name('operationalIctResults');
     Route::get('/operational/ict/report', [OperationalLayerController::class, 'opIctReport'])->name('operationalIctReport');
 
-    Route::get('/operational/management/page05', [OperationalLayerController::class, 'opManagementPage01'])->name('operationalManagementPage01');
+    Route::get('/operational/management/page01', [OperationalLayerController::class, 'opManagementPage01'])->name('operationalManagementPage01');
+    Route::get('/operational/management/page02', [OperationalLayerController::class, 'opManagementPage02'])->name('operationalManagementPage02');
+    Route::get('/operational/management/page03', [OperationalLayerController::class, 'opManagementPage03'])->name('operationalManagementPage03');
+    Route::get('/operational/management/page04', [OperationalLayerController::class, 'opManagementPage04'])->name('operationalManagementPage04');
+    Route::get('/operational/management/page05', [OperationalLayerController::class, 'opManagementPage05'])->name('operationalManagementPage05');
 
 });
 

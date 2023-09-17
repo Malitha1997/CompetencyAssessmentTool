@@ -586,4 +586,24 @@ class OperationalLayerController extends Controller
         return view('govOfficials.Operational.Management.page01');
     }
 
+    public function opManagementPage02()
+    {
+        return view('govOfficials.Operational.Management.page02');
+    }
+
+    public function opManagementPage03()
+    {
+        return view('govOfficials.Operational.Management.page03');
+    }
+
+    public function opManagementPage04()
+    {
+        return view('govOfficials.Operational.Management.page04');
+    }
+
+    public function opManagementPage05()
+    {
+        return view('govOfficials.Operational.Management.page05');
+    }
+
 }
