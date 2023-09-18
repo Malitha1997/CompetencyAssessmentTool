@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\OpIct;
+use App\Models\OpTeamwork;
 use App\Models\Govofficial;
 use App\Models\OpInitiative;
+use App\Models\OpManagement;
 use Illuminate\Http\Request;
 use App\Models\OpOrientation;
 use App\Models\OpCollaboration;
+use App\Models\OpCommunication;
 use App\Models\OpIctInWorkplace;
 use App\Models\OpChangeManagement;
 use Illuminate\Support\Facades\DB;
@@ -15,6 +18,9 @@ use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use Illuminate\Support\Facades\Auth;
+use App\Models\OpPersonalDevelopment;
+use App\Models\OpWorkplaceManagement;
+use App\Models\OpStakeholderManagement;
 use App\Models\OpInformationManagements;
 
 class OperationalLayerController extends Controller
@@ -82,8 +88,18 @@ class OperationalLayerController extends Controller
         $opOrientationDataExists = Auth::user()->govofficial->opOrientation;
         $opQualityManagementDataExists = Auth::user()->govofficial->opQualityManagement;
         $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
+
         $ictDataExists = Auth::user()->govofficial->opIct;
-        return view('govOfficials.Operational.main',compact('digitalGovDataExists','opChangeManagementDataExists','opCollaborationDataExists','opOrientationDataExists','opQualityManagementDataExists','ictDataExists'));
+        $opIctInWorkplaceDataExists = Auth::user()->govofficial->opIctInWorkPlace;
+        $opInformationManagementDataExists = Auth::user()->govofficial->opInformationManagement;
+
+        $managementDataExists = Auth::user()->govofficial->opManagement;
+        $opCommunicationDataExists = Auth::user()->govofficial->opCommunication;
+        $opWorkplaceManagementDataExists = Auth::user()->govofficial->opWorkplaceManagement;
+        $opStakeholderManagementDataExists = Auth::user()->govofficial->opStakeholderManagement;
+        $opTeamworkDataExists = Auth::user()->govofficial->opTeamwork;
+
+        return view('govOfficials.Operational.main',compact('opTeamworkDataExists','opStakeholderManagementDataExists','opWorkplaceManagementDataExists','opCommunicationDataExists','opTeamworkDataExists','opStakeholderManagementDataExists','opWorkplaceManagementDataExists','opInformationManagementDataExists','opIctInWorkplaceDataExists','digitalGovDataExists','opChangeManagementDataExists','opCollaborationDataExists','opOrientationDataExists','opQualityManagementDataExists','ictDataExists','managementDataExists'));
     }
 
     public function digitalGovernmentPage01()
@@ -603,7 +619,460 @@ class OperationalLayerController extends Controller
 
     public function opManagementPage05()
     {
-        return view('govOfficials.Operational.Management.page05');
+        $opCommunication=Auth::user()->govofficial->opCommunication;
+        $opWorkplaceManagement=Auth::user()->govofficial->opWorkplaceManagement;
+        $opStakeholderManagement=Auth::user()->govofficial->opStakeholderManagement;
+        $opTeamwork=Auth::user()->govofficial->opTeamwork;
+
+        $totOpCommunication=$opCommunication->mgt1+$opCommunication->mgt2+$opCommunication->mgt3+$opCommunication->mgt4;
+        $totOpWorkplaceManagement=$opWorkplaceManagement->mgt5+$opWorkplaceManagement->mgt6;
+        $totOpStakeholderManagement=$opStakeholderManagement->mgt7+$opStakeholderManagement->mgt8+$opStakeholderManagement->mgt9+$opStakeholderManagement->mgt10;
+        $totOpTeamwork=$opTeamwork->mg11+$opTeamwork->mgt12+$opTeamwork->mgt13+$opTeamwork->mgt14;
+
+        return view('govOfficials.Operational.Management.page05',compact('totOpCommunication','totOpWorkplaceManagement','totOpStakeholderManagement','totOpTeamwork'));
+    }
+
+    public function storeOpCommunication(Request $request){
+        request()->validate([
+            'mgt1'=>'required|string',
+            'mgt2'=>'required|string',
+            'mgt3'=>'required|string',
+            'mgt4'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $opCommunicaton = new OpCommunication;
+
+        $opCommunicaton->mgt1=$request->mgt1;
+        $opCommunicaton->mgt2=$request->mgt2;
+        $opCommunicaton->mgt3=$request->mgt3;
+        $opCommunicaton->mgt4=$request->mgt4;
+        $opCommunicaton->govofficial_id=$request->govofficial_id;
+
+        $opCommunicaton->save();
+
+        return redirect()->route('operationalManagementPage02');
+
+    }
+
+    public function storeOpWorkplaceManagement(Request $request){
+        request()->validate([
+            'mgt5'=>'required|string',
+            'mgt6'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $opWorkplaceManagement = new OpWorkplaceManagement;
+
+        $opWorkplaceManagement->mgt5=$request->mgt5;
+        $opWorkplaceManagement->mgt6=$request->mgt6;
+        $opWorkplaceManagement->govofficial_id=$request->govofficial_id;
+
+        $opWorkplaceManagement->save();
+
+        return redirect()->route('operationalManagementPage03');
+
+    }
+
+    public function storeOpStakeholderManagement(Request $request){
+        request()->validate([
+            'mgt7'=>'required|string',
+            'mgt8'=>'required|string',
+            'mgt9'=>'required|string',
+            'mgt10'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $opStakeholderManagement = new OpStakeholderManagement;
+
+        $opStakeholderManagement->mgt7=$request->mgt7;
+        $opStakeholderManagement->mgt8=$request->mgt8;
+        $opStakeholderManagement->mgt9=$request->mgt9;
+        $opStakeholderManagement->mgt10=$request->mgt10;
+        $opStakeholderManagement->govofficial_id=$request->govofficial_id;
+
+        $opStakeholderManagement->save();
+
+        return redirect()->route('operationalManagementPage04');
+    }
+
+    public function storeOpTeamwork(Request $request){
+        request()->validate([
+            'mgt11'=>'required|string',
+            'mgt12'=>'required|string',
+            'mgt13'=>'required|string',
+            'mgt14'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $opTeamwork = new OpTeamwork;
+
+        $opTeamwork->mgt11=$request->mgt11;
+        $opTeamwork->mgt12=$request->mgt12;
+        $opTeamwork->mgt13=$request->mgt13;
+        $opTeamwork->mgt14=$request->mgt14;
+        $opTeamwork->govofficial_id=$request->govofficial_id;
+
+        $opTeamwork->save();
+
+        return redirect()->route('operationalManagementPage05');
+
+    }
+
+    public function storeOpPersonalDevelopment(Request $request){
+        request()->validate([
+            'mgt15'=>'required|string',
+            'mgt16'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $opPersonalDevelopment = new OpPersonalDevelopment;
+
+        $opPersonalDevelopment->mgt15=$request->mgt15;
+        $opPersonalDevelopment->mgt16=$request->mgt16;
+        $opPersonalDevelopment->govofficial_id=$request->govofficial_id;
+
+        $opPersonalDevelopment->save();
+
+        $marksOpPersonalDevelopment=$request->mgt15+$request->mgt16;
+        $marks_op_management=$request->opCommunication+$request->opWorkplaceManagement+$request->opStakeholderManagement+$request->opTeamwork+$marksOpPersonalDevelopment;
+// dd($marks_op_management);
+        $opManagement = new OpManagement;
+
+        $opManagement->op_communication=$request->opCommunication;
+        $opManagement->op_workplace_management=$request->opWorkplaceManagement;
+        $opManagement->op_stakeholder_management=$request->opStakeholderManagement;
+        $opManagement->op_teamwork=$request->opTeamwork;
+        $opManagement->op_personal_development=$marksOpPersonalDevelopment;
+        $opManagement->marks_op_management =$marks_op_management;
+        $opManagement->govofficial_id =$request->govofficial_id;
+
+        $opManagement->save();
+
+        return redirect()->route('operationallayer');
+
+    }
+
+    public function opManagementResult(){
+        $opManagement = Auth::user()->govofficial->opManagement;
+
+        $opCommunication=$opManagement->op_communication;
+        $a=$opCommunication/28;
+        $avgOpCommunication=round($a*100);
+
+        $opWorkplaceManagement=$opManagement->op_workplace_management;
+        $a=$opWorkplaceManagement/12;
+        $avgOpWorkplaceManagement=round($a*100);
+
+        $opStakeholderManagement=$opManagement->op_stakeholder_management;
+        $a=$opStakeholderManagement/24;
+        $avgOpStakeholderManagement=round($a*100);
+
+        $opTeamwork=$opManagement->op_teamwork;
+        $a=$opTeamwork/24;
+        $avgOpTeamwork=round($a*100);
+
+        $opPersonalDevelopment=$opManagement->op_personal_development;
+        $a=$opPersonalDevelopment/12;
+        $avgOpPersonalDevelopment=round($a*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['Communication', (int) $avgOpCommunication],
+            ['Workplace Management', (int) $avgOpWorkplaceManagement],
+            ['Stakeholder Management', (int) $avgOpStakeholderManagement],
+            ['Teamwork', (int) $avgOpTeamwork],
+            ['Personal Development', (int) $avgOpPersonalDevelopment],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $opCommunication2=$govOfficial->opCommunication;
+        $opWorkplaceManagement2=$govOfficial->opWorkplaceManagement;
+        $opStakeholderManagement2=$govOfficial->opStakeholderManagement;
+        $opTeamwork2=$govOfficial->opTeamwork;
+        $opPersonalDevelopment2=$govOfficial->opPersonalDevelopment;
+
+        return view('govOfficials.Operational.Management.results',compact('result','opCommunication2','opWorkplaceManagement2','opStakeholderManagement2','opTeamwork2','opPersonalDevelopment2','avgOpCommunication','avgOpWorkplaceManagement','avgOpStakeholderManagement','avgOpTeamwork','avgOpPersonalDevelopment'));
+    }
+
+    public function opManagementReport(){
+        $opManagement = Auth::user()->govofficial->opManagement;
+
+        $opCommunication=$opManagement->op_communication;
+        $a=$opCommunication/28;
+        $avgOpCommunication=round($a*100);
+
+        $opWorkplaceManagement=$opManagement->op_workplace_management;
+        $a=$opWorkplaceManagement/12;
+        $avgOpWorkplaceManagement=round($a*100);
+
+        $opStakeholderManagement=$opManagement->op_stakeholder_management;
+        $a=$opStakeholderManagement/24;
+        $avgOpStakeholderManagement=round($a*100);
+
+        $opTeamwork=$opManagement->op_teamwork;
+        $a=$opTeamwork/24;
+        $avgOpTeamwork=round($a*100);
+
+        $opPersonalDevelopment=$opManagement->op_personal_development;
+        $a=$opPersonalDevelopment/12;
+        $avgOpPersonalDevelopment=round($a*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['Communication', (int) $avgOpCommunication],
+            ['Workplace Management', (int) $avgOpWorkplaceManagement],
+            ['Stakeholder Management', (int) $avgOpStakeholderManagement],
+            ['Teamwork', (int) $avgOpTeamwork],
+            ['Personal Development', (int) $avgOpPersonalDevelopment],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $opCommunication2=$govOfficial->opCommunication;
+        $opWorkplaceManagement2=$govOfficial->opWorkplaceManagement;
+        $opStakeholderManagement2=$govOfficial->opStakeholderManagement;
+        $opTeamwork2=$govOfficial->opTeamwork;
+        $opPersonalDevelopment2=$govOfficial->opPersonalDevelopment;
+
+
+        return view('govOfficials.Operational.Management.report',compact('govOfficial','result','opCommunication2','opWorkplaceManagement2','opStakeholderManagement2','opTeamwork2','opPersonalDevelopment2','avgOpCommunication','avgOpWorkplaceManagement','avgOpStakeholderManagement','avgOpTeamwork','avgOpPersonalDevelopment'));
+    }
+
+    public function overalresult(){
+            $labels = ["ICT", "Digital Government", "Management"];
+            $govOfficial=Auth::user()->govofficial;
+            $opIct=Auth::user()->govofficial->opIct;
+            $opDigitalGov=Auth::user()->govofficial->opDigitalGovernment;
+            $opManagement=Auth::user()->govofficial->opManagement;
+            $data=[
+                (int) $opIct->marks_op_ict,
+                (int) $opDigitalGov->marks_op_digital_government,
+                (int) $opManagement->marks_op_management
+            ];
+            $opIct = Auth::user()->govofficial->opIct;
+
+            $opIctInWorkplace=$opIct->op_ict_in_workplace;
+            $a=$opIctInWorkplace/40;
+            $avgOpIctInWorkplace=round($a*100);
+
+            $opInformationManagement=$opIct->op_information_management;
+            $b=$opInformationManagement/24;
+            $avgOpInformationManagement=round($b*100);
+
+            $opDigitalCitizenship=$opIct->op_digital_citizenship;
+            $c=$opDigitalCitizenship/36;
+            $avgOpDigitalCitizenship=round($c*100);
+
+            $result = [
+                ['Category', 'Value'],
+                ['ICT in Workplace', (int) $avgOpIctInWorkplace],
+                ['Information Management', (int) $avgOpInformationManagement],
+                ['Digital Citizenship', (int) $avgOpDigitalCitizenship],
+            ];
+
+            $opIctInWorkplace2=$govOfficial->opIctInWorkplace;
+            $opInformationManagement2=$govOfficial->opInformationManagement;
+            $opDigitalCitizenship2=$govOfficial->opDigitalCitizenship;
+
+            $opDigitalGov = Auth::user()->govofficial->opDigitalGovernment;
+
+            $opChangeManagement=$opDigitalGov->op_change_management;
+            $a=$opChangeManagement/11;
+            $avgOpChangeManagement=round($a*100);
+
+            $opCollaboration=$opDigitalGov->op_collaboration;
+            $b=$opCollaboration/11;
+            $avgOpCollaboration=round($b*100);
+
+            $opOrientatiion=$opDigitalGov->op_orientation;
+            $c=$opOrientatiion/12;
+            $avgOpOrientatiion=round($c*100);
+
+            $opQualityManagement=$opDigitalGov->op_quality_management;
+            $d=$opQualityManagement/18;
+            $avgOpQualityManagement=round($d*100);
+
+            $opInitiative=$opDigitalGov->op_initiative;
+            $e=$opInitiative/46;
+            $avgOpInitiative=round($e*100);
+
+        $result2 = [
+            ['Category', 'Value'],
+            ['Change Management', (int) $avgOpChangeManagement],
+            ['Collaboration and Partnership', (int) $avgOpCollaboration],
+            ['Results Orientation', (int) $avgOpOrientatiion],
+            ['Quality Management', (int) $avgOpQualityManagement],
+            ['Execute Digital Government Initiatives', (int) $avgOpInitiative],
+        ];
+
+        $opChangeManagement2=$govOfficial->opChangeManagement;
+        $opCollaboration2=$govOfficial->opCollaboration;
+        $opOrientation2=$govOfficial->opOrientation;
+        $opQualityManagement2=$govOfficial->opQualityManagement;
+        $opInitiative2=$govOfficial->opInitiative;
+
+        $opManagement = Auth::user()->govofficial->opManagement;
+
+        $opCommunication=$opManagement->op_communication;
+        $a=$opCommunication/28;
+        $avgOpCommunication=round($a*100);
+
+        $opWorkplaceManagement=$opManagement->op_workplace_management;
+        $a=$opWorkplaceManagement/12;
+        $avgOpWorkplaceManagement=round($a*100);
+
+        $opStakeholderManagement=$opManagement->op_stakeholder_management;
+        $a=$opStakeholderManagement/24;
+        $avgOpStakeholderManagement=round($a*100);
+
+        $opTeamwork=$opManagement->op_teamwork;
+        $a=$opTeamwork/24;
+        $avgOpTeamwork=round($a*100);
+
+        $opPersonalDevelopment=$opManagement->op_personal_development;
+        $a=$opPersonalDevelopment/12;
+        $avgOpPersonalDevelopment=round($a*100);
+
+        $result3 = [
+            ['Category', 'Value'],
+            ['Communication', (int) $avgOpCommunication],
+            ['Workplace Management', (int) $avgOpWorkplaceManagement],
+            ['Stakeholder Management', (int) $avgOpStakeholderManagement],
+            ['Teamwork', (int) $avgOpTeamwork],
+            ['Personal Development', (int) $avgOpPersonalDevelopment],
+        ];
+
+        $opCommunication2=$govOfficial->opCommunication;
+        $opWorkplaceManagement2=$govOfficial->opWorkplaceManagement;
+        $opStakeholderManagement2=$govOfficial->opStakeholderManagement;
+        $opTeamwork2=$govOfficial->opTeamwork;
+        $opPersonalDevelopment2=$govOfficial->opPersonalDevelopment;
+
+        return view('govOfficials.Operational.overalResults',compact('result3','opCommunication2','opWorkplaceManagement2','opStakeholderManagement2','opTeamwork2','opPersonalDevelopment2','avgOpCommunication','avgOpWorkplaceManagement','avgOpStakeholderManagement','avgOpTeamwork','avgOpPersonalDevelopment','avgOpInitiative','avgOpQualityManagement','avgOpOrientatiion','avgOpCollaboration','avgOpChangeManagement','opInitiative2','opQualityManagement2','opOrientation2','opCollaboration2','opChangeManagement2','result2','avgOpDigitalCitizenship','avgOpInformationManagement','avgOpIctInWorkplace','opDigitalCitizenship2','opInformationManagement2','opIctInWorkplace2','labels','data','result'));
+    }
+
+    public function overalreport(){
+        $opDigitalGov = Auth::user()->govofficial->opIct;
+
+        $opIctInWorkplace=$opDigitalGov->op_ict_in_workplace;
+        $a=$opIctInWorkplace/40;
+        $avgOpIctInWorkplace=round($a*100);
+
+        $opInformationManagement=$opDigitalGov->op_information_management;
+        $b=$opInformationManagement/24;
+        $avgOpInformationManagement=round($b*100);
+
+        $opDigitalCitizenship=$opDigitalGov->op_digital_citizenship;
+        $c=$opDigitalCitizenship/36;
+        $avgOpDigitalCitizenship=round($c*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['ICT in Workplace', (int) $avgOpIctInWorkplace],
+            ['Information Management', (int) $avgOpInformationManagement],
+            ['Digital Citizenship', (int) $avgOpDigitalCitizenship],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $opIctInWorkplace2=$govOfficial->opIctInWorkplace;
+        $opInformationManagement2=$govOfficial->opInformationManagement;
+        $opDigitalCitizenship2=$govOfficial->opDigitalCitizenship;
+
+        $govOfficial=Auth::user()->govofficial;
+        $opDigitalGov = Auth::user()->govofficial->opDigitalGovernment;
+
+        $opChangeManagement=$opDigitalGov->op_change_management;
+        $a=$opChangeManagement/11;
+        $avgOpChangeManagement=round($a*100);
+
+        $opCollaboration=$opDigitalGov->op_collaboration;
+        $b=$opCollaboration/11;
+        $avgOpCollaboration=round($b*100);
+
+        $opOrientatiion=$opDigitalGov->op_orientation;
+        $c=$opOrientatiion/12;
+        $avgOpOrientatiion=round($c*100);
+
+        $opQualityManagement=$opDigitalGov->op_quality_management;
+        $d=$opQualityManagement/18;
+        $avgOpQualityManagement=round($d*100);
+
+        $opInitiative=$opDigitalGov->op_initiative;
+        $e=$opInitiative/46;
+        $avgOpInitiative=round($e*100);
+
+        $result2 = [
+            ['Category', 'Value'],
+            ['Change Management', (int) $avgOpChangeManagement],
+            ['Collaboration and Partnership', (int) $avgOpCollaboration],
+            ['Results Orientation', (int) $avgOpOrientatiion],
+            ['Quality Management', (int) $avgOpQualityManagement],
+            ['Execute Digital Government Initiatives', (int) $avgOpInitiative],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $opChangeManagement2=$govOfficial->opChangeManagement;
+        $opCollaboration2=$govOfficial->opCollaboration;
+        $opOrientation2=$govOfficial->opOrientation;
+        $opQualityManagement2=$govOfficial->opQualityManagement;
+        $opInitiative2=$govOfficial->opInitiative;
+
+        $opManagement = Auth::user()->govofficial->opManagement;
+
+        $opCommunication=$opManagement->op_communication;
+        $a=$opCommunication/28;
+        $avgOpCommunication=round($a*100);
+
+        $opWorkplaceManagement=$opManagement->op_workplace_management;
+        $a=$opWorkplaceManagement/12;
+        $avgOpWorkplaceManagement=round($a*100);
+
+        $opStakeholderManagement=$opManagement->op_stakeholder_management;
+        $a=$opStakeholderManagement/24;
+        $avgOpStakeholderManagement=round($a*100);
+
+        $opTeamwork=$opManagement->op_teamwork;
+        $a=$opTeamwork/24;
+        $avgOpTeamwork=round($a*100);
+
+        $opPersonalDevelopment=$opManagement->op_personal_development;
+        $a=$opPersonalDevelopment/12;
+        $avgOpPersonalDevelopment=round($a*100);
+
+        $result3 = [
+            ['Category', 'Value'],
+            ['Communication', (int) $avgOpCommunication],
+            ['Workplace Management', (int) $avgOpWorkplaceManagement],
+            ['Stakeholder Management', (int) $avgOpStakeholderManagement],
+            ['Teamwork', (int) $avgOpTeamwork],
+            ['Personal Development', (int) $avgOpPersonalDevelopment],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $opCommunication2=$govOfficial->opCommunication;
+        $opWorkplaceManagement2=$govOfficial->opWorkplaceManagement;
+        $opStakeholderManagement2=$govOfficial->opStakeholderManagement;
+        $opTeamwork2=$govOfficial->opTeamwork;
+        $opPersonalDevelopment2=$govOfficial->opPersonalDevelopment;
+
+        $labels = ["ICT", "Digital Government", "Management"];
+            $govOfficial=Auth::user()->govofficial;
+            $opIct=Auth::user()->govofficial->opIct;
+            $opDigitalGov=Auth::user()->govofficial->opDigitalGovernment;
+            $opManagement=Auth::user()->govofficial->opManagement;
+            $data=[
+                (int) $opIct->marks_op_ict,
+                (int) $opDigitalGov->marks_op_digital_government,
+                (int) $opManagement->marks_op_management
+            ];
+
+
+        return view('govOfficials.Operational.overalReport',compact('data','labels','result3','opCommunication2','opWorkplaceManagement2','opStakeholderManagement2','opTeamwork2','opPersonalDevelopment2','avgOpCommunication','avgOpWorkplaceManagement','avgOpStakeholderManagement','avgOpTeamwork','avgOpPersonalDevelopment','result2','avgOpChangeManagement','avgOpCollaboration','avgOpOrientatiion','avgOpQualityManagement','avgOpInitiative','opChangeManagement2','opCollaboration2','opOrientation2','opQualityManagement2','opInitiative2','result','opIctInWorkplace2','opInformationManagement2','opDigitalCitizenship2','avgOpIctInWorkplace','avgOpInformationManagement','avgOpDigitalCitizenship','govOfficial'));
     }
 
 }

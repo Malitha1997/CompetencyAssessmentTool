@@ -89,6 +89,16 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/operational/management/page04', [OperationalLayerController::class, 'opManagementPage04'])->name('operationalManagementPage04');
     Route::get('/operational/management/page05', [OperationalLayerController::class, 'opManagementPage05'])->name('operationalManagementPage05');
 
+    Route::post('storeOpCommunication', [OperationalLayerController::class, 'storeOpCommunication'])->name('storeOpCommunication');
+    Route::post('storeOpWorkplaceManagement', [OperationalLayerController::class, 'storeOpWorkplaceManagement'])->name('storeOpWorkplaceManagement');
+    Route::post('storeOpStakeholderManagement', [OperationalLayerController::class, 'storeOpStakeholderManagement'])->name('storeOpStakeholderManagement');
+    Route::post('storeOpTeamwork', [OperationalLayerController::class, 'storeOpTeamwork'])->name('storeOpTeamwork');
+    Route::post('storeOpPersonalDevelopment', [OperationalLayerController::class, 'storeOpPersonalDevelopment'])->name('storeOpPersonalDevelopment');
+    Route::get('/operational/management/results', [OperationalLayerController::class, 'opManagementResult'])->name('operationalManagementResults');
+    Route::get('/operational/management/report', [OperationalLayerController::class, 'opManagementReport'])->name('operationalManagementReport');
+    Route::get('/operational/overal', [OperationalLayerController::class, 'overalresult'])->name('operationalOveral');
+
+    Route::get('/operational/overall/report', [OperationalLayerController::class, 'overalreport'])->name('operationalOverallReport');
 });
 
 Route::controller(SearchController::class)->group(function(){

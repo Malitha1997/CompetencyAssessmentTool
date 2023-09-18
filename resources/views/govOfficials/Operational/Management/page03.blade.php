@@ -1,6 +1,8 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
+<form method="POST" action="{{ route('storeOpStakeholderManagement') }}">
+    {{csrf_field()}}
 <section data-aos="fade-down" style="height: 750px;">
     <div class="container" style="margin-top: 50px;text-align:center;margin-bottom:70px">
         <span style="font-size: 25px;color: #5F2B84;font-family: poppins;font-weight: bold;text-align: center;"><br><br><br><strong>Self Assessment -&nbsp;</strong>Management (Operational Staff)&nbsp;</span>
@@ -126,6 +128,7 @@
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="mgt10" id="mgt10_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt10_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Can access services from anywhere (ඕනෑම තැනක සිට සේවාවන් වෙත ප්‍රවේශ විය හැකි වීම)</label></div>
                                             </div>
+                                            <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -138,8 +141,9 @@
     </div>
 </section>
 <div class="row" style="margin-right: 0px;margin-top: 1130px;margin-left: 850px;margin-bottom:50px">
-    <div class="col"><button class="btn btn-primary" type="button" style="font-family: Poppins, sans-serif;color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</button>
-        <a class="btn btn-primary" type="button" href="{{ route('operationalManagementPage04') }}" style="font-family: Poppins, sans-serif;width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</a></div>
+    <div class="col"><a class="btn btn-primary" href="{{ route('operationallayer') }}" type="button" style="font-family: Poppins, sans-serif;color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
+        <button class="btn btn-primary" type="submit" style="font-family: Poppins, sans-serif;width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</button></div>
 </div>
+</form>
 
 @endsection

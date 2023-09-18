@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('op_managements', function (Blueprint $table) {
+        Schema::create('op_management', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('op_communication');
+            $table->string('op_workplace_management');
+            $table->string('op_stakeholder_management');
+            $table->string('op_teamwork');
+            $table->string('op_personal_development');
             $table->string('marks_op_management');
             $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
@@ -24,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('op_managements');
+        Schema::dropIfExists('op_management');
     }
 };

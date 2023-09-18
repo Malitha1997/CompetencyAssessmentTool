@@ -4,10 +4,13 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\OpIct;
+use App\Models\OpTeamwork;
 use App\Models\Operational;
 use App\Models\OpInitiative;
+use App\Models\OpManagement;
 use App\Models\OpOrientation;
 use App\Models\OpCollaboration;
+use App\Models\OpCommunication;
 use App\Models\OpIctInWorkPlace;
 use App\Models\OpChangeManagement;
 use App\Models\Govorganizationname;
@@ -15,6 +18,9 @@ use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use App\Models\Govorganizationdetail;
+use App\Models\OpPersonalDevelopment;
+use App\Models\OpWorkplaceManagement;
+use App\Models\OpStakeholderManagement;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\OpInformationManagements;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -78,5 +84,29 @@ class Govofficial extends Model
 
     public function opIct(){
         return $this->hasOne(OpIct::class);
+    }
+
+    public function opCommunication(){
+        return $this->hasOne(OpCommunication::class);
+    }
+
+    public function opPersonalDevelopment(){
+        return $this->hasOne(OpPersonalDevelopment::class);
+    }
+
+    public function opStakeholderManagement(){
+        return $this->hasOne(OpStakeholderManagement::class);
+    }
+
+    public function opTeamwork(){
+        return $this->hasOne(OpTeamwork::class);
+    }
+
+    public function opWorkplaceManagement(){
+        return $this->hasOne(OpWorkplaceManagement::class);
+    }
+
+    public function opManagement(){
+        return $this->hasOne(OpManagement::class);
     }
 }

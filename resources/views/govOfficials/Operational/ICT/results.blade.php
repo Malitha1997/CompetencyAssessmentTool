@@ -19,7 +19,7 @@
                             <a class="btn btn-primary" type="button" href="{{ route('operationalIctReport') }}" style="width: 203px;height: 55px;font-size: 20px;font-family: Poppins;background: url(&quot;{{ asset('img/Screenshot (561) 6.png') }}&quot;), var(--bs-body-bg);border-style: none;">Download</a></div>
                     </div>
                     <div class="row" style="margin-top: 30px;">
-                        <div class="col" style="margin-top: 40px;"><a href="{{ route('userHome') }}" style="font-family: poppins;font-size: 20px;color: #5F2B84;">Back To User Profile</a></div>
+                        <div class="col" style="margin-top: 40px;"><a href="{{ route('operationallayer') }}" style="font-family: poppins;font-size: 20px;color: #5F2B84;">Back</a></div>
                     </div>
                 </div>
             </div>
@@ -29,34 +29,34 @@
         <div class="container"style="width: 920px;height: 535px;text-align: center;margin-top: 50px;border-radius: 10px;box-shadow: 0px 0px 7px 4px #5F2B84;border-style: none;border-color: var(--bs-emphasis-color);">
             <div id="chart_div" style="width:850px;height:400px;font-family: Poppins;margin-left:50px;"></div>
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script>
-        google.charts.load('current', {packages: ['corechart', 'bar']});
-        google.charts.setOnLoadCallback(drawBasic);
+            <script>
+                google.charts.load('current', {packages: ['corechart', 'bar']});
+                google.charts.setOnLoadCallback(drawBasic);
 
-    function drawBasic() {
-        {{--  var vAxis = ["Citizen Experience Strategy", "Citizen Engagement", "Citizen Experience", "Citizen Trust & Perception", "Citizen Insights & Behavior"];  --}}
-      var data = google.visualization.arrayToDataTable({{ Js::from($result) }});
+            function drawBasic() {
+                {{--  var vAxis = ["Citizen Experience Strategy", "Citizen Engagement", "Citizen Experience", "Citizen Trust & Perception", "Citizen Insights & Behavior"];  --}}
+            var data = google.visualization.arrayToDataTable({{ Js::from($result) }});
 
-      var options = {
+            var options = {
 
-        chartArea: {width: '50%'},
-        hAxis: {
-          title: 'Proficiency',
-          minValue: 0,
-          maxValue: 100
-        },
-        vAxis: {
-          title: 'Competency Area',
+                chartArea: {width: '50%'},
+                hAxis: {
+                title: 'Proficiency',
+                minValue: 0,
+                maxValue: 100
+                },
+                vAxis: {
+                title: 'Competency Area',
 
-        },
-        colors: ['#CC1D56']
-      };
+                },
+                colors: ['#CC1D56']
+            };
 
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
 
-      chart.draw(data, options);
-    }
-    </script>
+            chart.draw(data, options);
+            }
+            </script>
     </div>
     </div>
     <div class="table-responsive" style="margin-top: 100px;margin-left: 50px;">
