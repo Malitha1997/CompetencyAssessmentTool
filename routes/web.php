@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TopLayerController;
-use App\Http\Controllers\OperationalLayerController;
 use App\Http\Controllers\GovofficialController;
+use App\Http\Controllers\MiddleLayerController;
+use App\Http\Controllers\OperationalLayerController;
 
 
 
@@ -99,6 +100,14 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/operational/overal', [OperationalLayerController::class, 'overalresult'])->name('operationalOveral');
 
     Route::get('/operational/overall/report', [OperationalLayerController::class, 'overalreport'])->name('operationalOverallReport');
+
+    Route::get('/middlelayer', [MiddleLayerController::class, 'middle'])->name('middlelayer');
+    Route::get('/middle/ict/page01', [MiddleLayerController::class, 'midIctPage01'])->name('middleIctPage01');
+    Route::get('/middle/ict/page02', [MiddleLayerController::class, 'midIctPage02'])->name('middleIctPage02');
+    Route::get('/middle/ict/page03', [MiddleLayerController::class, 'midIctPage03'])->name('middleIctPage03');
+
+    Route::post('storeMidIctInWorkplace', [MiddleLayerController::class, 'storeMidIctInWorkplace'])->name('storeMidIctInWorkplace');
+    Route::post('storeMidInformationManagement', [MiddleLayerController::class, 'storeMidInformationManagement'])->name('storeMidInformationManagement');
 });
 
 Route::controller(SearchController::class)->group(function(){

@@ -12,16 +12,19 @@ use App\Models\OpOrientation;
 use App\Models\OpCollaboration;
 use App\Models\OpCommunication;
 use App\Models\OpIctInWorkPlace;
+use App\Models\MidIctInWorkplace;
 use App\Models\OpChangeManagement;
 use App\Models\Govorganizationname;
 use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use App\Models\Govorganizationdetail;
+use App\Models\MidDigitalCitizenship;
 use App\Models\OpPersonalDevelopment;
 use App\Models\OpWorkplaceManagement;
 use App\Models\OpStakeholderManagement;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\MidInformationManagement;
 use App\Models\OpInformationManagements;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -108,5 +111,17 @@ class Govofficial extends Model
 
     public function opManagement(){
         return $this->hasOne(OpManagement::class);
+    }
+
+    public function midIctInWorkplace(){
+        return $this->hasOne(MidIctInWorkplace::class);
+    }
+
+    public function midInformationManagement(){
+        return $this->hasOne(MidInformationManagement::class);
+    }
+
+    public function midDigitalCitizenship(){
+        return $this->hasOne(MidDigitalCitizenship::class);
     }
 }
