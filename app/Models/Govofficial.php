@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\OpIct;
+use App\Models\MidIct;
 use App\Models\OpTeamwork;
 use App\Models\Operational;
 use App\Models\OpInitiative;
@@ -123,5 +124,9 @@ class Govofficial extends Model
 
     public function midDigitalCitizenship(){
         return $this->hasOne(MidDigitalCitizenship::class);
+    }
+
+    public function midIct(){
+        return $this->hasOne(MidIct::class);
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
-<form method="POST" action="">
+<form method="POST" action="{{ route('storeMidDigitalCitizenship') }}">
     {{csrf_field()}}
 <section data-aos="fade-down" style="height: 1900px;">
     <div class="container" style="margin-top: 50px;text-align:center;margin-bottom:50px">
@@ -67,7 +67,7 @@
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict10_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"></td>
                         </tr>
                         <tr>
-                            <td style="color: rgb(0,0,0);margin-bottom: 0px;">c)A digital identity is comprised of characteristics, or data attributes, such as the following: Username and password. Online search activities, like electronic transactions.</td>
+                            <td style="color: rgb(0,0,0);margin-bottom: 0px;">c) A digital identity is comprised of characteristics, or data attributes, such as the following: Username and password. Online search activities, like electronic transactions.</td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict10_3" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="2"></td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict10_3" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"></td>
                         </tr>
@@ -408,6 +408,9 @@
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="ict21" id="ict21_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict21_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">4) Uninstall Antivirus</label></div>
                                             </div>
+                                            <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
+                                            <input class="form-control" type="hidden" id="totMidIctInWorkplace" name="totMidIctInWorkplace" value="{{ $totMidIctInWorkplace }}" readonly>
+                                            <input class="form-control" type="hidden" id="totMidInformationManagement" name="totMidInformationManagement" value="{{ $totMidInformationManagement }}" readonly>
                                         </div>
                                     </div>
                                 </div>
