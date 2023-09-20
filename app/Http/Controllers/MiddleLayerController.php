@@ -12,7 +12,11 @@ use App\Models\MidInformationManagement;
 class MiddleLayerController extends Controller
 {
     public function middle(){
-        return view ('govOfficials.Middle&Junior.main');
+        $midIctInWorkplace=Auth::user()->govofficial->midIctInWorkplace;
+        $midInformationManagement=Auth::user()->govofficial->midInformationManagement;
+        $midDigtalCitizenship=Auth::user()->govofficial->midDigitalCitizenship;
+
+        return view ('govOfficials.Middle&Junior.main',compact('midInformationManagement','midIctInWorkplace','midDigtalCitizenship',));
     }
 
     public function midIctPage01(){
@@ -26,6 +30,7 @@ class MiddleLayerController extends Controller
     public function midIctPage03(){
         $midIctInWorkplace=Auth::user()->govofficial->midIctInWorkplace;
         $midInformationManagement=Auth::user()->govofficial->midInformationManagement;
+        $midDigtalCitizenship=Auth::user()->govofficial->midDigitalCitizenship;
 
         $totMidIctInWorkplace=$midIctInWorkplace->ict1+$midIctInWorkplace->ict2+$midIctInWorkplace->ict3+$midIctInWorkplace->ict4+$midIctInWorkplace->ict5_1+$midIctInWorkplace->ict5_2+$midIctInWorkplace->ict6_1+$midIctInWorkplace->ict6_2;
         $totMidInformationManagement=$midInformationManagement->ict7+$midInformationManagement->ict8;
@@ -147,5 +152,37 @@ class MiddleLayerController extends Controller
 
         return redirect()->route('middlelayer');
 
+    }
+
+    public function midIctResult(){
+        $midIct = Auth::user()->govofficial->midIct;
+
+        $midIctInWorkplace=$midIct->ict_in_workplace;
+        // dd($midIctInWorkplace);
+        $a=$midIctInWorkplace/32;
+        $avgMidIctInWorkplace=round($a*100);
+
+        $midInformationManagement=$midIct->information_management;
+        $b=$midInformationManagement/10;
+        $avgMidInformationManagement=round($b*100);
+
+        $midDigitalCitizenship=$midIct->digital_citizenship;
+        $c=$midDigitalCitizenship/58;
+        $avgMidDigitalCitizenship=round($c*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['ICT in Workplace', (int) $avgMidIctInWorkplace],
+            ['Information Management', (int) $avgMidInformationManagement],
+            ['Digital Citizenship', (int) $avgMidDigitalCitizenship],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midIctInWorkplace2=$govOfficial->opIctInWorkplace;
+        $midInformationManagement2=$govOfficial->opInformationManagement;
+        $midDigitalCitizenship2=$govOfficial->opDigitalCitizenship;
+
+        return view('govOfficials.Middle&Junior.ICT.results',compact('result'));
     }
 }

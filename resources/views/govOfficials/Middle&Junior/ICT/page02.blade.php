@@ -13,10 +13,10 @@
         </div>
         <div data-aos="fade-down" data-aos-duration="1000" style="width: 1282px;height: 900px;margin-top: 80px;border-radius: 10px;border: 2px solid #5f2b84;padding-left: 0px;margin-left: 6px;">
             <div class="row" style="margin-top: 20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">7) What is true about Information Security Data Protection and Privacy?<br>
+                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">7) What is true about Information Security, Data Protection, and Privacy?<br>
                     &nbsp; &nbsp; &nbsp; &nbsp;(A) - Information security is more important than Data protection<br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;(B) - System admin is the responsible party for the data protection of the system<br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;(C) - Maintaining data privacy is a corporate level responsibility                                                                       </span></div>
+                    &nbsp; &nbsp; &nbsp; &nbsp;(B) - The system admin is the responsible party for the data protection of the system <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;(C) - Maintaining data privacy is a corporate-level responsibility                                                                      </span></div>
             </div>
             <div class="row d-flex flex-column" style="text-align: center;">
                 <div class="col">
@@ -30,10 +30,10 @@
                                                 <div class="col" style="margin-top: 10px;"><input type="radio" name="ict7" id="ict7_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict7_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) A</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict7" id="ict7_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="ict7_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) B</label></div>
+                                                <div class="col"><input type="radio" name="ict7" id="ict7_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict7_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) B</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict7" id="ict7_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict7_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Both A & B</label></div>
+                                                <div class="col"><input type="radio" name="ict7" id="ict7_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="5"><label class="form-label" for="ict7_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Both A & B</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="ict7" id="ict7_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict7_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) None of the Above</label></div>
@@ -65,10 +65,10 @@
                                                 <div class="col" style="margin-top: 10px;"><input type="radio" name="ict8" id="ict8_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict8_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) A Only</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict8" id="ict8_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="ict8_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) A & B</label></div>
+                                                <div class="col"><input type="radio" name="ict8" id="ict8_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict8_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) A & B</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict8" id="ict8_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict8_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) B, C and D</label></div>
+                                                <div class="col"><input type="radio" name="ict8" id="ict8_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="5"><label class="form-label" for="ict8_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) B, C and D</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="ict8" id="ict8_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict8_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>

@@ -13,7 +13,7 @@
         </div>
         <div data-aos="fade-down" data-aos-duration="1000" style="width: 1282px;height: 2000px;margin-top: 80px;border-radius: 10px;border: 2px solid #5f2b84;padding-left: 0px;margin-left: 6px;">
             <div class="row" style="margin-top: 20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">1) Identify the benefits of ICT for transformation in public services Choose the incorrect answer</span></div>
+                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">1) What is NOT a benefit of ICT for transformation in public services?</span></div>
             </div>
             <div class="row d-flex flex-column" style="text-align: center;">
                 <div class="col">
@@ -27,13 +27,13 @@
                                                 <div class="col" style="margin-top: 10px;"><input type="radio" name="ict1" id="ict1_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict1_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) Digital Transformation will improve customer/ citizen satisfaction</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict1" id="ict1_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="ict1_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Understanding of digital tools & techniques, practices will help to increase efficiency</label></div>
+                                                <div class="col"><input type="radio" name="ict1" id="ict1_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="5"><label class="form-label" for="ict1_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Understanding of digital tools & techniques, practices will help to increase efficiency</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="ict1" id="ict1_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict1_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Usage of digital means will help to increase productivity</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict1" id="ict1_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict1_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) With right attitude you will be able to transform your department to a digital inclusive organization</label></div>
+                                                <div class="col"><input type="radio" name="ict1" id="ict1_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict1_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) With the right attitude you will be able to transform your department into a digital inclusive organization</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -59,16 +59,16 @@
                                     <div class="row d-flex flex-column" style="text-align: center;">
                                         <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col" style="margin-top: 10px;"><input type="radio" name="ict2" id="ict2_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict2_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) A Only</label></div>
+                                                <div class="col" style="margin-top: 10px;"><input type="radio" name="ict2" id="ict2_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict2_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) A, B, & C</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict2" id="ict2_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="ict2_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) A & B</label></div>
+                                                <div class="col"><input type="radio" name="ict2" id="ict2_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict2_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) B, C & D</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict2" id="ict2_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict2_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) B, C and D</label></div>
+                                                <div class="col"><input type="radio" name="ict2" id="ict2_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict2_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) A, C & D</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict2" id="ict2_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict2_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+                                                <div class="col"><input type="radio" name="ict2" id="ict2_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="5"><label class="form-label" for="ict2_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">3) Select the most important for your organization?</span></div>
+                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">3) Select the most important factor for your organization?</span></div>
             </div>
             <div class="row d-flex flex-column" style="text-align: center;">
                 <div class="col">
@@ -90,16 +90,16 @@
                                     <div class="row d-flex flex-column" style="text-align: center;">
                                         <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col" style="margin-top: 10px;"><input type="radio" name="ict3" id="ict3_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict3_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">1) Most important is the digital roadmap</label></div>
+                                                <div class="col" style="margin-top: 10px;"><input type="radio" name="ict3" id="ict3_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="5"><label class="form-label" for="ict3_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) Most important is the digital roadmap</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict3" id="ict3_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="ict3_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">2) Identification of digitalization needs my your department</label></div>
+                                                <div class="col"><input type="radio" name="ict3" id="ict3_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict3_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Identification of digitalization needs by your department</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict3" id="ict3_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict3_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">3) Email collaboration and communication tools</label></div>
+                                                <div class="col"><input type="radio" name="ict3" id="ict3_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict3_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Email collaboration and communication tools</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict3" id="ict3_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict3_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">4) All of the above</label></div>
+                                                <div class="col"><input type="radio" name="ict3" id="ict3_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict3_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">4) Identify the benefits of digital transformation Choose the Correct answer</span></div>
+                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">4) Identify the benefits of digital transformation. Choose the Correct answer?</span></div>
             </div>
             <div class="row d-flex flex-column" style="text-align: center;">
                 <div class="col">
@@ -121,16 +121,16 @@
                                     <div class="row d-flex flex-column" style="text-align: center;">
                                         <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col" style="margin-top: 10px;"><input type="radio" name="ict4" id="ict4_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict4_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">1) Understanding of digital tools & techniques, practices will help to increase efficiency</label></div>
+                                                <div class="col" style="margin-top: 10px;"><input type="radio" name="ict4" id="ict4_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict4_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) Understanding of digital tools & techniques, and practices will help to increase efficiency</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict4" id="ict4_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="ict4_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">2) Usage of digital means will help to increase productivity</label></div>
+                                                <div class="col"><input type="radio" name="ict4" id="ict4_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict4_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Usage of digital means will help to increase productivity</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict4" id="ict4_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict4_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">3) With right attitude you will be able to transform your department to a digital inclusive organization</label></div>
+                                                <div class="col"><input type="radio" name="ict4" id="ict4_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict4_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) With the right attitude you will be able to transform your department into a digital inclusive organization</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict4" id="ict4_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict4_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">4) All of the above</label></div>
+                                                <div class="col"><input type="radio" name="ict4" id="ict4_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="5"><label class="form-label" for="ict4_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">5) Indicate whether the following statements are true or false</span></div>
+                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">5) What is True/ False about adopting innovation through digital modes?</span></div>
             </div>
             <div class="table-responsive" style="font-family: Poppins, sans-serif;font-size: 20px;margin-left: 80px;">
                 <table class="table">
@@ -155,12 +155,12 @@
                     <tbody>
                         <tr style="margin-top: 10px;">
                             <td style="color: rgb(0,0,0);width: 900px;">a) Most of the manual processes in your organization can be automated</td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict5_1" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="2"> </td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict5_1" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="3"> </td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict5_1" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"></td>
                         </tr>
                         <tr>
                             <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) Latest technologies should be adopted in your organization</td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict5_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="2"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict5_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="3"></td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict5_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"></td>
                         </tr>
                         <tr></tr>
@@ -170,7 +170,7 @@
                 </table>
             </div>
             <div class="row" style="margin-top: 20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">6) Mark True/ False</span></div>
+                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 0px;">6) By using digital tools and technologies in operational work you can become an avid practitioner of digital tools and technologies in the workplace. Mark True/ False?</span></div>
             </div>
             <div class="table-responsive" style="font-family: Poppins, sans-serif;font-size: 20px;margin-left: 80px;">
                 <table class="table">
@@ -183,13 +183,13 @@
                     </thead>
                     <tbody>
                         <tr style="margin-top: 10px;">
-                            <td style="color: rgb(0,0,0);width: 900px;">a) Practicing email etiquette is a responsibility of the organization</td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict6_1" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="2"> </td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict6_1" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"></td>
+                            <td style="color: rgb(0,0,0);width: 900px;">a) Practicing email etiquette is a responsibility of the organization </td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict6_1" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"> </td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict6_1" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="3"></td>
                         </tr>
                         <tr>
-                            <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) Promoting e-signature in your organization is your responsibility</td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict6_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="2"></td>
+                            <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) Promoting e-signature in your organization is your responsibility </td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict6_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="3"></td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict6_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"></td>
                         </tr>
                         <tr></tr>

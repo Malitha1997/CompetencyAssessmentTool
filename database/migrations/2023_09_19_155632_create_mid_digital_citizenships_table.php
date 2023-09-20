@@ -18,20 +18,12 @@ return new class extends Migration
             $table->string('ict10_1');
             $table->string('ict10_2');
             $table->string('ict10_3');
-            $table->string('ict11_1');
-            $table->string('ict11_2');
-            $table->string('ict11_3');
+            $table->string('ict11');
             $table->string('ict12');
             $table->string('ict13');
             $table->string('ict14');
             $table->string('ict15');
-            $table->string('ict16_1');
-            $table->string('ict16_2');
-            $table->string('ict17');
-            $table->string('ict18');
-            $table->string('ict19');
-            $table->string('ict20');
-            $table->string('ict21');
+            $table->string('ict16');
             $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }

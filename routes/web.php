@@ -109,6 +109,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('storeMidIctInWorkplace', [MiddleLayerController::class, 'storeMidIctInWorkplace'])->name('storeMidIctInWorkplace');
     Route::post('storeMidInformationManagement', [MiddleLayerController::class, 'storeMidInformationManagement'])->name('storeMidInformationManagement');
     Route::post('storeMidDigitalCitizenship', [MiddleLayerController::class, 'storeMidDigitalCitizenship'])->name('storeMidDigitalCitizenship');
+    Route::get('/middle/ict/results', [MiddleLayerController::class, 'midIctResult'])->name('middleIctResult');
 });
 
 Route::controller(SearchController::class)->group(function(){
