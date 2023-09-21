@@ -210,4 +210,28 @@ class MiddleLayerController extends Controller
 
         return view('govOfficials.Middle&Junior.ICT.report',compact('govOfficial','midDigitalCitizenship2','midInformationManagement2','midIctInWorkplace2','avgMidDigitalCitizenship','avgMidInformationManagement','avgMidIctInWorkplace','result'));
     }
+
+    public function midDigitalGovernmentPage01(){
+        return view('govOfficials.Middle&Junior.DigitalGovernment.page01');
+    }
+
+    public function midDigitalGovernmentPage02(){
+        return view('govOfficials.Middle&Junior.DigitalGovernment.page02');
+    }
+
+    public function midDigitalGovernmentPage03(){
+        return view('govOfficials.Middle&Junior.DigitalGovernment.page03');
+    }
+
+    public function midDigitalGovernmentPage04(){
+        return view('govOfficials.Middle&Junior.DigitalGovernment.page04');
+    }
+
+    public function midDigitalGovernmentPage05(){
+        return view('govOfficials.Middle&Junior.DigitalGovernment.page05');
+    }
+
+    public function midDigitalGovernmentPage06(){
+        return view('govOfficials.Middle&Junior.DigitalGovernment.page06');
+    }
 }

@@ -111,6 +111,13 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('storeMidDigitalCitizenship', [MiddleLayerController::class, 'storeMidDigitalCitizenship'])->name('storeMidDigitalCitizenship');
     Route::get('/middle/ict/results', [MiddleLayerController::class, 'midIctResult'])->name('middleIctResult');
     Route::get('/middle/ict/report', [MiddleLayerController::class, 'midIctReport'])->name('middleIctReport');
+
+    Route::get('/middle/digitalgovernment/page01', [MiddleLayerController::class, 'midDigitalGovernmentPage01'])->name('midDigitalGovernmentPage01');
+    Route::get('/middle/digitalgovernment/page02', [MiddleLayerController::class, 'midDigitalGovernmentPage02'])->name('midDigitalGovernmentPage02');
+    Route::get('/middle/digitalgovernment/page03', [MiddleLayerController::class, 'midDigitalGovernmentPage03'])->name('midDigitalGovernmentPage03');
+    Route::get('/middle/digitalgovernment/page04', [MiddleLayerController::class, 'midDigitalGovernmentPage04'])->name('midDigitalGovernmentPage04');
+    Route::get('/middle/digitalgovernment/page05', [MiddleLayerController::class, 'midDigitalGovernmentPage05'])->name('midDigitalGovernmentPage05');
+    Route::get('/middle/digitalgovernment/page06', [MiddleLayerController::class, 'midDigitalGovernmentPage06'])->name('midDigitalGovernmentPage06');
 });
 
 Route::controller(SearchController::class)->group(function(){
