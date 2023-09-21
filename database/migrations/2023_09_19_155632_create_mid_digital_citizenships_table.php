@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('mid_digital_citizenships', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('ict9');
+            $table->string('ict9_1');
+            $table->string('ict9_2');
+            $table->string('ict9_3');
             $table->string('ict10_1');
             $table->string('ict10_2');
             $table->string('ict10_3');
@@ -22,7 +24,9 @@ return new class extends Migration
             $table->string('ict12');
             $table->string('ict13');
             $table->string('ict14');
-            $table->string('ict15');
+            $table->string('ict15_1');
+            $table->string('ict15_2');
+            $table->string('ict15_3');
             $table->string('ict16');
             $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });

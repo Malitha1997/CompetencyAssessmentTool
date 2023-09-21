@@ -16,7 +16,7 @@
                     </div>
                     <div class="row">
                         <div class="col" style="margin-top: 50px;">
-                            <a class="btn btn-primary" type="button" href="{{ route('operationalIctReport') }}" style="width: 203px;height: 55px;font-size: 20px;font-family: Poppins;background: url(&quot;{{ asset('img/Screenshot (561) 6.png') }}&quot;), var(--bs-body-bg);border-style: none;">Download</a></div>
+                            <a class="btn btn-primary" type="button" href="{{ route('middleIctReport') }}" style="width: 203px;height: 55px;font-size: 20px;font-family: Poppins;background: url(&quot;{{ asset('img/Screenshot (561) 6.png') }}&quot;), var(--bs-body-bg);border-style: none;">Download</a></div>
                     </div>
                     <div class="row" style="margin-top: 30px;">
                         <div class="col" style="margin-top: 40px;"><a href="{{ route('middlelayer') }}" style="font-family: poppins;font-size: 20px;color: #5F2B84;">Back</a></div>
@@ -59,7 +59,7 @@
             </script>
     </div>
     </div>
-    {{--  <div class="table-responsive" style="margin-top: 100px;margin-left: 50px;">
+    <div class="table-responsive" style="margin-top: 100px;margin-left: 50px;">
         <table class="table">
             <thead style="background: var(--bs-table-border-color);">
                 <tr style="background: var(--bs-table-border-color);height: 60px;">
@@ -71,88 +71,72 @@
             <tbody>
                 <tr>
                     <td style="font-family: poppins;"><br>ICT in Workplace<br><br></td>
-                    <td style="width: 300px;font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>{{ $avgOpIctInWorkplace }}%</td>
+                    <td style="width: 300px;font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>{{ $avgMidIctInWorkplace }}%</td>
                     <td style="font-family: poppins;text-align: left;">
-                        @if($opIctInWorkplace2->ict1_1==0||$opIctInWorkplace2->ict1_2==0||$opIctInWorkplace2->ict1_3==0)
-                        Tools techniques and trends that enables digital transformation on public services<br><br>
+                        @if($midIctInWorkplace2->ict1==0)
+                        <br>Tools techniques and trends that enables digital transformation on public services<br><br>
                         @endif
-                        @if($opIctInWorkplace2->ict2==0)
-                        Emerging ICT technologies<br><br>
+                        @if($midIctInWorkplace2->ict2==0)
+                        <br>Emerging ICT technologies<br><br>
                         @endif
-                        @if($opIctInWorkplace2->ict3_1==0||$opIctInWorkplace2->ict3_2==0)
-                        Perform tasks according to the ICT plans of the organization<br><br>
+                        @if($midIctInWorkplace2->ict3==0)
+                        <br>Line of Business and tools and techniques in digitalization<br><br>
                         @endif
-                        @if($opIctInWorkplace2->ict3_3==0)
-                        ICT Plans<br><br>
+                        @if($midIctInWorkplace2->ict4==0)
+                        <br>Digital Government Transformation<br><br>
                         @endif
-                        @if($opIctInWorkplace2->ict4==0)
-                        Digital Government Transformation<br><br>
+                        @if($midIctInWorkplace2->ict5_1==0||$midIctInWorkplace2->ict5_2==0)
+                        <br>Innovation adoption<br><br>
                         @endif
-                        @if($opIctInWorkplace2->ict5==0)
-                        Internet Application programs<br><br>
-                        @endif
-                        @if($opIctInWorkplace2->ict6==0)
-                        Digital tools and technologies usage<br><br>
-                        @endif
-                        @if($opIctInWorkplace2->ict7==0)
-                        Incident Management<br><br>
-                        @endif
-                        @if($opIctInWorkplace2->ict8==0)
-                        Digital transformation and service innovation<br><br>
-                        @endif
-                        @if($opIctInWorkplace2->ict9==0)
-                        IT configuration management<br><br><br>
+                        @if($midIctInWorkplace2->ict6_1==0||$midIctInWorkplace2->ict6_2==0)
+                        <br>Digital tools and technologies usage<br><br>
                         @endif
                     </td>
                 </tr>
                 <tr style="font-family: poppins;">
                     <td style="font-family: poppins;"><br>Information Management<br><br></td>
-                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgOpInformationManagement }}%</td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgMidInformationManagement }}%</td>
                     <td style="font-family: poppins;text-align: left;box-shadow: 0px 0px;">
-                        @if($opInformationManagement2->ict10_1==0||$opInformationManagement2->ict10_2==0||$opInformationManagement2->ict10_3==0||$opInformationManagement2->ict11==0)
-                        Information security Data protection and privacy<br><br>
+                        @if($midInformationManagement2->ict7==0)
+                        <br>Information security Data protection and privacy<br><br>
                         @endif
-                        @if($opInformationManagement2->ict12==0)
-                        Tools and techniques available to retrieve data<br><br>
+                        @if($midInformationManagement2->ict8==0)
+                        <br>Tools and techniques available to retrieve data<br><br>
                         @endif
-                        @if($opInformationManagement2->ict13_1==0||$opInformationManagement2->ict13_2==0||$opInformationManagement2->ict13_3==0||$opInformationManagement2->ict14==0)
-                        Storage and maintenance<br><br>
-                        @endif
-
                     </td>
                 </tr>
                 <tr>
                     <td style="font-family: poppins;"><br>Digital Citizenship<br><br></td>
-                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgOpDigitalCitizenship }}%</td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgMidDigitalCitizenship }}%</td>
                     <td style="font-family: poppins;text-align: left;">
-                        @if($opDigitalCitizenship2->ict15==0)
-                        Digital media and technologies<br><br>
+                        @if($midDigitalCitizenship2->ict9_1==0||$midDigitalCitizenship2->ict9_2==0||$midDigitalCitizenship2->ict9_3==0)
+                        <br>Digital media and technologies<br><br>
                         @endif
-                        @if($opDigitalCitizenship2->ict16==0)
-                        Impact of technology use<br><br>
+                        @if($midDigitalCitizenship2->ict10_1==0||$midDigitalCitizenship2->ict10_2==0||$midDigitalCitizenship2->ict10_3==0)
+                        <br>Impact of technology use<br><br>
                         @endif
-                        @if ($opDigitalCitizenship2->ict17==0)
-                        Cyber risks<br><br>
+                        @if($midDigitalCitizenship2->ict11==0)
+                        <br>Cyber risks<br><br>
                         @endif
-                        @if ($opDigitalCitizenship2->ict18==0)
-                        Cyber-threats<br><br>
+                        @if($midDigitalCitizenship2->ict12==0)
+                        <br>Cyber-threats<br><br>
                         @endif
-                        @if($opDigitalCitizenship2->ict19==0)
-                        Digital Empathy<br><br>
+                        @if($midDigitalCitizenship2->ict13==0)
+                        <br>Digital Empathy<br><br>
                         @endif
-                        @if ($opDigitalCitizenship2->ict20_1==0||$opDigitalCitizenship2->ict20_2==0||$opDigitalCitizenship2->ict20_3==0)
-                        Digital footprint<br><br>
+                        @if($midDigitalCitizenship2->ict14==0)
+                        <br>Digital footprint<br><br>
                         @endif
-                        @if ($opDigitalCitizenship2->ict21==0)
-                        Digital media<br><br>
+                        @if($midDigitalCitizenship2->ict15_1==0||$midDigitalCitizenship2->ict15_2==0||$midDigitalCitizenship2->ict15_3==0)
+                        <br>Digital media<br><br>
                         @endif
-                        @if ($opDigitalCitizenship2->ict22==0)
-                        Privacy Management<br><br>
+                        @if($midDigitalCitizenship2->ict16==0)
+                        <br>Privacy Management<br><br>
                         @endif
                     </td>
                 </tr>
             </tbody>
-        </table>  --}}
+        </table>
     </div>
 </section>
 @endsection

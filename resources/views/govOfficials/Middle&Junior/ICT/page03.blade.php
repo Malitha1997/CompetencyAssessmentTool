@@ -3,7 +3,7 @@
 @section('content')
 <form method="POST" action="{{ route('storeMidDigitalCitizenship') }}">
     {{csrf_field()}}
-<section data-aos="fade-down" style="height: 1900px;">
+<section data-aos="fade-down" style="height: 250px;">
     <div class="container" style="margin-top: 50px;text-align:center;margin-bottom:50px">
         <span style="font-size: 25px;color: #5F2B84;font-family: poppins;font-weight: bold;text-align: center;"><br><br><br>Self Assessment - ICT (Middle & Junior Management)</span>
     </div>
@@ -11,7 +11,7 @@
         <div class="d-flex justify-content-center mb-auto mb-md-auto" data-aos="fade-right" data-aos-duration="1000" style="width: 1358px;height: 163px;margin-top: 20px;background: #1f2471;border-radius: 10px;margin-left: -30px;">
             <div class="text-center d-flex flex-column justify-content-center" style="width: 1358px;height: 194px;color: rgb(255, 255, 255);background: #ffffff;padding-top: 0px;text-align: center;border-radius: 10px;border: 1px solid #1f2471;padding-bottom: 0px;margin-top: 25px;"><span style="color: var(--bs-body-bg);font-size: 20px;font-family: Poppins, sans-serif;font-weight: bold;height: 90px;padding-bottom: 0px;margin-bottom: -42px;background: #E52F72;margin-top: -120px;border-radius: 5px;"><br>Competency Area: Digital Citizenship<br><br><br></span><span style="color: rgb(0,0,0);font-family: Poppins, sans-serif;font-size: 20px;text-align: center;font-weight: bold;padding-top: 0px;margin-bottom: -12px;margin-top: 50px;"><br>Competency Area Description: Use of digital technology and media in safe responsible and ethical ways.&nbsp;<br><br><br></span></div>
         </div>
-        <div data-aos="fade-down" data-aos-duration="1000" style="width: 1282px;height: 4500px;margin-top: 80px;border-radius: 10px;border: 2px solid #5f2b84;padding-left: 0px;margin-left: 6px;">
+        <div data-aos="fade-down" data-aos-duration="1000" style="width: 1282px;height: 2900px;margin-top: 80px;border-radius: 10px;border: 2px solid #5f2b84;padding-left: 0px;margin-left: 6px;">
             <div class="row" style="margin-top: 20px;">
                 <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 100px;"><br>9) What is True/ False about Digital Citizen Identity?</span></div>
             </div>
@@ -93,7 +93,7 @@
                                                 <div class="col" style="margin-top: 10px;"><input type="radio" name="ict11" id="ict11_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label"for="ict11_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) Cyberbullying includes sending, posting, or sharing negative, harmful, false, or mean content about someone else</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict11" id="ict11_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label"for="ict11_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Cyberbullying is acted through digital tools, it is often anonymous, and aims to destroy and psychologically humiliate the victim</label></div>
+                                                <div class="col"><input type="radio" name="ict11" id="ict11_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label"for="ict11_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Cyberbullying is acted through digital tools, it is often anonymous, and aims to destroy and psychologically <br>humiliate the victim</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="ict11" id="ict11_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label"for="ict11_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Cyberbullying refers to bullying or harassment of any kind inflicted through electronic or communication devices</label></div>
@@ -155,10 +155,10 @@
                                                 <div class="col" style="margin-top: 10px;"><input type="radio" name="ict13" id="ict13_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict13_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) It is how your digital touchpoints understand and react to the feelings of the person engaging with them</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict13" id="ict13_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict13_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b) One of the most effective ways to show digital empathy is to not only understand your audience, but to provide and share with them information that is relevant to their needs.</label></div>
+                                                <div class="col"><input type="radio" name="ict13" id="ict13_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict13_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b) One of the most effective ways to show digital empathy is to not only understand your audience, but to provide and &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;share with them information that is relevant to their needs.</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="ict13" id="ict13_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict13_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c) Digital Empathy improves the breadth and quality of data by transforming transactional relationships into deeper ongoing trusting relationships</label></div>
+                                                <div class="col"><input type="radio" name="ict13" id="ict13_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict13_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c) Digital Empathy improves the breadth and quality of data by transforming transactional relationships into deeper &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ongoing trusting relationships</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="ict13" id="ict13_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="5"><label class="form-label" for="ict13_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
@@ -227,8 +227,8 @@
                         </tr>
                         <tr>
                             <td style="color: rgb(0,0,0);margin-bottom: 0px;">c) Media and information literacy will enhance the capacity of people to enjoy their fundamental human rights</td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict15_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"></td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict15_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="4"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict15_3" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="ict15_3" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="4"></td>
                         </tr>
                         <tr></tr>
                     </tbody>
@@ -257,6 +257,9 @@
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="ict16" id="ict16_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="ict16_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Digital protection</label></div>
                                             </div>
+                                            <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
+                                            <input class="form-control" type="hidden" id="totMidIctInWorkplace" name="totMidIctInWorkplace" value="{{$totMidIctInWorkplace}}" readonly>
+                                            <input class="form-control" type="hidden" id="totMidInformationManagement" name="totMidInformationManagement" value="{{$totMidInformationManagement}}" readonly>
                                         </div>
                                     </div>
                                 </div>
