@@ -9,15 +9,22 @@ use App\Models\OpTeamwork;
 use App\Models\Operational;
 use App\Models\OpInitiative;
 use App\Models\OpManagement;
+use App\Models\MidInitiative;
 use App\Models\OpOrientation;
+use App\Models\MidOrientation;
 use App\Models\OpCollaboration;
 use App\Models\OpCommunication;
+use App\Models\MidCollaboration;
 use App\Models\OpIctInWorkPlace;
 use App\Models\MidIctInWorkplace;
 use App\Models\OpChangeManagement;
 use App\Models\Govorganizationname;
+use App\Models\MidChangeManagement;
 use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
+use App\Models\MidDigitalGovernment;
+use App\Models\MidProjectManagement;
+use App\Models\MidQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use App\Models\Govorganizationdetail;
 use App\Models\MidDigitalCitizenship;
@@ -128,5 +135,33 @@ class Govofficial extends Model
 
     public function midIct(){
         return $this->hasOne(MidIct::class);
+    }
+
+    public function midChangeManagement(){
+        return $this->hasOne(MidChangeManagement::class);
+    }
+
+    public function midCollaboration(){
+        return $this->hasOne(MidCollaboration::class);
+    }
+
+    public function midInitiative(){
+        return $this->hasOne(MidInitiative::class);
+    }
+
+    public function midOrientation(){
+        return $this->hasOne(MidOrientation::class);
+    }
+
+    public function midProjectManagement(){
+        return $this->hasOne(MidProjectManagement::class);
+    }
+
+    public function midQualityManagement(){
+        return $this->hasOne(MidQualityManagement::class);
+    }
+
+    public function midDigitalGovernment(){
+        return $this->hasOne(MidDigitalGovernment::class);
     }
 }

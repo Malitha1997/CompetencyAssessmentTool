@@ -118,6 +118,13 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/middle/digitalgovernment/page04', [MiddleLayerController::class, 'midDigitalGovernmentPage04'])->name('midDigitalGovernmentPage04');
     Route::get('/middle/digitalgovernment/page05', [MiddleLayerController::class, 'midDigitalGovernmentPage05'])->name('midDigitalGovernmentPage05');
     Route::get('/middle/digitalgovernment/page06', [MiddleLayerController::class, 'midDigitalGovernmentPage06'])->name('midDigitalGovernmentPage06');
+
+    Route::post('storeMidProjectManagement', [MiddleLayerController::class, 'storeMidProjectManagement'])->name('storeMidProjectManagement');
+    Route::post('storeMidChangeManagement', [MiddleLayerController::class, 'storeMidChangeManagement'])->name('storeMidChangeManagement');
+    Route::post('storeMidCollaboration', [MiddleLayerController::class, 'storeMidCollaboration'])->name('storeMidCollaboration');
+    Route::post('storeMidOrientation', [MiddleLayerController::class, 'storeMidOrientation'])->name('storeMidOrientation');
+    Route::post('storeMidQualityManagement', [MiddleLayerController::class, 'storeMidQualityManagement'])->name('storeMidQualityManagement');
+    Route::post('storeMidInitiative', [MiddleLayerController::class, 'storeMidInitiative'])->name('storeMidInitiative');
 });
 
 Route::controller(SearchController::class)->group(function(){

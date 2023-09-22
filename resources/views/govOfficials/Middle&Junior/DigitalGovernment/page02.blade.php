@@ -1,7 +1,8 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
-
+<form method="POST" action="{{ route('storeMidChangeManagement') }}">
+    {{csrf_field()}}
 <section data-aos="fade-down" style="height: 750px;">
     <div style="margin-top: 70px;text-align:center;margin-bottom: 30px;"><span style="font-size: 25px;color: #5F2B84;font-family: poppins;font-weight: bold;text-align: center;"><br><br>Self Assessment - Management (Middle &amp; Junior Management)<br><br></span></div>
     <div class="container align-content-center align-self-center" style="width: 1358px;height: 600px;margin-top: 10px;">
@@ -21,16 +22,16 @@
                                     <div class="row d-flex flex-column" style="text-align: center;">
                                         <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Satisfactory performance</label></div>
+                                                <div class="col"><input type="radio" name="dg4" id="dg4_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="dg4_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Satisfactory performance</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Encounting unpleasant surprises</label></div>
+                                                <div class="col"><input type="radio" name="dg4" id="dg4_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg4_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Encounting unpleasant surprises</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Competitors are doing better</label></div>
+                                                <div class="col"><input type="radio" name="dg4" id="dg4_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg4_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Competitors are doing better</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Missing organizational targets</label></div>
+                                                <div class="col"><input type="radio" name="dg4" id="dg4_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg4_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Missing organizational targets</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -57,16 +58,16 @@
                                             <div class="row d-flex flex-column" style="text-align: center;margin-top: -80px;">
                                                 <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                                     <div class="row" style="margin-bottom: 20px;">
-                                                        <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) A, B, C, D, E, F, G</label></div>
+                                                        <div class="col"><input type="radio" name="dg5" id="dg5_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg5_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) A, B, C, D, E, F, G</label></div>
                                                     </div>
                                                     <div class="row" style="margin-bottom: 20px;">
-                                                        <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) G, C, F, B, D, A, E</label></div>
+                                                        <div class="col"><input type="radio" name="dg5" id="dg5_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="5"><label class="form-label" for="dg5_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) G, C, F, B, D, A, E</label></div>
                                                     </div>
                                                     <div class="row" style="margin-bottom: 20px;">
-                                                        <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) A, C, E, G, B, D, F</label></div>
+                                                        <div class="col"><input type="radio" name="dg5" id="dg5_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg5_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) A, C, E, G, B, D, F</label></div>
                                                     </div>
                                                     <div class="row" style="margin-bottom: 20px;">
-                                                        <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) A, B, G, F, C, D, E</label></div>
+                                                        <div class="col"><input type="radio" name="dg5" id="dg5_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg5_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) A, B, G, F, C, D, E</label></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,16 +91,16 @@
                                     <div class="row d-flex flex-column" style="text-align: center;">
                                         <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Reduced costs</label></div>
+                                                <div class="col"><input type="radio" name="dg6" id="dg6_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg6_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Reduced costs</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Improved efficiency</label></div>
+                                                <div class="col"><input type="radio" name="dg6" id="dg6_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg6_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Improved efficiency</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Higher transparency</label></div>
+                                                <div class="col"><input type="radio" name="dg6" id="dg6_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg6_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Higher transparency</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+                                                <div class="col"><input type="radio" name="dg6" id="dg6_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="dg6_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -121,16 +122,16 @@
                                     <div class="row d-flex flex-column" style="text-align: center;">
                                         <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Financial pressures</label></div>
+                                                <div class="col"><input type="radio" name="dg7" id="dg7_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="3"><label class="form-label" for="dg7_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Financial pressures</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Positive customer feedback</label></div>
+                                                <div class="col"><input type="radio" name="dg7" id="dg7_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg7_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Positive customer feedback</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Political Reasons</label></div>
+                                                <div class="col"><input type="radio" name="dg7" id="dg7_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg7_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Political Reasons</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Employee satisfaction</label></div>
+                                                <div class="col"><input type="radio" name="dg7" id="dg7_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg7_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Employee satisfaction</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -152,16 +153,16 @@
                                     <div class="row d-flex flex-column" style="text-align: center;">
                                         <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Service Automation</label></div>
+                                                <div class="col"><input type="radio" name="dg8" id="dg8_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg8_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Service Automation</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Employee Availability</label></div>
+                                                <div class="col"><input type="radio" name="dg8" id="dg8_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="dg8_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Employee Availability</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Foster Strong Culture</label></div>
+                                                <div class="col"><input type="radio" name="dg8" id="dg8_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg8_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Foster Strong Culture</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+                                                <div class="col"><input type="radio" name="dg8" id="dg8_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg8_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -186,16 +187,17 @@
                     <tbody>
                         <tr style="margin-top: 10px;">
                             <td style="color: rgb(0,0,0);">a) Change will always give positive results </td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" style="width:15px;height:15px;"> </td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" style="width:15px;height:15px;"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_1" style="width:15px;height:15px;" value="1.5"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_1" style="width:15px;height:15px;" value="0"></td>
                         </tr>
                         <tr>
                             <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) I should not support the change until I see the impact to my department </td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" style="width:15px;height:15px;"></td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" style="width:15px;height:15px;"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_2" style="width:15px;height:15px;" value="0"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_2" style="width:15px;height:15px;" value="1.5"></td>
                         </tr>
                         <tr></tr>
                         <tr></tr>
+                        <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
                     </tbody>
                 </table>
             </div>
@@ -204,6 +206,7 @@
 </section>
 <div class="row" style="font-family: Poppins, sans-serif;margin-right: 0px;margin-top: 1790px;margin-left: 850px;margin-bottom:50px">
     <div class="col"><a class="btn btn-primary" href="{{ route('middlelayer') }}" type="button" style="color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
-        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage03') }}" style="width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</a></div>
+        <button class="btn btn-primary" type="submit" style="width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</button></div>
 </div>
+</form>
 @endsection

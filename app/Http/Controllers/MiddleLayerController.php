@@ -4,7 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\MidIct;
 use Illuminate\Http\Request;
+use App\Models\MidInitiative;
+use App\Models\MidOrientation;
+use App\Models\MidCollaboration;
 use App\Models\MidIctInWorkplace;
+use App\Models\MidChangeManagement;
+use App\Models\MidDigitalGovernment;
+use App\Models\MidProjectManagement;
+use App\Models\MidQualityManagement;
 use Illuminate\Support\Facades\Auth;
 use App\Models\MidDigitalCitizenship;
 use App\Models\MidInformationManagement;
@@ -232,6 +239,262 @@ class MiddleLayerController extends Controller
     }
 
     public function midDigitalGovernmentPage06(){
-        return view('govOfficials.Middle&Junior.DigitalGovernment.page06');
+        $midProjectManagement=Auth::user()->govofficial->midProjectManagement;
+        $totmidProjectManagement=$midProjectManagement->dg1_1+$midProjectManagement->dg1_2+$midProjectManagement->dg1_3+$midProjectManagement->dg1_4+$midProjectManagement->dg1_5+$midProjectManagement->dg2_1+$midProjectManagement->dg2_2+$midProjectManagement->dg2_3+$midProjectManagement->dg2_4+$midProjectManagement->dg3_1+$midProjectManagement->dg3_2+$midProjectManagement->dg3_3;
+
+        $midChangeManagement=Auth::user()->govofficial->midChangeManagement;
+        $totmidChangeManagement=$midChangeManagement->dg4+$midChangeManagement->dg5+$midChangeManagement->dg6+$midChangeManagement->dg7+$midChangeManagement->dg8+$midChangeManagement->dg9_1+$midChangeManagement->dg9_2;
+
+        $midCollaboration=Auth::user()->govofficial->midCollaboration;
+        $totmidCollaboration=$midCollaboration->dg10+$midCollaboration->dg11_1+$midCollaboration->dg11_2+$midCollaboration->dg11_3+$midCollaboration->dg11_4+$midCollaboration->dg12+$midCollaboration->dg13+$midCollaboration->dg14;
+
+        $midOrientation=Auth::user()->govofficial->midOrientation;
+        $totmidOrientation=$midOrientation->dg15+$midOrientation->dg16_1+$midOrientation->dg16_2+$midOrientation->dg16_3+$midOrientation->dg16_4+$midOrientation->dg17+$midOrientation->dg18+$midOrientation->dg19_1+$midOrientation->dg19_2+$midOrientation->dg19_3+$midOrientation->dg19_4;
+
+        $midQualityManagement=Auth::user()->govofficial->midQualityManagement;
+        $totmidQualityManagement=$midQualityManagement->dg20+$midQualityManagement->dg21+$midQualityManagement->dg22_1+$midQualityManagement->dg22_2+$midQualityManagement->dg22_3+$midQualityManagement->dg22_4+$midQualityManagement->dg23+$midQualityManagement->dg24+$midQualityManagement->dg25;
+
+        return view('govOfficials.Middle&Junior.DigitalGovernment.page06',compact('totmidQualityManagement','totmidOrientation','totmidCollaboration','totmidChangeManagement','totmidProjectManagement'));
     }
+
+    public function storeMidProjectManagement(Request $request){
+        request()->validate([
+            'dg1_1' => 'required|string',
+            'dg1_2' => 'required|string',
+            'dg1_3' => 'required|string',
+            'dg1_4' => 'required|string',
+            'dg1_5' => 'required|string',
+            'dg2_1' => 'required|string',
+            'dg2_2' => 'required|string',
+            'dg2_3' => 'required|string',
+            'dg2_4' => 'required|string',
+            'dg3_1' => 'required|string',
+            'dg3_2' => 'required|string',
+            'dg3_3' => 'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midProjectManagement = new MidProjectManagement;
+
+        $midProjectManagement->dg1_1=$request->dg1_1;
+        $midProjectManagement->dg1_2=$request->dg1_2;
+        $midProjectManagement->dg1_3=$request->dg1_3;
+        $midProjectManagement->dg1_4=$request->dg1_4;
+        $midProjectManagement->dg1_5=$request->dg1_5;
+        $midProjectManagement->dg2_1=$request->dg2_1;
+        $midProjectManagement->dg2_2=$request->dg2_2;
+        $midProjectManagement->dg2_3=$request->dg2_3;
+        $midProjectManagement->dg2_4=$request->dg2_4;
+        $midProjectManagement->dg3_1=$request->dg3_1;
+        $midProjectManagement->dg3_2=$request->dg3_2;
+        $midProjectManagement->dg3_3=$request->dg3_3;
+        $midProjectManagement->govofficial_id=$request->govofficial_id;
+
+        $midProjectManagement->save();
+
+        return redirect()->route('midDigitalGovernmentPage02');
+    }
+
+    public function storeMidChangeManagement(Request $request){
+        request()->validate([
+            'dg4' => 'required|string',
+            'dg5' => 'required|string',
+            'dg6' => 'required|string',
+            'dg7' => 'required|string',
+            'dg8' => 'required|string',
+            'dg9_1' => 'required|string',
+            'dg9_2' => 'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midChangeManagement = new MidChangeManagement;
+
+        $midChangeManagement->dg4=$request->dg4;
+        $midChangeManagement->dg5=$request->dg5;
+        $midChangeManagement->dg6=$request->dg6;
+        $midChangeManagement->dg7=$request->dg7;
+        $midChangeManagement->dg8=$request->dg8;
+        $midChangeManagement->dg9_1=$request->dg9_1;
+        $midChangeManagement->dg9_2=$request->dg9_2;
+        $midChangeManagement->govofficial_id=$request->govofficial_id;
+
+        $midChangeManagement->save();
+
+        return redirect()->route('midDigitalGovernmentPage03');
+    }
+
+    public function storeMidCollaboration(Request $request){
+        request()->validate([
+            'dg10' => 'required|string',
+            'dg11_1' => 'required|string',
+            'dg11_2' => 'required|string',
+            'dg11_3' => 'required|string',
+            'dg11_4' => 'required|string',
+            'dg12' => 'required|string',
+            'dg13' => 'required|string',
+            'dg14' => 'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midCollaboration = new MidCollaboration;
+
+        $midCollaboration->dg10=$request->dg10;
+        $midCollaboration->dg11_1=$request->dg11_1;
+        $midCollaboration->dg11_2=$request->dg11_2;
+        $midCollaboration->dg11_3=$request->dg11_3;
+        $midCollaboration->dg11_4=$request->dg11_4;
+        $midCollaboration->dg12=$request->dg12;
+        $midCollaboration->dg13=$request->dg13;
+        $midCollaboration->dg14=$request->dg14;
+        $midCollaboration->govofficial_id=$request->govofficial_id;
+
+        $midCollaboration->save();
+
+        return redirect()->route('midDigitalGovernmentPage04');
+    }
+
+    public function storeMidOrientation(Request $request){
+        request()->validate([
+            'dg15' => 'required|string',
+            'dg16_1' => 'required|string',
+            'dg16_2' => 'required|string',
+            'dg16_3' => 'required|string',
+            'dg16_4' => 'required|string',
+            'dg17' => 'required|string',
+            'dg18' => 'required|string',
+            'dg19_1' => 'required|string',
+            'dg19_2' => 'required|string',
+            'dg19_3' => 'required|string',
+            'dg19_4' => 'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midOrientation = new MidOrientation;
+
+        $midOrientation->dg15=$request->dg15;
+        $midOrientation->dg16_1=$request->dg16_1;
+        $midOrientation->dg16_2=$request->dg16_2;
+        $midOrientation->dg16_3=$request->dg16_3;
+        $midOrientation->dg16_4=$request->dg16_4;
+        $midOrientation->dg17=$request->dg17;
+        $midOrientation->dg18=$request->dg18;
+        $midOrientation->dg19_1=$request->dg19_1;
+        $midOrientation->dg19_2=$request->dg19_2;
+        $midOrientation->dg19_3=$request->dg19_3;
+        $midOrientation->dg19_4=$request->dg19_4;
+        $midOrientation->govofficial_id=$request->govofficial_id;
+
+        $midOrientation->save();
+
+        return redirect()->route('midDigitalGovernmentPage05');
+    }
+
+    public function storeMidQualityManagement(Request $request){
+        request()->validate([
+            'dg20' => 'required|string',
+            'dg21' => 'required|string',
+            'dg22_1' => 'required|string',
+            'dg22_2' => 'required|string',
+            'dg22_3' => 'required|string',
+            'dg22_4' => 'required|string',
+            'dg23' => 'required|string',
+            'dg24' => 'required|string',
+            'dg25' => 'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midQualityManagement = new MidQualityManagement;
+
+        $midQualityManagement->dg20=$request->dg20;
+        $midQualityManagement->dg21=$request->dg21;
+        $midQualityManagement->dg22_1=$request->dg22_1;
+        $midQualityManagement->dg22_2=$request->dg22_2;
+        $midQualityManagement->dg22_3=$request->dg22_3;
+        $midQualityManagement->dg22_4=$request->dg22_4;
+        $midQualityManagement->dg23=$request->dg23;
+        $midQualityManagement->dg24=$request->dg24;
+        $midQualityManagement->dg25=$request->dg25;
+        $midQualityManagement->govofficial_id=$request->govofficial_id;
+
+        $midQualityManagement->save();
+
+        return redirect()->route('midDigitalGovernmentPage06');
+    }
+
+    public function storeMidInitiative(Request $request){
+        // dd($request);
+        request()->validate([
+            'dg26_1' => 'required|string',
+            'dg26_2' => 'required|string',
+            'dg26_3' => 'required|string',
+            'dg27_1' => 'required|string',
+            'dg27_2' => 'required|string',
+            'dg27_3' => 'required|string',
+            'dg28' => 'required|string',
+            'dg29' => 'required|string',
+            'dg30' => 'required|string',
+            'dg31' => 'required|string',
+            'dg32' => 'required|string',
+            'dg33' => 'required|string',
+            'dg34' => 'required|string',
+            'dg35_1' => 'required|string',
+            'dg35_2' => 'required|string',
+            'dg35_3' => 'required|string',
+            'dg35_4' => 'required|string',
+            'dg36_1' => 'required|string',
+            'dg36_2' => 'required|string',
+            'dg36_3' => 'required|string',
+            'dg36_4' => 'required|string',
+            'dg37' => 'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+// dd('hi');
+        $midInitiative = new MidInitiative;
+
+        $midInitiative->dg26_1=$request->dg26_1;
+        $midInitiative->dg26_2=$request->dg26_2;
+        $midInitiative->dg26_3=$request->dg26_3;
+        $midInitiative->dg27_1=$request->dg27_1;
+        $midInitiative->dg27_2=$request->dg27_2;
+        $midInitiative->dg27_3=$request->dg27_3;
+        $midInitiative->dg28=$request->dg28;
+        $midInitiative->dg29=$request->dg29;
+        $midInitiative->dg30=$request->dg30;
+        $midInitiative->dg31=$request->dg31;
+        $midInitiative->dg32=$request->dg32;
+        $midInitiative->dg33=$request->dg33;
+        $midInitiative->dg34=$request->dg34;
+        $midInitiative->dg35_1=$request->dg35_1;
+        $midInitiative->dg35_2=$request->dg35_2;
+        $midInitiative->dg35_3=$request->dg35_3;
+        $midInitiative->dg35_4=$request->dg35_4;
+        $midInitiative->dg36_1=$request->dg36_1;
+        $midInitiative->dg36_2=$request->dg36_2;
+        $midInitiative->dg36_3=$request->dg36_3;
+        $midInitiative->dg36_4=$request->dg36_4;
+        $midInitiative->dg37=$request->dg37;
+        $midInitiative->govofficial_id=$request->govofficial_id;
+
+        $midInitiative->save();
+
+        $totmidInitiative=$request->dg26_1+$request->dg26_2+$request->dg26_3+$request->dg27_1+$request->dg27_2+$request->dg27_3+$request->dg28+$request->dg29+$request->dg30+$request->dg31+$request->dg32+$request->dg33+$request->dg34+$request->dg35_1+$request->dg35_2+$request->dg35_3+$request->dg35_4+$request->dg36_1+$request->dg36_2+$request->dg36_3+$request->dg36_4+$request->dg37;
+        $marksMidInitiative=$request->totmidProjectManagement+$request->totmidChangeManagement+$request->totmidCollaboration+$request->totmidOrientation+$request->totmidQualityManagement+$totmidInitiative;
+
+        $midDigitalGovernment=new MidDigitalGovernment;
+
+        $midDigitalGovernment->mid_project_management=$request->totmidProjectManagement;
+        $midDigitalGovernment->mid_change_management=$request->totmidChangeManagement;
+        $midDigitalGovernment->mid_collaboration=$request->totmidCollaboration;
+        $midDigitalGovernment->mid_orientation=$request->totmidOrientation;
+        $midDigitalGovernment->mid_quality_management=$request->totmidQualityManagement;
+        $midDigitalGovernment->mid_initiative=$totmidInitiative;
+        $midDigitalGovernment->marks_mid_digital_government=$marksMidInitiative;
+        $midDigitalGovernment->govofficial_id=$request->govofficial_id;
+
+        $midDigitalGovernment->save();
+
+        return redirect()->route('middlelayer');
+    }
+
+
 }
