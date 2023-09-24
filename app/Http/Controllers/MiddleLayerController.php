@@ -21,9 +21,16 @@ class MiddleLayerController extends Controller
     public function middle(){
         $midIctInWorkplace=Auth::user()->govofficial->midIctInWorkplace;
         $midInformationManagement=Auth::user()->govofficial->midInformationManagement;
-        $midDigtalCitizenship=Auth::user()->govofficial->midDigitalCitizenship;
+        $midDigitalCitizenship=Auth::user()->govofficial->midDigitalCitizenship;
+        $midProjectManagement=Auth::user()->govofficial->midProjectManagement;
+        $midChangeManagement=Auth::user()->govofficial->midChangeManagement;
+        $midCollaboration=Auth::user()->govofficial->midCollaboration;
+        $midOrientation=Auth::user()->govofficial->midOrientation;
+        $midQualityManagement=Auth::user()->govofficial->midQualityManagement;
+        $midInitiative=Auth::user()->govofficial->midInitiative;
+        $midDigitalGovernment=Auth::user()->govofficial->midDigitalGovernment;
 
-        return view ('govOfficials.Middle&Junior.main',compact('midInformationManagement','midIctInWorkplace','midDigtalCitizenship',));
+        return view ('govOfficials.Middle&Junior.main',compact('midDigitalGovernment','midInitiative','midQualityManagement','midOrientation','midCollaboration','midChangeManagement','midProjectManagement','midInformationManagement','midIctInWorkplace','midDigitalCitizenship',));
     }
 
     public function midIctPage01(){
@@ -494,6 +501,54 @@ class MiddleLayerController extends Controller
         $midDigitalGovernment->save();
 
         return redirect()->route('middlelayer');
+    }
+
+    public function midDgResult(){
+        $midDigitalGov = Auth::user()->govofficial->midDigitalGovernment;
+
+        $midProjectManagement=$midDigitalGov->mid_project_management;
+        $a=$midProjectManagement/12;
+        $avgmidProjectManagement=round($a*100);
+
+        $midChangeManagement=$midDigitalGov->mid_change_management;
+        $b=$midChangeManagement/18;
+        $avgmidChangeManagement=round($b*100);
+
+        $midCollaboration=$midDigitalGov->mid_collaboration;
+        $c=$midCollaboration/12;
+        $avgmidCollaboration=round($c*100);
+
+        $midOrientatiion=$midDigitalGov->mid_orientation;
+        $d=$midOrientatiion/14;
+        $avgmidOrientatiion=round($d*100);
+
+        $midQualityManagement=$midDigitalGov->mid_quality_management;
+        $e=$midQualityManagement/15;
+        $avgmidQualityManagement=round($e*100);
+
+        $midInitiative=$midDigitalGov->mid_initiative;
+        $f=$midInitiative/29;
+        $avgmidInitiative=round($f*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['Project Management', (int) $avgmidProjectManagement],
+            ['Change Management', (int) $avgmidChangeManagement],
+            ['Collaboration and Partnership', (int) $avgmidCollaboration],
+            ['Results Orientation', (int) $avgmidOrientatiion],
+            ['Quality Management', (int) $avgmidQualityManagement],
+            ['Execute Digital Government Initiatives', (int) $avgmidInitiative],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midProjectManagement2=$govOfficial->midProjectManagement;
+        $midChangeManagement2=$govOfficial->midChangeManagement;
+        $midCollaboration2=$govOfficial->midCollaboration;
+        $midOrientation2=$govOfficial->midOrientation;
+        $midQualityManagement2=$govOfficial->midQualityManagement;
+        $midInitiative2=$govOfficial->midInitiative;
+        return view('govOfficials.Middle&Junior.DigitalGovernment.results',compact('midProjectManagement2','result','avgmidChangeManagement','avgmidCollaboration','avgmidOrientatiion','avgmidQualityManagement','avgmidInitiative','midChangeManagement2','midCollaboration2','midOrientation2','midQualityManagement2','midInitiative2'));
     }
 
 

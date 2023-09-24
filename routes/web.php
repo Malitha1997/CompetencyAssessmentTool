@@ -125,6 +125,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('storeMidOrientation', [MiddleLayerController::class, 'storeMidOrientation'])->name('storeMidOrientation');
     Route::post('storeMidQualityManagement', [MiddleLayerController::class, 'storeMidQualityManagement'])->name('storeMidQualityManagement');
     Route::post('storeMidInitiative', [MiddleLayerController::class, 'storeMidInitiative'])->name('storeMidInitiative');
+    Route::get('/middle/Dg/results', [MiddleLayerController::class, 'midDgResult'])->name('middleDgResult');
 });
 
 Route::controller(SearchController::class)->group(function(){
