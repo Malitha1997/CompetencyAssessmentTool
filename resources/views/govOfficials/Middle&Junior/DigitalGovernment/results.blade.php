@@ -15,7 +15,7 @@
                         <div class="col-xxl-12" style="margin-top: -50px;"><span style="color: var(--bs-emphasis-color);font-size: 20px;font-family: poppins;"><br>You have successfully completed Digital Government Self&nbsp; Assessment.<br><br></span></div>
                     </div>
                     <div class="row">
-                        <div class="col" style="margin-top: 20px;"><a class="btn btn-primary" href="{{route('operationalDigitalgovernmentReport')}}" type="button" style="width: 203px;height: 55px;font-size: 20px;font-family: Poppins;background: url(&quot;{{ asset('img/Screenshot (561) 6.png') }}&quot;), var(--bs-body-bg);border-style: none;">Download</a></div>
+                        <div class="col" style="margin-top: 20px;"><a class="btn btn-primary" href="{{route('middleDgReport')}}" type="button" style="width: 203px;height: 55px;font-size: 20px;font-family: Poppins;background: url(&quot;{{ asset('img/Screenshot (561) 6.png') }}&quot;), var(--bs-body-bg);border-style: none;">Download</a></div>
                     </div>
                     <div class="row" style="margin-top: 30px;">
                         <div class="col" style="margin-top: 40px;"><a href="{{ route('middlelayer') }}" style="font-family: poppins;font-size: 20px;color: #5F2B84;">Back</a></div>
@@ -90,7 +90,7 @@
                         @if($midChangeManagement2->dg4==0 || $midChangeManagement2->dg5==0)
                         <br>Change Management<br><br>
                         @endif
-                        @if($midChangeManagement2->dg6==0 || $midChangeManagement2->dg7==0 || $midChangeManagement2->dg8==0 || $midChangeManagement2->dg9_1==0 || $midChangeManagement2->dg9_2==0)
+                        @if($midChangeManagement2->dg6==0 || $midChangeManagement2->dg7==0 || $midChangeManagement2->dg8==0 || $midChangeManagement2->dg9_1==0 || $midChangeManagement2->dg9_2==0 || $midChangeManagement2->dg9_3==0)
                         <br>Digital services<br><br>
                         @endif
                     </td>

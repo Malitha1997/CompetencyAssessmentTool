@@ -6,19 +6,25 @@ use App\Models\User;
 use App\Models\OpIct;
 use App\Models\MidIct;
 use App\Models\OpTeamwork;
+use App\Models\MidTeamWork;
 use App\Models\Operational;
 use App\Models\OpInitiative;
 use App\Models\OpManagement;
 use App\Models\MidInitiative;
+use App\Models\MidManagement;
 use App\Models\OpOrientation;
 use App\Models\MidOrientation;
+use App\Models\MidStakeholder;
 use App\Models\OpCollaboration;
 use App\Models\OpCommunication;
 use App\Models\MidCollaboration;
+use App\Models\MidCommunication;
 use App\Models\OpIctInWorkPlace;
+use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
 use App\Models\OpChangeManagement;
 use App\Models\Govorganizationname;
+use App\Models\MidCapacityBuilding;
 use App\Models\MidChangeManagement;
 use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
@@ -30,9 +36,12 @@ use App\Models\Govorganizationdetail;
 use App\Models\MidDigitalCitizenship;
 use App\Models\OpPersonalDevelopment;
 use App\Models\OpWorkplaceManagement;
+use App\Models\MidPersonalDevelopment;
+use App\Models\MidWorkplaceManagement;
 use App\Models\OpStakeholderManagement;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\MidInformationManagement;
+use App\Models\MidPerformanceManagement;
 use App\Models\OpInformationManagements;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -163,5 +172,41 @@ class Govofficial extends Model
 
     public function midDigitalGovernment(){
         return $this->hasOne(MidDigitalGovernment::class);
+    }
+
+    public function midCommunication(){
+        return $this->hasOne(MidCommunication::class);
+    }
+
+    public function midWorkplaceManagement(){
+        return $this->hasOne(MidWorkplaceManagement::class);
+    }
+
+    public function midDecisionMaking(){
+        return $this->hasOne(MidDecisionMaking::class);
+    }
+
+    public function midCapacityBuilding(){
+        return $this->hasOne(MidCapacityBuilding::class);
+    }
+
+    public function midStakeholder(){
+        return $this->hasOne(MidStakeholder::class);
+    }
+
+    public function midPerformanceManagement(){
+        return $this->hasOne(MidPerformanceManagement::class);
+    }
+
+    public function midTeamWork(){
+        return $this->hasOne(MidTeamWork::class);
+    }
+
+    public function midPersonalDevelopment(){
+        return $this->hasOne(MidPersonalDevelopment::class);
+    }
+
+    public function midManagement(){
+        return $this->hasOne(MidManagement::class);
     }
 }

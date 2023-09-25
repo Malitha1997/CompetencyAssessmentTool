@@ -122,7 +122,7 @@
                                     <div class="row d-flex flex-column" style="text-align: center;">
                                         <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input type="radio" name="dg7" id="dg7_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="3"><label class="form-label" for="dg7_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Financial pressures</label></div>
+                                                <div class="col"><input type="radio" name="dg7" id="dg7_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="dg7_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Financial pressures</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input type="radio" name="dg7" id="dg7_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg7_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Positive customer feedback</label></div>
@@ -187,13 +187,18 @@
                     <tbody>
                         <tr style="margin-top: 10px;">
                             <td style="color: rgb(0,0,0);">a) Change will always give positive results </td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_1" style="width:15px;height:15px;" value="1.5"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_1" style="width:15px;height:15px;" value="1"></td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_1" style="width:15px;height:15px;" value="0"></td>
                         </tr>
                         <tr>
-                            <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) I should not support the change until I see the impact to my department </td>
+                            <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) Issue owner should be responsible for the change </td>
                             <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_2" style="width:15px;height:15px;" value="0"></td>
-                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_2" style="width:15px;height:15px;" value="1.5"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_2" style="width:15px;height:15px;" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgb(0,0,0);margin-bottom: 0px;">c) I should not support the change until I see the impact to my department </td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_3" style="width:15px;height:15px;" value="0"></td>
+                            <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="dg9_3" style="width:15px;height:15px;" value="1"></td>
                         </tr>
                         <tr></tr>
                         <tr></tr>

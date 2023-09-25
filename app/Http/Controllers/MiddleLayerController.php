@@ -3,18 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\MidIct;
+use App\Models\MidTeamWork;
 use Illuminate\Http\Request;
 use App\Models\MidInitiative;
+use App\Models\MidManagement;
 use App\Models\MidOrientation;
+use App\Models\MidStakeholder;
 use App\Models\MidCollaboration;
+use App\Models\MidCommunication;
+use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
+use App\Models\MidCapacityBuilding;
 use App\Models\MidChangeManagement;
 use App\Models\MidDigitalGovernment;
 use App\Models\MidProjectManagement;
 use App\Models\MidQualityManagement;
 use Illuminate\Support\Facades\Auth;
 use App\Models\MidDigitalCitizenship;
+use App\Models\MidPersonalDevelopment;
+use App\Models\MidWorkplaceManagement;
 use App\Models\MidInformationManagement;
+use App\Models\MidPerformanceManagement;
 
 class MiddleLayerController extends Controller
 {
@@ -551,5 +560,380 @@ class MiddleLayerController extends Controller
         return view('govOfficials.Middle&Junior.DigitalGovernment.results',compact('midProjectManagement2','result','avgmidChangeManagement','avgmidCollaboration','avgmidOrientatiion','avgmidQualityManagement','avgmidInitiative','midChangeManagement2','midCollaboration2','midOrientation2','midQualityManagement2','midInitiative2'));
     }
 
+    public function midDgReport(){
+        $midDigitalGov = Auth::user()->govofficial->midDigitalGovernment;
+
+        $midProjectManagement=$midDigitalGov->mid_project_management;
+        $a=$midProjectManagement/12;
+        $avgmidProjectManagement=round($a*100);
+
+        $midChangeManagement=$midDigitalGov->mid_change_management;
+        $b=$midChangeManagement/18;
+        $avgmidChangeManagement=round($b*100);
+
+        $midCollaboration=$midDigitalGov->mid_collaboration;
+        $c=$midCollaboration/12;
+        $avgmidCollaboration=round($c*100);
+
+        $midOrientatiion=$midDigitalGov->mid_orientation;
+        $d=$midOrientatiion/14;
+        $avgmidOrientatiion=round($d*100);
+
+        $midQualityManagement=$midDigitalGov->mid_quality_management;
+        $e=$midQualityManagement/15;
+        $avgmidQualityManagement=round($e*100);
+
+        $midInitiative=$midDigitalGov->mid_initiative;
+        $f=$midInitiative/29;
+        $avgmidInitiative=round($f*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['Project Management', (int) $avgmidProjectManagement],
+            ['Change Management', (int) $avgmidChangeManagement],
+            ['Collaboration and Partnership', (int) $avgmidCollaboration],
+            ['Results Orientation', (int) $avgmidOrientatiion],
+            ['Quality Management', (int) $avgmidQualityManagement],
+            ['Execute Digital Government Initiatives', (int) $avgmidInitiative],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midProjectManagement2=$govOfficial->midProjectManagement;
+        $midChangeManagement2=$govOfficial->midChangeManagement;
+        $midCollaboration2=$govOfficial->midCollaboration;
+        $midOrientation2=$govOfficial->midOrientation;
+        $midQualityManagement2=$govOfficial->midQualityManagement;
+        $midInitiative2=$govOfficial->midInitiative;
+        return view('govOfficials.Middle&Junior.DigitalGovernment.report',compact('govOfficial','midProjectManagement2','result','avgmidChangeManagement','avgmidCollaboration','avgmidOrientatiion','avgmidQualityManagement','avgmidInitiative','midChangeManagement2','midCollaboration2','midOrientation2','midQualityManagement2','midInitiative2'));
+    }
+
+    public function midManagementPage01(){
+        return view('govOfficials.Middle&Junior.Management.page01');
+    }
+
+    public function midManagementPage02(){
+        return view('govOfficials.Middle&Junior.Management.page02');
+    }
+
+    public function midManagementPage03(){
+        return view('govOfficials.Middle&Junior.Management.page03');
+    }
+
+    public function midManagementPage04(){
+        return view('govOfficials.Middle&Junior.Management.page04');
+    }
+
+    public function midManagementPage05(){
+        return view('govOfficials.Middle&Junior.Management.page05');
+    }
+
+    public function midManagementPage06(){
+        return view('govOfficials.Middle&Junior.Management.page06');
+    }
+
+    public function midManagementPage07(){
+        return view('govOfficials.Middle&Junior.Management.page07');
+    }
+
+    public function midManagementPage08(){
+        $midCommunication=Auth::user()->govofficial->midCommunication;
+        $totMidCommunication=$midCommunication->mgt1+$midCommunication->mgt2_1+$midCommunication->mgt2_2+$midCommunication->mgt2_3+$midCommunication->mgt2_4+$midCommunication->mgt3+$midCommunication->mgt4+$midCommunication->mgt5;
+        
+        $midWorkplaceManagement=Auth::user()->govofficial->midWorkplaceManagement;
+        $totMidWorkplaceManagement=$midWorkplaceManagement->mgt6+$midWorkplaceManagement->mgt7+$midWorkplaceManagement->mgt8+$midWorkplaceManagement->mgt9_1+$midWorkplaceManagement->mgt9_2+$midWorkplaceManagement->mgt9_3+$midWorkplaceManagement->mgt9_4;
+
+        $midDecisionMaking=Auth::user()->govofficial->midDecisionMaking;
+        $totMidDecisionMaking=$midDecisionMaking->mgt10+$midDecisionMaking->mgt11+$midDecisionMaking->mgt12+$midDecisionMaking->mgt13+$midDecisionMaking->mgt14+$midDecisionMaking->mgt15+$midDecisionMaking->mgt16+$midDecisionMaking->mgt17+$midDecisionMaking->mgt18;
+        
+        $midCapacityBuilding=Auth::user()->govofficial->midCapacityBuilding;
+        $totMidCapacityBuilding=$midCapacityBuilding->mgt19_1+$midCapacityBuilding->mgt19_2+$midCapacityBuilding->mgt19_3+$midCapacityBuilding->mgt19_4+$midCapacityBuilding->mgt20_1+$midCapacityBuilding->mgt20_2+$midCapacityBuilding->mgt20_3+$midCapacityBuilding->mgt20_4;
+        
+        $midStakeholder=Auth::user()->govofficial->midStakeholder;
+        $totMidStakeholder=$midStakeholder->mgt21+$midStakeholder->mgt22+$midStakeholder->mgt23_1+$midStakeholder->mgt23_2+$midStakeholder->mgt23_3+$midStakeholder->mgt23_4+$midStakeholder->mgt24_1+$midStakeholder->mgt24_2+$midStakeholder->mgt24_3+$midStakeholder->mgt25_1+$midStakeholder->mgt25_2+$midStakeholder->mgt25_3+$midStakeholder->mgt25_4+$midStakeholder->mgt26+$midStakeholder->mgt27+$midStakeholder->mgt28+$midStakeholder->mgt29;
+        
+        $midPerformanceManagement=Auth::user()->govofficial->midPerformanceManagement;
+        $totMidPerformanceManagement=$midPerformanceManagement->mgt30_1+$midPerformanceManagement->mgt30_2+$midPerformanceManagement->mgt30_3+$midPerformanceManagement->mgt31+$midPerformanceManagement->mgt32_1+$midPerformanceManagement->mgt32_2+$midPerformanceManagement->mgt32_3+$midPerformanceManagement->mgt32_4+$midPerformanceManagement->mgt33_1+$midPerformanceManagement->mgt33_2+$midPerformanceManagement->mgt33_3+$midPerformanceManagement->mgt33_4+$midPerformanceManagement->mgt34+$midPerformanceManagement->mgt35;
+        
+        $midTeamWork=Auth::user()->govofficial->midTeamWork;
+        $totMidTeamWork=$midTeamWork->mgt36+$midTeamWork->mgt37;
+        
+        return view('govOfficials.Middle&Junior.Management.page08',compact('totMidTeamWork','totMidPerformanceManagement','totMidStakeholder','totMidCapacityBuilding','totMidDecisionMaking','totMidWorkplaceManagement','totMidCommunication'));
+    }
+
+    public function storeMidCommunication(Request $request){
+        request()->validate([
+            'mgt1'=>'required|string',
+            'mgt2_1'=>'required|string',
+            'mgt2_2'=>'required|string',
+            'mgt2_3'=>'required|string',
+            'mgt2_4'=>'required|string',
+            'mgt3'=>'required|string',
+            'mgt4'=>'required|string',
+            'mgt5'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midCommunication = new MidCommunication;
+
+        $midCommunication->mgt1=$request->mgt1;
+        $midCommunication->mgt2_1=$request->mgt2_1;
+        $midCommunication->mgt2_2=$request->mgt2_2;
+        $midCommunication->mgt2_3=$request->mgt2_3;
+        $midCommunication->mgt2_4=$request->mgt2_4;
+        $midCommunication->mgt3=$request->mgt3;
+        $midCommunication->mgt4=$request->mgt4;
+        $midCommunication->mgt5=$request->mgt5;
+        $midCommunication->govofficial_id=$request->govofficial_id;
+
+        $midCommunication->save();
+
+        return redirect()->route('midManagementPage02');
+    }
+
+    public function storeMidWorkplaceManagement(Request $request){
+        request()->validate([
+            'mgt6'=>'required|string',
+            'mgt7'=>'required|string',
+            'mgt8'=>'required|string',
+            'mgt9_1'=>'required|string',
+            'mgt9_2'=>'required|string',
+            'mgt9_3'=>'required|string',
+            'mgt9_4'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midWorkplaceManagemet = new MidWorkplaceManagement;
+
+        $midWorkplaceManagemet->mgt6=$request->mgt6;
+        $midWorkplaceManagemet->mgt7=$request->mgt7;
+        $midWorkplaceManagemet->mgt8=$request->mgt8;
+        $midWorkplaceManagemet->mgt9_1=$request->mgt9_1;
+        $midWorkplaceManagemet->mgt9_2=$request->mgt9_2;
+        $midWorkplaceManagemet->mgt9_3=$request->mgt9_3;
+        $midWorkplaceManagemet->mgt9_4=$request->mgt9_4;
+        $midWorkplaceManagemet->govofficial_id=$request->govofficial_id;
+
+        $midWorkplaceManagemet->save();
+
+        return redirect()->route('midManagementPage03');
+    }
+
+    public function storeMidDecisionMaking(Request $request){
+        request()->validate([
+            'mgt10'=>'required|string',
+            'mgt11'=>'required|string',
+            'mgt12'=>'required|string',
+            'mgt13'=>'required|string',
+            'mgt14'=>'required|string',
+            'mgt15'=>'required|string',
+            'mgt16'=>'required|string',
+            'mgt17'=>'required|string',
+            'mgt18'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midDecionMaking = new MidDecisionMaking;
+
+        $midDecionMaking->mgt10=$request->mgt10;
+        $midDecionMaking->mgt11=$request->mgt11;
+        $midDecionMaking->mgt12=$request->mgt12;
+        $midDecionMaking->mgt13=$request->mgt13;
+        $midDecionMaking->mgt14=$request->mgt14;
+        $midDecionMaking->mgt15=$request->mgt15;
+        $midDecionMaking->mgt16=$request->mgt16;
+        $midDecionMaking->mgt17=$request->mgt17;
+        $midDecionMaking->mgt18=$request->mgt18;
+        $midDecionMaking->govofficial_id=$request->govofficial_id;
+
+        $midDecionMaking->save();
+
+        return redirect()->route('midManagementPage04');
+    }
+
+    public function storeMidCapacityBuilding(Request $request){
+        request()->validate([
+            'mgt19_1'=>'required|string',
+            'mgt19_2'=>'required|string',
+            'mgt19_3'=>'required|string',
+            'mgt19_4'=>'required|string',
+            'mgt20_1'=>'required|string',
+            'mgt20_2'=>'required|string',
+            'mgt20_3'=>'required|string',
+            'mgt20_4'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midCapacityBuilding = new MidCapacityBuilding;
+
+        $midCapacityBuilding->mgt19_1=$request->mgt19_1;
+        $midCapacityBuilding->mgt19_2=$request->mgt19_2;
+        $midCapacityBuilding->mgt19_3=$request->mgt19_3;
+        $midCapacityBuilding->mgt19_4=$request->mgt19_4;
+        $midCapacityBuilding->mgt20_1=$request->mgt20_1;
+        $midCapacityBuilding->mgt20_2=$request->mgt20_2;
+        $midCapacityBuilding->mgt20_3=$request->mgt20_3;
+        $midCapacityBuilding->mgt20_4=$request->mgt20_4;
+        $midCapacityBuilding->govofficial_id=$request->govofficial_id;
+
+        $midCapacityBuilding->save();
+
+        return redirect()->route('midManagementPage05');
+
+    }
+
+    public function storeMidStakeholder(Request $request){
+        // dd($request);
+        request()->validate([
+            'mgt21'=>'required|string',
+            'mgt22'=>'required|string',
+            'mgt23_1'=>'required|string',
+            'mgt23_2'=>'required|string',
+            'mgt23_3'=>'required|string',
+            'mgt23_4'=>'required|string',
+            'mgt24_1'=>'required|string',
+            'mgt24_2'=>'required|string',
+            'mgt24_3'=>'required|string',
+            'mgt25_1'=>'required|string',
+            'mgt25_2'=>'required|string',
+            'mgt25_3'=>'required|string',
+            'mgt25_4'=>'required|string',
+            'mgt26'=>'required|string',
+            'mgt27'=>'required|string',
+            'mgt28'=>'required|string',
+            'mgt29'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+        // dd($request);
+
+        $midStakeholder = new MidStakeholder;
+
+        $midStakeholder->mgt21=$request->mgt21;
+        $midStakeholder->mgt22=$request->mgt22;
+        $midStakeholder->mgt23_1=$request->mgt23_1;
+        $midStakeholder->mgt23_2=$request->mgt23_2;
+        $midStakeholder->mgt23_3=$request->mgt23_3;
+        $midStakeholder->mgt23_4=$request->mgt23_4;
+        $midStakeholder->mgt24_1=$request->mgt24_1;
+        $midStakeholder->mgt24_2=$request->mgt24_2;
+        $midStakeholder->mgt24_3=$request->mgt24_3;
+        $midStakeholder->mgt25_1=$request->mgt25_1;
+        $midStakeholder->mgt25_2=$request->mgt25_2;
+        $midStakeholder->mgt25_3=$request->mgt25_3;
+        $midStakeholder->mgt25_4=$request->mgt25_4;
+        $midStakeholder->mgt26=$request->mgt26;
+        $midStakeholder->mgt27=$request->mgt27;
+        $midStakeholder->mgt28=$request->mgt28;
+        $midStakeholder->mgt29=$request->mgt29;
+        $midStakeholder->govofficial_id=$request->govofficial_id;
+
+        $midStakeholder->save();
+
+        return redirect()->route('midManagementPage06');
+    }
+
+    public function storeMidPerformanceManagement(Request $request){
+        // dd($request);
+        request()->validate([
+            'mgt30_1'=>'required|string',
+            'mgt30_2'=>'required|string',
+            'mgt30_3'=>'required|string',
+            'mgt31'=>'required|string',
+            'mgt32_1'=>'required|string',
+            'mgt32_2'=>'required|string',
+            'mgt32_3'=>'required|string',
+            'mgt32_4'=>'required|string',
+            'mgt33_1'=>'required|string',
+            'mgt33_2'=>'required|string',
+            'mgt33_3'=>'required|string',
+            'mgt33_4'=>'required|string',
+            'mgt34'=>'required|string',
+            'mgt35'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $midPerformanceManagement = new MidPerformanceManagement;
+
+        $midPerformanceManagement->mgt30_1=$request->mgt30_1;
+        $midPerformanceManagement->mgt30_2=$request->mgt30_2;
+        $midPerformanceManagement->mgt30_3=$request->mgt30_3;
+        $midPerformanceManagement->mgt31=$request->mgt31;
+        $midPerformanceManagement->mgt32_1=$request->mgt32_1;
+        $midPerformanceManagement->mgt32_2=$request->mgt32_2;
+        $midPerformanceManagement->mgt32_3=$request->mgt32_3;
+        $midPerformanceManagement->mgt32_4=$request->mgt32_4;
+        $midPerformanceManagement->mgt33_1=$request->mgt33_1;
+        $midPerformanceManagement->mgt33_2=$request->mgt33_2;
+        $midPerformanceManagement->mgt33_3=$request->mgt33_3;
+        $midPerformanceManagement->mgt33_4=$request->mgt33_4;
+        $midPerformanceManagement->mgt34=$request->mgt34;
+        $midPerformanceManagement->mgt35=$request->mgt35;
+        $midPerformanceManagement->govofficial_id=$request->govofficial_id;
+
+        $midPerformanceManagement->save();
+
+        return redirect()->route('midManagementPage07');
+
+    }
+
+    public function storeMidTeamWork(Request $request){
+        // dd($request);
+        request()->validate([
+            'mgt36'=>'required|string',
+            'mgt37'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midTeamWork = new MidTeamWork;
+
+        $midTeamWork->mgt36=$request->mgt36;
+        $midTeamWork->mgt37=$request->mgt37;
+        $midTeamWork->govofficial_id=$request->govofficial_id;
+
+        $midTeamWork->save();
+
+        return redirect()->route('midManagementPage08');
+    }
+
+    public function storeMidPersonalDevelopment(Request $request){
+        // dd($request);
+        request()->validate([
+            'mgt38'=>'required|string',
+            'mgt39_1'=>'required|string',
+            'mgt39_2'=>'required|string',
+            'mgt39_3'=>'required|string',
+            'govofficial_id'=>'required|string',
+        ]);
+
+        $midPersonalDevelopment = new MidPersonalDevelopment;
+
+        $midPersonalDevelopment->mgt38=$request->mgt38;
+        $midPersonalDevelopment->mgt39_1=$request->mgt39_1;
+        $midPersonalDevelopment->mgt39_2=$request->mgt39_2;
+        $midPersonalDevelopment->mgt39_3=$request->mgt39_3;
+        $midPersonalDevelopment->govofficial_id=$request->govofficial_id;
+
+        $midPersonalDevelopment->save();
+
+        $totMidPersonalDevelopment=$request->mgt38+$request->mgt39_1+$request->mgt39_2+$request->mgt39_3;
+        $totMidManagement=$request->totMidCommunication+$request->totMidWorkplaceManagement+$request->totMidDecisionMaking+$request->totMidCapacityBuilding+$request->totMidStakeholder+$request->totMidPerformanceManagement+$request->totMidTeamWork;
+        
+        $midManagement=new MidManagement;
+
+        $midManagement->mid_communication=$request->totMidCommunication;
+        $midManagement->mid_workplace_management=$request->totMidWorkplaceManagement;
+        $midManagement->mid_decision_making=$request->totMidDecisionMaking;
+        $midManagement->mid_capacity_building=$request->totMidCapacityBuilding;
+        $midManagement->mid_stakeholder=$request->totMidStakeholder;
+        $midManagement->mid_performance_management=$request->totMidPerformanceManagement;
+        $midManagement->mid_team_work=$request->totMidTeamWork;
+        $midManagement->mid_personal_development=$totMidPersonalDevelopment;
+        $midManagement->mid_management_overall=$totMidManagement;
+        $midManagement->govofficial_id=$request->govofficial_id;
+
+        $midManagement->save();
+
+        return redirect()->route('middlelayer');
+    }
 
 }

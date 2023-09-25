@@ -126,7 +126,27 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('storeMidQualityManagement', [MiddleLayerController::class, 'storeMidQualityManagement'])->name('storeMidQualityManagement');
     Route::post('storeMidInitiative', [MiddleLayerController::class, 'storeMidInitiative'])->name('storeMidInitiative');
     Route::get('/middle/Dg/results', [MiddleLayerController::class, 'midDgResult'])->name('middleDgResult');
+    Route::get('/middle/Dg/report', [MiddleLayerController::class, 'midDgReport'])->name('middleDgReport');
+
+    Route::get('/middle/management/page01', [MiddleLayerController::class, 'midManagementPage01'])->name('midManagementPage01');
+    Route::get('/middle/management/page02', [MiddleLayerController::class, 'midManagementPage02'])->name('midManagementPage02');
+    Route::get('/middle/management/page03', [MiddleLayerController::class, 'midManagementPage03'])->name('midManagementPage03');
+    Route::get('/middle/management/page04', [MiddleLayerController::class, 'midManagementPage04'])->name('midManagementPage04');
+    Route::get('/middle/management/page05', [MiddleLayerController::class, 'midManagementPage05'])->name('midManagementPage05');
+    Route::get('/middle/management/page06', [MiddleLayerController::class, 'midManagementPage06'])->name('midManagementPage06');
+    Route::get('/middle/management/page07', [MiddleLayerController::class, 'midManagementPage07'])->name('midManagementPage07');
+    Route::get('/middle/management/page08', [MiddleLayerController::class, 'midManagementPage08'])->name('midManagementPage08');
+
+    Route::post('storeMidCommunication', [MiddleLayerController::class, 'storeMidCommunication'])->name('storeMidCommunication');
+    Route::post('storeMidWorkplaceManagement', [MiddleLayerController::class, 'storeMidWorkplaceManagement'])->name('storeMidWorkplaceManagement');
+    Route::post('storeMidDecisionMaking', [MiddleLayerController::class, 'storeMidDecisionMaking'])->name('storeMidDecisionMaking');
+    Route::post('storeMidCapacityBuilding', [MiddleLayerController::class, 'storeMidCapacityBuilding'])->name('storeMidCapacityBuilding');
+    Route::post('storeMidStakeholder', [MiddleLayerController::class, 'storeMidStakeholder'])->name('storeMidStakeholder');
+    Route::post('storeMidPerformanceManagement', [MiddleLayerController::class, 'storeMidPerformanceManagement'])->name('storeMidPerformanceManagement');
+    Route::post('storeMidTeamWork', [MiddleLayerController::class, 'storeMidTeamWork'])->name('storeMidTeamWork');
+    Route::post('storeMidPersonalDevelopment', [MiddleLayerController::class, 'storeMidPersonalDevelopment'])->name('storeMidPersonalDevelopment');
 });
+
 
 Route::controller(SearchController::class)->group(function(){
     Route::get('autocomplete', 'autocomplete')->name('autocomplete');

@@ -11,17 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mid_change_management', function (Blueprint $table) {
+        Schema::create('mid_decision_makings', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('dg4');
-            $table->string('dg5');
-            $table->string('dg6');
-            $table->string('dg7');
-            $table->string('dg8');
-            $table->string('dg9_1');
-            $table->string('dg9_2');
-            $table->string('dg9_3');
+            $table->string('mgt10');
+            $table->string('mgt11');
+            $table->string('mgt12');
+            $table->string('mgt13');
+            $table->string('mgt14');
+            $table->string('mgt15');
+            $table->string('mgt16');
+            $table->string('mgt17');
+            $table->string('mgt18');
             $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mid_change_management');
+        Schema::dropIfExists('mid_decision_makings');
     }
 };
