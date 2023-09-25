@@ -145,6 +145,8 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('storeMidPerformanceManagement', [MiddleLayerController::class, 'storeMidPerformanceManagement'])->name('storeMidPerformanceManagement');
     Route::post('storeMidTeamWork', [MiddleLayerController::class, 'storeMidTeamWork'])->name('storeMidTeamWork');
     Route::post('storeMidPersonalDevelopment', [MiddleLayerController::class, 'storeMidPersonalDevelopment'])->name('storeMidPersonalDevelopment');
+
+    Route::get('/middle/management/result', [MiddleLayerController::class, 'midManagementResult'])->name('middleManagementResult');
 });
 
 

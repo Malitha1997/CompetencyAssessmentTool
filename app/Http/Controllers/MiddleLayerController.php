@@ -39,7 +39,16 @@ class MiddleLayerController extends Controller
         $midInitiative=Auth::user()->govofficial->midInitiative;
         $midDigitalGovernment=Auth::user()->govofficial->midDigitalGovernment;
 
-        return view ('govOfficials.Middle&Junior.main',compact('midDigitalGovernment','midInitiative','midQualityManagement','midOrientation','midCollaboration','midChangeManagement','midProjectManagement','midInformationManagement','midIctInWorkplace','midDigitalCitizenship',));
+        $midManagement=Auth::user()->govofficial->midManagement;
+        $midCommunication=Auth::user()->govofficial->midCommunication;
+        $midWorkplaceManagement=Auth::user()->govofficial->midWorkplaceManagement;
+        $midDecisionMaking=Auth::user()->govofficial->midDecisionMaking;
+        $midCapacityBuilding=Auth::user()->govofficial->midCapacityBuilding;
+        $midStakeholder=Auth::user()->govofficial->midStakeholder;
+        $midPerformanceManagement=Auth::user()->govofficial->midPerformanceManagement;
+        $midTeamWork=Auth::user()->govofficial->midTeamWork;
+
+        return view ('govOfficials.Middle&Junior.main',compact('midTeamWork','midPerformanceManagement','midStakeholder','midCapacityBuilding','midDecisionMaking','midWorkplaceManagement','midCommunication','midManagement','midDigitalGovernment','midInitiative','midQualityManagement','midOrientation','midCollaboration','midChangeManagement','midProjectManagement','midInformationManagement','midIctInWorkplace','midDigitalCitizenship',));
     }
 
     public function midIctPage01(){
@@ -639,25 +648,25 @@ class MiddleLayerController extends Controller
     public function midManagementPage08(){
         $midCommunication=Auth::user()->govofficial->midCommunication;
         $totMidCommunication=$midCommunication->mgt1+$midCommunication->mgt2_1+$midCommunication->mgt2_2+$midCommunication->mgt2_3+$midCommunication->mgt2_4+$midCommunication->mgt3+$midCommunication->mgt4+$midCommunication->mgt5;
-        
+
         $midWorkplaceManagement=Auth::user()->govofficial->midWorkplaceManagement;
         $totMidWorkplaceManagement=$midWorkplaceManagement->mgt6+$midWorkplaceManagement->mgt7+$midWorkplaceManagement->mgt8+$midWorkplaceManagement->mgt9_1+$midWorkplaceManagement->mgt9_2+$midWorkplaceManagement->mgt9_3+$midWorkplaceManagement->mgt9_4;
 
         $midDecisionMaking=Auth::user()->govofficial->midDecisionMaking;
         $totMidDecisionMaking=$midDecisionMaking->mgt10+$midDecisionMaking->mgt11+$midDecisionMaking->mgt12+$midDecisionMaking->mgt13+$midDecisionMaking->mgt14+$midDecisionMaking->mgt15+$midDecisionMaking->mgt16+$midDecisionMaking->mgt17+$midDecisionMaking->mgt18;
-        
+
         $midCapacityBuilding=Auth::user()->govofficial->midCapacityBuilding;
         $totMidCapacityBuilding=$midCapacityBuilding->mgt19_1+$midCapacityBuilding->mgt19_2+$midCapacityBuilding->mgt19_3+$midCapacityBuilding->mgt19_4+$midCapacityBuilding->mgt20_1+$midCapacityBuilding->mgt20_2+$midCapacityBuilding->mgt20_3+$midCapacityBuilding->mgt20_4;
-        
+
         $midStakeholder=Auth::user()->govofficial->midStakeholder;
         $totMidStakeholder=$midStakeholder->mgt21+$midStakeholder->mgt22+$midStakeholder->mgt23_1+$midStakeholder->mgt23_2+$midStakeholder->mgt23_3+$midStakeholder->mgt23_4+$midStakeholder->mgt24_1+$midStakeholder->mgt24_2+$midStakeholder->mgt24_3+$midStakeholder->mgt25_1+$midStakeholder->mgt25_2+$midStakeholder->mgt25_3+$midStakeholder->mgt25_4+$midStakeholder->mgt26+$midStakeholder->mgt27+$midStakeholder->mgt28+$midStakeholder->mgt29;
-        
+
         $midPerformanceManagement=Auth::user()->govofficial->midPerformanceManagement;
         $totMidPerformanceManagement=$midPerformanceManagement->mgt30_1+$midPerformanceManagement->mgt30_2+$midPerformanceManagement->mgt30_3+$midPerformanceManagement->mgt31+$midPerformanceManagement->mgt32_1+$midPerformanceManagement->mgt32_2+$midPerformanceManagement->mgt32_3+$midPerformanceManagement->mgt32_4+$midPerformanceManagement->mgt33_1+$midPerformanceManagement->mgt33_2+$midPerformanceManagement->mgt33_3+$midPerformanceManagement->mgt33_4+$midPerformanceManagement->mgt34+$midPerformanceManagement->mgt35;
-        
+
         $midTeamWork=Auth::user()->govofficial->midTeamWork;
         $totMidTeamWork=$midTeamWork->mgt36+$midTeamWork->mgt37;
-        
+
         return view('govOfficials.Middle&Junior.Management.page08',compact('totMidTeamWork','totMidPerformanceManagement','totMidStakeholder','totMidCapacityBuilding','totMidDecisionMaking','totMidWorkplaceManagement','totMidCommunication'));
     }
 
@@ -917,7 +926,7 @@ class MiddleLayerController extends Controller
 
         $totMidPersonalDevelopment=$request->mgt38+$request->mgt39_1+$request->mgt39_2+$request->mgt39_3;
         $totMidManagement=$request->totMidCommunication+$request->totMidWorkplaceManagement+$request->totMidDecisionMaking+$request->totMidCapacityBuilding+$request->totMidStakeholder+$request->totMidPerformanceManagement+$request->totMidTeamWork;
-        
+
         $midManagement=new MidManagement;
 
         $midManagement->mid_communication=$request->totMidCommunication;
@@ -933,7 +942,69 @@ class MiddleLayerController extends Controller
 
         $midManagement->save();
 
-        return redirect()->route('middlelayer');
+        return redirect()->route('middleManagementResult');
+    }
+
+    public function midManagementResult(){
+
+        $midManagement = Auth::user()->govofficial->midManagement;
+
+        $midCommunication=$midManagement->mid_communication;
+        $a=$midCommunication/12;
+        $avgmidCommunication=round($a*100);
+
+        $midWorkplaceManagement=$midManagement->mid_workplace_management;
+        $b=$midWorkplaceManagement/10;
+        $avgmidWorkplaceManagement=round($b*100);
+
+        $midDecisionMaking=$midManagement->mid_decision_making;
+        $c=$midDecisionMaking/19;
+        $avgmidDecisionMaking=round($c*100);
+
+        $midCapacityBuilding=$midManagement->mid_capacity_building;
+        $d=$midCapacityBuilding/8;
+        $avgmidCapacityBuilding=round($d*100);
+
+        $midStakeholderManagement=$midManagement->mid_stakeholder_management;
+        $e=$midStakeholderManagement/25;
+        $avgmidStakeholderManagement=round($e*100);
+
+        $midPerformanceManagement=$midManagement->mid_performance_management;
+        $f=$midPerformanceManagement/17;
+        $avgmidPerformanceManagement=round($f*100);
+
+        $midTeamwork=$midManagement->mid_teamwork;
+        $g=$midTeamwork/4;
+        $avgmidTeamwork=round($g*100);
+
+        $midPersonalDevelopment=$midManagement->mid_personal_development;
+        $h=$midPersonalDevelopment/5;
+        $avgmidPersonalDevelopment=round($h*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['Communication', (int) $avgmidCommunication],
+            ['Workplace Management', (int) $avgmidWorkplaceManagement],
+            ['Decision Making', (int) $avgmidDecisionMaking],
+            ['Capacity Building', (int) $avgmidCapacityBuilding],
+            ['Stakeholder Management', (int) $avgmidStakeholderManagement],
+            ['Performance Management', (int) $avgmidCapacityBuilding],
+            ['Teamwork', (int) $avgmidTeamwork],
+            ['Personal Development', (int) $avgmidPersonalDevelopment],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midCommunication2=$govOfficial->midCommunication;
+        $midWorkplaceManagement2=$govOfficial->midWorkplaceManagement;
+        $midDecisionMaking2=$govOfficial->midDecisionMaking;
+        $midCapacityBuilding2=$govOfficial->midCapacityBuilding;
+        $midStakeholderManagement2=$govOfficial->midStakeholder;
+        $midPerformanceManagement2=$govOfficial->midPerformanceManagement;
+        $midTeamwork2=$govOfficial->midTeamwork;
+        $midPersonalDevelopment2=$govOfficial->midPersonalDevelopment;
+
+        return view('govOfficials.Middle&Junior.Management.results',compact('avgmidPerformanceManagement','midPerformanceManagement2','avgmidCapacityBuilding','avgmidDecisionMaking','midPerformanceManagement2','midCapacityBuilding2','midDecisionMaking2','result','midCommunication2','midWorkplaceManagement2','midStakeholderManagement2','midTeamwork2','midPersonalDevelopment2','avgmidCommunication','avgmidWorkplaceManagement','avgmidStakeholderManagement','avgmidTeamwork','avgmidPersonalDevelopment'));
     }
 
 }
