@@ -99,6 +99,7 @@
                         <div class="col" style="text-align: center;">
                             <a class="btn btn-primary" href="/middlelayer" type="button" style="width: 266px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;);border-width: 0px;font-family: Poppins, sans-serif;font-size: 20px;"  >Mid.Assessments</a>
                             <a class="btn btn-primary" href="/operationallayer" type="button" style="width: 266px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;);border-width: 0px;font-family: Poppins, sans-serif;font-size: 20px;"  >Op.Assessments</a>
+                            <a class="btn btn-primary" href="/toplayer" type="button" style="width: 266px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;);border-width: 0px;font-family: Poppins, sans-serif;font-size: 20px;"  >Top Assessments</a>
                         </div>
                     <div class="row" style="margin-top: 50px;">
                         {{--  <div class="col" style="text-align: center;"><button class="btn btn-primary" type="button" style="width: 266px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;), url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;);border-width: 0px;font-family: Poppins, sans-serif;font-size: 20px;" disabled>Deep Assessment</button></div>  --}}

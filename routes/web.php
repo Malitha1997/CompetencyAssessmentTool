@@ -147,7 +147,27 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('storeMidPersonalDevelopment', [MiddleLayerController::class, 'storeMidPersonalDevelopment'])->name('storeMidPersonalDevelopment');
 
     Route::get('/middle/management/result', [MiddleLayerController::class, 'midManagementResult'])->name('middleManagementResult');
+    Route::get('/middle/management/report', [MiddleLayerController::class, 'midManagementReport'])->name('middleManagementReport');
+
+    Route::get('/top/ict/page01', [TopLayerController::class, 'topIctPage01'])->name('topIctPage01');
+    Route::get('/top/ict/page02', [TopLayerController::class, 'topIctPage02'])->name('topIctPage02');
+    Route::get('/top/ict/page03', [TopLayerController::class, 'topIctPage03'])->name('topIctPage03');
+
+    Route::post('storeTopIctInWorplace', [TopLayerController::class, 'storeTopIctInWorkplace'])->name('storeTopIctInWorplace');
+    Route::post('storeTopInformationManagement', [TopLayerController::class, 'storeTopInformationManagement'])->name('storeTopInformationManagement');
+    Route::post('storeTopDigitalCitizenship', [TopLayerController::class, 'storeTopDigitalCitizenship'])->name('storeTopDigitalCitizenship');
+
+    Route::get('/top/ict/result', [TopLayerController::class, 'topIctResult'])->name('topIctResult');
+    Route::get('/top/ict/report', [TopLayerController::class, 'topIctReport'])->name('topIctReport');
+
+    Route::get('/top/digitalgovernment/page01', [TopLayerController::class, 'topDigitalGovernmentPage01'])->name('topDigitalGovernmentPage01');
+    Route::get('/top/digitalgovernment/page02', [TopLayerController::class, 'topDigitalGovernmentPage02'])->name('topDigitalGovernmentPage02');
+    Route::get('/top/digitalgovernment/page03', [TopLayerController::class, 'topDigitalGovernmentPage03'])->name('topDigitalGovernmentPage03');
+    Route::get('/top/digitalgovernment/page04', [TopLayerController::class, 'topDigitalGovernmentPage04'])->name('topDigitalGovernmentPage04');
+    Route::get('/top/digitalgovernment/page05', [TopLayerController::class, 'topDigitalGovernmentPage05'])->name('topDigitalGovernmentPage05');
+    Route::get('/top/digitalgovernment/page06', [TopLayerController::class, 'topDigitalGovernmentPage06'])->name('topDigitalGovernmentPage06');
 });
+
 
 
 Route::controller(SearchController::class)->group(function(){
