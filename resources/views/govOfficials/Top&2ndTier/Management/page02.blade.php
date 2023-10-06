@@ -1,7 +1,11 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
+<<<<<<< HEAD
 <form method="POST" action="{{ route('storeTopCommunication') }}">
+=======
+<form method="POST" action="">
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
     {{csrf_field()}}
     <section data-aos="fade-down" style="height: 750px;">
         <div style="margin-top: 70px;text-align:center;margin-bottom: 10px;"><span style="font-size: 25px;color: #5F2B84;font-family: poppins;font-weight: bold;text-align: center;"><br><br>Self Assessment -&nbsp;Management (Top &amp; 2nd Tier Management)</span></div>
@@ -25,6 +29,7 @@
                                         <div class="row d-flex flex-column" style="text-align: center;">
                                             <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                                 <div class="row" style="margin-bottom: 20px;">
+<<<<<<< HEAD
                                                     <div class="col" style="margin-top: 10px;"><input type="radio" name="mgt5" id="mgt5_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt5_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) A, B, are D are correct</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
@@ -35,6 +40,18 @@
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt5" id="mgt5_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt5_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+=======
+                                                    <div class="col" style="margin-top: 10px;"><input type="radio" name="mgt5" id="mgt5_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt5_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) A, B, are D are correct</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt5" id="mgt5_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt5_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) B, C and D are correct</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt5" id="mgt5_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt5_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) A, B and C are correct</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt5" id="mgt5_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt5_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
                                                 </div>
                                             </div>
                                         </div>
@@ -56,10 +73,17 @@
                                         <div class="row d-flex flex-column" style="text-align: center;">
                                             <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                                 <div class="row" style="margin-bottom: 20px;">
+<<<<<<< HEAD
                                                     <div class="col" style="margin-top: 10px;"><input type="radio" name="mgt6" id="mgt6_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt6_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) True</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt6" id="mgt6_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt6_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) False</label></div>
+=======
+                                                    <div class="col" style="margin-top: 10px;"><input type="radio" name="mgt6" id="mgt6_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt6_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) True</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt6" id="mgt6_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt6_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) False</label></div>
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
                                                 </div>
                                             </div>
                                         </div>
@@ -81,6 +105,7 @@
                                         <div class="row d-flex flex-column" style="text-align: center;">
                                             <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                                 <div class="row" style="margin-bottom: 20px;">
+<<<<<<< HEAD
                                                     <div class="col"><input type="radio" name="mgt7" id="mgt7_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt7_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Social Media</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
@@ -91,6 +116,18 @@
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt7" id="mgt7_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt7_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Newspapers</label></div>
+=======
+                                                    <div class="col"><input type="radio" name="mgt7" id="mgt7_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt7_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Social Media</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt7" id="mgt7_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt7_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">b) Email</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt7" id="mgt7_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt7_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">C) Video chat</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt7" id="mgt7_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt7_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Newspapers</label></div>
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
                                                 </div>
                                             </div>
                                         </div>
@@ -112,6 +149,7 @@
                                         <div class="row d-flex flex-column" style="text-align: center;">
                                             <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                                 <div class="row" style="margin-bottom: 20px;">
+<<<<<<< HEAD
                                                     <div class="col"><input type="radio" name="mgt8" id="mgt8_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt8_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Use different feedback channels</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
@@ -122,6 +160,18 @@
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt8" id="mgt8_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt8_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Create a feedback safe culture</label></div>
+=======
+                                                    <div class="col"><input type="radio" name="mgt8" id="mgt8_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt8_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Use different feedback channels</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt8" id="mgt8_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt8_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Provide training on receiving and giving feedback</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt8" id="mgt8_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt8_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Not encourage to anonymous feedback</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt8" id="mgt8_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt8_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Create a feedback safe culture</label></div>
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
                                                 </div>
                                             </div>
                                         </div>
@@ -143,6 +193,7 @@
                                         <div class="row d-flex flex-column" style="text-align: center;">
                                             <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                                 <div class="row" style="margin-bottom: 20px;">
+<<<<<<< HEAD
                                                     <div class="col"><input type="radio" name="mgt9" id="mgt9_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt9_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Clarity</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
@@ -155,6 +206,19 @@
                                                     <div class="col"><input type="radio" name="mgt9" id="mgt9_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt9_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Consistency</label></div>
                                                 </div>
                                                 <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
+=======
+                                                    <div class="col"><input type="radio" name="mgt9" id="mgt9_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt8_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Clarity</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt9" id="mgt9_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt8_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Attention</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt9" id="mgt9_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt8_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Language</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt9" id="mgt9_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="mgt8_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Consistency</label></div>
+                                                </div>
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
                                             </div>
                                         </div>
                                     </div>
@@ -168,7 +232,11 @@
     </section>
 <div class="row" style="margin-right: 0px;margin-top: 1250px;margin-left: 850px;margin-bottom:50px;font-family: Poppins, sans-serif;">
     <div class="col"><a class="btn btn-primary" href="{{ route('toplayer') }}" type="button" style="color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
+<<<<<<< HEAD
         <button class="btn btn-primary" type="submit" style="width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</button></div>
+=======
+        <a class="btn btn-primary" type="submit" href="/top/management/page03" style="width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</a></div>
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 </div>
 </form>
 @endsection

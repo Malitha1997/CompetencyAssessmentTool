@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TopIct;
 use Illuminate\Http\Request;
 use App\Models\TopLeadership;
+<<<<<<< HEAD
 use App\Models\TopManagement;
 use App\Models\TopOrientation;
 use App\Models\TopCollaboration;
@@ -13,17 +14,26 @@ use App\Models\TopHumanResource;
 use App\Models\TopDecisionMaking;
 use App\Models\TopIctInWorkplace;
 use App\Models\TopCapacityBuilding;
+=======
+use App\Models\TopOrientation;
+use App\Models\TopCollaboration;
+use App\Models\TopIctInWorkplace;
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\TopChangeManagement;
 use App\Models\TopDigitalGovernment;
 use App\Models\TopProjectManagement;
 use App\Models\TopQualityManagement;
 use Illuminate\Support\Facades\Auth;
 use App\Models\TopDigitalCitizenship;
+<<<<<<< HEAD
 use App\Models\TopPersonalDevelopment;
 use App\Models\TopWorkplaceManagement;
 use App\Models\TopInformationManagement;
 use App\Models\TopStakeholderManagement;
 use App\Models\TopOrganizationalLeadership;
+=======
+use App\Models\TopInformationManagement;
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 
 class TopLayerController extends Controller
 {
@@ -87,8 +97,12 @@ class TopLayerController extends Controller
     {
         $topIct=Auth::user()->govofficial->topIct;
         $topDigitalGovernment=Auth::user()->govofficial->topDigitalGovernment;
+<<<<<<< HEAD
         $topManagement=Auth::user()->govofficial->topManagement;
         return view('govOfficials.Top&2ndTier.main',compact('topIct','topDigitalGovernment','topManagement'));
+=======
+        return view('govOfficials.Top&2ndTier.main',compact('topIct','topDigitalGovernment'));
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
     }
 
     public function topIctPage01(){
@@ -562,6 +576,7 @@ class TopLayerController extends Controller
         return view('govOfficials.Top&2ndTier.Management.page04');
     }
 
+<<<<<<< HEAD
     public function topManagementPage05(){
         return view('govOfficials.Top&2ndTier.Management.page05');
     }
@@ -924,3 +939,6 @@ class TopLayerController extends Controller
 
 
 }
+=======
+} 
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5

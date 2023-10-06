@@ -57,12 +57,17 @@
             <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                 <div class="card-body" style="background: rgba(86,108,179,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;">
                     <p class="card-text" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></p>
+<<<<<<< HEAD
                         @if($topManagement)
                         <a class="btn btn-primary" href="{{ route('topManagementResult') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
                         @else
                         <a class="btn btn-primary" type="button" href="{{ route('topManagementPage01') }}" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family:poppins">Get Started</a>
                         @endif
                     </div>
+=======
+                    <a class="btn btn-primary" href="{{route('topManagementPage01')}}" type="button" style="font-family:poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
+                </div>
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
             </div>
         </div>
     </div>
