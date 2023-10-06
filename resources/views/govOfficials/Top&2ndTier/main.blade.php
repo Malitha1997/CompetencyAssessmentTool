@@ -39,7 +39,11 @@
                 <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                     <div class="card-body" style="background: rgba(86,108,179,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;margin-top: -16px;">
                         <p class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and capabilities to drive an ICT-enabled transformation of the public sector. And making it possible to carry out the public sector’s tasks more efficiently and effectively.<br><br></p>
+                        @if($topDigitalGovernment)
+                        <a class="btn btn-primary" href="/top/dg/result" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                        @else
                         <a class="btn btn-primary" type="button" href="{{ route('topDigitalGovernmentPage01') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -47,13 +51,18 @@
     </div>
 </div>
 <div class="row" style="margin-top: 100px;">
-    <div class="col-md-6" data-aos="fade-up" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 524px;height: 545px;margin-left: 470px;border-style: solid;border-color: #5F2B84;text-align: center;">
+    <div class="col-md-6" data-aos="fade-up" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 524px;height: 545px;margin-left: 32%;border-style: solid;border-color: #5F2B84;text-align: center;margin-bottom:50px">
         <div>
             <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">Management Assessment</p><img width="336" height="250" src="{{ asset('img/12146032_Wavy_Gen-03_Single-07 1.png') }}" style="width: 367px;height: 242px;">
             <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                 <div class="card-body" style="background: rgba(86,108,179,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;">
-                    <p class="card-text" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></p><button class="btn btn-primary" type="button" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</button>
-                </div>
+                    <p class="card-text" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></p>
+                        @if($topManagement)
+                        <a class="btn btn-primary" href="{{ route('topManagementResult') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                        @else
+                        <a class="btn btn-primary" type="button" href="{{ route('topManagementPage01') }}" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family:poppins">Get Started</a>
+                        @endif
+                    </div>
             </div>
         </div>
     </div>

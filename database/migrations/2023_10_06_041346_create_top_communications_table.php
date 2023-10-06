@@ -11,16 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('top_digital_governments', function (Blueprint $table) {
+        Schema::create('top_communications', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('project_management');
-            $table->string('change_management');
-            $table->string('collaboration');
-            $table->string('orientation');
-            $table->string('quality_management');
-            $table->string('leadership');
-            $table->string('overall_top_digital_government');
+            $table->string('mgt5');
+            $table->string('mgt6');
+            $table->string('mgt7');
+            $table->string('mgt8');
+            $table->string('mgt9');
             $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('top_digital_governments');
+        Schema::dropIfExists('top_communications');
     }
 };

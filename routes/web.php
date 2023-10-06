@@ -166,6 +166,37 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/digitalgovernment/page04', [TopLayerController::class, 'topDigitalGovernmentPage04'])->name('topDigitalGovernmentPage04');
     Route::get('/top/digitalgovernment/page05', [TopLayerController::class, 'topDigitalGovernmentPage05'])->name('topDigitalGovernmentPage05');
     Route::get('/top/digitalgovernment/page06', [TopLayerController::class, 'topDigitalGovernmentPage06'])->name('topDigitalGovernmentPage06');
+
+    Route::post('storeTopProjectManagement', [TopLayerController::class, 'storeTopProjectManagement'])->name('storeTopProjectManagement');
+    Route::post('storeTopChangeManagement', [TopLayerController::class, 'storeTopChangeManagement'])->name('storeTopChangeManagement');
+    Route::post('storeTopCollaboration', [TopLayerController::class, 'storeTopCollaboration'])->name('storeTopCollaboration');
+    Route::post('storeTopOrientation', [TopLayerController::class, 'storeTopOrientation'])->name('storeTopOrientation');
+    Route::post('storeTopQualityManagement', [TopLayerController::class, 'storeTopQualityManagement'])->name('storeTopQualityManagement');
+    Route::post('storeTopLeadership', [TopLayerController::class, 'storeTopLeadership'])->name('storeTopLeadership');
+
+    Route::get('/top/dg/result', [TopLayerController::class, 'topDigitalGovernmentResult'])->name('topDigitalGovernmentResult');
+    Route::get('/top/dg/report', [TopLayerController::class, 'topDigitalGovernmentReport'])->name('topDigitalGovernmentReport');
+
+    Route::get('/top/management/page01', [TopLayerController::class, 'topManagementPage01'])->name('topManagementPage01');
+    Route::get('/top/management/page02', [TopLayerController::class, 'topManagementPage02'])->name('topManagementPage02');
+    Route::get('/top/management/page03', [TopLayerController::class, 'topManagementPage03'])->name('topManagementPage03');
+    Route::get('/top/management/page04', [TopLayerController::class, 'topManagementPage04'])->name('topManagementPage04');
+    Route::get('/top/management/page05', [TopLayerController::class, 'topManagementPage05'])->name('topManagementPage05');
+    Route::get('/top/management/page06', [TopLayerController::class, 'topManagementPage06'])->name('topManagementPage06');
+    Route::get('/top/management/page07', [TopLayerController::class, 'topManagementPage07'])->name('topManagementPage07');
+    Route::get('/top/management/page08', [TopLayerController::class, 'topManagementPage08'])->name('topManagementPage08');
+
+    Route::post('storeTopOrganizationalLeadership', [TopLayerController::class, 'storeTopOrganizationalLeadership'])->name('storeTopOrganizationalLeadership');
+    Route::post('storeTopCommunication', [TopLayerController::class, 'storeTopCommunication'])->name('storeTopCommunication');
+    Route::post('storeTopWorkplaceManagement', [TopLayerController::class, 'storeTopWorkplaceManagement'])->name('storeTopWorkplaceManagement');
+    Route::post('storeTopDecisionMaking', [TopLayerController::class, 'storeTopDecisionMaking'])->name('storeTopDecisionMaking');
+    Route::post('storeTopCapacityBuilding', [TopLayerController::class, 'storeTopCapacityBuilding'])->name('storeTopCapacityBuilding');
+    Route::post('storeTopStakeholder', [TopLayerController::class, 'storeTopStakeholder'])->name('storeTopStakeholder');
+    Route::post('storeTopHumanResource', [TopLayerController::class, 'storeTopHumanResource'])->name('storeTopHumanResource');
+    Route::post('storeTopPersonalDevelopment', [TopLayerController::class, 'storeTopPersonalDevelopment'])->name('storeTopPersonalDevelopment');
+
+    Route::get('/top/mgt/result', [TopLayerController::class, 'topManagementResult'])->name('topManagementResult');
+    Route::get('/top/mgt/report', [TopLayerController::class, 'topManagementReport'])->name('topManagementReport');
 });
 
 

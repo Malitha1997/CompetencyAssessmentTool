@@ -1,7 +1,7 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
-<form method="POST" action="">
+<form method="POST" action="{{route('storeTopChangeManagement')}}">
     {{csrf_field()}}
 <section data-aos="fade-down" style="height: 750px;">
     <div style="margin-top: 50px;text-align:center;margin-bottom: 50px;">
@@ -60,98 +60,11 @@
                                             <div class="row" style="margin-bottom: 20px;">
                                                 <div class="col"><input name="dg6" id="dg6_2" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg6_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; b) Google docs, spreadsheets to work on a single document collaboratively (Google docs, spreadsheets -&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; සහයෝගීව තනි ලේඛනයක් මත වැඩ කිරීමට)</label></div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-top: -20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 100px;"><br>7) Identify the incorrect statement. (වැරදි ප්‍රකාශය හඳුනාගන්න)</span></div>
-            </div>
-            <div class="row d-flex flex-column" style="text-align: center;">
-                <div class="col">
-                    <div class="row d-flex flex-column" style="text-align: center;">
-                        <div class="col">
-                            <div class="row d-flex flex-column" style="text-align: center;">
-                                <div class="col">
-                                    <div class="row d-flex flex-column" style="text-align: center;">
-                                        <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg7" id="dg7_1" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg7_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 20px;width: 1100px;">a) Individual strengths/weaknesses can be shared between team members and go for bigger outcomes (තනි&nbsp; &nbsp; &nbsp; &nbsp;පුද්ගල ශක්තීන්/දුර්වලතා කණ්ඩායම් සාමාජිකයන් අතර බෙදා ගත හැකි අතර එය&nbsp;විශාල ප්‍රතිඵල කරා යා හැක)</label></div>
+                                                <div class="col" style="margin-top: 10px;"><input name="dg6" id="dg6_3" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg6_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) WhatsApp/ Facebook Group for group chats (WhatsApp/ Facebook Group - කණ්ඩායම් කතාබස් සඳහා)</label></div>
                                             </div>
                                             <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg7" id="dg7_2" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="6"><label class="form-label" for="dg7_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp;  b) Talented members can take the lead in every team and others become just followers (දක්ෂ සාමාජිකයින්ට සෑම&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;කණ්ඩායමකම පෙරමුණ ගත හැකි අතර අනෙක් අය හුදෙක් අනුගාමිකයින් බවට පත්වේ)</label></div>
-                                            </div>
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg7" id="dg7_3" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg7_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; c) Responsibilities can be shared among team members so that all members can play an important role (සියලුම&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; සාමාජිකයින්ට වැදගත් කාර්යභාරයක් ඉටු කළ හැකි වන පරිදි කණ්ඩායම් සාමාජිකයින් අතර වගකීම් බෙදා ගත හැකිය)</label></div>
-                                            </div>
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg7" id="dg7_4" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg7_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; d) Diversity in a team can always lead to a greater success (කණ්ඩායමක විවිධත්වය සෑම විටම වැඩි සාර්ථකත්වයක් කරා ගෙන&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;යා හැකිය)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-top: -20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 100px;"><br>8) Identify the incorrect statement. (වැරදි ප්‍රකාශය හඳුනාගන්න)</span></div>
-            </div>
-            <div class="row d-flex flex-column" style="text-align: center;">
-                <div class="col">
-                    <div class="row d-flex flex-column" style="text-align: center;">
-                        <div class="col">
-                            <div class="row d-flex flex-column" style="text-align: center;">
-                                <div class="col">
-                                    <div class="row d-flex flex-column" style="text-align: center;">
-                                        <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg8" id="dg8_1" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg8_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 20px;width: 1100px;">a) Individual strengths/weaknesses can be shared between team members and go for bigger outcomes (තනි&nbsp; &nbsp; &nbsp; &nbsp;පුද්ගල ශක්තීන්/දුර්වලතා කණ්ඩායම් සාමාජිකයන් අතර බෙදා ගත හැකි අතර එය&nbsp;විශාල ප්‍රතිඵල කරා යා හැක)</label></div>
-                                            </div>
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg8" id="dg8_2" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="6"><label class="form-label" for="dg8_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp;  b) Talented members can take the lead in every team and others become just followers (දක්ෂ සාමාජිකයින්ට සෑම&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;කණ්ඩායමකම පෙරමුණ ගත හැකි අතර අනෙක් අය හුදෙක් අනුගාමිකයින් බවට පත්වේ)</label></div>
-                                            </div>
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg8" id="dg8_3" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg8_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; c) Responsibilities can be shared among team members so that all members can play an important role (සියලුම&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; සාමාජිකයින්ට වැදගත් කාර්යභාරයක් ඉටු කළ හැකි වන පරිදි කණ්ඩායම් සාමාජිකයින් අතර වගකීම් බෙදා ගත හැකිය)</label></div>
-                                            </div>
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg8" id="dg8_4" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg8_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; d) Diversity in a team can always lead to a greater success (කණ්ඩායමක විවිධත්වය සෑම විටම වැඩි සාර්ථකත්වයක් කරා ගෙන&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;යා හැකිය)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-top: -20px;">
-                <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 100px;"><br>9) Identify the incorrect statement. (වැරදි ප්‍රකාශය හඳුනාගන්න)</span></div>
-            </div>
-            <div class="row d-flex flex-column" style="text-align: center;">
-                <div class="col">
-                    <div class="row d-flex flex-column" style="text-align: center;">
-                        <div class="col">
-                            <div class="row d-flex flex-column" style="text-align: center;">
-                                <div class="col">
-                                    <div class="row d-flex flex-column" style="text-align: center;">
-                                        <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg9" id="dg9_1" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg9_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 20px;width: 1100px;">a) Individual strengths/weaknesses can be shared between team members and go for bigger outcomes (තනි&nbsp; &nbsp; &nbsp; &nbsp;පුද්ගල ශක්තීන්/දුර්වලතා කණ්ඩායම් සාමාජිකයන් අතර බෙදා ගත හැකි අතර එය&nbsp;විශාල ප්‍රතිඵල කරා යා හැක)</label></div>
-                                            </div>
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg9" id="dg9_2" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="6"><label class="form-label" for="dg9_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp;  b) Talented members can take the lead in every team and others become just followers (දක්ෂ සාමාජිකයින්ට සෑම&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;කණ්ඩායමකම පෙරමුණ ගත හැකි අතර අනෙක් අය හුදෙක් අනුගාමිකයින් බවට පත්වේ)</label></div>
-                                            </div>
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg9" id="dg9_3" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg9_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; c) Responsibilities can be shared among team members so that all members can play an important role (සියලුම&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; සාමාජිකයින්ට වැදගත් කාර්යභාරයක් ඉටු කළ හැකි වන පරිදි කණ්ඩායම් සාමාජිකයින් අතර වගකීම් බෙදා ගත හැකිය)</label></div>
-                                            </div>
-                                            <div class="row" style="margin-bottom: 20px;">
-                                                <div class="col"><input name="dg9" id="dg9_4" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg9_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; d) Diversity in a team can always lead to a greater success (කණ්ඩායමක විවිධත්වය සෑම විටම වැඩි සාර්ථකත්වයක් කරා ගෙන&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;යා හැකිය)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label></div>
+                                                <div class="col"><input name="dg6" id="dg6_4" type="radio" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="dg6_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; b) Google docs, spreadsheets to work on a single document collaboratively (Google docs, spreadsheets -&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; සහයෝගීව තනි ලේඛනයක් මත වැඩ කිරීමට)</label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -166,7 +79,7 @@
 </section>
 <div class="row" style="margin: 990px 0px 0px 926px;margin-right: 0px;margin-top: 1800px;margin-left: 850px;margin-bottom:50px">
     <div class="col"><a class="btn btn-primary" href="/toplayer" type="button" style="color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;font-family: Poppins, sans-serif;">Resume</a>
-        <a class="btn btn-primary" type="submit" href="{{ route('topDigitalGovernmentPage03') }}" style="font-family: Poppins, sans-serif;width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</a></div>
+        <button class="btn btn-primary" type="submit" style="font-family: Poppins, sans-serif;width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</button></div>
 </div>
 </form>
 

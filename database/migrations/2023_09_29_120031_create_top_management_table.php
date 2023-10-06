@@ -14,6 +14,16 @@ return new class extends Migration
         Schema::create('top_management', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('organizational_leadership');
+            $table->string('communication');
+            $table->string('workplace_management');
+            $table->string('decision_making');
+            $table->string('capacity_building');
+            $table->string('stakeholder_management');
+            $table->string('human_resource');
+            $table->string('personal_development');
+            $table->string('overall_top_management');
+            $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
 
