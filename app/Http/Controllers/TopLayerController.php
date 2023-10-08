@@ -204,7 +204,7 @@ class TopLayerController extends Controller
 
         $topIct->save();
 
-        return redirect()->route('toplayer');
+        return redirect()->route('topIctResult');
 
     }
 
