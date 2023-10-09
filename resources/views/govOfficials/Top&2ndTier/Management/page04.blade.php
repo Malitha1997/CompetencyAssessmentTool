@@ -25,12 +25,44 @@
                                                     <div class="col" style="margin-top: 10px;"><input type="radio" name="mgt13" id="mgt13_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt13_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) Identify and be clear the goal of the decision making</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt13" id="mgt13_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt13_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">b) Gather all relevant information to support the decision making process</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt13" id="mgt13_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt13_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Form a homogenous group to make the decision</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt13" id="mgt13_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt13_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Weigh pros and cons of the decision</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: -20px;">
+                    <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 100px;"><br>14) The resistance towards change at an individual level can be due to various reasons: Select the most appropriate.</span></div>
+                </div>
+                <div class="row d-flex flex-column" style="text-align: center;">
+                    <div class="col">
+                        <div class="row d-flex flex-column" style="text-align: center;">
+                            <div class="col">
+                                <div class="row d-flex flex-column" style="text-align: center;">
+                                    <div class="col">
+                                        <div class="row d-flex flex-column" style="text-align: center;">
+                                            <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt14" id="mgt14_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt14_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) How satisfied they are with the existing state of affairs.</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt14" id="mgt14_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt14_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">b) How much practical or realistic the change is.</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt14" id="mgt14_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt14_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">c) What will be the possible cost change on the individual in terms of potential risks involved, pressure to develop new competencies and disruptions.</label></div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 20px;">
+                                                    <div class="col"><input type="radio" name="mgt14" id="mgt14_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt14_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                                 </div>
                                             </div>
                                         </div>

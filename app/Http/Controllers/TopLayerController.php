@@ -86,9 +86,26 @@ class TopLayerController extends Controller
     public function top()
     {
         $topIct=Auth::user()->govofficial->topIct;
+        $topIctInWorkplace=Auth::user()->govofficial->topIctInWorkplace;
+        $topInformationManagement=Auth::user()->govofficial->topInformationManagement;
+
         $topDigitalGovernment=Auth::user()->govofficial->topDigitalGovernment;
+        $topProjectManagement=Auth::user()->govofficial->topProjectManagement;
+        $topChangeManagement=Auth::user()->govofficial->topChangeManagement;
+        $topCollaboration=Auth::user()->govofficial->topCollaboration;
+        $topOrientation=Auth::user()->govofficial->topOrientation;
+        $topQualityManagement=Auth::user()->govofficial->topQualityManagement;
+
         $topManagement=Auth::user()->govofficial->topManagement;
-        return view('govOfficials.Top&2ndTier.main',compact('topIct','topDigitalGovernment','topManagement'));
+        $topOrganizationalLeadership=Auth::user()->govofficial->topOrganizationalLeadership;
+        $topCommunication=Auth::user()->govofficial->topCommunication;
+        $topWorkplaceManagement=Auth::user()->govofficial->topWorkplaceManagement;
+        $topDecisionMaking=Auth::user()->govofficial->topDecisionMaking;
+        $topCapacityBuilding=Auth::user()->govofficial->topCapacityBuilding;
+        $topStakeholder=Auth::user()->govofficial->topStakeholder;
+        $topHumanResource=Auth::user()->govofficial->topHumanResource;
+
+        return view('govOfficials.Top&2ndTier.main',compact('topHumanResource','topStakeholder','topCapacityBuilding','topDecisionMaking','topWorkplaceManagement','topCommunication','topOrganizationalLeadership','topQualityManagement','topOrientation','topCollaboration','topChangeManagement','topProjectManagement','topInformationManagement','topIctInWorkplace','topIct','topDigitalGovernment','topManagement'));
     }
 
     public function topIctPage01(){
@@ -674,6 +691,7 @@ class TopLayerController extends Controller
             'mgt17'=>'required|string',
             'govofficial_id'=>'required|string',
         ]);
+        // dd($request);
 
         $topDecionMaking = new TopDecisionMaking;
 
@@ -795,7 +813,7 @@ class TopLayerController extends Controller
 
         $topManagement->save();
 
-        return redirect()->route('toplayer');
+        return redirect()->route('topManagementResult');
     }
 
     public function topManagementResult(){
@@ -920,6 +938,280 @@ class TopLayerController extends Controller
         $topPersonalDevelopment2=$govOfficial->topPersonalDevelopment;
 
         return view('govOfficials.Top&2ndTier.Management.report',compact('govOfficial','avgtopCapacityBuilding','avgtopDecisionMaking','topCapacityBuilding2','topDecisionMaking2','result','topCommunication2','topWorkplaceManagement2','topStakeholderManagement2','topPersonalDevelopment2','avgtopCommunication','avgtopWorkplaceManagement','avgtopStakeholderManagement','avgtopPersonalDevelopment'));
+    }
+
+    public function overalresult(){
+        $labels = ["ICT", "Digital Government", "Management"];
+        $topIct=Auth::user()->govofficial->topIct;
+        $topDigitalGov=Auth::user()->govofficial->topDigitalGovernment;
+        $topManagement=Auth::user()->govofficial->topManagement;
+        $data=[
+            (int) $topIct->overall_top_ict,
+            (int) $topDigitalGov->overall_top_digital_government,
+            (int) $topManagement->overall_top_management
+        ];
+
+        $topIctInWorkplace=$topIct->ict_in_workplace;
+        $a=$topIctInWorkplace/24;
+        $avgTopIctInWorkplace=round($a*100);
+
+        $topInformationManagement=$topIct->information_management;
+        $b=$topInformationManagement/6;
+        $avgTopInformationManagement=round($b*100);
+
+        $topDigitalCitizenship=$topIct->digital_citizenship;
+        $c=$topDigitalCitizenship/70;
+        $avgTopDigitalCitizenship=round($c*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['ICT in Workplace', (int) $avgTopIctInWorkplace],
+            ['Information Management', (int) $avgTopInformationManagement],
+            ['Digital Citizenship', (int) $avgTopDigitalCitizenship],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $topIctInWorkplace2=$govOfficial->topIctInWorkplace;
+        $topInformationManagement2=$govOfficial->topInformationManagement;
+        $topDigitalCitizenship2=$govOfficial->topDigitalCitizenship;
+
+        $topProjectManagement=$topDigitalGov->project_management;
+        $a=$topProjectManagement/12;
+        $avgtopProjectManagement=round($a*100);
+
+        $topChangeManagement=$topDigitalGov->change_management;
+        $b=$topChangeManagement/18;
+        $avgtopChangeManagement=round($b*100);
+
+        $topCollaboration=$topDigitalGov->collaboration;
+        $c=$topCollaboration/12;
+        $avgtopCollaboration=round($c*100);
+
+        $topOrientatiion=$topDigitalGov->orientation;
+        $d=$topOrientatiion/14;
+        $avgtopOrientatiion=round($d*100);
+
+        $topQualityManagement=$topDigitalGov->quality_management;
+        $e=$topQualityManagement/15;
+        $avgtopQualityManagement=round($e*100);
+
+        $topLeadership=$topDigitalGov->Leadership;
+        $f=$topLeadership/29;
+        $avgtopLeadership=round($f*100);
+
+        $result2 = [
+            ['Category', 'Value'],
+            ['Project Management', (int) $avgtopProjectManagement],
+            ['Change Management', (int) $avgtopChangeManagement],
+            ['Collaboration and Partnership', (int) $avgtopCollaboration],
+            ['Results Orientation', (int) $avgtopOrientatiion],
+            ['Quality Management', (int) $avgtopQualityManagement],
+            ['Digital Government Leadership', (int) $avgtopLeadership],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $topProjectManagement2=$govOfficial->topProjectManagement;
+        $topChangeManagement2=$govOfficial->topChangeManagement;
+        $topCollaboration2=$govOfficial->topCollaboration;
+        $topOrientation2=$govOfficial->topOrientation;
+        $topQualityManagement2=$govOfficial->topQualityManagement;
+        $topLeadership2=$govOfficial->topLeadership;
+
+        $topOrganizationalLeadership=$topManagement->organizational_leadership;
+        $i=$topOrganizationalLeadership/12;
+        $avgtopOrganizationalLeadership=round($i*100);
+
+        $topCommunication=$topManagement->communication;
+        $a=$topCommunication/12;
+        $avgtopCommunication=round($a*100);
+
+        $topWorkplaceManagement=$topManagement->workplace_management;
+        $b=$topWorkplaceManagement/10;
+        $avgtopWorkplaceManagement=round($b*100);
+
+        $topDecisionMaking=$topManagement->decision_making;
+        $c=$topDecisionMaking/19;
+        $avgtopDecisionMaking=round($c*100);
+
+        $topCapacityBuilding=$topManagement->capacity_building;
+        $d=$topCapacityBuilding/8;
+        $avgtopCapacityBuilding=round($d*100);
+
+        $topStakeholderManagement=$topManagement->stakeholder_management;
+        $e=$topStakeholderManagement/25;
+        $avgtopStakeholderManagement=round($e*100);
+
+        $topHumanResource=$topManagement->human_resource;
+        $f=$topHumanResource/17;
+        $avgtopHumanResource=round($f*100);
+
+        $topPersonalDevelopment=$topManagement->personal_development;
+        $h=$topPersonalDevelopment/5;
+        $avgtopPersonalDevelopment=round($h*100);
+
+        $result3 = [
+            ['Category', 'Value'],
+            ['Organizational Leadership', (int) $avgtopOrganizationalLeadership],
+            ['Communication', (int) $avgtopCommunication],
+            ['Workplace Management', (int) $avgtopWorkplaceManagement],
+            ['Decision Making', (int) $avgtopDecisionMaking],
+            ['Capacity Building', (int) $avgtopCapacityBuilding],
+            ['Stakeholder Management', (int) $avgtopStakeholderManagement],
+            ['Human Resource', (int) $avgtopHumanResource],
+            ['Personal Development', (int) $avgtopPersonalDevelopment],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $topOrganizationalLeadership2=$govOfficial->topOrganizationalLeadership;
+        $topCommunication2=$govOfficial->topCommunication;
+        $topWorkplaceManagement2=$govOfficial->topWorkplaceManagement;
+        $topDecisionMaking2=$govOfficial->topDecisionMaking;
+        $topCapacityBuilding2=$govOfficial->topCapacityBuilding;
+        $topStakeholderManagement2=$govOfficial->topStakeholder;
+        $topHumanResource2=$govOfficial->topHumanResource;
+        $topPersonalDevelopment2=$govOfficial->topPersonalDevelopment;
+
+        return view('govOfficials.Top&2ndTier.overallResults',compact('data','labels','topDigitalCitizenship2','topInformationManagement2','topIctInWorkplace2','avgTopDigitalCitizenship','avgTopInformationManagement','avgTopIctInWorkplace','result','topLeadership2','topProjectManagement2','result2','avgtopChangeManagement','avgtopCollaboration','avgtopOrientatiion','avgtopQualityManagement','avgtopLeadership','topChangeManagement2','topCollaboration2','topOrientation2','topQualityManagement2','avgtopCapacityBuilding','avgtopDecisionMaking','topCapacityBuilding2','topDecisionMaking2','result3','topCommunication2','topWorkplaceManagement2','topStakeholderManagement2','topPersonalDevelopment2','avgtopCommunication','avgtopWorkplaceManagement','avgtopStakeholderManagement','avgtopPersonalDevelopment'));
+    }
+
+    public function overalreport(){
+        $labels = ["ICT", "Digital Government", "Management"];
+        $topIct=Auth::user()->govofficial->topIct;
+        $topDigitalGov=Auth::user()->govofficial->topDigitalGovernment;
+        $topManagement=Auth::user()->govofficial->topManagement;
+        $data=[
+            (int) $topIct->overall_top_ict,
+            (int) $topDigitalGov->overall_top_digital_government,
+            (int) $topManagement->overall_top_management
+        ];
+
+        $topIctInWorkplace=$topIct->ict_in_workplace;
+        $a=$topIctInWorkplace/24;
+        $avgTopIctInWorkplace=round($a*100);
+
+        $topInformationManagement=$topIct->information_management;
+        $b=$topInformationManagement/6;
+        $avgTopInformationManagement=round($b*100);
+
+        $topDigitalCitizenship=$topIct->digital_citizenship;
+        $c=$topDigitalCitizenship/70;
+        $avgTopDigitalCitizenship=round($c*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['ICT in Workplace', (int) $avgTopIctInWorkplace],
+            ['Information Management', (int) $avgTopInformationManagement],
+            ['Digital Citizenship', (int) $avgTopDigitalCitizenship],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $topIctInWorkplace2=$govOfficial->topIctInWorkplace;
+        $topInformationManagement2=$govOfficial->topInformationManagement;
+        $topDigitalCitizenship2=$govOfficial->topDigitalCitizenship;
+
+        $topProjectManagement=$topDigitalGov->project_management;
+        $a=$topProjectManagement/12;
+        $avgtopProjectManagement=round($a*100);
+
+        $topChangeManagement=$topDigitalGov->change_management;
+        $b=$topChangeManagement/18;
+        $avgtopChangeManagement=round($b*100);
+
+        $topCollaboration=$topDigitalGov->collaboration;
+        $c=$topCollaboration/12;
+        $avgtopCollaboration=round($c*100);
+
+        $topOrientatiion=$topDigitalGov->orientation;
+        $d=$topOrientatiion/14;
+        $avgtopOrientatiion=round($d*100);
+
+        $topQualityManagement=$topDigitalGov->quality_management;
+        $e=$topQualityManagement/15;
+        $avgtopQualityManagement=round($e*100);
+
+        $topLeadership=$topDigitalGov->Leadership;
+        $f=$topLeadership/29;
+        $avgtopLeadership=round($f*100);
+
+        $result2 = [
+            ['Category', 'Value'],
+            ['Project Management', (int) $avgtopProjectManagement],
+            ['Change Management', (int) $avgtopChangeManagement],
+            ['Collaboration and Partnership', (int) $avgtopCollaboration],
+            ['Results Orientation', (int) $avgtopOrientatiion],
+            ['Quality Management', (int) $avgtopQualityManagement],
+            ['Digital Government Leadership', (int) $avgtopLeadership],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $topProjectManagement2=$govOfficial->topProjectManagement;
+        $topChangeManagement2=$govOfficial->topChangeManagement;
+        $topCollaboration2=$govOfficial->topCollaboration;
+        $topOrientation2=$govOfficial->topOrientation;
+        $topQualityManagement2=$govOfficial->topQualityManagement;
+        $topLeadership2=$govOfficial->topLeadership;
+
+        $topOrganizationalLeadership=$topManagement->organizational_leadership;
+        $i=$topOrganizationalLeadership/12;
+        $avgtopOrganizationalLeadership=round($i*100);
+
+        $topCommunication=$topManagement->communication;
+        $a=$topCommunication/12;
+        $avgtopCommunication=round($a*100);
+
+        $topWorkplaceManagement=$topManagement->workplace_management;
+        $b=$topWorkplaceManagement/10;
+        $avgtopWorkplaceManagement=round($b*100);
+
+        $topDecisionMaking=$topManagement->decision_making;
+        $c=$topDecisionMaking/19;
+        $avgtopDecisionMaking=round($c*100);
+
+        $topCapacityBuilding=$topManagement->capacity_building;
+        $d=$topCapacityBuilding/8;
+        $avgtopCapacityBuilding=round($d*100);
+
+        $topStakeholderManagement=$topManagement->stakeholder_management;
+        $e=$topStakeholderManagement/25;
+        $avgtopStakeholderManagement=round($e*100);
+
+        $topHumanResource=$topManagement->human_resource;
+        $f=$topHumanResource/17;
+        $avgtopHumanResource=round($f*100);
+
+        $topPersonalDevelopment=$topManagement->personal_development;
+        $h=$topPersonalDevelopment/5;
+        $avgtopPersonalDevelopment=round($h*100);
+
+        $result3 = [
+            ['Category', 'Value'],
+            ['Organizational Leadership', (int) $avgtopOrganizationalLeadership],
+            ['Communication', (int) $avgtopCommunication],
+            ['Workplace Management', (int) $avgtopWorkplaceManagement],
+            ['Decision Making', (int) $avgtopDecisionMaking],
+            ['Capacity Building', (int) $avgtopCapacityBuilding],
+            ['Stakeholder Management', (int) $avgtopStakeholderManagement],
+            ['Human Resource', (int) $avgtopHumanResource],
+            ['Personal Development', (int) $avgtopPersonalDevelopment],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $topOrganizationalLeadership2=$govOfficial->topOrganizationalLeadership;
+        $topCommunication2=$govOfficial->topCommunication;
+        $topWorkplaceManagement2=$govOfficial->topWorkplaceManagement;
+        $topDecisionMaking2=$govOfficial->topDecisionMaking;
+        $topCapacityBuilding2=$govOfficial->topCapacityBuilding;
+        $topStakeholderManagement2=$govOfficial->topStakeholder;
+        $topHumanResource2=$govOfficial->topHumanResource;
+        $topPersonalDevelopment2=$govOfficial->topPersonalDevelopment;
+
+        return view('govOfficials.Top&2ndTier.overallReport',compact('govOfficial','data','labels','topDigitalCitizenship2','topInformationManagement2','topIctInWorkplace2','avgTopDigitalCitizenship','avgTopInformationManagement','avgTopIctInWorkplace','result','topLeadership2','topProjectManagement2','result2','avgtopChangeManagement','avgtopCollaboration','avgtopOrientatiion','avgtopQualityManagement','avgtopLeadership','topChangeManagement2','topCollaboration2','topOrientation2','topQualityManagement2','avgtopCapacityBuilding','avgtopDecisionMaking','topCapacityBuilding2','topDecisionMaking2','result3','topCommunication2','topWorkplaceManagement2','topStakeholderManagement2','topPersonalDevelopment2','avgtopCommunication','avgtopWorkplaceManagement','avgtopStakeholderManagement','avgtopPersonalDevelopment'));
     }
 
 
