@@ -11,7 +11,7 @@
         <div class="d-flex justify-content-center mb-auto mb-md-auto" data-aos="fade-right" data-aos-duration="1000" style="width: 1358px;height: 163px;margin-top: 20px;background: #1f2471;border-radius: 10px;margin-left: -30px;">
             <div class="text-center d-flex flex-column justify-content-center" style="width: 1358px;height: 194px;color: rgb(255, 255, 255);background: #ffffff;padding-top: 0px;text-align: center;border-radius: 10px;border: 1px solid #1f2471;padding-bottom: 0px;margin-top: 25px;"><span style="color: var(--bs-body-bg);font-size: 20px;font-family: Poppins, sans-serif;font-weight: bold;height: 90px;padding-bottom: 0px;margin-bottom: -42px;background: #E52F72;margin-top: -48px;border-radius: 5px;"><br>Competency Area: Digital Citizenship (නිපුණතා&nbsp;අංශය - ඩිජිටල් පුරවැසිභාවය)<br><br><br></span><span style="color: rgb(0,0,0);font-family: Poppins, sans-serif;font-size: 20px;text-align: center;font-weight: bold;padding-top: 0px;margin-bottom: -12px;margin-top: 10px;"><br>Competency Area Description: Use of digital technology and media in safe responsible and ethical ways.&nbsp; (නිපුණතා අංශයේ විස්තරය: &nbsp;වගකිවයුතු සහ සදාචාරාත්මක ආකාරයෙන් ආරක්ෂිතව&nbsp;ඩිජිටල් තාක්ෂණය සහ&nbsp;මාධ්‍ය භාවිතය.)&nbsp;<br><br><br></span></div>
         </div>
-        <div data-aos="fade-down" data-aos-duration="1000" style="width: 1282px;height: 2980px;margin-top: 80px;border-radius: 10px;border: 2px solid #5f2b84;padding-left: 0px;margin-left: 6px;">
+        <div data-aos="fade-down" data-aos-duration="1000" style="width: 1282px;height: 3150px;margin-top: 80px;border-radius: 10px;border: 2px solid #5f2b84;padding-left: 0px;margin-left: 6px;">
             <div class="row" style="margin-top: 20px;">
                 <div class="col" style="margin-left: 40px;"><span style="color: #1f2471;font-family: Poppins, sans-serif;font-size: 20px;margin-left: 100px;"><br>15) Which of the following is the best definition of a good digital citizen? (යහපත් ඩිජිටල් පුරවැසියෙකු පිළිබඳ හොඳම නිර්වචනය පහත සඳහන් දේවලින් කුමක්ද?)</span></div>
             </div>
@@ -269,9 +269,9 @@
         </div>
     </div>
 </section>
-<div class="row" style="margin-right: 0px;margin-top: 2700px;margin-left: 850px;font-family: Poppins, sans-serif;margin-bottom:50px">
-    <div class="col"><a class="btn btn-primary" href="{{ route('operationallayer') }}" "type="button" style="color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
-        <button class="btn btn-primary" type="submit" style="width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</button></div>
+<div class="row" style="margin-right: 0px;margin-top: 2900px;margin-left: 850px;font-family: Poppins, sans-serif;margin-bottom:50px">
+    <div class="col"><button class="btn btn-primary" href="{{ route('operationallayer') }}" type="button" style="color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
+        <button class="btn btn-primary" type="submit" style="width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Submit</button></div>
 </div>
 </form>
 @endsection

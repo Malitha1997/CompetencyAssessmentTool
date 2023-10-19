@@ -1157,35 +1157,35 @@ class TopLayerController extends Controller
         $topLeadership2=$govOfficial->topLeadership;
 
         $topOrganizationalLeadership=$topManagement->organizational_leadership;
-        $i=$topOrganizationalLeadership/12;
+        $i=$topOrganizationalLeadership/14;
         $avgtopOrganizationalLeadership=round($i*100);
 
         $topCommunication=$topManagement->communication;
-        $a=$topCommunication/12;
+        $a=$topCommunication/18;
         $avgtopCommunication=round($a*100);
 
         $topWorkplaceManagement=$topManagement->workplace_management;
-        $b=$topWorkplaceManagement/10;
+        $b=$topWorkplaceManagement/12;
         $avgtopWorkplaceManagement=round($b*100);
 
         $topDecisionMaking=$topManagement->decision_making;
-        $c=$topDecisionMaking/19;
+        $c=$topDecisionMaking/10;
         $avgtopDecisionMaking=round($c*100);
 
         $topCapacityBuilding=$topManagement->capacity_building;
-        $d=$topCapacityBuilding/8;
+        $d=$topCapacityBuilding/20;
         $avgtopCapacityBuilding=round($d*100);
 
         $topStakeholderManagement=$topManagement->stakeholder_management;
-        $e=$topStakeholderManagement/25;
+        $e=$topStakeholderManagement/14;
         $avgtopStakeholderManagement=round($e*100);
 
         $topHumanResource=$topManagement->human_resource;
-        $f=$topHumanResource/17;
+        $f=$topHumanResource/6;
         $avgtopHumanResource=round($f*100);
 
         $topPersonalDevelopment=$topManagement->personal_development;
-        $h=$topPersonalDevelopment/5;
+        $h=$topPersonalDevelopment/6;
         $avgtopPersonalDevelopment=round($h*100);
 
         $result3 = [

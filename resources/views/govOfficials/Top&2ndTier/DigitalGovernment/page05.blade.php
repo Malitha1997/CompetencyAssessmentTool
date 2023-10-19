@@ -68,6 +68,7 @@
                                                         <div class="row" style="margin-bottom: 20px;">
                                                             <div class="col"><input type="radio" name="dg15" id="dg15_4" value="0" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="dg15_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Your front office often is the point of initial contact for your customer</label></div>
                                                         </div>
+                                                        <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
                                                     </div>
                                                 </div>
                                             </div>

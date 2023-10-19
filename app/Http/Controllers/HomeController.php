@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -39,7 +40,8 @@ class HomeController extends Controller
 
     public function index(): View
     {
-        return view('govOfficials.userHome');
+        $layer=Auth::user()->govofficial->employment_layer;
+        return view('govOfficials.userHome',compact('layer'));
     }
 
 

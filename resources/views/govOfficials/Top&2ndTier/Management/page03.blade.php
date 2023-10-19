@@ -31,7 +31,7 @@
                                                     <div class="col"><input type="radio" name="mgt10" id="mgt10_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt10_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Transference</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt10" id="mgt10_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt10_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Retention</label></div>
+                                                    <div class="col"><input type="radio" name="mgt10" id="mgt10_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="mgt10_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Retention</label></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,7 +62,7 @@
                                                     <div class="col"><input type="radio" name="mgt11" id="mgt11_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt11_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c) A lack of clear ownership of benefits beyond the business case and the lack of robust processes to manage,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;monitor and realise benefits.</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt11" id="mgt11_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt11_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of above are true</label></div>
+                                                    <div class="col"><input type="radio" name="mgt11" id="mgt11_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="mgt11_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of above are true</label></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -93,7 +93,7 @@
                                                     <div class="col"><input type="radio" name="mgt12" id="mgt12_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt12_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Skype</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt12" id="mgt12_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt12_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+                                                    <div class="col"><input type="radio" name="mgt12" id="mgt12_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="mgt12_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                                 </div>
                                                 <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
                                             </div>

@@ -57,10 +57,10 @@
                                         <div class="row d-flex flex-column" style="text-align: center;">
                                             <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="dg17" id="dg17_1" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="dg17_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Both A and B are correct</label></div>
+                                                    <div class="col"><input type="radio" name="dg17" id="dg17_1" value="5" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="dg17_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;width: 1100px;">a) Both A and B are correct</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="dg17" id="dg17_2" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="dg17_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Both A and B are incorrect</label></div>
+                                                    <div class="col"><input type="radio" name="dg17" id="dg17_2" value="0" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="dg17_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Both A and B are incorrect</label></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -93,6 +93,12 @@
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="dg18" id="dg18_4" value="5" style="margin-left:20px;width:15px;height:15px;margin-right: 10px;"><label class="form-label" for="dg18_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Effective legal framework</label></div>
                                                 </div>
+                                                <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
+                                                <input class="form-control" type="hidden" id="totTopProjectManagement" name="totTopProjectManagement" value="{{$tottopProjectManagement}}" readonly>
+                                                <input class="form-control" type="hidden" id="totTopChangeManagement" name="totTopChangeManagement" value="{{$tottopChangeManagement}}" readonly>
+                                                <input class="form-control" type="hidden" id="totTopCollaboration" name="totTopCollaboration" value="{{$tottopCollaboration}}" readonly>
+                                                <input class="form-control" type="hidden" id="totTopOrientation" name="totTopOrientation" value="{{$tottopOrientation}}" readonly>
+                                                <input class="form-control" type="hidden" id="totTopQualityManagement" name="totTopQualityManagement" value="{{$tottopQualityManagement}}" readonly>
                                             </div>
                                         </div>
                                     </div>

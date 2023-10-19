@@ -25,17 +25,17 @@
                         <tbody>
                             <tr style="margin-top: 10px;">
                                 <td style="color: rgb(0,0,0);width: 900px;">a) Senior leadership must encourage human resource practices that promote employee behaviors that are consistent with the organization's strategy. This strategic alignment and these human resource practices enable public organizations&nbsp;to achieve digital transformation with superior performance.</td>
-                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_1" style="width:20px;height:20px" value="0"> </td>
+                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_1" style="width:20px;height:20px" value="4"> </td>
                                 <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_1" style="width:20px;height:20px" value="0"></td>
                             </tr>
                             <tr>
                                 <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) Collaborative work environment is not an effective method for building a knowledge driven Organization</td>
                                 <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_2" style="width:20px;height:20px" value="0"></td>
-                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_2" style="width:20px;height:20px" value="0"></td>
+                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_2" style="width:20px;height:20px" value="4"></td>
                             </tr>
                             <tr>
                                 <td style="color: rgb(0,0,0);margin-bottom: 0px;">c) The level of employees understanding on ICT, readiness for digital transformation, digital literacy among the staff streamline and positively influence digital government adoption and implementation </td>
-                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_3" style="width:20px;height:20px" value="0"></td>
+                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_3" style="width:20px;height:20px" value="4"></td>
                                 <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt18_3" style="width:20px;height:20px" value="0"></td>
                             </tr>
                             <tr></tr>
@@ -59,7 +59,7 @@
                                                     <div class="col" style="margin-top: 10px;"><input type="radio" name="mgt19" id="mgt19_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt19_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) Continuous learning is only applicable for personal development</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt19" id="mgt19_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt19_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Continuous learning in the workplace is about developing new skills and knowledge</label></div>
+                                                    <div class="col"><input type="radio" name="mgt19" id="mgt19_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="mgt19_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Continuous learning in the workplace is about developing new skills and knowledge</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt19" id="mgt19_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt19_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Informal education is part of continuous learning</label></div>
@@ -93,7 +93,7 @@
                                                     <div class="col"><input type="radio" name="mgt20" id="mgt20_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt20_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Redesigning business processes</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt20" id="mgt20_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt20_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Changing the overall attitude towards work</label></div>
+                                                    <div class="col"><input type="radio" name="mgt20" id="mgt20_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="mgt20_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Changing the overall attitude towards work</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt20" id="mgt20_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt20_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Successful innovation</label></div>
@@ -127,7 +127,7 @@
                                                     <div class="col"><input type="radio" name="mgt21" id="mgt21_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt21_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Keeps employees engaged around the overall digital strategy</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt21" id="mgt21_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt21_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+                                                    <div class="col"><input type="radio" name="mgt21" id="mgt21_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="mgt21_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                                 </div>
                                                 <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
                                             </div>

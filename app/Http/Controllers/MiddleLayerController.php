@@ -329,6 +329,7 @@ class MiddleLayerController extends Controller
             'dg8' => 'required|string',
             'dg9_1' => 'required|string',
             'dg9_2' => 'required|string',
+            'dg9_3' => 'required|string',
             'govofficial_id'=>'required|string',
         ]);
 
@@ -341,6 +342,7 @@ class MiddleLayerController extends Controller
         $midChangeManagement->dg8=$request->dg8;
         $midChangeManagement->dg9_1=$request->dg9_1;
         $midChangeManagement->dg9_2=$request->dg9_2;
+        $midChangeManagement->dg9_3=$request->dg9_3;
         $midChangeManagement->govofficial_id=$request->govofficial_id;
 
         $midChangeManagement->save();
