@@ -159,7 +159,7 @@
                             <tr style="background: var(--bs-table-border-color);">
                                 <th style="background: var(--bs-table-border-color);width: 200px;font-size: 12px;">Competency Area</th>
                                 <th style="background: var(--bs-table-border-color);width: 100px;font-size: 12px;">Result</th>
-                                <th style="background: var(--bs-table-border-color);font-size: 12px;">Recommendations</th>
+                                <th style="background: var(--bs-table-border-color);font-size: 12px;">Recommended areas of improvement</th>
                             </tr>
                         </thead>
                         <tbody style="font-size: 12px;">

@@ -78,7 +78,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <input class="form-control-lg" name="gov_org_name" type="text" placeholder="Select Organization Name" id="gov_org_name" style="width: 500px;" value="{{ old('gov_org_name')}}">
+                            <input class="form-control-lg" name="gov_org_name" type="text" placeholder="Select Organization Name" id="gov_org_name" style="width: 500px;" value="{{ old('gov_org_name->gov_org_name')}}">
                             <input type="hidden" name="gov_org_name" id="gov_org_nameid" >
                             @if($errors->has('gov_org_name'))
                             <p class="text-danger"><b>Select the organization name</b></p>

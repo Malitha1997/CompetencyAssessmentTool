@@ -93,7 +93,7 @@
                 </div>
                 <div style="width :450.3px;background: url(&quot;{{ asset('img/Screenshot (560) 1(2).png') }}&quot;);">
 
-                    <h1 data-aos="fade-down" style="font-family: Poppins, sans-serif;text-align: center;font-size: 24px;margin-top: 500px;">You are eligible for Digital Government Competency Framework assessment. Asses the your Competencies.&nbsp;</h1>
+                    <h1 data-aos="fade-down" style="font-family: Poppins, sans-serif;text-align: center;font-size: 24px;margin-top: 500px;">Click on the 'Assessments' button to start the <br>Competency Assessment.&nbsp;</h1>
 
                     <div class="row" style="margin-top: 90px;">
                         <div class="col" style="text-align: center;">

@@ -28,9 +28,12 @@ use App\Models\MidPerformanceManagement;
 class MiddleLayerController extends Controller
 {
     public function middle(){
+        $midIct=Auth::user()->govofficial->midIct;
         $midIctInWorkplace=Auth::user()->govofficial->midIctInWorkplace;
         $midInformationManagement=Auth::user()->govofficial->midInformationManagement;
         $midDigitalCitizenship=Auth::user()->govofficial->midDigitalCitizenship;
+
+        $midDigitalGovernment=Auth::user()->govofficial->midDigitalGovernment;
         $midProjectManagement=Auth::user()->govofficial->midProjectManagement;
         $midChangeManagement=Auth::user()->govofficial->midChangeManagement;
         $midCollaboration=Auth::user()->govofficial->midCollaboration;
@@ -48,7 +51,7 @@ class MiddleLayerController extends Controller
         $midPerformanceManagement=Auth::user()->govofficial->midPerformanceManagement;
         $midTeamWork=Auth::user()->govofficial->midTeamWork;
 
-        return view ('govOfficials.Middle&Junior.main',compact('midTeamWork','midPerformanceManagement','midStakeholder','midCapacityBuilding','midDecisionMaking','midWorkplaceManagement','midCommunication','midManagement','midDigitalGovernment','midInitiative','midQualityManagement','midOrientation','midCollaboration','midChangeManagement','midProjectManagement','midInformationManagement','midIctInWorkplace','midDigitalCitizenship',));
+        return view ('govOfficials.Middle&Junior.main',compact('midDigitalGovernment','midIct','midTeamWork','midPerformanceManagement','midStakeholder','midCapacityBuilding','midDecisionMaking','midWorkplaceManagement','midCommunication','midManagement','midDigitalGovernment','midInitiative','midQualityManagement','midOrientation','midCollaboration','midChangeManagement','midProjectManagement','midInformationManagement','midIctInWorkplace','midDigitalCitizenship',));
     }
 
     public function midIctPage01(){
@@ -520,7 +523,7 @@ class MiddleLayerController extends Controller
 
         $midDigitalGovernment->save();
 
-        return redirect()->route('middlelayer');
+        return redirect()->route('middleDgResult');
     }
 
     public function midDgResult(){
@@ -1068,6 +1071,296 @@ class MiddleLayerController extends Controller
         $midPersonalDevelopment2=$govOfficial->midPersonalDevelopment;
 
         return view('govOfficials.Middle&Junior.Management.report',compact('govOfficial','avgmidPerformanceManagement','midPerformanceManagement2','avgmidCapacityBuilding','avgmidDecisionMaking','midPerformanceManagement2','midCapacityBuilding2','midDecisionMaking2','result','midCommunication2','midWorkplaceManagement2','midStakeholderManagement2','midTeamwork2','midPersonalDevelopment2','avgmidCommunication','avgmidWorkplaceManagement','avgmidStakeholderManagement','avgmidTeamwork','avgmidPersonalDevelopment'));
+    }
+
+    public function overallresult(){
+        $labels = ["ICT", "Digital Government", "Management"];
+        $govOfficial=Auth::user()->govofficial;
+        $midIct=Auth::user()->govofficial->midIct;
+        $midDigitalGov=Auth::user()->govofficial->midDigitalGovernment;
+        $midManagement=Auth::user()->govofficial->midManagement;
+        $data=[
+            (int) $midIct->overall_mid_ict,
+            (int) $midDigitalGov->marks_mid_digital_government,
+            (int) $midManagement->mid_management_overall
+        ];
+
+        $midIct = Auth::user()->govofficial->midIct;
+
+        $midIctInWorkplace=$midIct->ict_in_workplace;
+        // dd($midIctInWorkplace);
+        $a=$midIctInWorkplace/32;
+        $avgMidIctInWorkplace=round($a*100);
+
+        $midInformationManagement=$midIct->information_management;
+        $b=$midInformationManagement/10;
+        $avgMidInformationManagement=round($b*100);
+
+        $midDigitalCitizenship=$midIct->digital_citizenship;
+        $c=$midDigitalCitizenship/58;
+        $avgMidDigitalCitizenship=round($c*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['ICT in Workplace', (int) $avgMidIctInWorkplace],
+            ['Information Management', (int) $avgMidInformationManagement],
+            ['Digital Citizenship', (int) $avgMidDigitalCitizenship],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midIctInWorkplace2=$govOfficial->midIctInWorkplace;
+        $midInformationManagement2=$govOfficial->midInformationManagement;
+        $midDigitalCitizenship2=$govOfficial->midDigitalCitizenship;
+
+        $midDigitalGov = Auth::user()->govofficial->midDigitalGovernment;
+
+        $midProjectManagement=$midDigitalGov->mid_project_management;
+        $a=$midProjectManagement/12;
+        $avgMidProjectManagement=round($a*100);
+
+        $midChangeManagement=$midDigitalGov->mid_change_management;
+        $b=$midChangeManagement/18;
+        $avgMidChangeManagement=round($b*100);
+
+        $midCollaboration=$midDigitalGov->mid_collaboration;
+        $c=$midCollaboration/12;
+        $avgMidCollaboration=round($c*100);
+
+        $midOrientatiion=$midDigitalGov->mid_orientation;
+        $d=$midOrientatiion/14;
+        $avgMidOrientatiion=round($d*100);
+
+        $midQualityManagement=$midDigitalGov->mid_quality_management;
+        $e=$midQualityManagement/15;
+        $avgMidQualityManagement=round($e*100);
+
+        $midInitiative=$midDigitalGov->mid_initiative;
+        $f=$midInitiative/29;
+        $avgMidInitiative=round($f*100);
+
+        $result2 = [
+            ['Category', 'Value'],
+            ['Project Management', (int) $avgMidProjectManagement],
+            ['Change Management', (int) $avgMidChangeManagement],
+            ['Collaboration and Partnership', (int) $avgMidCollaboration],
+            ['Results Orientation', (int) $avgMidOrientatiion],
+            ['Quality Management', (int) $avgMidQualityManagement],
+            ['Execute Digital Government Initiatives', (int) $avgMidInitiative],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midProjectManagement2=$govOfficial->midProjectManagement;
+        $midChangeManagement2=$govOfficial->midChangeManagement;
+        $midCollaboration2=$govOfficial->midCollaboration;
+        $midOrientation2=$govOfficial->midOrientation;
+        $midQualityManagement2=$govOfficial->midQualityManagement;
+        $midInitiative2=$govOfficial->midInitiative;
+
+        $midManagement = Auth::user()->govofficial->midManagement;
+
+        $midCommunication=$midManagement->mid_communication;
+        $a=$midCommunication/12;
+        $avgmidCommunication=round($a*100);
+
+        $midWorkplaceManagement=$midManagement->mid_workplace_management;
+        $b=$midWorkplaceManagement/10;
+        $avgmidWorkplaceManagement=round($b*100);
+
+        $midDecisionMaking=$midManagement->mid_decision_making;
+        $c=$midDecisionMaking/19;
+        $avgmidDecisionMaking=round($c*100);
+
+        $midCapacityBuilding=$midManagement->mid_capacity_building;
+        $d=$midCapacityBuilding/8;
+        $avgmidCapacityBuilding=round($d*100);
+
+        $midStakeholderManagement=$midManagement->mid_stakeholder_management;
+        $e=$midStakeholderManagement/25;
+        $avgmidStakeholderManagement=round($e*100);
+
+        $midPerformanceManagement=$midManagement->mid_performance_management;
+        $f=$midPerformanceManagement/17;
+        $avgmidPerformanceManagement=round($f*100);
+
+        $midTeamwork=$midManagement->mid_teamwork;
+        $g=$midTeamwork/4;
+        $avgmidTeamwork=round($g*100);
+
+        $midPersonalDevelopment=$midManagement->mid_personal_development;
+        $h=$midPersonalDevelopment/5;
+        $avgmidPersonalDevelopment=round($h*100);
+
+        $result3 = [
+            ['Category', 'Value'],
+            ['Communication', (int) $avgmidCommunication],
+            ['Workplace Management', (int) $avgmidWorkplaceManagement],
+            ['Decision Making', (int) $avgmidDecisionMaking],
+            ['Capacity Building', (int) $avgmidCapacityBuilding],
+            ['Stakeholder Management', (int) $avgmidStakeholderManagement],
+            ['Performance Management', (int) $avgmidCapacityBuilding],
+            ['Teamwork', (int) $avgmidTeamwork],
+            ['Personal Development', (int) $avgmidPersonalDevelopment],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midCommunication2=$govOfficial->midCommunication;
+        $midWorkplaceManagement2=$govOfficial->midWorkplaceManagement;
+        $midDecisionMaking2=$govOfficial->midDecisionMaking;
+        $midCapacityBuilding2=$govOfficial->midCapacityBuilding;
+        $midStakeholderManagement2=$govOfficial->midStakeholder;
+        $midPerformanceManagement2=$govOfficial->midPerformanceManagement;
+        $midTeamwork2=$govOfficial->midTeamwork;
+        $midPersonalDevelopment2=$govOfficial->midPersonalDevelopment;
+
+        return view('govOfficials.Middle&Junior.overalResults',compact('avgmidPersonalDevelopment','avgmidTeamwork','avgmidPerformanceManagement','avgmidStakeholderManagement','avgmidCapacityBuilding','avgmidDecisionMaking','avgmidWorkplaceManagement','avgmidCommunication','midPersonalDevelopment2','midTeamwork2','midPerformanceManagement2','midStakeholderManagement2','midCapacityBuilding2','midDecisionMaking2','midWorkplaceManagement2','midWorkplaceManagement2','midCommunication2','result3','avgMidInitiative','avgMidQualityManagement','avgMidOrientatiion','avgMidCollaboration','avgMidChangeManagement','avgMidProjectManagement','avgMidDigitalCitizenship','avgMidInformationManagement','avgMidIctInWorkplace','midInitiative2','midQualityManagement2','midOrientation2','midCollaboration2','midChangeManagement2','midProjectManagement2','result2','labels','data','result','midIctInWorkplace2','midInformationManagement2','midDigitalCitizenship2','govOfficial'));
+    }
+
+    public function overallReport(){
+        $labels = ["ICT", "Digital Government", "Management"];
+        $govOfficial=Auth::user()->govofficial;
+        $midIct=Auth::user()->govofficial->midIct;
+        $midDigitalGov=Auth::user()->govofficial->midDigitalGovernment;
+        $midManagement=Auth::user()->govofficial->midManagement;
+        $data=[
+            (int) $midIct->overall_mid_ict,
+            (int) $midDigitalGov->marks_mid_digital_government,
+            (int) $midManagement->mid_management_overall
+        ];
+
+        $midIct = Auth::user()->govofficial->midIct;
+
+        $midIctInWorkplace=$midIct->ict_in_workplace;
+        // dd($midIctInWorkplace);
+        $a=$midIctInWorkplace/32;
+        $avgMidIctInWorkplace=round($a*100);
+
+        $midInformationManagement=$midIct->information_management;
+        $b=$midInformationManagement/10;
+        $avgMidInformationManagement=round($b*100);
+
+        $midDigitalCitizenship=$midIct->digital_citizenship;
+        $c=$midDigitalCitizenship/58;
+        $avgMidDigitalCitizenship=round($c*100);
+
+        $result = [
+            ['Category', 'Value'],
+            ['ICT in Workplace', (int) $avgMidIctInWorkplace],
+            ['Information Management', (int) $avgMidInformationManagement],
+            ['Digital Citizenship', (int) $avgMidDigitalCitizenship],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midIctInWorkplace2=$govOfficial->midIctInWorkplace;
+        $midInformationManagement2=$govOfficial->midInformationManagement;
+        $midDigitalCitizenship2=$govOfficial->midDigitalCitizenship;
+
+        $midDigitalGov = Auth::user()->govofficial->midDigitalGovernment;
+
+        $midProjectManagement=$midDigitalGov->mid_project_management;
+        $a=$midProjectManagement/12;
+        $avgMidProjectManagement=round($a*100);
+
+        $midChangeManagement=$midDigitalGov->mid_change_management;
+        $b=$midChangeManagement/18;
+        $avgMidChangeManagement=round($b*100);
+
+        $midCollaboration=$midDigitalGov->mid_collaboration;
+        $c=$midCollaboration/12;
+        $avgMidCollaboration=round($c*100);
+
+        $midOrientatiion=$midDigitalGov->mid_orientation;
+        $d=$midOrientatiion/14;
+        $avgMidOrientatiion=round($d*100);
+
+        $midQualityManagement=$midDigitalGov->mid_quality_management;
+        $e=$midQualityManagement/15;
+        $avgMidQualityManagement=round($e*100);
+
+        $midInitiative=$midDigitalGov->mid_initiative;
+        $f=$midInitiative/29;
+        $avgMidInitiative=round($f*100);
+
+        $result2 = [
+            ['Category', 'Value'],
+            ['Project Management', (int) $avgMidProjectManagement],
+            ['Change Management', (int) $avgMidChangeManagement],
+            ['Collaboration and Partnership', (int) $avgMidCollaboration],
+            ['Results Orientation', (int) $avgMidOrientatiion],
+            ['Quality Management', (int) $avgMidQualityManagement],
+            ['Execute Digital Government Initiatives', (int) $avgMidInitiative],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midProjectManagement2=$govOfficial->midProjectManagement;
+        $midChangeManagement2=$govOfficial->midChangeManagement;
+        $midCollaboration2=$govOfficial->midCollaboration;
+        $midOrientation2=$govOfficial->midOrientation;
+        $midQualityManagement2=$govOfficial->midQualityManagement;
+        $midInitiative2=$govOfficial->midInitiative;
+
+        $midManagement = Auth::user()->govofficial->midManagement;
+
+        $midCommunication=$midManagement->mid_communication;
+        $a=$midCommunication/12;
+        $avgmidCommunication=round($a*100);
+
+        $midWorkplaceManagement=$midManagement->mid_workplace_management;
+        $b=$midWorkplaceManagement/10;
+        $avgmidWorkplaceManagement=round($b*100);
+
+        $midDecisionMaking=$midManagement->mid_decision_making;
+        $c=$midDecisionMaking/19;
+        $avgmidDecisionMaking=round($c*100);
+
+        $midCapacityBuilding=$midManagement->mid_capacity_building;
+        $d=$midCapacityBuilding/8;
+        $avgmidCapacityBuilding=round($d*100);
+
+        $midStakeholderManagement=$midManagement->mid_stakeholder_management;
+        $e=$midStakeholderManagement/25;
+        $avgmidStakeholderManagement=round($e*100);
+
+        $midPerformanceManagement=$midManagement->mid_performance_management;
+        $f=$midPerformanceManagement/17;
+        $avgmidPerformanceManagement=round($f*100);
+
+        $midTeamwork=$midManagement->mid_teamwork;
+        $g=$midTeamwork/4;
+        $avgmidTeamwork=round($g*100);
+
+        $midPersonalDevelopment=$midManagement->mid_personal_development;
+        $h=$midPersonalDevelopment/5;
+        $avgmidPersonalDevelopment=round($h*100);
+
+        $result3 = [
+            ['Category', 'Value'],
+            ['Communication', (int) $avgmidCommunication],
+            ['Workplace Management', (int) $avgmidWorkplaceManagement],
+            ['Decision Making', (int) $avgmidDecisionMaking],
+            ['Capacity Building', (int) $avgmidCapacityBuilding],
+            ['Stakeholder Management', (int) $avgmidStakeholderManagement],
+            ['Performance Management', (int) $avgmidCapacityBuilding],
+            ['Teamwork', (int) $avgmidTeamwork],
+            ['Personal Development', (int) $avgmidPersonalDevelopment],
+        ];
+
+        $govOfficial=Auth::user()->govofficial;
+
+        $midCommunication2=$govOfficial->midCommunication;
+        $midWorkplaceManagement2=$govOfficial->midWorkplaceManagement;
+        $midDecisionMaking2=$govOfficial->midDecisionMaking;
+        $midCapacityBuilding2=$govOfficial->midCapacityBuilding;
+        $midStakeholderManagement2=$govOfficial->midStakeholder;
+        $midPerformanceManagement2=$govOfficial->midPerformanceManagement;
+        $midTeamwork2=$govOfficial->midTeamwork;
+        $midPersonalDevelopment2=$govOfficial->midPersonalDevelopment;
+
+        return view('govOfficials.Middle&Junior.overallReport',compact('avgmidPersonalDevelopment','avgmidTeamwork','avgmidPerformanceManagement','avgmidStakeholderManagement','avgmidCapacityBuilding','avgmidDecisionMaking','avgmidWorkplaceManagement','avgmidCommunication','midPersonalDevelopment2','midTeamwork2','midPerformanceManagement2','midStakeholderManagement2','midCapacityBuilding2','midDecisionMaking2','midWorkplaceManagement2','midWorkplaceManagement2','midCommunication2','result3','avgMidInitiative','avgMidQualityManagement','avgMidOrientatiion','avgMidCollaboration','avgMidChangeManagement','avgMidProjectManagement','avgMidDigitalCitizenship','avgMidInformationManagement','avgMidIctInWorkplace','midInitiative2','midQualityManagement2','midOrientation2','midCollaboration2','midChangeManagement2','midProjectManagement2','result2','labels','data','result','midIctInWorkplace2','midInformationManagement2','midDigitalCitizenship2','govOfficial'));
     }
 
 }

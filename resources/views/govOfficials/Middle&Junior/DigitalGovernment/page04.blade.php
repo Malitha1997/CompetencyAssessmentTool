@@ -49,8 +49,8 @@
                     <thead>
                         <tr style="margin-top: 10px;">
                             <th></th>
-                            <th style="color: #1f2471;">True</th>
-                            <th style="color: #1f2471;">False</th>
+                            <th style="color: #1f2471;text-align:center">True</th>
+                            <th style="color: #1f2471;text-align:center">False</th>
                         </tr>
                     </thead>
                     <tbody>
