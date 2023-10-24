@@ -31,7 +31,7 @@
                                                     <div class="col"><input type="radio" name="mgt28" id="mgt28_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt28_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Participate in a self paced study course</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt28" id="mgt28_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt28_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Follow a mandatory course arranged by the supervisor</label></div>
+                                                    <div class="col"><input type="radio" name="mgt28" id="mgt28_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="mgt28_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Follow a mandatory course arranged by the supervisor</label></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -59,7 +59,7 @@
                                                     <div class="col"><input type="radio" name="mgt29" id="mgt29_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt29_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Mental</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt29" id="mgt29_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt29_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Financial</label></div>
+                                                    <div class="col"><input type="radio" name="mgt29" id="mgt29_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="mgt29_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Financial</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt29" id="mgt29_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt29_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Physical</label></div>

@@ -31,7 +31,7 @@
                                                     <div class="col"><input type="radio" name="mgt22" id="mgt22_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt22_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Avoiding</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt22" id="mgt22_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt22_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Negotiating</label></div>
+                                                    <div class="col"><input type="radio" name="mgt22" id="mgt22_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="mgt22_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Negotiating</label></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,12 +56,12 @@
                         <tbody>
                             <tr style="margin-top: 10px;">
                                 <td style="color: rgb(0,0,0);width: 900px;">a) The Top Management can promote benefits of digital services amongst employees by sharing positive feedback from citizens.</td>
-                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt23_1" style="width:20px;height:20px" value="0"> </td>
+                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt23_1" style="width:20px;height:20px" value="4"> </td>
                                 <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt23_1" style="width:20px;height:20px" value="0"></td>
                             </tr>
                             <tr>
                                 <td style="color: rgb(0,0,0);margin-bottom: 0px;">b) When governments deliver services based on the needs of the people they serve, they can increase public satisfaction and reduce costs.</td>
-                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt23_2" style="width:20px;height:20px" value="0"></td>
+                                <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt23_2" style="width:20px;height:20px" value="4"></td>
                                 <td style="text-align: center;border-radius: 0px;border-width: 0px;border-color: rgb(0,0,0);"><input type="radio" name="mgt23_2" style="width:20px;height:20px" value="0"></td>
                             </tr>
                             <tr></tr>
@@ -91,7 +91,7 @@
                                                     <div class="col"><input type="radio" name="mgt24" id="mgt24_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt24_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Mechanism to cater to stakeholders interests</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt24" id="mgt24_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt24_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+                                                    <div class="col"><input type="radio" name="mgt24" id="mgt24_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="mgt24_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -122,7 +122,7 @@
                                                     <div class="col"><input type="radio" name="mgt25" id="mgt25_3"  style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt25_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Recognize commendable work</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt25" id="mgt25_4"  style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt25_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
+                                                    <div class="col"><input type="radio" name="mgt25" id="mgt25_4"  style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="mgt25_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) All of the above</label></div>
                                                 </div>
                                                 <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
                                             </div>

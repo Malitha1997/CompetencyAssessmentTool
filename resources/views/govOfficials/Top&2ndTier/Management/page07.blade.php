@@ -25,7 +25,7 @@
                                         <div class="row d-flex flex-column" style="text-align: center;">
                                             <div class="col" style="margin-top: 20px;margin-bottom: 10px;text-align: left;">
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col" style="margin-top: 10px;"><input type="radio" name="mgt26" id="mgt26_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt26_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) Both a and b are correct</label></div>
+                                                    <div class="col" style="margin-top: 10px;"><input type="radio" name="mgt26" id="mgt26_1" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="2"><label class="form-label" for="mgt26_1" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: 0px;width: 1100px;">a) Both a and b are correct</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
                                                     <div class="col"><input type="radio" name="mgt26" id="mgt26_2" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt26_2" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">b) Only a is correct</label></div>
@@ -65,7 +65,7 @@
                                                     <div class="col"><input type="radio" name="mgt27" id="mgt27_3" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt27_3" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">c) Boosting morale and retention by investing in employees</label></div>
                                                 </div>
                                                 <div class="row" style="margin-bottom: 20px;">
-                                                    <div class="col"><input type="radio" name="mgt27" id="mgt27_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="0"><label class="form-label" for="mgt27_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Provide a motivation to Senior staff to train juniors</label></div>
+                                                    <div class="col"><input type="radio" name="mgt27" id="mgt27_4" style="margin-left:50px;width:15px;height:15px;margin-right: 10px;" value="4"><label class="form-label" for="mgt27_4" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-emphasis-color);margin-left: 20px;margin-top: -28px;">d) Provide a motivation to Senior staff to train juniors</label></div>
                                                 </div>
                                                 <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
                                             </div>
