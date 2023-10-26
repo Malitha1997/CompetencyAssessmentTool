@@ -749,7 +749,7 @@ class OperationalLayerController extends Controller
 
         $opManagement->save();
 
-        return redirect()->route('operationallayer');
+        return redirect()->route('operationalManagementResults');
 
     }
 

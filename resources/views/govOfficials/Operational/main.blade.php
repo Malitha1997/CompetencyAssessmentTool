@@ -1,11 +1,11 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
-<style>
+<!-- <style>
     [class*="col-1"] {
         width: 100%;
     }
-</style>
+</style> -->
 <header style="margin-bottom: 300px;margin-top: 150px;">
     <p data-aos="fade-down" data-aos-duration="900" style="color: #1F2471;font-size: 36px;font-weight: bold;font-family: poppins;text-align: center;"><br>Welcome to the Digital Government Competency Framework !<br><br></p>
 </header>
@@ -24,7 +24,7 @@
 <p style="color: #1F2471;font-size: 36px;font-weight: bold;font-family: poppins;text-align: center;margin-top: 30px;"><br>Assessments</p>
 <div class="container">
     <div class="row" style="margin-top: 60px;text-align: center;border-color: var(--bs-body-color);">
-        <div class="col-1 left" id="card1" data-aos="fade-right" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 50%;height: 75%;border-style: solid;border-color: #5F2B84;">
+        <div class="col-sm-4 left" id="card1" data-aos="fade-right" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 50%;height: 75%;border-style: solid;border-color: #5F2B84;">
             <div>
                 <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">ICT Competency Assessment</p><img src="{{ asset('img/10780254_19197640 1.png') }}" style="width: 100%;height: 100%;">
                 <div class="card" style="text-align: center;width: 50%;margin-right: 5px;border-width:0px">
@@ -41,11 +41,11 @@
                 </div>
             </div>
         </div>
-        <div class="col right" id="card1" data-aos="fade-left" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 50%;height: 75%;border-style: solid;border-color: #5F2B84;margin-left:2%">
+        <div class="col-sm-4" id="card1" data-aos="fade-left" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 50%;height: 75%;border-style: solid;border-color: #5F2B84;">
             <div>
                 <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">Digital Government Assessment</p><img src="{{ asset('img/10782817_19197324 1.png') }}" style="width: 80%;height: 100%;font-family: poppins;">
                 <div class="card" style="text-align: center;width: 50%;margin-right: 5px;border-width:0px">
-                    <div class="card-body" style="background: rgba(244,140,67,0.25);border-radius: 10px;width: 200%;height:50%;text-align: center;margin-left: -2%;margin-top: -16px;">
+                    <div class="card-body" style="background: rgba(244,140,67,0.25);border-radius: 10px;width: 200%;height:70%;text-align: center;margin-left: -2%;margin-top: -16px;">
                         <p class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and capabilities to drive an ICT-enabled transformation of the public sector. And making it possible to carry out the public sector’s tasks more efficiently and effectively.<br><br></p>
                         @if($ictDataExists && $digitalGovDataExists && $managementDataExists)
                         <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
@@ -69,11 +69,11 @@
     </div>
 </div>
 <div class="row" style="margin-top: 100px;margin-bottom:50px">
-    <div class="col-md-6" data-aos="fade-up" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 524px;height: 545px;margin-left: 32%;border-style: solid;border-color: #5F2B84;text-align: center;">
+    <div class="container" data-aos="fade-up" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 50%;height: 75%;border-style: solid;border-color: #5F2B84;text-align: center;">
         <div>
-            <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">Management Assessment</p><img width="336" height="250" src="{{ asset('img/12146032_Wavy_Gen-03_Single-07 1.png ')}}" style="width: 367px;height: 242px;">
-            <div class="card" id="card3" style="text-align: center;width: 500px;margin-right: 5px;">
-                <div class="card-body" style="background: rgba(244,140,67,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;">
+            <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">Management Assessment</p><img src="{{ asset('img/12146032_Wavy_Gen-03_Single-07 1.png ')}}" style="width: 50%;height: 50%;">
+            <div class="card" id="card3" style="text-align: center;width: 50%;margin-right: 5px;border-width:0px">
+                <div class="card-body" style="background: rgba(244,140,67,0.25);border-radius: 10px;width: 200%;height:50%;text-align: center;margin-left: -2%;margin-top: -16px;">
                     <p class="card-text" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></p>
                     @if($ictDataExists && $digitalGovDataExists && $managementDataExists)
                     <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>

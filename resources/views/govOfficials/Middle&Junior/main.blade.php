@@ -24,12 +24,14 @@
                 <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                     <div class="card-body" style="background: rgba(235,48,62,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;">
                         <p class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and skills in ICT to enable more efficient, cost-effective, and participatory government, facilitate more convenient government services, allow greater public access to information, and make government more accountable to citizens.<br><br></p>
-                        @if($midIctInWorkplace && $midInformationManagement && $midDigitalCitizenship)
+                        @if($midIct && $midDigitalGovernment && $midManagement)
+                        <a class="btn btn-primary" href="/middle/overall/result" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                        @elseif($midIct)
                         <a class="btn btn-primary" href="/middle/ict/results" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
-                        @elseif($midIctInWorkplace)
-                        <a class="btn btn-primary" type="button" href="{{ route('middleIctPage02') }}" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;margin-top: -18px;">Get Started</a>
                         @elseif($midInformationManagement)
                         <a class="btn btn-primary" type="button" href="{{ route('middleIctPage03') }}" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;margin-top: -18px;">Get Started</a>
+                        @elseif($midIctInWorkplace)
+                        <a class="btn btn-primary" type="button" href="{{ route('middleIctPage02') }}" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;margin-top: -18px;">Get Started</a>
                         @else
                         <a class="btn btn-primary" type="button" href="{{ route('middleIctPage01') }}" style="width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;font-family: poppins;margin-top: -18px;">Get Started</a>
                         @endif
@@ -43,18 +45,20 @@
                 <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                     <div class="card-body" style="background: rgba(235,48,62,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;margin-top: -16px;">
                         <p class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and capabilities to drive an ICT-enabled transformation of the public sector. And making it possible to carry out the public sector’s tasks more efficiently and effectively.<br><br></p>
-                        @if($midDigitalGovernment)
+                        @if($midIct && $midDigitalGovernment && $midManagement)
+                        <a class="btn btn-primary" href="{{ route('middleOverallResult') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                        @elseif($midDigitalGovernment)
                         <a class="btn btn-primary" href="{{ route('middleDgResult') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
-                        @elseif($midProjectManagement)
-                        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage02') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
-                        @elseif($midChangeManagement)
-                        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage03') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
-                        @elseif($midCollaboration)
-                        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage04') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
-                        @elseif($midOrientation)
-                        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage05') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
                         @elseif($midQualityManagement)
                         <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage06') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
+                        @elseif($midOrientation)
+                        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage05') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
+                        @elseif($midCollaboration)
+                        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage04') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
+                        @elseif($midChangeManagement)
+                        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage03') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
+                        @elseif($midProjectManagement)
+                        <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage02') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a> 
                         @else
                         <a class="btn btn-primary" type="button" href="{{ route('midDigitalGovernmentPage01') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png ')}}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;margin-top: 05px;">Get Started</a>
                         @endif
@@ -72,22 +76,24 @@
             <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
                 <div class="card-body" style="background: rgba(235,48,62,0.25);border-radius: 10px;width: 512px;height: 222px;text-align: center;margin-left: -10px;">
                     <p class="card-text" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></p>
-                    @if($midManagement)
+                    @if($midIct && $midDigitalGovernment && $midManagement)
+                    <a class="btn btn-primary" href="{{ route('middleOverallResult') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                    @elseif($midManagement)
                     <a class="btn btn-primary" href="{{ route('middleManagementResult') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
-                    @elseif($midCommunication)
-                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage02') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
+                    @elseif($midTeamWork)
+                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage08') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
+                    @elseif($midPerformanceManagement)
+                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage07') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
+                    @elseif($midStakeholder)
+                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage06') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
+                    @elseif($midCapacityBuilding)
+                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage05') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
+                    @elseif($midDecisionMaking)
+                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage04') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
                     @elseif($midWorkplaceManagement)
                     <a class="btn btn-primary" type="button" href="{{ route('midManagementPage03') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
-                    @elseif($midDecisionMaking)
-                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage03') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
-                    @elseif($midCapacityBuilding)
-                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage04') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
-                    @elseif($midStakeholder)
-                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage05') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
-                    @elseif($midPerformanceManagement)
-                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage05') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
-                    @elseif($midTeamWork)
-                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage05') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
+                    @elseif($midCommunication)
+                    <a class="btn btn-primary" type="button" href="{{ route('midManagementPage02') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a> 
                     @else
                     <a class="btn btn-primary" type="button" href="{{ route('midManagementPage01') }}" style="font-family: poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
                     @endif

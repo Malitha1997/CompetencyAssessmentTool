@@ -149,6 +149,9 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/middle/management/result', [MiddleLayerController::class, 'midManagementResult'])->name('middleManagementResult');
     Route::get('/middle/management/report', [MiddleLayerController::class, 'midManagementReport'])->name('middleManagementReport');
 
+    Route::get('/middle/overall/result', [MiddleLayerController::class, 'overallResult'])->name('middleOverallResult');
+    Route::get('/middle/overall/report', [MiddleLayerController::class, 'overallReport'])->name('middleOverallReport');
+
     Route::get('/top/ict/page01', [TopLayerController::class, 'topIctPage01'])->name('topIctPage01');
     Route::get('/top/ict/page02', [TopLayerController::class, 'topIctPage02'])->name('topIctPage02');
     Route::get('/top/ict/page03', [TopLayerController::class, 'topIctPage03'])->name('topIctPage03');

@@ -210,78 +210,85 @@
                     <div class="col" style="text-align: center;"><span style="font-family: poppins;font-weight: bold;text-align: center;color: #1F2471;"><br>Recommendations</span></div>
                 </div>
                 <div class="container">
-                    <div class="table-responsive" style="margin-top: 100px;margin-left: 50px;">
-                        <table class="table">
-                            <thead style="background: var(--bs-table-border-color);">
-                                <tr style="background: var(--bs-table-border-color);height: 60px;">
-                                    <th style="width: 400px;font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>Competency Area<br><br></th>
-                                    <th style="width: 300px;font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Proficiency<br><br></th>
-                                    <th style="font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Recommended areas of improvement<br><br></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="font-family: poppins;"><br>ICT in Workplace<br><br></td>
-                                    <td style="width: 300px;font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>{{ $avgTopIctInWorkplace }}%</td>
-                                    <td style="font-family: poppins;text-align: left;">
-                                        @if($topIctInWorkplace2->ict1==0)
-                                        Digital transformation on public services<br><br>
-                                        @endif
-                                        @if($topIctInWorkplace2->ict2==0)
-                                        Emerging ICT technologies<br><br>
-                                        @endif
-                                        @if($topIctInWorkplace2->ict3==0)
-                                        Developing ICT plans<br><br>
-                                        Digital government strategy <br><br>
-                                        @endif
-                                        @if($topIctInWorkplace2->ict4==0)
-                                        Digital Government Transformation<br><br>
-                                        @endif
-                                    </td>
-                                </tr>
-                                <tr style="font-family: poppins;">
-                                    <td style="font-family: poppins;"><br>Information Management<br><br></td>
-                                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgTopInformationManagement }}%</td>
-                                    <td style="font-family: poppins;text-align: left;box-shadow: 0px 0px;">
-                                        @if($topInformationManagement2->ict5==0)
-                                        Information security<br><br>
-                                        Data protection and privacy<br><br>
-                                        @endif
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: poppins;"><br>Digital Citizenship<br><br></td>
-                                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgTopDigitalCitizenship }}%</td>
-                                    <td style="font-family: poppins;text-align: left;">
-                                        @if($topDigitalCitizenship2->ict6_1==0||$topDigitalCitizenship2->ict6_2==0||$topDigitalCitizenship2->ict6_3==0)
-                                        Digital media and technologies<br><br>
-                                        @endif
-                                        @if($topDigitalCitizenship2->ict7_1==0||$topDigitalCitizenship2->ict7_2==0||$topDigitalCitizenship2->ict7_3==0)
-                                        Impact of technology use use<br><br>
-                                        @endif
-                                        @if ($topDigitalCitizenship2->ict8==0)
-                                        Cyber risks<br><br>
-                                        @endif
-                                        @if ($topDigitalCitizenship2->ict9==0)
-                                        Cyber-threats<br><br>
-                                        @endif
-                                        @if($topDigitalCitizenship2->ict10==0)
-                                        Digital Empathy<br><br>
-                                        @endif
-                                        @if($topDigitalCitizenship2->ict11==0)
-                                        Digital footprints<br><br>
-                                        @endif
-                                        @if ($topDigitalCitizenship2->ict12_1==0||$topDigitalCitizenship2->ict12_2==0||$topDigitalCitizenship2->ict12_3==0)
-                                        Digital media<br><br>
-                                        @endif
-                                        @if ($topDigitalCitizenship2->ict13==0)
-                                        Privacy Management<br><br>
-                                        @endif
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="table-responsive" style="margin-top: 30px;width:850px;">
+                <table class="table">
+            <thead style="background: var(--bs-table-border-color);">
+                <tr style="background: var(--bs-table-border-color);height: 60px;">
+                    <th style="width: 400px;font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>Competency Area<br><br></th>
+                    <th style="width: 300px;font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Proficiency<br><br></th>
+                    <th style="font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Recommended areas of improvement<br><br></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-family: poppins;"><br>ICT in Workplace<br><br></td>
+                    <td style="width: 300px;font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>{{ $avgMidIctInWorkplace }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midIctInWorkplace2->ict1==0)
+                        <br>Tools techniques and trends that enables digital transformation on public services<br><br>
+                        @endif
+                        @if($midIctInWorkplace2->ict2==0)
+                        <br>Emerging ICT technologies<br><br>
+                        @endif
+                        @if($midIctInWorkplace2->ict3==0)
+                        <br>Line of Business and tools and techniques in digitalization<br><br>
+                        @endif
+                        @if($midIctInWorkplace2->ict4==0)
+                        <br>Digital Government Transformation<br><br>
+                        @endif
+                        @if($midIctInWorkplace2->ict5_1==0||$midIctInWorkplace2->ict5_2==0)
+                        <br>Innovation adoption<br><br>
+                        @endif
+                        @if($midIctInWorkplace2->ict6_1==0||$midIctInWorkplace2->ict6_2==0)
+                        <br>Digital tools and technologies usage<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr style="font-family: poppins;">
+                    <td style="font-family: poppins;"><br>Information Management<br><br></td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgMidInformationManagement }}%</td>
+                    <td style="font-family: poppins;text-align: left;box-shadow: 0px 0px;">
+                        @if($midInformationManagement2->ict7==0)
+                        <br>Information security Data protection and privacy<br><br>
+                        @endif
+                        @if($midInformationManagement2->ict8==0)
+                        <br>Tools and techniques available to retrieve data<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: poppins;"><br>Digital Citizenship<br><br></td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgMidDigitalCitizenship }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midDigitalCitizenship2->ict9_1==0||$midDigitalCitizenship2->ict9_2==0||$midDigitalCitizenship2->ict9_3==0)
+                        <br>Digital media and technologies<br><br>
+                        @endif
+                        @if($midDigitalCitizenship2->ict10_1==0||$midDigitalCitizenship2->ict10_2==0||$midDigitalCitizenship2->ict10_3==0)
+                        <br>Impact of technology use<br><br>
+                        @endif
+                        @if($midDigitalCitizenship2->ict11==0)
+                        <br>Cyber risks<br><br>
+                        @endif
+                        @if($midDigitalCitizenship2->ict12==0)
+                        <br>Cyber-threats<br><br>
+                        @endif
+                        @if($midDigitalCitizenship2->ict13==0)
+                        <br>Digital Empathy<br><br>
+                        @endif
+                        @if($midDigitalCitizenship2->ict14==0)
+                        <br>Digital footprint<br><br>
+                        @endif
+                        @if($midDigitalCitizenship2->ict15_1==0||$midDigitalCitizenship2->ict15_2==0||$midDigitalCitizenship2->ict15_3==0)
+                        <br>Digital media<br><br>
+                        @endif
+                        @if($midDigitalCitizenship2->ict16==0)
+                        <br>Privacy Management<br><br>
+                        @endif
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+                </div>
                 </div>
                 <div class="row" style="text-align: center">
                     <div class="col" style="margin-left:300px"><span style="font-family: Poppins, sans-serif;">3</span></div>
@@ -377,8 +384,8 @@
                 <div class="row">
                     <div class="col" style="text-align: center;"><span style="font-family: poppins;font-weight: bold;text-align: center;color: #1F2471;"><br>Recommendations</span></div>
                 </div>
-                {{--  <div class="table-responsive" style="margin-top: 100px;margin-left: 50px;">
-        <table class="table">
+                <div class="table-responsive" style="margin-top: 30px;width:650px;margin-left:20%">
+                <table class="table">
             <thead style="background: var(--bs-table-border-color);">
                 <tr style="background: var(--bs-table-border-color);height: 60px;">
                     <th style="width: 400px;font-size: 20px;font-family: poppins;background: var(--bs-table-border-color);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>Competency Area<br><br></th>
@@ -388,53 +395,81 @@
             </thead>
             <tbody>
                 <tr>
-                    <td style="font-family: poppins;"><br>Change Management<br><br></td>
-                    <td style="font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);"><br>{{ $avgOpChangeManagement }}%</td>
+                    <td style="font-family: poppins;"><br>Project Management<br><br></td>
+                    <td style="font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);"><br>{{ $avgMidChangeManagement }}%</td>
                     <td style="font-family: poppins;text-align: left;">
-                        @if($opChangeManagement2->dg1==0)
-                        <br>Change management in digital transformation<br><br>
+                        @if($midProjectManagement2->dg1_1==0 || $midProjectManagement2->dg1_2==0 || $midProjectManagement2->dg1_3==0 || $midProjectManagement2->dg1_4==0 || $midProjectManagement2->dg1_5==0 || $midProjectManagement2->dg2_1==0 || $midProjectManagement2->dg2_2==0 || $midProjectManagement2->dg2_3==0 || $midProjectManagement2->dg2_4==0 )
+                        <br>Project Management<br><br>
+                        <br>Program Management<br><br>
                         @endif
-                        @if($opChangeManagement2->dg2==0)
+                        @if($midProjectManagement2->dg3_1==0 || $midProjectManagement2->dg3_2==0 || $midProjectManagement2->dg3_3==0)
+                        <br>Digitalization<br><br>
+                        <br>LoB<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: poppins;"><br>Change Management<br><br></td>
+                    <td style="font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);"><br>{{ $avgMidChangeManagement }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midChangeManagement2->dg4==0 || $midChangeManagement2->dg5==0)
+                        <br>Change Management<br><br>
+                        @endif
+                        @if($midChangeManagement2->dg6==0 || $midChangeManagement2->dg7==0 || $midChangeManagement2->dg8==0 || $midChangeManagement2->dg9_1==0 || $midChangeManagement2->dg9_2==0 || $midChangeManagement2->dg9_3==0)
                         <br>Digital services<br><br>
                         @endif
                     </td>
                 </tr>
                 <tr style="font-family: poppins;">
                     <td style="font-family: poppins;"><br>Collaboration and Partnership</td>
-                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgOpCollaboration }}%</td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgMidCollaboration }}%</td>
                     <td style="font-family: poppins;text-align: left;box-shadow: 0px 0px;">
-                        @if($opCollaboration2->dg3==0)
+                        @if($midCollaboration2->dg10==0)
                         <br>Collaboration<br><br>
                         @endif
-                        @if($opCollaboration2->dg4==0)
-                        <br>Team dynamics<br><br>
-                        <br>Integration<br><br>
+                        @if($midCollaboration2->dg11_1==0 || $midCollaboration2->dg11_2==0 || $midCollaboration2->dg11_3==0 || $midCollaboration2->dg11_4==0 || $midCollaboration2->dg12==0)
+                        <br>Diversity<br><br>
+                        <br>Inclusiveness<br><br>
+                        <br>Bridge the digital divide<br><br>
+                        @endif
+                        @if($midCollaboration2->dg13==0 || $midCollaboration2->dg14==0)
+                        <br>Data sharing<br><br>
                         @endif
                     </td>
                 </tr>
                 <tr>
                     <td style="font-family: poppins;"><br>Results Orientation<br><br></td>
-                    <td style="background: var(--bs-warning-bg-subtle);font-family: poppins;"><br>{{ $avgOpOrientatiion }}%</td>
+                    <td style="background: var(--bs-warning-bg-subtle);font-family: poppins;"><br>{{ $avgMidOrientatiion }}%</td>
                     <td style="text-align: left;font-family: poppins;">
-                        @if($opOrientation2->dg5==0)
-                            <br>Results orientation in public service delivery<br><br>
+                        @if($midOrientation2->dg15==0 || $midOrientation2->dg16_1==0 || $midOrientation2->dg16_2==0 || $midOrientation2->dg16_3==0 || $midOrientation2->dg16_4==0)
+                            <br>Evaluate outcomes<br><br>
                         @endif
-                        @if($opOrientation2->dg6==0)
-                            <br>KPIs of digital government services<br><br>
+                        @if($midOrientation2->dg17==0 || $midOrientation2->dg18==0)
+                            <br>Continuous innovation<br><br>
+                            <br>Stakeholder satisfaction<br><br>
+                        @endif
+                        @if($midOrientation2->dg19_1==0 || $midOrientation2->dg19_2==0 || $midOrientation2->dg19_3==0 || $midOrientation2->dg19_4==0)
+                            <br>Performance Management<br><br>
                         @endif
                     </td>
                 </tr>
                 <tr>
                     <td style="font-family: poppins;"><br><br><br>Quality Management<br><br></td>
-                    <td style="background: var(--bs-warning-bg-subtle);font-family: poppins;"><br>{{ $avgOpQualityManagement }}%</td>
+                    <td style="background: var(--bs-warning-bg-subtle);font-family: poppins;"><br>{{ $avgMidQualityManagement }}%</td>
                     <td style="text-align: left;font-family: poppins;">
-                        @if($opQualityManagement2->dg7==0)
-                            <br>Customer Service<br><br>
+                        @if($midQualityManagement2->dg20==0 || $midQualityManagement2->dg21==0)
+                            <br>Business Environmental Analysis<br><br>
                         @endif
-                        @if($opQualityManagement2->dg8==0)
-                            <br>Delivery chain and its elements<br><br>
+                        @if($midQualityManagement2->dg22_1==0 || $midQualityManagement2->dg22_2==0 || $midQualityManagement2->dg22_3==0 || $midQualityManagement2->dg22_4==0)
+                            <br>Stakeholder expectations and satisfaction<br><br>
+                            <br>Quality management<br><br>
                         @endif
-                        @if($opQualityManagement2->dg9==0)
+                        @if($midQualityManagement2->dg23==0 || $midQualityManagement2->dg24==0)
+                            <br>Quality management<br><br>
+                            <br>Digital means available<br><br>
+                            <br>Service delivery<br><br>
+                        @endif
+                        @if($midQualityManagement2->dg25==0)
                             <br>Service delivery<br><br>
                             <br>Quality management<br><br>
                         @endif
@@ -443,44 +478,43 @@
                 </tr>
                 <tr>
                     <td style="font-family: poppins;"><br><br><br><br>Execute Digital Government Initiatives<br><br></td>
-                    <td style="background: var(--bs-warning-bg-subtle);font-family: poppins;"><br>{{ $avgOpInitiative }}%</td>
+                    <td style="background: var(--bs-warning-bg-subtle);font-family: poppins;"><br>{{ $avgMidInitiative }}%</td>
                     <td style="text-align: left;font-family: poppins;">
-                        @if($opInitiative2->dg10==0)
-                            <br>Legal framework for digital Government in Sri Lanka<br><br>
+                        @if($midInitiative2->dg26_1==0 || $midInitiative2->dg26_2==0 || $midInitiative2->dg26_3==0 || $midInitiative2->dg27_1==0)
+                            <br>National Digital Transformation Plan<br><br>
                         @endif
-                        @if($opInitiative2->dg11==0)
-                            <br>Public service delivery<br><br>
+                        @if($midInitiative2->dg27_2==0 || $midInitiative2->dg27_3==0)
+                            <br>Digital service offerings of the organization<br><br>
                         @endif
-                        @if($opInitiative2->dg12==0)
+                        @if($midInitiative2->dg28==0)
                             <br>CDIO<br><br>
                         @endif
-                        @if($opInitiative2->dg13==0)
+                        @if($midInitiative2->dg29==0 || $midInitiative2->dg30==0 || $midInitiative2->dg31==0)
                             <br>Service delivery channels<br><br>
                         @endif
-                        @if($opInitiative2->dg14_1==0)
-                            <br>National Digital Transformation Plan<br><br>
+                        @if($midInitiative2->dg32==0)
+                            <br>Digital Maturity Model of GoSL<br><br>
+                            <br>Digital government<br><br>
                         @endif
-                        @if($opInitiative2->dg14_2==0)
-                            <br>National Digital Transformation Plan<br><br>
+                        @if($midInitiative2->dg33==0 || $midInitiative2->dg34==0)
+                            <br>Procurement management<br><br>
+                            <br>Government ICT related procurement<br><br>
                         @endif
-                        @if($opInitiative2->dg15==0)
-                            <br>Code of ethics<br><br>
-                            <br>Public service values<br><br>
-                            <br>Personal development<br><br>
-                            <br>Public service delivery<br><br>
+                        @if($midInitiative2->dg35_1==0 || $midInitiative2->dg35_2==0 || $midInitiative2->dg35_3==0 || $midInitiative2->dg35_4==0)
+                            <br>Policy and procedure formulation<br><br>
                         @endif
-                        @if($opInitiative2->dg16==0)
-                            <br>Citizenship orientation<br><br>
-                            <br>Public service delivery<br><br>
+                        @if($midInitiative2->dg36_1==0 || $midInitiative2->dg36_2==0 || $midInitiative2->dg36_3==0 || $midInitiative2->dg36_4==0)
+                            <br>Strategic plans<br><br>
                         @endif
-                        @if($opInitiative2->dg17==0)
-                            <br>Personal development<br><br>
+                        @if($midInitiative2->dg37==0)
+                            <br>Leadership<br><br>
+                            <br>Organization digital strategy and vision<br><br>
                         @endif
                     </td>
                 </tr>
             </tbody>
         </table>
-    </div>  --}}
+                </div>
                 <div class="row" style="text-align: center;margin-top:10%">
                     <div class="col" style="margin-left:300px"><span style="font-family: Poppins, sans-serif;">3</span></div>
                     <div class="col" style="margin-right:-50px"><img src="{{ asset('ICTA.png') }}" style="width: 117px;height: 55px"><img src="{{ asset('Light2.png') }}" style="width:126px;"></div>
@@ -576,78 +610,168 @@
                     <div class="col" style="text-align: center;"><span style="font-family: poppins;font-weight: bold;text-align: center;color: #1F2471;"><br>Recommendations</span></div>
                 </div>
                 <div class="container">
-                    <div class="table-responsive" style="margin-top: 100px;margin-left: 50px;">
-                        <table class="table">
-                            <thead style="background: var(--bs-table-border-color);">
-                                <tr style="background: var(--bs-table-border-color);height: 60px;">
-                                    <th style="width: 400px;font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>Competency Area<br><br></th>
-                                    <th style="width: 300px;font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Proficiency<br><br></th>
-                                    <th style="font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Recommended areas of improvement<br><br></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="font-family: poppins;"><br>ICT in Workplace<br><br></td>
-                                    <td style="width: 300px;font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>{{ $avgTopIctInWorkplace }}%</td>
-                                    <td style="font-family: poppins;text-align: left;">
-                                        @if($topIctInWorkplace2->ict1==0)
-                                        Digital transformation on public services<br><br>
-                                        @endif
-                                        @if($topIctInWorkplace2->ict2==0)
-                                        Emerging ICT technologies<br><br>
-                                        @endif
-                                        @if($topIctInWorkplace2->ict3==0)
-                                        Developing ICT plans<br><br>
-                                        Digital government strategy <br><br>
-                                        @endif
-                                        @if($topIctInWorkplace2->ict4==0)
-                                        Digital Government Transformation<br><br>
-                                        @endif
-                                    </td>
-                                </tr>
-                                <tr style="font-family: poppins;">
-                                    <td style="font-family: poppins;"><br>Information Management<br><br></td>
-                                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgTopInformationManagement }}%</td>
-                                    <td style="font-family: poppins;text-align: left;box-shadow: 0px 0px;">
-                                        @if($topInformationManagement2->ict5==0)
-                                        Information security<br><br>
-                                        Data protection and privacy<br><br>
-                                        @endif
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: poppins;"><br>Digital Citizenship<br><br></td>
-                                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgTopDigitalCitizenship }}%</td>
-                                    <td style="font-family: poppins;text-align: left;">
-                                        @if($topDigitalCitizenship2->ict6_1==0||$topDigitalCitizenship2->ict6_2==0||$topDigitalCitizenship2->ict6_3==0)
-                                        Digital media and technologies<br><br>
-                                        @endif
-                                        @if($topDigitalCitizenship2->ict7_1==0||$topDigitalCitizenship2->ict7_2==0||$topDigitalCitizenship2->ict7_3==0)
-                                        Impact of technology use use<br><br>
-                                        @endif
-                                        @if ($topDigitalCitizenship2->ict8==0)
-                                        Cyber risks<br><br>
-                                        @endif
-                                        @if ($topDigitalCitizenship2->ict9==0)
-                                        Cyber-threats<br><br>
-                                        @endif
-                                        @if($topDigitalCitizenship2->ict10==0)
-                                        Digital Empathy<br><br>
-                                        @endif
-                                        @if($topDigitalCitizenship2->ict11==0)
-                                        Digital footprints<br><br>
-                                        @endif
-                                        @if ($topDigitalCitizenship2->ict12_1==0||$topDigitalCitizenship2->ict12_2==0||$topDigitalCitizenship2->ict12_3==0)
-                                        Digital media<br><br>
-                                        @endif
-                                        @if ($topDigitalCitizenship2->ict13==0)
-                                        Privacy Management<br><br>
-                                        @endif
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="table-responsive" style="margin-top: 30px;width:850px;">
+                <table class="table">
+            <thead style="background: var(--bs-table-border-color);">
+                <tr style="background: var(--bs-table-border-color);height: 60px;">
+                    <th style="width: 400px;font-size: 20px;font-family: poppins;background: var(--bs-table-border-color);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>Competency Area<br><br></th>
+                    <th style="width: 300px;font-size: 20px;font-family: poppins;background: var(--bs-table-border-color);border-left-color: var(--bs-table-striped-color);"><br>Proficiency<br><br></th>
+                    <th style="font-size: 20px;font-family: poppins;background: var(--bs-table-border-color);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Recommended areas of improvement<br><br></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-family: poppins;"><br><br><br>Communication<br><br></td>
+                    <td style="width: 300px;font-family: poppins;text-align: center;background: var(--bs-warning-bg-subtle);"><br>{{ $avgmidCommunication }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midCommunication2->mgt1==0||$midCommunication2->mgt2_1==0||$midCommunication2->mgt2_2==0 ||$midCommunication2->mgt2_3==0 ||$midCommunication2->mgt2_4==0||$midCommunication2->mgt4==0||$midCommunication2->mgt5==0)
+                        <br>Communication<br><br>
+                        @endif
+                        @if($midCommunication2->mgt3==0)
+                        Digital communication<br><br>
+                        @endif
+                        @if($midCommunication2->mgt4==0)
+                        Personal development<br><br>
+                        @endif
+                        @if($midCommunication2->mgt5==0)
+                        Leadership<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr style="font-family: poppins;">
+                    <td style="font-family: poppins;"><br><br><br>Workplace Management<br><br></td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgmidWorkplaceManagement }}%</td>
+                    <td style="font-family: poppins;text-align: left;box-shadow: 0px 0px;">
+                        @if($midWorkplaceManagement2->mgt6==0)
+                        Risk Management<br><br>
+                        @endif
+                        @if($midWorkplaceManagement2->mgt7==0)
+                        Promote benefits to the citizens of digital services<br><br>
+                        @endif
+                        @if($midWorkplaceManagement2->mgt8==0)
+                        Team dynamics <br><br>
+                        Collaboration <br><br>
+                        @endif
+                        @if($midWorkplaceManagement2->mgt9_1==0||$midWorkplaceManagement2->mgt9_2==0||$midWorkplaceManagement2->mgt9_3==0||$midWorkplaceManagement2->mgt9_4==0)
+                        Team dynamics Collaboration<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: poppins;"><br><br><br>Decision Making</td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgmidDecisionMaking }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midDecisionMaking2->mgt10==0||$midDecisionMaking2->mgt11==0||$midDecisionMaking2->mgt12==0)
+                        Decision making<br><br>
+                        @endif
+                        @if($midDecisionMaking2->mgt13==0||$midDecisionMaking2->mgt14==0)
+                        Change management<br><br>
+                        @endif
+                        @if($midDecisionMaking2->mgt15==0)
+                        Decision making <br><br>
+                        Personal development<br><br>
+                        @endif
+                        @if($midDecisionMaking2->mgt16==0||$midDecisionMaking2->mgt17==0)
+                        Business intelligence <br><br>
+                        Data analytics<br><br>
+                        @endif
+                        @if($midDecisionMaking2->mgt18==0)
+                        Risk Management<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: poppins;"><br><br><br>Capacity Building</td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgmidCapacityBuilding }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midCapacityBuilding2->mgt19_1==0||$midCapacityBuilding2->mgt19_2==0||$midCapacityBuilding2->mgt19_3==0||$midCapacityBuilding2->mgt19_4==0)
+                        Human resources <br><br>
+                        Talent management<br><br>
+                        @endif
+                        @if($midCapacityBuilding2->mgt20_1==0||$midCapacityBuilding2->mgt20_2==0||$midCapacityBuilding2->mgt20_3==0||$midCapacityBuilding2->mgt20_4==0)
+                        Digital transformation<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: poppins;"><br><br><br>Stakeholder Management</td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgmidStakeholderManagement }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midStakeholderManagement2->mgt21==0||$midStakeholderManagement2->mgt22==0)
+                        Human resources <br><br>
+                        Talent management<br><br>
+                        @endif
+                        @if($midStakeholderManagement2->mgt23_1==0||$midStakeholderManagement2->mgt23_2==0||$midStakeholderManagement2->mgt23_3==0||$midStakeholderManagement2->mgt23_4==0)
+                        Promote benefits to the citizens of a digital service amongst employees<br><br>
+                        @endif
+                        @if($midStakeholderManagement2->mgt24_1==0||$midStakeholderManagement2->mgt24_2==0||$midStakeholderManagement2->mgt24_3==0)
+                        Stakeholder management<br><br>
+                        @endif
+                        @if($midStakeholderManagement2->mgt25_1==0||$midStakeholderManagement2->mgt25_2==0||$midStakeholderManagement2->mgt25_3==0||$midStakeholderManagement2->mgt25_4==0||$midStakeholderManagement2->mgt26==0)
+                        Empower employees Communication Learning and development Decision making<br><br>
+                        @endif
+                        @if($midStakeholderManagement2->mgt27==0)
+                        Citizenship orientation <br><br>
+                        Customer service<br><br>
+                        @endif
+                        @if($midStakeholderManagement2->mgt28==0||$midStakeholderManagement2->mgt28==0)
+                        Team dynamics <br><br>
+                        Collaborative<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: poppins;"><br><br>Performance Management<br><br></td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgmidPerformanceManagement }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midStakeholderManagement2->mgt30_1==0||$midStakeholderManagement2->mgt30_2==0||$midStakeholderManagement2->mgt30_3==0||$midStakeholderManagement2->mgt34==0||$midStakeholderManagement2->mgt35==0)
+                        Performance management<br><br>
+                        @endif
+                        @if($midStakeholderManagement2->mgt31==0)
+                        Human Resource Development<br><br>
+                        @endif
+                        @if($midPerformanceManagement2->mgt32_1==0||$midPerformanceManagement2->mgt32_2==0||$midPerformanceManagement2->mgt32_3==0||$midPerformanceManagement2->mgt32_4==0)
+                        Team dynamics<br><br>
+                        Integration<br><br>
+                        @endif
+                        @if($midPerformanceManagement2->mgt33_1==0||$midPerformanceManagement2->mgt33_2==0||$midPerformanceManagement2->mgt33_3==0||$midPerformanceManagement2->mgt33_4==0)
+                        Learning and development <br><br>
+                        Leadership skills <br><br>
+                        @endif
+                        @if($midPerformanceManagement2->mgt34==0||$midPerformanceManagement2->mgt35==0)
+                        Training Need Analysis <br><br>
+                        @endif
+                        @if($midPerformanceManagement2->mgt13==0)
+                        Technical troubleshooting<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: poppins;"><br><br>Teamwork<br><br></td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgmidTeamwork }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midTeamwork2->mgt36==0)
+                        Team dynamics <br><br>
+                        Personal development<br><br>
+                        @endif
+                        @if($midTeamwork2->mgt37==0)
+                        Communication <br><br>
+                        Team work<br><br>
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: poppins;"><br><br>Personal Development</td>
+                    <td style="font-family: poppins;background: var(--bs-warning-bg-subtle);"><br>{{ $avgmidPersonalDevelopment }}%</td>
+                    <td style="font-family: poppins;text-align: left;">
+                        @if($midPersonalDevelopment2->mgt38==0||$midPersonalDevelopment2->mgt39_1==0||$midPersonalDevelopment2->mgt39_2==0||$midPersonalDevelopment2->mgt39_3==0)
+                        Personal development<br><br>
+                        @endif
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+                </div>
                 </div>
                 <div class="row" style="text-align: center">
                     <div class="col" style="margin-left:300px"><span style="font-family: Poppins, sans-serif;">3</span></div>

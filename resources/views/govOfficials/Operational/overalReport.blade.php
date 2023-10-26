@@ -216,7 +216,7 @@
                             <tr style="background: var(--bs-table-border-color);height: 60px;">
                                 <th style="width: 400px;font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>Competency Area<br><br></th>
                                 <th style="width: 300px;font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Proficiency<br><br></th>
-                                <th style="font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Recommendations<br><br></th>
+                                <th style="font-size: 20px;font-family: poppins;background: var(--bs-tertiary-bg);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Recommended areas of improvement<br><br></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -406,7 +406,7 @@
                             <tr style="background: var(--bs-table-border-color);">
                                 <th style="background: var(--bs-table-border-color);width: 200px;font-size: 12px;">Competency Area</th>
                                 <th style="background: var(--bs-table-border-color);width: 100px;font-size: 12px;">Result</th>
-                                <th style="background: var(--bs-table-border-color);font-size: 12px;">Recommendations</th>
+                                <th style="background: var(--bs-table-border-color);font-size: 12px;">Recommended areas of improvement</th>
                             </tr>
                         </thead>
                         <tbody style="font-size: 12px;">
@@ -604,7 +604,7 @@
                             <tr style="background: var(--bs-table-border-color);height: 60px;">
                                 <th style="width: 400px;font-size: 20px;font-family: poppins;background: var(--bs-table-border-color);border-left-style: solid;border-left-color: var(--bs-table-striped-color);"><br>Competency Area<br><br></th>
                                 <th style="width: 300px;font-size: 20px;font-family: poppins;background: var(--bs-table-border-color);border-left-color: var(--bs-table-striped-color);"><br>Proficiency<br><br></th>
-                                <th style="font-size: 20px;font-family: poppins;background: var(--bs-table-border-color);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Recommendations<br><br></th>
+                                <th style="font-size: 20px;font-family: poppins;background: var(--bs-table-border-color);border-left-style: solid;border-left-color: var(--bs-table-color);"><br>Recommended areas of improvement<br><br></th>
                             </tr>
                         </thead>
                         <tbody>
