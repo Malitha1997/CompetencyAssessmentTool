@@ -41,7 +41,9 @@ class HomeController extends Controller
     public function index(): View
     {
         $layer=Auth::user()->govofficial->employment_layer;
-        return view('govOfficials.userHome',compact('layer'));
+        $govofficial=Auth::user()->govofficial;
+        // dd($govofficial);
+        return view('govOfficials.userHome',compact('layer','govofficial'));
     }
 
 
