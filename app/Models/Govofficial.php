@@ -23,7 +23,7 @@ use App\Models\OpCollaboration;
 use App\Models\OpCommunication;
 use App\Models\MidCollaboration;
 use App\Models\MidCommunication;
-use App\Models\OpIctInWorkPlace;
+use App\Models\OpIctInWorkplace;
 use App\Models\TopCollaboration;
 use App\Models\TopCommunication;
 use App\Models\TopHumanResource;
@@ -115,7 +115,7 @@ class Govofficial extends Model
     }
 
     public function opIctInWorkPlace(){
-        return $this->hasOne(OpIctInWorkPlace::class);
+        return $this->hasOne(OpIctInWorkplace::class);
     }
 
     public function opInformationManagement(){

@@ -269,7 +269,7 @@
 </section>
 
 <div class="row" style="margin-right: 0px;margin-top: 2750px;margin-left: 850px;margin-bottom:50px">
-    <div class="col" style="margin-top: 0px;"><a class="btn btn-primary" type="button" href="/operationallayer" style="font-family: Poppins, sans-serif;color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
+    <div class="col" style="margin-top: 0px;"><a class="btn btn-primary" type="button" href="{{route('operationallayer')}}" style="font-family: Poppins, sans-serif;color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
         <button class="btn btn-primary" type="submit" style="font-family: Poppins, sans-serif;width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Submit</button></div>
 </div>
 </form>

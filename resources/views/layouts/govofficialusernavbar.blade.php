@@ -2,8 +2,8 @@
 <html data-bs-theme="light" lang="en" >
 
 <head>
-    <!-- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Competency Framework</title>
     <link rel="stylesheet" href="{{ asset('cssfile/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
@@ -21,7 +21,7 @@
             </div><img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 10px;">
             <div class="dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255);margin-right:70px"></a>
                 <div class="dropdown-menu" style="font-family: Popins;width:50px;margin-right:50px">
-                    <a class="dropdown-item" style="font-family: Poppins,san-serif" href="/home">Profile</a>
+                    <a class="dropdown-item" style="font-family: Poppins,san-serif" href="{{route('userHome')}}">Profile</a>
                     <a class="dropdown-item" style="font-family: Poppins" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
