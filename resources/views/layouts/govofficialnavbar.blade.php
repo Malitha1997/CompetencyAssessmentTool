@@ -35,18 +35,18 @@
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-12 col-sm-6 col-md-3">
-                    <span style="text-align: center;font-family: Poppins, sans-serif;font-color: #00000000;"><br>Aiming at a digitally competent society and an empowered Government workforce with required competencies.<br><br></span><img src="{{ asset('img/Group 282.png') }}">
+                    <span style="text-align: center;font-family: Poppins, sans-serif;color: #000;"><br>Aiming at a digitally competent society and an empowered Government workforce with required competencies.<br><br></span><img src="{{ asset('img/Group 282.png') }}">
                 </div>
                 <div class="col-12 col-sm-6 col-md-2 col-xl-2 pe-xl-0" style="margin-left: 170px;">
-                    <h5 style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);">Links</h5>
-                    <ul class="list-inline" style="text-align: left;margin-left: 79px;">
+                    <h5 style="font-family: Poppins, sans-serif;color: #000;">Links</h5>
+                    <ul class="list-inline" style="text-align: left;margin-left: 79px;color: #000">
                         <li class="list-inline-item"><img src="{{ asset('img/Group 281.png') }}" style="margin-top: 10px;"><a href="#" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);margin-left: 10px;margin-top: 18px;">&gt; Home</a></li>
                         <li class="list-inline-item"></li>
                         <li class="list-inline-item"></li>
                         <li class="list-inline-item"></li>
                     </ul>
                 </div>
-                <div class="col-md-3 social-networks pe-xl-0 pt-xl-0 pb-xl-0" style="margin-left: 250px;">
+                <div class="col-md-3 social-networks pe-xl-0 pt-xl-0 pb-xl-0" style="margin-left: 250px;color: #000">
                     <h5 style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);">Contact Us</h5>
                     <ul style="text-align: left;font-family: Poppins, sans-serif;font-size: 14px;">
                         <li style="color: var(--bs-emphasis-color);"><img src="{{ asset('img/Group 277.png') }}">&nbsp;94 112-369-099</li>
@@ -57,7 +57,7 @@
             </div>
             <div class="row footer-copyright" style="background: #8D8E9D;">
                 <div class="col" style="background: #8D8E9D;">
-                    <p style="text-align: left;font-family: Poppins, sans-serif;font-size: 14px;color: var(--bs-emphasis-color);">Copyright @ 2023 <span style="color: rgb(255, 0, 0);">ICT Agency of Sri Lanka</span>. All rights reserved&nbsp;</p>
+                    <p style="text-align: left;font-family: Poppins, sans-serif;font-size: 14px;color: #000;">Copyright @ 2023 <span style="color: rgb(255, 0, 0);">ICT Agency of Sri Lanka</span>. All rights reserved&nbsp;</p>
                 </div>
             </div>
         </div>
