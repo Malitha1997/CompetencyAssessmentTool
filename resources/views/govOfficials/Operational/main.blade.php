@@ -1,7 +1,7 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
-<div class="row">
+<div class="row" style="margin-top:15%">
     <h2 data-aos="fade-down" data-aos-duration="900" style="color: #1F2471;font-weight: bold;font-family: poppins;text-align: center;"><br>Welcome to the Digital Government Competency Framework !<br><br></h2>
 </div>
 <div class="row">

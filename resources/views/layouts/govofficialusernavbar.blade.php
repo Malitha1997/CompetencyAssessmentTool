@@ -14,11 +14,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md py-3 navbar-light" data-aos="slide-down" data-aos-duration="1000" style="background: #C1C2DA;">
-        <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-2" style="width: 1440px;text-align: left;font-family: Poppins, sans-serif;"><img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">
-                <ul class="navbar-nav ms-auto"></ul>
-            </div><img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 10px;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top " data-aos="slide-down" data-aos-duration="1000" style="background: #C1C2DA;">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand d-flex align-items-center" href="#"></a> -->
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-2" style="text-align: left;font-family: Poppins, sans-serif;">
+                <img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">  
+            </div>
+            <img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 10px;">
             <div class="dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255);margin-right:70px"></a>
                 <div class="dropdown-menu" style="font-family: Popins;width:50px;margin-right:50px">
                     <a class="dropdown-item" style="font-family: Poppins,san-serif" href="{{route('userHome')}}">Profile</a>

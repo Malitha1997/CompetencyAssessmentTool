@@ -4,11 +4,11 @@
 
 <body>
 
-        <div class="container" data-aos="fade-up" data-aos-duration="1000"  style="margin-top: 10%;margin-bottom: 5%;">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000"  style="margin-top: 20%;margin-bottom: 5%;">
             <div class="row">
                 <div class="col-lg-8 col-sm-8" style="border-radius: 0px;border: 2px solid #5f2b84;">
                     <div class="row">
-                        <h1 style="font-family: Poppins, sans-serif;color: #1f2471;font-weight: bold;text-align: center;">User Profile</h1>
+                        <h1 style="font-family: Poppins, sans-serif;color: #1f2471;font-weight: bold;text-align: center;margin-top:2%">User Profile</h1>
                     </div>
                     <div class="row">
                         <h3 data-aos="fade-down" style="color: #f01f75;font-weight: bold;font-family: Poppins, sans-serif;">General Information</h3>
