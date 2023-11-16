@@ -21,9 +21,9 @@
             <div class="collapse navbar-collapse" id="navcol-2" style="text-align: left;font-family: Poppins, sans-serif;">
                 <img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">  
             </div>
-            <img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 10px;">
-            <div class="dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255);margin-right:70px"></a>
-                <div class="dropdown-menu" style="font-family: Popins;width:50px;margin-right:50px">
+            <img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 2%;">
+            <div class="dropdown" style="margin-right:10%"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255);"></a>
+                <div class="dropdown-menu" style="font-family: Popins;margin-right:10%">
                     <a class="dropdown-item" style="font-family: Poppins,san-serif" href="{{route('userHome')}}">Profile</a>
                     <a class="dropdown-item" style="font-family: Poppins" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
