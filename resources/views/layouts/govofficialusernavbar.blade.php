@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md fixed-top py-3 navbar-light" data-aos="slide-down" data-aos-duration="1000" style="background: #C1C2DA;">
+    <nav class="navbar navbar-expand-md py-3 navbar-light" data-aos="slide-down" data-aos-duration="1000" style="background: #C1C2DA;">
         <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2" style="width: 1440px;text-align: left;font-family: Poppins, sans-serif;"><img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">
                 <ul class="navbar-nav ms-auto"></ul>
@@ -40,10 +40,10 @@
     <footer data-aos="slide-up" data-aos-duration="1000" id="myFooter" style="background: #C1C2DA;">
         <div class="container-fluid">
             <div class="row text-center">
-                <div class="col-12 col-sm-6 col-md-3">
-                    <span style="text-align: center;font-family: Poppins, sans-serif;color: #000;"><br>Aiming at a digitally competent society and an empowered Government workforce with required competencies.<br><br></span><img src="{{ asset('img/Group 282.png') }}">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <span style="text-align: center;font-family: Poppins, sans-serif;color: #000;"><br>Aiming at a digitally competent society and an empowered Government workforce with required competencies.<br><br></span>
                 </div>
-                <div class="col-12 col-sm-6 col-md-2 col-xl-2 pe-xl-0" style="margin-left: 170px;">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <h5 style="font-family: Poppins, sans-serif;color: #000;">Links</h5>
                     <ul class="list-inline" style="text-align: left;margin-left: 79px;color: #000;">
                         <li class="list-inline-item"><img src="{{ asset('img/Group 281.png') }}" style="margin-top: 10px;"><a href="#" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);margin-left: 10px;margin-top: 18px;">&gt; Home</a></li>
@@ -52,12 +52,12 @@
                         <li class="list-inline-item"></li>
                     </ul>
                 </div>
-                <div class="col-md-3 social-networks pe-xl-0 pt-xl-0 pb-xl-0" style="margin-left: 250px;">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <h5 style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);color: #000;">Contact Us</h5>
                     <ul style="text-align: left;font-family: Poppins, sans-serif;font-size: 14px;color: #000;">
                         <li style="color: var(--bs-emphasis-color);"><img src="{{ asset('img/Group 277.png') }}">&nbsp;94 112-369-099</li>
-                        <li style="color: var(--bs-emphasis-color);"><img src="{{ asset('img/Group 278.png') }}" style="margin-top: 10px;">&nbsp;info@lightningdigital.gov.lk</li>
-                        <li style="color: var(--bs-emphasis-color);"><img src="{{ asset('img/Group 279.png') }}" style="margin-top: 10px;">&nbsp;490 R.A. De Mel Mawatha, Colombo, 00300,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sri Lanka.</li>
+                        <li style="color: var(--bs-emphasis-color);"><img src="{{ asset('img/Group 278.png') }}" style="margin-top: 2%;">&nbsp;info@lightningdigital.gov.lk</li>
+                        <li style="color: var(--bs-emphasis-color);"><img src="{{ asset('img/Group 279.png') }}" style="margin-top: 2%;">&nbsp;490 R.A. De Mel Mawatha, Colombo, 00300,Sri Lanka.</li>
                     </ul>
                 </div>
             </div>

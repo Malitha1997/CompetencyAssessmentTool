@@ -2,115 +2,166 @@
 
 @section('content')
 
-<body style="width: auto;border-color: rgb(46,127,208);color: rgb(255,255,255);">
-    <section data-aos="fade-up" data-aos-duration="1000" >
-        <div class="container container-expand-sm" style="margin-top: 150px;margin-bottom: 20px;border-radius: 0px;border: 2px solid #5f2b84;">
+<body>
+
+        <div class="container" data-aos="fade-up" data-aos-duration="1000"  style="margin-top: 10%;margin-bottom: 5%;">
             <div class="row">
-                <div class="col" style="width: auto;margin-top: 20px">
-                    <h1 style="font-family: Poppins, sans-serif;color: #1f2471;font-weight: bold;text-align: center;margin-top: 5px;">User Profile</h1>
-                    <div class="row" style="margin-top: 30px;margin-bottom: 25px;">
-                        <div class="col"><span class="general" data-aos="fade-down" style="color: #f01f75;font-weight: bold;font-family: Poppins, sans-serif;">General Information</span></div>
+                <div class="col-lg-8 col-sm-8" style="border-radius: 0px;border: 2px solid #5f2b84;">
+                    <div class="row">
+                        <h1 style="font-family: Poppins, sans-serif;color: #1f2471;font-weight: bold;text-align: center;">User Profile</h1>
                     </div>
-                    <div class="row" id="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/User.png') }}" style="margin-left: 0px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;margin-bottom: 0px;">Full name</span>
+                    <div class="row">
+                        <h3 data-aos="fade-down" style="color: #f01f75;font-weight: bold;font-family: Poppins, sans-serif;">General Information</h3>
+                    </div>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/User.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Full name</h4></div>
+                            </div>   
                         </div>
-                        <div class="col" style="text-align: left"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->full_name}}" readonly></div>
-                    </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Leader.png') }}" style="margin-left: 0px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;">Preferred Name</span>
+                        <div class="col-6">
+                            <h4 id="h4" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->full_name}}</h4>
                         </div>
-                        <div class="col" style="text-align: left;"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->preferred_name}}" readonly></div>
                     </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Group.png') }}" style="margin-left: 0px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;">Designation</span>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Leader.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Preferred Name</h4></div>
+                            </div>   
                         </div>
-                        <div class="col" style="text-align: left;"><input  class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->designation}}"  readonly></div>
-                    </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Building.png') }}" style="margin-left: 0px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;">Organization Name</span>
+                        <div class="col-6">
+                            <h4 id="h4" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->preferred_name}}</h4>
                         </div>
-                        <div class="col" style="border: 0px;font-family: Poppins;text-align: left"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->govorganizationname->gov_org_name}}" readonly></div>
                     </div>
-                    <div class="row" data-aos="fade-down" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Viber.png') }}" style="margin-left: 0px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;">Contact Number</span>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Group.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Designation</h4></div>
+                            </div>   
                         </div>
-                        <div class="col" style="border: 0px;font-family: Poppins;text-align: left"><input class="details" type="text" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->contact_number}}" readonly></div>
-                    </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Email.png') }}" style="margin-left: 0px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;">E-mail address</span>
+                        <div class="col-6">
+                            <h4 id="h4" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->designation}}</h4>
                         </div>
-                        <div class="col" style="border: 0px;font-family: Poppins;text-align: left"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->email}}" readonly></div>
                     </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Menu.png') }}" style="margin-left: 0px;margin-right: 10px;"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;">Employment Layer</span>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Building.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Organization Name</h4></div>
+                            </div>   
                         </div>
-                        <div class="col" style="border: 0px;font-family: Poppins;text-align: left"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{ucfirst(Auth::user()->govofficial->employment_layer)}} Layer" readonly></div>
-                    </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Calendar.png') }}" style="margin-left: 0px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;">Date of Birthday</span>
+                        <div class="col-6">
+                            <h4 id="h4" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->govorganizationname->gov_org_name}}</h4>
                         </div>
-                        <div class="col" style="border: 0px;font-family: Poppins;text-align: left"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->date_of_birth}}" readonly></div>
                     </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Email.png') }}" style="margin-left: 0px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;">Social Media Links</span>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Viber.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Contact Number</h4></div>
+                            </div>   
                         </div>
-
-                    </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Linkedin.png') }}" style="margin-left: 20px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;margin-left: 20px;">LinkedIn</span>
+                        <div class="col-6">
+                            <h4 id="h4" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->contact_number}}</h4>
                         </div>
-                        <div class="col" style="border: 0px;font-family: Poppins;text-align: left"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->linkedin}}" readonly></div>
                     </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Facebook.png') }}" style="margin-left: 20px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;margin-left: 20px;">Facebook</span>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Email.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">E-mail address</h4></div>
+                            </div>   
                         </div>
-                        <div class="col" style="border: 0px;font-family: Poppins;text-align: left"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->facebook}}" readonly></div>
-                    </div>
-                    <div class="row" style="margin-bottom: 25px;">
-                        <div class="col">
-                            <picture><img id="logo" data-aos="fade-down" src="{{ asset('img/Instagram.png') }}" style="margin-left: 20px;margin-right: 10px;" width="25" height="25"></picture><span class="info" data-aos="fade-down" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);margin-top: 0px;margin-left: 20px;">Instagram</span>
+                        <div class="col-6">
+                            <h4 id="gmail" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->email}}</h4>
                         </div>
-                        <div class="col" style="border: 0px;font-family: Poppins;text-align: left"><input class="details" type="text" data-aos="fade-down" style="border: 0px;font-family: Poppins;text-align: left;" value="{{Auth::user()->govofficial->instagram}}" readonly></div>
                     </div>
-
-                    <div class="row" style="margin-bottom: 20px;">
-                        <div class="col" style="margin-top: 50px;text-align: right;">
-
-                            <a class="btn btn-primary" data-aos="fade-down" type="button" style="font-family: Poppins, sans-serif;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px">View Results</a>
-                            <a class="btn btn-primary" data-aos="fade-down" type="button" style="font-family: Poppins, sans-serif;border-width: 0px;background: url(&quot;{{ asset('img/Screenshot (561) 7.png') }}&quot;);border-radius: 10pxmargin-right: 80px;">Edit Profile</a></div>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Menu.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Employment Layer</h4></div>
+                            </div>   
+                        </div>
+                        <div class="col-6">
+                            <h4 id="h4" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{ucfirst(Auth::user()->govofficial->employment_layer)}} Layer</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Calendar.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Date of Birthday</h4></div>
+                            </div>   
+                        </div>
+                        <div class="col-6">
+                            <h4 id="h4" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->date_of_birth}}</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:2%"> 
+                        <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Email.png') }}"></div>
+                        <div class="col-8" style="margin-left:-42.5%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Social Media Links</h4></div>    
+                    </div>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row" style="margin-left:5%">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Linkedin.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">LinkedIn</h4></div>
+                            </div>   
+                        </div>
+                        <div class="col-6">
+                            <h4 id="h4-2" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->linkedin}}</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row" style="margin-left:5%">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Facebook.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Facebook</h4></div>
+                            </div>   
+                        </div>
+                        <div class="col-6">
+                            <h4 id="h4-2" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->facebook}}</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-6">
+                            <div class="row" style="margin-left:5%">
+                                <div class="col-6"><img id="img" data-aos="fade-down" src="{{ asset('img/Instagram.png') }}"></div>
+                                <div class="col-8" style="margin-left:-35%"><h4 id="h4" data-aos="fade-down"  style="font-family: Poppins, sans-serif;color: rgb(0,0,0);">Instagram</h4></div>
+                            </div>   
+                        </div>
+                        <div class="col-6">
+                            <h4 id="h4-2" data-aos="fade-down" style="font-family: Poppins;text-align: left;">{{Auth::user()->govofficial->instagram}}</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:2%;margin-bottom:3%">
+                        <div class="col" style="text-align:right">
+                            <a class="btn btn-primary" data-aos="fade-down" type="button" style="font-family: Poppins, sans-serif;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px"><h4 id="h4" style="margin-top:2%">View Results</h4></a>
+                        </div>
+                        <div class="col" style="text-align:left">
+                            <a class="btn btn-primary" id="edit" data-aos="fade-down" type="button" style=";font-family: Poppins, sans-serif;border-width: 0px;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 2px;border-color: #ef4323;border-radius: 10px"><h4 id="h4" style="margin-top:2%">Edit Profile</h4></a>
+                        </div>
                     </div>
                 </div>
-                <div class="img" style="width :450.3px;background: url(&quot;{{ asset('img/Screenshot (560) 1(2).png') }}&quot;);">
-
-                    <h1 class="h4" data-aos="fade-down" style="font-family: Poppins, sans-serif;text-align: center;font-size: 24px;margin-top: 500px;">Click on the 'Assessments' button to start the <br>Competency Assessment.&nbsp;</h1>
-
-                    <div class="row" style="margin-top: 90px;">
-                        <div class="col" style="text-align: center;">
+                <div class="col-lg-4 col-sm-4" style="background: linear-gradient(to top right, #660066 56%, #FF6699 100%);">
+                    <div class="row" >
+                        <h3 data-aos="fade-down" id="h3" style="font-family: Poppins, sans-serif;color:#fff;text-align: center;margin-top: 80%;">Click on the 'Assessments' button to start the <br>Competency Assessment.&nbsp;</h3>
+                    </div>
+                    <div class="row" style="text-align:center">  
                         @if($layer=='middle')
-                            <a class="btn btn-primary" href="{{route('middlelayer')}}" type="button" style="width: 266px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;);border-width: 0px;font-family: Poppins, sans-serif;font-size: 20px;"  >Assessments</a>
+                            <a class="btn btn-primary" id="layerButton" href="{{route('middlelayer')}}" type="button" style="margin-left:30%;margin-top:10%;text-align:center;width:40%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 0px;font-family: Poppins, sans-serif;"><h5>Assessments</h5></a>
                         @elseif($layer=='operational')
-                            <a class="btn btn-primary" href="{{route('operationallayer')}}" type="button" style="width: 266px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;);border-width: 0px;font-family: Poppins, sans-serif;font-size: 20px;"  >Assessments</a>
+                            <a class="btn btn-primary" id="layerButton" href="{{route('operationallayer')}}" type="button" style="margin-left:30%;margin-top:10%;text-align:center;width:40%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 0px;font-family: Poppins, sans-serif;"><h5>Assessments</h5></a>
                         @elseif($layer=='top')    
-                            <a class="btn btn-primary" href="{{route('toplayer')}}" type="button" style="width: 266px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;);border-width: 0px;font-family: Poppins, sans-serif;font-size: 20px;"  >Assessments</a>
+                            <a class="btn btn-primary" id="layerButton" href="{{route('toplayer')}}" type="button" style="margin-left:30%;margin-top:10%;text-align:center;width:40%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 0px;font-family: Poppins, sans-serif;"><h5>Assessments</h5></a>
                         @endif
-                        </div>
-                    <div class="row" style="margin-top: 50px;">
-                        {{--  <div class="col" style="text-align: center;"><button class="btn btn-primary" type="button" style="width: 266px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;), url(&quot;{{ asset('img/Screenshot (561) 5.png') }}&quot;);border-width: 0px;font-family: Poppins, sans-serif;font-size: 20px;" disabled>Deep Assessment</button></div>  --}}
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 </body>
 @endsection
