@@ -33,7 +33,13 @@
     font-size: 16px;
     height: 13px;
 }
-.details{
+#card1{
+    width:470px;
+}
+#card2{
+    width:70%;
+}
+/* .details{
     font-size: 20px;
     color :#000;
     margin-left : -70px;
@@ -54,7 +60,7 @@
 }
 .h4{
     margin-top: 500px;
-}
+} */
 /* @media(max-width: 768px){
     .col{
         width:1000px;
@@ -65,7 +71,7 @@
     width: 100%;
   } */
 @media screen and (max-width: 600px){
-    body{
+    /* body{
         width: 100%;
         margin-top: -50px;
     }
@@ -109,6 +115,38 @@
     }
     .h4{
         margin-top: 10px;
+    } */
+    #h4{
+        font-size: 14px;
+    }
+    #img{
+        height:15px;
+        width:15px;
+        margin-top:-10px;
+    }
+    #h4-2{
+        font-size: 12px;
+        margin-left:-5%
+    }
+    #gmail{
+        font-size: 12px;
+    }
+    #h3{
+        margin-top:10%;
+        font-size:18px;
+    }
+    #layerButton{
+        margin-bottom:10%;
+    }
+    #mainOp{
+        font-size: 14px;
+        margin-top: 0px
+    }
+    #card1{
+        width:90%
+    }
+    #card2{
+        width:90%;
     }
     
 }
