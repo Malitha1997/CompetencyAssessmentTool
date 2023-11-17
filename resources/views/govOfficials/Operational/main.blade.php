@@ -38,9 +38,9 @@
                     </div>
                     <div class="row">
                         @if($ictDataExists && $digitalGovDataExists && $managementDataExists)
-                        <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                        <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
                         @elseif($ictDataExists) 
-                        <a class="btn btn-primary" href="{{route('operationalIctResults')}}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                        <a class="btn btn-primary" href="{{route('operationalIctResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
                         @else
                         <a class="btn btn-primary" href="{{ route('operationalIctPage01') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
                         @endif
@@ -64,17 +64,17 @@
                     </div>
                     <div class="row">
                         @if($ictDataExists && $digitalGovDataExists && $managementDataExists)
-                        <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
+                        <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
                         @elseif($digitalGovDataExists)
-                        <a class="btn btn-primary" href="{{route('operationalDigitalgovernmentResults')}}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px">View Results</a>
-                        @elseif($opChangeManagementDataExists)
-                        <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage02')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
-                        @elseif($opCollaborationDataExists)
-                        <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage03')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
-                        @elseif($opOrientationDataExists)
-                        <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage04')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                        <a class="btn btn-primary" href="{{route('operationalDigitalgovernmentResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
                         @elseif($opQualityManagementDataExists)
                         <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage05')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                        @elseif($opOrientationDataExists)
+                        <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage04')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                        @elseif($opCollaborationDataExists)
+                        <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage03')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                        @elseif($opChangeManagementDataExists)
+                        <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage02')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
                         @else
                         <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage01')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
                         @endif

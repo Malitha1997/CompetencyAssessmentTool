@@ -404,10 +404,6 @@
         </div>
     </div>
 </div>
-<!-- <div class="row" style="margin-bottom:100px;margin-right: 0px;margin-top: 3200px;margin-left: 850px;font-family: Poppins, sans-serif;">
-    <div class="col"><a class="btn btn-primary" href="{{ route('operationallayer') }}" type="button" style="color: #EF4323;width: 174px;height: 55px;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;margin-right: 30px;border-radius: 10px;">Resume</a>
-        <button class="btn btn-primary" type="submit" style="width: 174px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;);border-color: rgb(255, 255, 255);border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;font-size: 20px;font-weight: bold;border-radius: 10px;">Next</button></div>
-</div> -->
 </form>
 
 @endsection
