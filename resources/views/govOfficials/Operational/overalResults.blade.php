@@ -16,7 +16,7 @@
                         <a class="btn btn-primary" type="button" href="{{ route('operationalOverallReport')}}" style="margin-left:20%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);width:60%;border-style: none;"><h4 id="h4">Download</h4></a>
                     </div>
                     <div class="row" style="margin-top:10%;text-allign:center">
-                        <a  href="{{ route('operationallayer') }}" style="font-family: poppins;font-size: 20px;color: #5F2B84;margin-left:44%"><h5 id="h4">Back</h5></a>
+                        <a  href="{{ route('userHome') }}" style="font-family: poppins;font-size: 20px;color: #5F2B84;margin-left:44%"><h5 id="h4">Back</h5></a>
                     </div>
                 </div>
                 <div class="col-6">

@@ -37,9 +37,7 @@
                         <h7 id="h4" class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and skills in ICT to enable more efficient, cost-effective, and participatory government, facilitate more convenient government services, allow greater public access to information, and make government more accountable to citizens.<br><br></h7>
                     </div>
                     <div class="row">
-                        @if($ictDataExists && $digitalGovDataExists && $managementDataExists)
-                        <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
-                        @elseif($ictDataExists) 
+                        @if($ictDataExists) 
                         <a class="btn btn-primary" href="{{route('operationalIctResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
                         @else
                         <a class="btn btn-primary" href="{{ route('operationalIctPage01') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
@@ -63,9 +61,7 @@
                         <h7 id="h4" style="text-align: justify;font-family: poppins;">Required knowledge and capabilities to drive an ICT-enabled transformation of the public sector. And making it possible to carry out the public sector’s tasks more efficiently and effectively.<br><br></h7>
                     </div>
                     <div class="row">
-                        @if($ictDataExists && $digitalGovDataExists && $managementDataExists)
-                        <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
-                        @elseif($digitalGovDataExists)
+                        @if($digitalGovDataExists)
                         <a class="btn btn-primary" href="{{route('operationalDigitalgovernmentResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
                         @elseif($opQualityManagementDataExists)
                         <a class="btn btn-primary" href="{{route('operationalDigitalGovernmentPage05')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
@@ -100,9 +96,8 @@
                         <h7 id="h4" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></h7>
                     </div>
                     
-                    @if($ictDataExists && $digitalGovDataExists && $managementDataExists)
-                    <a class="btn btn-primary" href="{{ route('operationalOveral') }}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
-                    @elseif($managementDataExists)
+                    
+                    @if($managementDataExists)
                     <a class="btn btn-primary" href="{{route('operationalManagementResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
                     @elseif($opTeamworkDataExists )
                     <a class="btn btn-primary" href="{{route ('operationalManagementPage05') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>

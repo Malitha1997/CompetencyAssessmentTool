@@ -24,14 +24,21 @@
             </div>
             <img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 2%;">
             <!-- <a class="btn btn-primary" style="border-width:0px;font-family: Poppins,san-serif;background: url(&quot;{{ asset('img/Mask group 276.png') }}&quot;);" href="{{route('userHome')}}"></a>   -->
+            <a class="btn btn-primary" style="font-family: Poppins,san-serif;margin-right:1%;border-width:0px;background: linear-gradient(to bottom, #660066 70%, #FF6699 100%);" href="{{route('userHome')}}">Profile</a>
             <i class="fa fa-user" aria-hidden="true"></i>
-            <!-- <a class="btn btn-danger" type="button" style="font-family: Poppins;" href="{{ route('logout') }}"
+            <!-- <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;background: linear-gradient(to bottom, #F44567 0%, #F97B5F 49%)" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         Logout
-                    </a> -->
-                    
-            <div class="dropdown" style="margin-right:10%"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255);"></a>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form> -->
+            <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-family: Poppins;border-width:0px;background: linear-gradient(to bottom, #F44567 0%, #F97B5F 49%)" href="{{ route('logout') }}">
+                        Logout
+            </button>
+            
+            <!-- <div class="dropdown" style="margin-right:10%"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255);"></a>
                 <div class="dropdown-menu" style="font-family: Popins;margin-right:10%">
                     <a class="dropdown-item" style="font-family: Poppins,san-serif" href="{{route('userHome')}}">Profile</a>
                     <a class="dropdown-item" style="font-family: Poppins" href="{{ route('logout') }}"
@@ -43,10 +50,34 @@
                         @csrf
                     </form>
                 </div>
-            </div>
+            </div> -->
         </div>
     </nav>
     <div class="container">
+    <div class="modal fade" style="font-family:poppins" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 id="h4" class="modal-title" id="exampleModalLabel">Warning</h5> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
         @yield('content')
     </div>
     <footer data-aos="slide-up" data-aos-duration="1000" id="myFooter" style="background: #C1C2DA;">
@@ -84,6 +115,25 @@
     <script src="{{ asset('jsfile/bootstrap.min.js') }}"></script>
     <script src="{{ asset('jsfile/aos.min.js') }}"></script>
     <script src="{{ asset('jsfile/bs-init.js') }}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
+    <!-- <script>
+        function submitForm(form) {
+            swal({
+                title: "Are you sure?",
+                text: "This form will be submitted",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then(function (isOkay) {
+                if (isOkay) {
+                    form.submit();
+                }
+            });
+
+            return false;
+        }
+    </script> -->
 </body>
 
 </html>
