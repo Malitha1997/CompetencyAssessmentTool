@@ -43,7 +43,10 @@ class HomeController extends Controller
         $layer=Auth::user()->govofficial->employment_layer;
         $govofficial=Auth::user()->govofficial;
         // dd($govofficial);
-        return view('govOfficials.userHome',compact('layer','govofficial'));
+        $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
+        $ictDataExists = Auth::user()->govofficial->opIct;
+        $managementDataExists = Auth::user()->govofficial->opManagement;
+        return view('govOfficials.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists'));
     }
 
 
