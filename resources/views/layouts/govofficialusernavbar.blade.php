@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('cssfile/Bold-BS4-Footer-Big-Logo.css') }}">
     <link rel="stylesheet" href="{{ asset('cssfile/Navbar-Right-Links-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('cssfile/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -22,10 +23,10 @@
                 <img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">
                 
             </div>
-            <img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 2%;">
+            <!-- <img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 2%;"> -->
             <!-- <a class="btn btn-primary" style="border-width:0px;font-family: Poppins,san-serif;background: url(&quot;{{ asset('img/Mask group 276.png') }}&quot;);" href="{{route('userHome')}}"></a>   -->
-            <a class="btn btn-primary" style="font-family: Poppins,san-serif;margin-right:1%;border-width:0px;background: linear-gradient(to bottom, #660066 70%, #FF6699 100%);" href="{{route('userHome')}}">Profile</a>
-            <i class="fa fa-user" aria-hidden="true"></i>
+            <a class="btn btn-primary" style="font-family: Poppins,san-serif;margin-right:1%;border-width:0px;background: linear-gradient(to bottom, #660066 70%, #FF6699 100%);" href="{{route('userHome')}}"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+            
             <!-- <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;background: linear-gradient(to bottom, #F44567 0%, #F97B5F 49%)" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
@@ -35,7 +36,7 @@
                 @csrf
             </form> -->
             <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-family: Poppins;border-width:0px;background: linear-gradient(to bottom, #F44567 0%, #F97B5F 49%)" href="{{ route('logout') }}">
-                        Logout
+            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
             </button>
             
             <!-- <div class="dropdown" style="margin-right:10%"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255);"></a>

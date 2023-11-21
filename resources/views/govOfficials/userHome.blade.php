@@ -149,7 +149,7 @@
                         @endif
                         </div>
                         <div class="col" style="text-align:left">
-                            <a class="btn btn-primary" id="edit" data-aos="fade-down" type="button" style=";font-family: Poppins, sans-serif;border-width: 0px;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 2px;border-color: #ef4323;border-radius: 10px"><h4 id="h4" style="margin-top:2%">Edit Profile</h4></a>
+                            <a class="btn btn-primary" href="{{route('edit')}}" id="edit" data-aos="fade-down" type="button" style=";font-family: Poppins, sans-serif;border-width: 0px;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 2px;border-color: #ef4323;border-radius: 10px"><h4 id="h4" style="margin-top:2%">Edit Profile</h4></a>
                         </div>
                     </div>
                 </div>
