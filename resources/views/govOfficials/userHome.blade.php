@@ -4,7 +4,7 @@
 
 <body>
 
-        <div class="container" data-aos="fade-up" data-aos-duration="1000"  style="margin-top: 20%;margin-bottom: 5%;">
+        <div class="container" id="div1" data-aos="fade-up" data-aos-duration="1000"  style="margin-bottom: 5%;">
             <div class="row">
                 <div class="col-lg-8 col-sm-8" style="border-radius: 0px;border: 2px solid #5f2b84;">
                     <div class="row">
@@ -147,9 +147,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-4" style="background: linear-gradient(to top right, #660066 56%, #FF6699 100%);">
+                <div id="div2" class="col-lg-4 col-sm-4" style="background: linear-gradient(to top right, #660066 56%, #FF6699 100%);">
                     <div class="row" >
-                        <h3 data-aos="fade-down" id="h3" style="font-family: Poppins, sans-serif;color:#fff;text-align: center;margin-top: 80%;">Click on the 'Assessments' button to start the <br>Competency Assessment.&nbsp;</h3>
+                        <h3 data-aos="fade-down" id="click" style="font-family: Poppins, sans-serif;color:#fff;text-align: center;">Click on the 'Assessments' button to start the <br>Competency Assessment.&nbsp;</h3>
                     </div>
                     <div class="row" style="text-align:center">  
                         @if($layer=='middle')
