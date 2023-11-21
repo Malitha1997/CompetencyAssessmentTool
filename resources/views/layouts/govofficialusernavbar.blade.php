@@ -19,9 +19,18 @@
             <!-- <a class="navbar-brand d-flex align-items-center" href="#"></a> -->
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2" style="text-align: left;font-family: Poppins, sans-serif;">
-                <img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">  
+                <img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">
+                
             </div>
             <img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 2%;">
+            <!-- <a class="btn btn-primary" style="border-width:0px;font-family: Poppins,san-serif;background: url(&quot;{{ asset('img/Mask group 276.png') }}&quot;);" href="{{route('userHome')}}"></a>   -->
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <!-- <a class="btn btn-danger" type="button" style="font-family: Poppins;" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        Logout
+                    </a> -->
+                    
             <div class="dropdown" style="margin-right:10%"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255);"></a>
                 <div class="dropdown-menu" style="font-family: Popins;margin-right:10%">
                     <a class="dropdown-item" style="font-family: Poppins,san-serif" href="{{route('userHome')}}">Profile</a>

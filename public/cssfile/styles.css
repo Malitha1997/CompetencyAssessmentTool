@@ -39,6 +39,13 @@
 #card2{
     width:70%;
 }
+#div1{
+    margin-top:10%
+}
+#click{
+    margin-top:80%
+}
+
 /* .details{
     font-size: 20px;
     color :#000;
@@ -154,5 +161,17 @@
     #h3{
         font-size:16px;
     }
-    
+    #h3-1{
+        font-size:20px;
+    }
+    #div1{
+        margin-top:20%
+    }
+    #div2{
+        height:40%
+    }
+    #click{
+        font-size:16px;
+        margin-top:20%
+    }
 }
