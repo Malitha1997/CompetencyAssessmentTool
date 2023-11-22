@@ -34,6 +34,8 @@ use App\Models\TopHumanResource;
 use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
 use App\Models\TopDecisionMaking;
+use App\Models\MidDecisionMaking;
+use App\Models\MidIctInWorkplace;
 use App\Models\TopIctInWorkplace;
 use App\Models\DeepDataGovernance;
 use App\Models\DeepDataManagement;
@@ -52,6 +54,7 @@ use App\Models\MidProjectManagement;
 use App\Models\MidQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use App\Models\TopDigitalGovernment;
+use App\Models\TopProjectManagement;
 use App\Models\TopQualityManagement;
 use App\Models\Govorganizationdetail;
 use App\Models\MidDigitalCitizenship;
@@ -368,4 +371,5 @@ class Govofficial extends Model
     public function deepApplication(){
         return $this->hasOne(DeepApplication::class);
     }
+
 }
