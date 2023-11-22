@@ -9,81 +9,74 @@ use App\Models\TopIct;
 use App\Models\OpTeamwork;
 use App\Models\MidTeamWork;
 use App\Models\Operational;
+use App\Models\DeepSecurity;
 use App\Models\OpInitiative;
 use App\Models\OpManagement;
 use App\Models\MidInitiative;
 use App\Models\MidManagement;
 use App\Models\OpOrientation;
 use App\Models\TopLeadership;
-<<<<<<< HEAD
 use App\Models\TopManagement;
-=======
->>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
+use App\Models\DeepTechnology;
 use App\Models\MidOrientation;
 use App\Models\MidStakeholder;
 use App\Models\TopOrientation;
+use App\Models\DeepApplication;
 use App\Models\OpCollaboration;
 use App\Models\OpCommunication;
+use App\Models\DeepConnectivity;
 use App\Models\MidCollaboration;
 use App\Models\MidCommunication;
 use App\Models\OpIctInWorkplace;
 use App\Models\TopCollaboration;
-<<<<<<< HEAD
 use App\Models\TopCommunication;
 use App\Models\TopHumanResource;
 use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
 use App\Models\TopDecisionMaking;
-=======
 use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
->>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\TopIctInWorkplace;
+use App\Models\DeepDataGovernance;
+use App\Models\DeepDataManagement;
 use App\Models\OpChangeManagement;
+use App\Models\DeepDataEngineering;
 use App\Models\Govorganizationname;
 use App\Models\MidCapacityBuilding;
 use App\Models\MidChangeManagement;
 use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
-<<<<<<< HEAD
 use App\Models\TopCapacityBuilding;
-=======
->>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\TopChangeManagement;
+use App\Models\DeepInteroperability;
 use App\Models\MidDigitalGovernment;
 use App\Models\MidProjectManagement;
 use App\Models\MidQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use App\Models\TopDigitalGovernment;
-<<<<<<< HEAD
-=======
 use App\Models\TopProjectManagement;
->>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\TopQualityManagement;
 use App\Models\Govorganizationdetail;
 use App\Models\MidDigitalCitizenship;
 use App\Models\OpPersonalDevelopment;
 use App\Models\OpWorkplaceManagement;
 use App\Models\TopDigitalCitizenship;
+use App\Models\DeepDeliveryGovernance;
+use App\Models\DeepEmergingTechnology;
 use App\Models\MidPersonalDevelopment;
 use App\Models\MidWorkplaceManagement;
-<<<<<<< HEAD
 use App\Models\TopPersonalDevelopment;
 use App\Models\TopWorkplaceManagement;
-=======
->>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\OpStakeholderManagement;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\MidInformationManagement;
 use App\Models\MidPerformanceManagement;
 use App\Models\OpInformationManagements;
 use App\Models\TopInformationManagement;
-<<<<<<< HEAD
 use App\Models\TopPerformanceManagement;
 use App\Models\TopStakeholderManagement;
+use App\Models\DeepTechnologyArchitecture;
 use App\Models\TopOrganizationalLeadership;
-=======
->>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Govofficial extends Model
@@ -294,7 +287,6 @@ class Govofficial extends Model
     public function topLeadership(){
         return $this->hasOne(TopLeadership::class);
     }
-<<<<<<< HEAD
 
     public function topManagement(){
         return $this->hasOne(TopManagement::class);
@@ -335,6 +327,49 @@ class Govofficial extends Model
     public function topHumanResource(){
         return $this->hasOne(TopHumanResource::class);
     }
-=======
->>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
+
+    public function deepTechnology(){
+        return $this->hasOne(DeepTechnology::class);
+    }
+
+    public function deepEmergingTechnology(){
+        return $this->hasOne(DeepEmergingTechnology::class);
+    }
+
+    public function deepDataManagement(){
+        return $this->hasOne(DeepDataManagement::class);
+    }
+
+    public function deepDeliveryGovernance(){
+        return $this->hasOne(DeepDeliveryGovernance::class);
+    }
+
+    public function deepConnectivity(){
+        return $this->hasOne(DeepConnectivity::class);
+    }
+
+    public function deepSecurity(){
+        return $this->hasOne(DeepSecurity::class);
+    }
+
+    public function deepTechnologyArchitecture(){
+        return $this->hasOne(DeepTechnologyArchitecture::class);
+    }
+
+    public function deepDataGovernance(){
+        return $this->hasOne(DeepDataGovernance::class);
+    }
+
+    public function deepDataEngineering(){
+        return $this->hasOne(DeepDataEngineering::class);
+    }
+
+    public function deepInteroperability(){
+        return $this->hasOne(DeepInteroperability::class);
+    }
+
+    public function deepApplication(){
+        return $this->hasOne(DeepApplication::class);
+    }
+
 }

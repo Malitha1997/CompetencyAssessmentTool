@@ -13,9 +13,6 @@ class GovofficialController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function updateProfile(){
-        return view('govOfficials.edit');
-    }
 
     public function index()
     {
@@ -88,7 +85,8 @@ class GovofficialController extends Controller
      */
     public function edit(string $id)
     {
-        
+        $govofficial = Govofficial::find($id);
+        return view('govOfficials.edit', compact('govofficial'));
     }
 
     /**
@@ -96,7 +94,40 @@ class GovofficialController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        request()->validate([
+            // 'user_id'=> 'required|string',
+            'full_name'=> 'required|string',
+            'preferred_name'=> 'required|string',
+            'designation'=> 'required|string',
+            'gov_org_name'=> 'required|string',
+            'contact_number'=> 'required|string',
+            'email'=> 'required|string',
+            'employment_layer'=> 'required|string',
+            'date_of_birth'=> 'required|string',
+            'linkedin'=> 'required|string',
+            'facebook'=> 'required|string',
+            'instagram'=> 'required|string',
+        ]);
+
+        $govofficial=Govofficial::find($id);
+
+        // $govofficial->user_id=$request->user_id;
+        $govofficial->full_name=$request->full_name;
+        $govofficial->preferred_name=$request->preferred_name;
+        $govofficial->designation=$request->designation;
+        $govofficial->govorganizationname_id=$request->gov_org_name;
+        $govofficial->contact_number=$request->contact_number;
+        $govofficial->email=$request->email;
+        $govofficial->employment_layer=$request->employment_layer;
+        $govofficial->date_of_birth=$request->date_of_birth;
+        $govofficial->linkedin=$request->linkedin;
+        $govofficial->facebook=$request->facebook;
+        $govofficial->instagram=$request->instagram;
+
+        $govofficial->update();
+
+        return redirect()->route('userHome');
+
     }
 
     /**
