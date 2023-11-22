@@ -206,6 +206,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/overallReport', [TopLayerController::class, 'overalreport'])->name('topOverallReport');
 
 
+    Route::get('/edit', [GovofficialController::class, 'updateProfile'])->name('edit');
 
 });
 
