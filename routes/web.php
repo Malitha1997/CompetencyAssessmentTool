@@ -6,6 +6,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TopLayerController;
 use App\Http\Controllers\GovofficialController;
 use App\Http\Controllers\MiddleLayerController;
+use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\OperationalLayerController;
 
 
@@ -203,7 +204,12 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/overallResults', [TopLayerController::class, 'overalresult'])->name('topOverallResults');
     Route::get('/top/overallReport', [TopLayerController::class, 'overalreport'])->name('topOverallReport');
 
-    Route::get('/edit', [GovofficialController::class, 'updateProfile'])->name('edit');
+    Route::resource('govofficials', GovofficialController::class);
+
+    Route::get('/resetPassword', [ChangePasswordController::class, 'changePassword'])->name('changePassword');
+    Route::get('change-password', [ChangePasswordController::class, 'index']);
+    Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
+
 });
 
 

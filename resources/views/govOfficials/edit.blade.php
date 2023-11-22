@@ -1,6 +1,11 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
+<form method="POST" action="{{route('govofficials.update',$govofficial->id)}}">
+{{csrf_field()}}
+
+@method('PUT')
+
 <div class="container" data-aos="fade-down" data-aos-duration="1000" id="div1" style="font-family:poppins;background: linear-gradient(to top right, #660066 56%, #FF6699 100%);border-radius:10px;padding-bottom:3%;margin-bottom:2%">
     <div class="row" style="text-align:center;" >
         <h1 style="color:#fff;margin-top:2%">Edit Profile</h1>
@@ -41,7 +46,8 @@
                     <h5 id="h4" style="color:#00000">Organization Name</h5>
                 </div>
                 <div class="row">
-                    <input class="form-control-lg" id="gov_org_name" name="gov_org_name" type="text" placeholder="Select Organization Name" style="width:80%;margin-left:10%" value="{{ Auth::user()->govofficial->govorganizationname->gov_org_name}}" readonly>
+                    <input class="form-control-lg" type="text" placeholder="Select Organization Name" style="width:80%;margin-left:10%" value="{{ Auth::user()->govofficial->govorganizationname->gov_org_name}}" readonly>
+                    <input type="hidden" name="gov_org_name" id="gov_org_nameid" value="{{Auth::user()->govofficial->govorganizationname_id}}">
                 </div>
             </div>
         </div>
@@ -69,7 +75,7 @@
                     <h5 id="h4" style="color:#00000">Employment Layer</h5>
                 </div>
                 <div class="row">
-                    <input class="form-control-lg" id="employment_layer" name="employment_layer" type="text" placeholder="Select the Employment Layer" style="width:80%;margin-left:10%" value="{{ ucFirst(Auth::user()->govofficial->employment_layer)}} Layer">
+                    <input class="form-control-lg" id="employment_layer" name="employment_layer" type="text" placeholder="Select the Employment Layer" style="width:80%;margin-left:10%" value="{{ Auth::user()->govofficial->employment_layer}}">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -108,6 +114,7 @@
                 <div class="row">
                     <input class="form-control-lg" id="instagram" name="instagram" type="text" placeholder="Paste Here" style="width:80%;margin-left:10%" value="{{ Auth::user()->govofficial->instagram}}">
                 </div>
+                <!-- <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"> -->
             </div>
         </div>
         <div class="row" style="margin-top:3%;padding-bottom:3%">
@@ -115,7 +122,7 @@
                 <button data-bs-toggle="modal" data-bs-target="#cancel" class="btn btn-primary" type="reset" style="background: rgb(255,255,255);color: rgb(238,110,17);border-color: rgb(238,110,17);">Cancel</button>
             </div>
             <div class="col-6" style="text-align:left">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update" type="submit" style="background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);text-align: center;border-color: rgb(254,80,57);">Update</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update" type="button" style="background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);text-align: center;border-color: rgb(254,80,57);">Update</button>
             </div>
         </div>
     </div>
@@ -132,9 +139,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
-            <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;" href="{{ route('userHome') }}">
-            Yes
-            </a>
+            <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;" href="{{route('userHome')}}">Yes</a>
         </div>
         </div>
     </div>
@@ -151,13 +156,15 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
-            <a class="btn btn-success" type="button" style="font-family: Poppins;border-width:0px;" href="{{ route('userHome') }}">
-            Yes
-            </a>
+            <button class="btn btn-success" type="submit" style="font-family: Poppins;border-width:0px;">Yes</button>
+            <form  action="{{ route('govofficials.update',$govofficial->id) }}" method="PUT" class="d-none">
+                @csrf
+            </form>
         </div>
         </div>
     </div>
 </div>
+</form>
 <!-- <section style="height: 1250px;">
     <div class="container-fluid d-table float-none" data-aos="fade-down" data-aos-duration="1000" style="margin-top: 200px;background: #5f2b84;width: 1177px;height: 1200px;border-radius: 10px;">
         <h1 style="font-family: Poppins, sans-serif;text-align: center;font-weight: bold;margin-top: 10px;margin-left: 10px;padding-top: 30px;padding-bottom: 10px;">Register Now</h1>

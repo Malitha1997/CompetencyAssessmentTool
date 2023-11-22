@@ -139,7 +139,7 @@
                         </div>
                     </div>
                     <div class="row" style="margin-top:2%;margin-bottom:3%">
-                        <div class="col" style="text-align:right">
+                        <div class="col-4" style="text-align:center">
                         @if($layer=='operational')
                             @if($ictDataExists && $digitalGovDataExists && $managementDataExists)
                             <a class="btn btn-primary" href="{{ route('operationalOveral') }}" data-aos="fade-down" type="button" style="font-family: Poppins, sans-serif;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px"><h4 id="h4" style="margin-top:2%">View Results</h4></a>
@@ -148,8 +148,11 @@
                             @endif
                         @endif
                         </div>
-                        <div class="col" style="text-align:left">
-                            <a class="btn btn-primary" href="{{route('edit')}}" id="edit" data-aos="fade-down" type="button" style=";font-family: Poppins, sans-serif;border-width: 0px;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 2px;border-color: #ef4323;border-radius: 10px"><h4 id="h4" style="margin-top:2%">Edit Profile</h4></a>
+                        <div class="col-4" style="text-align:center">
+                            <a class="btn btn-primary" href="{{route('govofficials.edit',$govofficial->id)}}" id="edit" data-aos="fade-down" type="button" style=";font-family: Poppins, sans-serif;border-width: 0px;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 2px;border-color: #ef4323;border-radius: 10px"><h4 id="h4" style="margin-top:2%">Edit Profile</h4></a>
+                        </div>
+                        <div class="col-4" style="text-align:center">
+                            <a class="btn btn-primary" href="{{route('changePassword')}}" id="edit" data-aos="fade-down" type="button" style=";font-family: Poppins, sans-serif;border-width: 0px;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 2px;border-color: #ef4323;border-radius: 10px"><h4 id="h4" style="margin-top:2%">Reset Password</h4></a>
                         </div>
                     </div>
                 </div>

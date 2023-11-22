@@ -66,7 +66,7 @@
                         Are you sure?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
                         <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
