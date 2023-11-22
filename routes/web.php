@@ -184,6 +184,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/management/page02', [TopLayerController::class, 'topManagementPage02'])->name('topManagementPage02');
     Route::get('/top/management/page03', [TopLayerController::class, 'topManagementPage03'])->name('topManagementPage03');
     Route::get('/top/management/page04', [TopLayerController::class, 'topManagementPage04'])->name('topManagementPage04');
+
     Route::get('/top/management/page05', [TopLayerController::class, 'topManagementPage05'])->name('topManagementPage05');
     Route::get('/top/management/page06', [TopLayerController::class, 'topManagementPage06'])->name('topManagementPage06');
     Route::get('/top/management/page07', [TopLayerController::class, 'topManagementPage07'])->name('topManagementPage07');
@@ -200,10 +201,13 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/top/mgt/result', [TopLayerController::class, 'topManagementResult'])->name('topManagementResult');
     Route::get('/top/mgt/report', [TopLayerController::class, 'topManagementReport'])->name('topManagementReport');
+
     Route::get('/top/overallResults', [TopLayerController::class, 'overalresult'])->name('topOverallResults');
     Route::get('/top/overallReport', [TopLayerController::class, 'overalreport'])->name('topOverallReport');
 
+
     Route::get('/edit', [GovofficialController::class, 'updateProfile'])->name('edit');
+
 });
 
 

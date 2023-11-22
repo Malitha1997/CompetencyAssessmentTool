@@ -15,7 +15,10 @@ use App\Models\MidInitiative;
 use App\Models\MidManagement;
 use App\Models\OpOrientation;
 use App\Models\TopLeadership;
+<<<<<<< HEAD
 use App\Models\TopManagement;
+=======
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\MidOrientation;
 use App\Models\MidStakeholder;
 use App\Models\TopOrientation;
@@ -25,11 +28,16 @@ use App\Models\MidCollaboration;
 use App\Models\MidCommunication;
 use App\Models\OpIctInWorkplace;
 use App\Models\TopCollaboration;
+<<<<<<< HEAD
 use App\Models\TopCommunication;
 use App\Models\TopHumanResource;
 use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
 use App\Models\TopDecisionMaking;
+=======
+use App\Models\MidDecisionMaking;
+use App\Models\MidIctInWorkplace;
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\TopIctInWorkplace;
 use App\Models\OpChangeManagement;
 use App\Models\Govorganizationname;
@@ -37,13 +45,20 @@ use App\Models\MidCapacityBuilding;
 use App\Models\MidChangeManagement;
 use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
+<<<<<<< HEAD
 use App\Models\TopCapacityBuilding;
+=======
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\TopChangeManagement;
 use App\Models\MidDigitalGovernment;
 use App\Models\MidProjectManagement;
 use App\Models\MidQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use App\Models\TopDigitalGovernment;
+<<<<<<< HEAD
+=======
+use App\Models\TopProjectManagement;
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\TopQualityManagement;
 use App\Models\Govorganizationdetail;
 use App\Models\MidDigitalCitizenship;
@@ -52,17 +67,23 @@ use App\Models\OpWorkplaceManagement;
 use App\Models\TopDigitalCitizenship;
 use App\Models\MidPersonalDevelopment;
 use App\Models\MidWorkplaceManagement;
+<<<<<<< HEAD
 use App\Models\TopPersonalDevelopment;
 use App\Models\TopWorkplaceManagement;
+=======
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use App\Models\OpStakeholderManagement;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\MidInformationManagement;
 use App\Models\MidPerformanceManagement;
 use App\Models\OpInformationManagements;
 use App\Models\TopInformationManagement;
+<<<<<<< HEAD
 use App\Models\TopPerformanceManagement;
 use App\Models\TopStakeholderManagement;
 use App\Models\TopOrganizationalLeadership;
+=======
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Govofficial extends Model
@@ -273,6 +294,7 @@ class Govofficial extends Model
     public function topLeadership(){
         return $this->hasOne(TopLeadership::class);
     }
+<<<<<<< HEAD
 
     public function topManagement(){
         return $this->hasOne(TopManagement::class);
@@ -313,4 +335,6 @@ class Govofficial extends Model
     public function topHumanResource(){
         return $this->hasOne(TopHumanResource::class);
     }
+=======
+>>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
 }
