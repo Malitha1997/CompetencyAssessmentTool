@@ -39,7 +39,7 @@
                          <h5 id="h5" style="margin-top:6%; color: #5F2B84; text-align:left;"> Create Password</h5>
                     </div>
                     <div class="row">
-                    <input class="form-control-lg" id="password" name="password" type="text" placeholder="Enter the Password" style="width:80%;margin-left:10%" value="{{ old('password')}}">
+                    <input class="form-control-lg" id="password" name="password" type="password" placeholder="Enter the Password" style="width:80%;margin-left:10%" value="{{ old('password')}}">
                     @if($errors->has('password'))
                                     <p class="text-danger" style="font-weight: bold">{{ $errors->first('password') }}</p>
                                     @endif
@@ -50,7 +50,7 @@
                          <h5 id="h5" style="margin-top:6%; color: #5F2B84;text-align:left;"> Confirm Password</h5>
                     </div>
                     <div class="row">
-                    <input class="form-control-lg" id="confirm-password" name="confirm-password" type="confirm-password" placeholder="Confirm Password" style="width:80%;margin-left:10%" value="{{ old('confirm-password')}}">
+                    <input class="form-control-lg" id="confirm-password" name="confirm-password" type="password" placeholder="Confirm Password" style="width:80%;margin-left:10%" value="{{ old('confirm-password')}}">
                     @if($errors->has('confirm-password'))
                                     <p class="text-danger" style="margin-left: 50px;font-weight: bold">{{ $errors->first('confirm-password') }}</p>
                                     @endif

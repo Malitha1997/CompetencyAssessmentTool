@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CdioController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TopLayerController;
@@ -209,6 +210,12 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/resetPassword', [ChangePasswordController::class, 'changePassword'])->name('changePassword');
     Route::get('change-password', [ChangePasswordController::class, 'index']);
     Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
+
+    Route::get('/cdio/main', [CdioController::class, 'main'])->name('cdioMain');
+    Route::get('/cdio/technology/main', [CdioController::class, 'technology'])->name('cdioTechnology');
+    Route::get('/cdio/customer/main', [CdioController::class, 'customer'])->name('cdioCustomer');
+    Route::get('/cdio/operation/main', [CdioController::class, 'operation'])->name('cdioOperation');
+    Route::get('/cdio/strategy/main', [CdioController::class, 'strategy'])->name('cdioStrategy');
 
 });
 

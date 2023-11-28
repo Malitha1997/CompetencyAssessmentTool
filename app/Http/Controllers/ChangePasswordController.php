@@ -5,12 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Rules\MatchOldPassword;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class ChangePasswordController extends Controller
 {
     public function changePassword(){
-        return view('auth.passwords.reset');
+        $layer=Auth::user()->govofficial->employment_layer;
+        if($layer=='cdio'){
+            return view('cdio.passwords.reset');
+        }else{
+            return view('auth.passwords.reset');
+        }
+        
     }
     public function __construct()
     {

@@ -86,7 +86,14 @@ class GovofficialController extends Controller
     public function edit(string $id)
     {
         $govofficial = Govofficial::find($id);
-        return view('govOfficials.edit', compact('govofficial'));
+        $layer=Auth::user()->govofficial->employment_layer;
+        if($layer=='cdio'){
+            return view('cdio.edit', compact('govofficial'));
+        }
+        else{
+            return view('govOfficials.edit', compact('govofficial'));
+        }
+        
     }
 
     /**
