@@ -64,6 +64,12 @@ class GovofficialController extends Controller
 
         $govofficial->save();
 
+        $cdio=new Cdio;
+
+        if($request->employment_layer=='cdio'){
+
+        }
+
         $user=new User;
 
         Auth::login($user);

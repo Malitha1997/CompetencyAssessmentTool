@@ -18,4 +18,5 @@ class Govorganizationname extends Model
     public function govorganizationdetails(){
         return $this->hasMany(Govorganizationdetail::class);
     }
+    
 }
