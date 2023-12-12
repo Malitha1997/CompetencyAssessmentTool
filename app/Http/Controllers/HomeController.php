@@ -46,7 +46,13 @@ class HomeController extends Controller
         $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
         $ictDataExists = Auth::user()->govofficial->opIct;
         $managementDataExists = Auth::user()->govofficial->opManagement;
-        return view('govOfficials.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists'));
+        if($layer=='cdio'){
+            return view('cdio.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists'));
+        }
+        else{
+            return view('govOfficials.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists'));
+        }
+        
     }
 
 

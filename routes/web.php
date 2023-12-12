@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CdioController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TopLayerController;
@@ -213,7 +214,34 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
 
 
+
     Route::get('/edit', [GovofficialController::class, 'updateProfile'])->name('edit');
+
+
+    Route::get('/cdio/main', [CdioController::class, 'main'])->name('cdioMain');
+    Route::get('/cdio/technology/main', [CdioController::class, 'technology'])->name('cdioTechnology');
+    Route::get('/cdio/customer/main', [CdioController::class, 'customer'])->name('cdioCustomer');
+    Route::get('/cdio/operation/main', [CdioController::class, 'operation'])->name('cdioOperation');
+    Route::get('/cdio/strategy/main', [CdioController::class, 'strategy'])->name('cdioStrategy');
+
+    Route::get('/cdio/assessments/main', [CdioController::class, 'assessments'])->name('cdioAssessments');
+
+    Route::get('/cdio/ict/page01', [CdioController::class, 'cdioIctPage01'])->name('cdioIctPage01');
+    Route::get('/cdio/ict/page02', [CdioController::class, 'cdioIctPage02'])->name('cdioIctPage02');
+    Route::get('/cdio/ict/page03', [CdioController::class, 'cdioIctPage03'])->name('cdioIctPage03');
+    Route::get('/cdio/ict/results', [CdioController::class, 'cdioIctResults'])->name('cdioIctResults');
+
+    Route::get('/cdio/dg/page01', [CdioController::class, 'cdioDigitalGovernmentPage01'])->name('cdioDigitalGovernmentPage01');
+    Route::get('/cdio/dg/page02', [CdioController::class, 'cdioDigitalGovernmentPage02'])->name('cdioDigitalGovernmentPage02');
+    Route::get('/cdio/dg/page03', [CdioController::class, 'cdioDigitalGovernmentPage03'])->name('cdioDigitalGovernmentPage03');
+    Route::get('/cdio/dg/page04', [CdioController::class, 'cdioDigitalGovernmentPage04'])->name('cdioDigitalGovernmentPage04');
+    Route::get('/cdio/dg/page05', [CdioController::class, 'cdioDigitalGovernmentPage05'])->name('cdioDigitalGovernmentPage05');
+    Route::get('/cdio/dg/page06', [CdioController::class, 'cdioDigitalGovernmentPage06'])->name('cdioDigitalGovernmentPage06');
+    Route::get('/cdio/dg/page07', [CdioController::class, 'cdioDigitalGovernmentPage07'])->name('cdioDigitalGovernmentPage07');
+
+    Route::get('/cdio/mgt/page01', [CdioController::class, 'cdioManagementPage01'])->name('cdioManagementPage01');
+    Route::get('/cdio/mgt/page02', [CdioController::class, 'cdioManagementPage02'])->name('cdioManagementPage02');
+    Route::get('/cdio/mgt/page03', [CdioController::class, 'cdioManagementPage03'])->name('cdioManagementPage03');
 
 
 });
