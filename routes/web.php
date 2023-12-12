@@ -186,6 +186,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/management/page02', [TopLayerController::class, 'topManagementPage02'])->name('topManagementPage02');
     Route::get('/top/management/page03', [TopLayerController::class, 'topManagementPage03'])->name('topManagementPage03');
     Route::get('/top/management/page04', [TopLayerController::class, 'topManagementPage04'])->name('topManagementPage04');
+
     Route::get('/top/management/page05', [TopLayerController::class, 'topManagementPage05'])->name('topManagementPage05');
     Route::get('/top/management/page06', [TopLayerController::class, 'topManagementPage06'])->name('topManagementPage06');
     Route::get('/top/management/page07', [TopLayerController::class, 'topManagementPage07'])->name('topManagementPage07');
@@ -202,6 +203,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/top/mgt/result', [TopLayerController::class, 'topManagementResult'])->name('topManagementResult');
     Route::get('/top/mgt/report', [TopLayerController::class, 'topManagementReport'])->name('topManagementReport');
+
     Route::get('/top/overallResults', [TopLayerController::class, 'overalresult'])->name('topOverallResults');
     Route::get('/top/overallReport', [TopLayerController::class, 'overalreport'])->name('topOverallReport');
 
@@ -210,6 +212,11 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/resetPassword', [ChangePasswordController::class, 'changePassword'])->name('changePassword');
     Route::get('change-password', [ChangePasswordController::class, 'index']);
     Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
+
+
+
+    Route::get('/edit', [GovofficialController::class, 'updateProfile'])->name('edit');
+
 
     Route::get('/cdio/main', [CdioController::class, 'main'])->name('cdioMain');
     Route::get('/cdio/technology/main', [CdioController::class, 'technology'])->name('cdioTechnology');
@@ -235,6 +242,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/cdio/mgt/page01', [CdioController::class, 'cdioManagementPage01'])->name('cdioManagementPage01');
     Route::get('/cdio/mgt/page02', [CdioController::class, 'cdioManagementPage02'])->name('cdioManagementPage02');
     Route::get('/cdio/mgt/page03', [CdioController::class, 'cdioManagementPage03'])->name('cdioManagementPage03');
+
 
 });
 
