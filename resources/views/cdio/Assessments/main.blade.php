@@ -37,11 +37,17 @@
                         <h7 id="h4" class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and skills in ICT to enable more efficient, cost-effective, and participatory government, facilitate more convenient government services, allow greater public access to information, and make government more accountable to citizens.<br><br></h7>
                     </div>
                     <div class="row">
-                        
+                     @if($ictInWorkplaceExists==true && $informationManagementExists==true && $managingTechnologicalInterventionExists==0 && $digitalCitizenshipExists=$govofficial)   
+                     <a class="btn btn-primary" href="{{route('cdioIctResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
+                     @elseif($ictInWorkplaceExists==true)
+                     <a class="btn btn-primary" href="{{route ('cdioIctPage02') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                     @elseif($informationManagementExists==true)  
+                     <a class="btn btn-primary" href="{{route ('cdioIctPage03') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a> 
+                     @elseif($managingTechnologicalInterventionExists==true)   
+                     <a class="btn btn-primary" href="{{route ('cdioIctPage04') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a> 
+                    @else
                     <a class="btn btn-primary" href="{{route ('cdioIctPage01') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
-                       
-                       
-                        
+                    @endif
                     </div>
                 </div>
             </div>

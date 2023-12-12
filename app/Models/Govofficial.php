@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\OpIct;
 use App\Models\MidIct;
 use App\Models\TopIct;
+use App\Models\CdioIct;
 use App\Models\OpTeamwork;
 use App\Models\MidTeamWork;
 use App\Models\Operational;
@@ -35,6 +36,7 @@ use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
 use App\Models\TopDecisionMaking;
 use App\Models\TopIctInWorkplace;
+use App\Models\CdioIctInWorkplace;
 use App\Models\DeepDataGovernance;
 use App\Models\DeepDataManagement;
 use App\Models\OpChangeManagement;
@@ -58,6 +60,7 @@ use App\Models\MidDigitalCitizenship;
 use App\Models\OpPersonalDevelopment;
 use App\Models\OpWorkplaceManagement;
 use App\Models\TopDigitalCitizenship;
+use App\Models\CdioDigitalCitizenship;
 use App\Models\DeepDeliveryGovernance;
 use App\Models\DeepEmergingTechnology;
 use App\Models\MidPersonalDevelopment;
@@ -72,8 +75,10 @@ use App\Models\OpInformationManagements;
 use App\Models\TopInformationManagement;
 use App\Models\TopPerformanceManagement;
 use App\Models\TopStakeholderManagement;
+use App\Models\CdioInformationManagement;
 use App\Models\DeepTechnologyArchitecture;
 use App\Models\TopOrganizationalLeadership;
+use App\Models\CdioManagingTechnologicalIntervention;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Govofficial extends Model
@@ -367,5 +372,25 @@ class Govofficial extends Model
 
     public function deepApplication(){
         return $this->hasOne(DeepApplication::class);
+    }
+
+    public function cdioIct(){
+        return $this->hasOne(CdioIct::class);
+    }
+
+    public function cdioIctInWorkplace(){
+        return $this->hasOne(CdioIctInWorkplace::class);
+    }
+
+    public function cdioInformationManagement(){
+        return $this->hasOne(CdioInformationManagement::class);
+    }
+
+    public function cdioManagingTechnologicalIntervention(){
+        return $this->hasOne(CdioManagingTechnologicalIntervention::class);
+    }
+
+    public function cdioDigitalCitizenship(){
+        return $this->hasOne(CdioDigitalCitizenship::class);
     }
 }

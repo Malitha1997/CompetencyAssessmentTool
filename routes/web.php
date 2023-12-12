@@ -222,7 +222,14 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/cdio/ict/page01', [CdioController::class, 'cdioIctPage01'])->name('cdioIctPage01');
     Route::get('/cdio/ict/page02', [CdioController::class, 'cdioIctPage02'])->name('cdioIctPage02');
     Route::get('/cdio/ict/page03', [CdioController::class, 'cdioIctPage03'])->name('cdioIctPage03');
+    Route::get('/cdio/ict/page04', [CdioController::class, 'cdioIctPage04'])->name('cdioIctPage04');
     Route::get('/cdio/ict/results', [CdioController::class, 'cdioIctResults'])->name('cdioIctResults');
+    Route::get('/cdio/ict/report', [CdioController::class, 'cdioIctReport'])->name('cdioIctReport');
+
+    Route::post('storeCdioIctInWorkplace', [CdioController::class, 'storeCdioIctInWorkplace'])->name('storeCdioIctInWorkplace');
+    Route::post('storeCdioInformationManagement', [CdioController::class, 'storeCdioInformationManagement'])->name('storeCdioInformationManagement');
+    Route::post('storeCdioManagingTechnologicalIntervention', [CdioController::class, 'storeCdioManagingTechnologicalIntervention'])->name('storeCdioManagingTechnologicalIntervention');
+    Route::post('storeCdioDigitalCitizenship', [CdioController::class, 'storeCdioDigitalCitizenship'])->name('storeCdioDigitalCitizenship');
 
     Route::get('/cdio/dg/page01', [CdioController::class, 'cdioDigitalGovernmentPage01'])->name('cdioDigitalGovernmentPage01');
     Route::get('/cdio/dg/page02', [CdioController::class, 'cdioDigitalGovernmentPage02'])->name('cdioDigitalGovernmentPage02');

@@ -1,11 +1,11 @@
 @extends('layouts.cdionavbar')
 
 @section('content')
-<form method="POST" action="{{ route('storeOpIctInWorkPlace') }}">
+<form method="POST" action="{{route('storeCdioIctInWorkplace')}}">
     {{csrf_field()}}
 <div class="container" data-aos="fade-down" style="font-family: Poppins, sans-serif;margin-bottom:2%">
     <div class="row" style="text-align:center">
-            <h2 style="color: #5F2B84;font-family: poppins;font-weight: bold;text-align: center;"><br><br><br>Self Assessment - ICT (Operational Staff)</h2>
+            <h2 style="color: #5F2B84;font-family: poppins;font-weight: bold;text-align: center;"><br><br><br>Self Assessment - ICT (CDIO)</h2>
     </div>  
     <div class="container" style="border-style:solid;border-width:1px;border-radius:10px">
         <div class="row" style="background: #E52F72;height:5%;text-align:center;border-radius:10px">
@@ -43,7 +43,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict1" id="ict1_2" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="4">
+                <input type="radio" name="ict1" id="ict1_2" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="0">
             </div>
             <div class="col-11" style="text-align:left">
                 <label for="ict1_2" style="color: var(--bs-emphasis-color);"><h5 id="h4">b) Only B and C</h5></label>
@@ -59,7 +59,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict1" id="ict1_4" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="0">
+                <input type="radio" name="ict1" id="ict1_4" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="5">
             </div>
             <div class="col-11" style="text-align:left">
                 <label for="ict1_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) All of the above</h5></label>
@@ -83,7 +83,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict2" id="ict2_2" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="4">
+                <input type="radio" name="ict2" id="ict2_2" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="0">
             </div>
             <div class="col-11" style="text-align:left">
                 <label for="ict2_2" style="color: var(--bs-emphasis-color);"><h5 id="h4">b)  Data Visualization helps users in analyzing a large amount of data in a simpler way.</h5></label>
@@ -99,7 +99,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict2" id="ict2_4" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="0">
+                <input type="radio" name="ict2" id="ict2_4" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="5">
             </div>
             <div class="col-11" style="text-align:left">
                 <label for="ict2_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) All of the above</h5></label>
@@ -132,7 +132,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict3" id="ict3_2" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="4">
+                <input type="radio" name="ict3" id="ict3_2" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="0">
             </div>
             <div class="col-11" style="text-align:left">
                 <label for="ict3_2" style="color: var(--bs-emphasis-color);"><h5 id="h4">b) Only B and C</h5></label>
@@ -140,7 +140,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict3" id="ict3_3" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="0">
+                <input type="radio" name="ict3" id="ict3_3" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);" value="5">
             </div>  
             <div class="col-11" style="text-align:left">
                 <label for="ict3_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) Only A and C</h5></label>
@@ -180,7 +180,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict4" id="ict4_3" value="0">
+                <input type="radio" name="ict4" id="ict4_3" value="5">
             </div>  
             <div class="col-11" style="text-align:left">
                 <label for="ict4_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) To facilitate informed decision-making and positive outcomes</h5></label>
@@ -188,7 +188,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict4" id="ict4_4" value="4">
+                <input type="radio" name="ict4" id="ict4_4" value="0">
             </div>
             <div class="col-11" style="text-align:left">
                 <label for="ict4_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) To prioritize traditional methods over digital solutions</h5></label>
@@ -240,7 +240,7 @@
 
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict5" id="ict5_4" value="4">
+                <input type="radio" name="ict5" id="ict5_4" value="5">
             </div>
             <div class="col-11" style="text-align:left">
                 <label for="ict5_4" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);">
@@ -258,7 +258,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict6" id="ict6_1" value="4">
+                <input type="radio" name="ict6" id="ict6_1" value="0">
             </div>
             <div class="col-11" style="text-align:left">
                 <label for="ict6_1" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);"><h5 id="h4">a) To undermine legal regulations</h5></label>
@@ -274,7 +274,7 @@
         </div>
         <div class="row" style="margin-top:1%">
             <div class="col-1" style="text-align:right">
-                <input type="radio" name="ict6" id="ict6_3" value="0">
+                <input type="radio" name="ict6" id="ict6_3" value="5">
             </div>  
             <div class="col-11" style="text-align:left">
                 <label for="ict6_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) To ensure compliance and avoid legal issues </h5></label>
@@ -288,7 +288,8 @@
                 <label for="ict6_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) To discourage adherence to legal standards</h5></label>
             </div>
         </div>
-        
+    </div>
+        <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>    
     <div class="row" style="margin-top:2%;margin-bottom:2%">
         <div class="col-12" style="text-align:right">
             <a class="btn btn-primary" href="{{ route('cdioAssessments') }}" type="button" style="width:25%;background: var(--bs-btn-disabled-color);border-width: 3px;border-color: #EF4323;font-size: 20px;font-weight: bold;border-radius: 10px;"><h4 id="h4" style="color:#EF4323">Resume</h4></a>
