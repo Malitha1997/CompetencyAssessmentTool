@@ -216,6 +216,7 @@
                     </label>
                 </div>
             </div>
+            <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
         </div>
     </div>
     <div class="row" style="margin-top:2%;margin-bottom:2%">

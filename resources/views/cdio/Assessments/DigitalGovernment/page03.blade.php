@@ -1,7 +1,7 @@
 @extends('layouts.cdionavbar')
 
 @section('content')
-<form method="POST" action="">
+<form method="POST" action="{{route('storeCdioCollaboration')}}">
     {{csrf_field()}}
     <div class="container" data-aos="fade-down" style="font-family: Poppins, sans-serif;margin-bottom:2%">
         <div class="row" style="text-align:center">
@@ -221,6 +221,7 @@
                         <h5 id="h4">d) You have to deal with this manager on a case by case basis, wait and see is the best policy</h5>
                     </label>
                 </div>
+                <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
             </div>
         </div>
     </div>

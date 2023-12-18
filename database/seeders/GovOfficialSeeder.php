@@ -28,5 +28,21 @@ class GovOfficialSeeder extends Seeder
             'govorganizationname_id' => 6,
 
         ]);
+
+        DB::table('govofficials')->insert([
+            'user_id'=> 5,
+            'full_name'=> 'Kamal Perera',
+            'preferred_name'=> 'Kamal',
+            'designation'=> 'Project Manager',
+            'contact_number'=> '0771452587',
+            'email'=> 'kamalperera@gmail.com',
+            'employment_layer'=> 'cdio',
+            'date_of_birth'=> '1990-10-25',
+            'linkedin'=> 'https://lk.linkedin.com/',
+            'facebook'=> 'https://www.facebook.com/',
+            'instagram'=> 'https://www.instagram.com/',
+            'govorganizationname_id' => 6,
+
+        ]);
     }
 }
