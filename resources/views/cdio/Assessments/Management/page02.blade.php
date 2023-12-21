@@ -46,7 +46,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt8" id="mgt8_3" value="7">
+                    <input type="radio" name="mgt8" id="mgt8_3" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt8_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) To enhance service quality and efficiency</h5></label>
@@ -90,7 +90,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt9" id="mgt9_3" value="0">
+                    <input type="radio" name="mgt9" id="mgt9_3" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt9_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) Reduced collaboration among departments.</h5></label>
@@ -99,7 +99,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt9" id="mgt9_4" value="7">
+                    <input type="radio" name="mgt9" id="mgt9_4" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt9_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) Reduced labor costs.</h5></label>
@@ -134,7 +134,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt10" id="mgt10_3" value="7">
+                    <input type="radio" name="mgt10" id="mgt10_3" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt10_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) To discourage innovation and creativity</h5></label>
@@ -143,7 +143,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt10" id="mgt10_4" value="0">
+                    <input type="radio" name="mgt10" id="mgt10_4" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt10_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) To promote effective communication and teamwork </h5></label>
@@ -160,7 +160,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt4" id="mgt4_1" value="7">
+                    <input type="radio" name="mgt4" id="mgt4_1" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt4_1" style="color: var(--bs-emphasis-color);"><h5 id="h4">a) Recognizing that an ethical issue exists.</h5></label>
@@ -204,7 +204,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt12" id="mgt12_1" value="7">
+                    <input type="radio" name="mgt12" id="mgt12_1" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt12_1" style="color: var(--bs-emphasis-color);"><h5 id="h4">a) How satisfied they are with the existing state of affairs.</h5></label>
@@ -231,7 +231,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt12" id="mgt12_4" value="0">
+                    <input type="radio" name="mgt12" id="mgt12_4" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt12_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) All of the above</h5></label>
@@ -248,7 +248,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt13" id="mgt13_1" value="7">
+                    <input type="radio" name="mgt13" id="mgt13_1" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt13_1" style="color: var(--bs-emphasis-color);"><h5 id="h4">a) Avoiding responsibility for decisions</h5></label>
@@ -266,7 +266,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt13" id="mgt13_3" value="0">
+                    <input type="radio" name="mgt13" id="mgt13_3" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt13_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) Taking responsibility and ownership for decisions made  </h5></label>
@@ -292,7 +292,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt14" id="mgt14_1" value="7">
+                    <input type="radio" name="mgt14" id="mgt14_1" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt14_1" style="color: var(--bs-emphasis-color);"><h5 id="h4">a) Increased reliance on intuition</h5></label>
@@ -301,7 +301,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt14" id="mgt14_2" value="0">
+                    <input type="radio" name="mgt14" id="mgt14_2" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt14_2" style="color: var(--bs-emphasis-color);"><h5 id="h4">b) Improved alignment with organizational goals</h5></label>
@@ -363,7 +363,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt15" id="mgt15_4" value="0">
+                    <input type="radio" name="mgt15" id="mgt15_4" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt15_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) To engage, enable and empower the citizens</h5></label>
@@ -380,7 +380,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt16" id="mgt16_1" value="7">
+                    <input type="radio" name="mgt16" id="mgt16_1" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt16_1" style="color: var(--bs-emphasis-color);"><h5 id="h4">a) To conceal information from employees</h5></label>
@@ -398,7 +398,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt16" id="mgt16_3" value="0">
+                    <input type="radio" name="mgt16" id="mgt16_3" value="2">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt16_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) To build trust and credibility</h5></label>
@@ -424,7 +424,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt17" id="mgt17_1" value="7">
+                    <input type="radio" name="mgt17" id="mgt17_1" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt17_1" style="color: var(--bs-emphasis-color);"><h5 id="h4">a) Reduced employee morale</h5></label>
@@ -442,7 +442,7 @@
 
             <div class="row" style="margin-top: 1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="mgt17" id="mgt17_3" value="0">
+                    <input type="radio" name="mgt17" id="mgt17_3" value="2">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="mgt17_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) Enhanced commitment and ownership </h5></label>

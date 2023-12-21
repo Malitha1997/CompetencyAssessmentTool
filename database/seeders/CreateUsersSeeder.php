@@ -60,6 +60,13 @@ class CreateUsersSeeder extends Seeder
                 'password'=> bcrypt('123456'),
              ],
 
+             [
+                'username'=>'cdio',
+                'email'=>'cdio@icta.lk',
+                'type'=> 0,
+                'password'=> bcrypt('123456'),
+             ],
+
         ];
 
 

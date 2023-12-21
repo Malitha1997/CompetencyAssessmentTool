@@ -249,6 +249,18 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/cdio/mgt/page01', [CdioController::class, 'cdioManagementPage01'])->name('cdioManagementPage01');
     Route::get('/cdio/mgt/page02', [CdioController::class, 'cdioManagementPage02'])->name('cdioManagementPage02');
     Route::get('/cdio/mgt/page03', [CdioController::class, 'cdioManagementPage03'])->name('cdioManagementPage03');
+    Route::get('/cdio/mgt/page04', [CdioController::class, 'cdioManagementPage04'])->name('cdioManagementPage04');
+    Route::get('/cdio/mgt/page05', [CdioController::class, 'cdioManagementPage05'])->name('cdioManagementPage05');
+    Route::get('/cdio/mgt/page06', [CdioController::class, 'cdioManagementPage06'])->name('cdioManagementPage06');
+    Route::get('/cdio/mgt/page07', [CdioController::class, 'cdioManagementPage07'])->name('cdioManagementPage07');
+    Route::get('/cdio/mgt/page08', [CdioController::class, 'cdioManagementPage08'])->name('cdioManagementPage08');
+
+    Route::post('storeCdioProjectAndProgrammeManagement', [CdioController::class, 'storeCdioProjectAndProgrammeManagement'])->name('storeCdioProjectAndProgrammeManagement');
+    Route::post('storeCdioChangeManagement', [CdioController::class, 'storeCdioChangeManagement'])->name('storeCdioChangeManagement');
+    Route::post('storeCdioCollaboration', [CdioController::class, 'storeCdioCollaboration'])->name('storeCdioCollaboration');
+    Route::post('storeCdioOrientation', [CdioController::class, 'storeCdioOrientation'])->name('storeCdioOrientation');
+    Route::post('storeCdioManagingQuality', [CdioController::class, 'storeCdioManagingQuality'])->name('storeCdioManagingQuality');
+    Route::post('storeCdioDriveTheAdoption', [CdioController::class, 'storeCdioDriveTheAdoption'])->name('storeCdioDriveTheAdoption');
 
 
 });

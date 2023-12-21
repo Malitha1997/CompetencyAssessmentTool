@@ -1,7 +1,7 @@
 @extends('layouts.cdionavbar')
 
 @section('content')
-<form method="POST" action="">
+<form method="POST" action="{{route('storeCdioChangeManagement')}}">
     {{csrf_field()}}
     <div class="container" data-aos="fade-down" style="font-family: Poppins, sans-serif;margin-bottom:2%">
         <div class="row" style="text-align:center">
@@ -214,7 +214,7 @@
                     <label for="dg8_4" style="color: var(--bs-emphasis-color);">
                         <h5 id="h4">d) All of the above</h5>
                     </label>
-                </div>
+                </div><input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
             </div>
         </div>
     </div>

@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\CdioIct;
 use Illuminate\Http\Request;
+use App\Models\CdioOrientation;
+use App\Models\CdioCollaboration;
 use App\Models\CdioIctInWorkplace;
+use App\Models\CdioManagingQuality;
+use App\Models\CdioChangeManagement;
+use App\Models\CdioDriveTheAdoption;
 use Illuminate\Support\Facades\Auth;
+use App\Models\CdioDigitalGovernment;
+use App\Models\CdioDigitalInitiative;
 use App\Models\CdioDigitalCitizenship;
 use App\Models\CdioInformationManagement;
+use App\Models\CdioProjectAndProgrammeManagement;
 use App\Models\CdioManagingTechnologicalIntervention;
 
 class CdioController extends Controller
@@ -34,10 +42,10 @@ class CdioController extends Controller
 
     public function assessments(){
         $govofficial=Auth::user()->govofficial;
-        $ictInWorkplaceExists=$govofficial->cdioIctInWorkplace->exists();
-        $informationManagementExists=$govofficial->cdioInformationManagement->exists();
-        $managingTechnologicalInterventionExists=$govofficial->cdioManagingTechnologicalIntervention->exists();
-        $digitalCitizenshipExists=$govofficial->cdioDigitalCitizenship->exists();
+        $ictInWorkplaceExists=$govofficial->cdioIctInWorkplace;
+        $informationManagementExists=$govofficial->cdioInformationManagement;
+        $managingTechnologicalInterventionExists=$govofficial->cdioManagingTechnologicalIntervention;
+        $digitalCitizenshipExists=$govofficial->cdioDigitalCitizenship;
         return view('cdio.Assessments.main',compact('ictInWorkplaceExists','informationManagementExists','managingTechnologicalInterventionExists','digitalCitizenshipExists'));
     }
 
@@ -244,7 +252,7 @@ class CdioController extends Controller
             ['Managing Technological Interventions', (int) $avgCdioManagingTechnologicalIntervention],
             ['Digital Citizenship', (int) $avgCdioDigitalCitizenship]
         ];
-
+ 
         return view('cdio.assessments.ICT.report',compact('govOfficial','result','cdioDigitalCitizenship2','cdioManagingTechnologicalIntervention2','cdioInformationManagement2','cdioIctInWorkplace2','avgCdioIctInWorkplace','avgCdioInformationManagement','avgCdioManagingTechnologicalIntervention','avgCdioDigitalCitizenship'));
     }
 
@@ -276,6 +284,167 @@ class CdioController extends Controller
         return view('cdio.assessments.DigitalGovernment.page07');
     }
 
+    public function storeCdioProjectAndProgrammeManagement(Request $request){
+        request()->validate([
+            'dg1'=>'required|string',
+            'dg2'=>'required|string',
+            'dg3'=>'required|string',
+            'dg4'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $cdioProjectAndProgrammeManagement=new CdioProjectAndProgrammeManagement;
+
+        $cdioProjectAndProgrammeManagement->dg1=$request->dg1;
+        $cdioProjectAndProgrammeManagement->dg2=$request->dg2;
+        $cdioProjectAndProgrammeManagement->dg3=$request->dg3;
+        $cdioProjectAndProgrammeManagement->dg4=$request->dg4;
+        $cdioProjectAndProgrammeManagement->govofficial_id=$request->govofficial_id;
+
+        $cdioProjectAndProgrammeManagement->save();
+
+        return redirect()->route('cdioDigitalGovernmentPage02');
+    }
+
+    public function storeCdioChangeManagement(Request $request){
+        request()->validate([
+            'dg5'=>'required|string',
+            'dg6'=>'required|string',
+            'dg7'=>'required|string',
+            'dg8'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $cdioChangeManagement = new CdioChangeManagement;
+
+        $cdioChangeManagement->dg5=$request->dg5;
+        $cdioChangeManagement->dg6=$request->dg6;
+        $cdioChangeManagement->dg7=$request->dg7;
+        $cdioChangeManagement->dg8=$request->dg8;
+        $cdioChangeManagement->govofficial_id=$request->govofficial_id;
+
+        $cdioChangeManagement->save();
+
+        return redirect()->route('cdioDigitalGovernmentPage03');
+
+    }
+
+    public function storeCdioCollaboration(Request $request){
+        request()->validate([
+            'dg9'=>'required|string',
+            'dg10'=>'required|string',
+            'dg11'=>'required|string',
+            'dg12'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $cdioCollaboration = new CdioCollaboration;
+
+        $cdioCollaboration->dg9=$request->dg9;
+        $cdioCollaboration->dg10=$request->dg10;
+        $cdioCollaboration->dg11=$request->dg11;
+        $cdioCollaboration->dg12=$request->dg12;
+        $cdioCollaboration->govofficial_id=$request->govofficial_id;
+
+        $cdioCollaboration->save();
+
+        return redirect()->route('cdioDigitalGovernmentPage04');
+
+    }
+
+    public function storeCdioOrientation(Request $request){
+        request()->validate([
+            'dg13'=>'required|string',
+            'dg14'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $cdioOrientation = new CdioOrientation;
+
+        $cdioOrientation->dg13=$request->dg13;
+        $cdioOrientation->dg14=$request->dg14;
+        $cdioOrientation->govofficial_id=$request->govofficial_id;
+
+        $cdioOrientation->save();
+
+        return redirect()->route('cdioDigitalGovernmentPage05');
+
+    }
+
+    public function storeCdioManagingQuality(Request $request){
+        request()->validate([
+            'dg15'=>'required|string',
+            'dg16'=>'required|string',
+            'dg17'=>'required|string',
+            'dg18'=>'required|string',
+            'dg19'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $cdioManagingQuality = new CdioManagingQuality;
+
+        $cdioManagingQuality->dg15=$request->dg15;
+        $cdioManagingQuality->dg16=$request->dg16;
+        $cdioManagingQuality->dg17=$request->dg17;
+        $cdioManagingQuality->dg18=$request->dg18;
+        $cdioManagingQuality->dg19=$request->dg19;
+        $cdioManagingQuality->govofficial_id=$request->govofficial_id;
+
+        $cdioManagingQuality->save();
+
+        return redirect()->route('cdioDigitalGovernmentPage06');
+
+    }
+
+    public function storeCdioDriveTheAdoption(Request $request){
+        request()->validate([
+            'dg20'=>'required|string',
+            'dg21'=>'required|string',
+            'dg22'=>'required|string',
+            'dg23'=>'required|string',
+            'dg24'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $cdioDriveTheAdoption = new CdioDriveTheAdoption;
+
+        $cdioDriveTheAdoption->dg20=$request->dg20;
+        $cdioDriveTheAdoption->dg21=$request->dg21;
+        $cdioDriveTheAdoption->dg22=$request->dg22;
+        $cdioDriveTheAdoption->dg23=$request->dg23;
+        $cdioDriveTheAdoption->dg24=$request->dg24;
+        $cdioDriveTheAdoption->govofficial_id=$request->govofficial_id;
+
+        $cdioDriveTheAdoption->save();
+
+
+        return redirect()->route('cdioDigitalGovernmentPage07');
+
+    }
+
+    public function storeCdioDigitalInitiative(Request $request){
+        request()->validate([
+            'dg26'=>'required|string',
+            'dg27'=>'required|string',
+            'dg28'=>'required|string',
+            'dg29'=>'required|string',
+            'govofficial_id'=>'required|string'
+        ]);
+
+        $cdioDigitalInitiative = new CdioDigitalInitiative;
+
+        $cdioDigitalInitiative->dg26=$request->dg26;
+        $cdioDigitalInitiative->dg27=$request->dg27;
+        $cdioDigitalInitiative->dg28=$request->dg28;
+        $cdioDigitalInitiative->dg29=$request->dg29;
+        $cdioDigitalInitiative->govofficial_id=$request->govofficial_id;
+
+        $cdioDigitalInitiative->save();
+
+        return redirect()->route('cdioAssessments');
+
+    }
+
     public function cdioManagementPage01(){
         return view('cdio.assessments.Management.page01');
     }
@@ -286,5 +455,25 @@ class CdioController extends Controller
 
     public function cdioManagementPage03(){
         return view('cdio.assessments.Management.page03');
+    }
+
+    public function cdioManagementPage04(){
+        return view('cdio.assessments.Management.page04');
+    }
+
+    public function cdioManagementPage05(){
+        return view('cdio.assessments.Management.page05');
+    }
+
+    public function cdioManagementPage06(){
+        return view('cdio.assessments.Management.page06');
+    }
+
+    public function cdioManagementPage07(){
+        return view('cdio.assessments.Management.page07');
+    }
+
+    public function cdioManagementPage08(){
+        return view('cdio.assessments.Management.page08');
     }
 }

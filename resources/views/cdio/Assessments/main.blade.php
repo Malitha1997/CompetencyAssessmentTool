@@ -37,7 +37,7 @@
                         <h7 id="h4" class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and skills in ICT to enable more efficient, cost-effective, and participatory government, facilitate more convenient government services, allow greater public access to information, and make government more accountable to citizens.<br><br></h7>
                     </div>
                     <div class="row">
-                     @if($ictInWorkplaceExists==true && $informationManagementExists==true && $managingTechnologicalInterventionExists==0 && $digitalCitizenshipExists=$govofficial)   
+                     @if($ictInWorkplaceExists==true && $informationManagementExists==true && $managingTechnologicalInterventionExists==true && $digitalCitizenshipExists==true)   
                      <a class="btn btn-primary" href="{{route('cdioIctResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
                      @elseif($ictInWorkplaceExists==true)
                      <a class="btn btn-primary" href="{{route ('cdioIctPage02') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
@@ -91,9 +91,7 @@
                     <div class="row">
                         <h7 id="h4" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></h7>
                     </div>
-                    
-                    
-                    
+
                     <a class="btn btn-primary" href="{{route ('cdioManagementPage01') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
                    
                 </div>
