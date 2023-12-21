@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('deep_interoperabilities', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('td31');
+            $table->string('td32');
+            $table->string('td33');
+            $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
 

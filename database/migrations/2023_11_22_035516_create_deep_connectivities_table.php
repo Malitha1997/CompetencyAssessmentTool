@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('deep_connectivities', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('td15');
+            $table->string('td16');
+            $table->string('td17');
+            $table->string('td18');
+            $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
 

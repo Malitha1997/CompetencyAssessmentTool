@@ -1,7 +1,7 @@
 @extends('layouts.cdionavbar')
 
 @section('content')
-<form method="POST" action="">
+<form method="POST" action="{{route('storeCdioTeamwork')}}">
     {{csrf_field()}}
 <div class="container" data-aos="fade-down" style="font-family: Poppins, sans-serif;margin-bottom:2%">
 
@@ -17,13 +17,14 @@
 
             <div class="row" style="background: #027673;height:5%;text-align:center;border-radius:10px">
 
-                <h5 id="h4" style="color:#fff;font-weight:bold"><br>Competency Area: Specialized knowledge, expertise and self development<br></h5>
+                <h5 id="h4" style="color:#fff;font-weight:bold"><br>Competency Area: Effective teamwork<br></h5>
 
             </div>
 
             <div class="row" style="text-align:center">
 
-                <h5 id="h4" style="color: rgb(0,0,0);font-weight:bold"><br>Continuously engage in activities to develop oneself, specialized knowledge and expertise<br><br></h5>
+                <h5 id="h4" style="color: rgb(0,0,0);font-weight:bold"><br>Ability to work in a team and bring synergies through effective team working
+                    <br><br></h5>
 
             </div>
 
@@ -35,13 +36,13 @@
 
                 <div class="col-1" style="margin-top:2%">
 
-                    <h5 id="h4" style="color: #1f2471;">37)</h5>
+                    <h5 id="h4" style="color: #1f2471;">35)</h5>
 
                 </div>
 
                 <div class="col-11">
 
-                    <h5 id="h4" style="color: #1f2471;margin-top:2%;margin-left:-4%">WSelf-learning is an approach to learning where the individual makes the effort (Mark the incorrect answer)</h5>
+                    <h5 id="h4" style="color: #1f2471;margin-top:2%;margin-left:-4%">What is true about synergy effect?</h5>
 
                 </div>
 
@@ -51,13 +52,13 @@
 
                 <div class="col-1" style="text-align:right">
 
-                    <input type="radio" name="mgt37" id="mgt37_1" value="0">
+                    <input type="radio" name="mgt35" id="mgt35_1" value="0">
 
                 </div>
 
                 <div class="col-11" style="text-align:left">
 
-                    <label for="mgt37_1" style="color: var(--bs-emphasis-color);"><h5 id="h4">a)  To identify their own learning needs</h5></label>
+                    <label for="mgt35_1" style="color: var(--bs-emphasis-color);"><h5 id="h4">a)  The team synergy effect leads to effective teamwork and high-impact results across the team</h5></label>
 
                 </div>
 
@@ -67,13 +68,13 @@
 
                 <div class="col-1" style="text-align:right">
 
-                    <input type="radio" name="mgt37" id="mgt37_2" value="0">
+                    <input type="radio" name="mgt35" id="mgt35_2" value="0">
 
                 </div>
 
                 <div class="col-11" style="text-align:left">
 
-                    <label for="mgt37_2" style="color: var(--bs-emphasis-color);"><h5 id="h4">b) Set learning goals</h5></label>
+                    <label for="mgt35_2" style="color: var(--bs-emphasis-color);"><h5 id="h4">b) Synergy describes a way to work together to produce great results</h5></label>
 
                 </div>
 
@@ -83,13 +84,13 @@
 
                 <div class="col-1" style="text-align:right">
 
-                    <input type="radio" name="mgt37" id="mgt37_3" value="2">
+                    <input type="radio" name="mgt35" id="mgt35_3" value="0">
 
                 </div>
 
                 <div class="col-11" style="text-align:left">
 
-                    <label for="mgt37_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) Promote learning methods</h5></label>
+                    <label for="mgt35_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) TSynergy is the combined action that takes place when different individuals collaborate for one common cause that improves results by the sharing of perceptions, insights and knowledge</h5></label>
 
                 </div>
 
@@ -99,13 +100,13 @@
 
                 <div class="col-1" style="text-align:right">
 
-                    <input type="radio" name="mgt37" id="mgt37_4" value="0">
+                    <input type="radio" name="mgt35" id="mgt35_4" value="2">
 
                 </div>
 
                 <div class="col-11" style="text-align:left">
 
-                    <label for="mgt37_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) Evaluate their own knowledge</h5></label>
+                    <label for="mgt35_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) All of the above</h5></label>
 
                 </div>
 
@@ -115,13 +116,13 @@
 
                 <div class="col-1" style="margin-top:2%">
 
-                    <h5 id="h4" style="color: #1f2471;">38)</h5>
+                    <h5 id="h4" style="color: #1f2471;">36)</h5>
 
                 </div>
 
                 <div class="col-11">
 
-                    <h5 id="h4" style="color: #1f2471;margin-top:2%;margin-left:-4%">Why is an interest in self-development essential for a Chief Digital Information Officer (CDIO) in supporting government policy?</h5>
+                    <h5 id="h4" style="color: #1f2471;margin-top:2%;margin-left:-4%">What is the primary purpose of CDIO's emphasis on knowledge sharing?</h5>
 
                 </div>
 
@@ -131,13 +132,13 @@
 
                 <div class="col-1" style="text-align:right">
 
-                    <input type="radio" name="mgt38" id="mgt38_1" value="0">
+                    <input type="radio" name="mgt36" id="mgt36_1" value="0">
 
                 </div>
 
                 <div class="col-11" style="text-align:left">
 
-                    <label for="mgt38_1" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);"><h5 id="h4">a) It is unnecessary for CDIOs</h5></label>
+                    <label for="mgt36_1" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);"><h5 id="h4">a) To hinder digital progress</h5></label>
 
                 </div>
 
@@ -147,13 +148,13 @@
 
                 <div class="col-1" style="text-align:right">
 
-                    <input type="radio" name="mgt38" id="mgt38_2" value="0">
+                    <input type="radio" name="mgt36" id="mgt36_2" value="0">
 
                 </div>
 
                 <div class="col-11" style="text-align:left">
 
-                    <label for="mgt38_2" style="color: var(--bs-emphasis-color);"><h5 id="h4">b)  To hinder government policy</h5></label>
+                    <label for="mgt36_2" style="color: var(--bs-emphasis-color);"><h5 id="h4">b) To create communication barriers</h5></label>
 
                 </div>
 
@@ -163,13 +164,13 @@
 
                 <div class="col-1" style="text-align:right">
 
-                    <input type="radio" name="mgt38" id="mgt38_3" value="0">
+                    <input type="radio" name="mgt36" id="mgt36_3" value="2">
 
                 </div>
 
                 <div class="col-11" style="text-align:left">
 
-                    <label for="mgt38_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) To stay stagnant in skills and knowledge </h5></label>
+                    <label for="mgt36_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) To encourage collaboration and efficiency    </h5></label>
 
                 </div>
 
@@ -179,16 +180,16 @@
 
                 <div class="col-1" style="text-align:right">
 
-                    <input type="radio" name="mgt38" id="mgt38_4" value="2">
+                    <input type="radio" name="mgt36" id="mgt36_4" value="0">
 
                 </div>
 
                 <div class="col-11" style="text-align:left">
 
-                    <label for="mgt38_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d)  To enhance capabilities and contribute to policy objectives </h5></label>
+                    <label for="mgt36_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d)  To discourage teamwork</h5></label>
 
                 </div>
-
+                <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly> 
             </div>
             </div>
             <div class="row" style="margin-top:2%;margin-bottom:2%">

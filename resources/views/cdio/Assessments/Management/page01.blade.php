@@ -1,7 +1,7 @@
 @extends('layouts.cdionavbar')
 
 @section('content')
-<form method="POST" action="">
+<form method="POST" action="{{route('storeCdioCommunication')}}">
     {{csrf_field()}}
     <div class="container" data-aos="fade-down" style="font-family: Poppins, sans-serif;margin-bottom:2%">
         <div class="row" style="text-align:center">

@@ -10,6 +10,7 @@ use App\Models\CdioIct;
 use App\Models\OpTeamwork;
 use App\Models\MidTeamWork;
 use App\Models\Operational;
+use App\Models\CdioTeamwork;
 use App\Models\DeepSecurity;
 use App\Models\OpInitiative;
 use App\Models\OpManagement;
@@ -18,10 +19,12 @@ use App\Models\MidManagement;
 use App\Models\OpOrientation;
 use App\Models\TopLeadership;
 use App\Models\TopManagement;
+use App\Models\CdioManagement;
 use App\Models\DeepTechnology;
 use App\Models\MidOrientation;
 use App\Models\MidStakeholder;
 use App\Models\TopOrientation;
+use App\Models\CdioOrientation;
 use App\Models\DeepApplication;
 use App\Models\OpCollaboration;
 use App\Models\OpCommunication;
@@ -32,14 +35,20 @@ use App\Models\OpIctInWorkplace;
 use App\Models\TopCollaboration;
 use App\Models\TopCommunication;
 use App\Models\TopHumanResource;
+use App\Models\CdioCollaboration;
+use App\Models\CdioCommunication;
+use App\Models\CdioHumanResource;
 use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
 use App\Models\TopDecisionMaking;
 use App\Models\TopIctInWorkplace;
+use App\Models\CdioDecisionMaking;
 use App\Models\CdioIctInWorkplace;
 use App\Models\DeepDataGovernance;
 use App\Models\DeepDataManagement;
 use App\Models\OpChangeManagement;
+use App\Models\CdioManagingQuality;
+use App\Models\CdioSelfDevelopment;
 use App\Models\DeepDataEngineering;
 use App\Models\Govorganizationname;
 use App\Models\MidCapacityBuilding;
@@ -48,6 +57,9 @@ use App\Models\OpDigitalGovernment;
 use App\Models\OpQualityManagement;
 use App\Models\TopCapacityBuilding;
 use App\Models\TopChangeManagement;
+use App\Models\CdioBuildingCapacity;
+use App\Models\CdioChangeManagement;
+use App\Models\CdioDriveTheAdoption;
 use App\Models\DeepInteroperability;
 use App\Models\MidDigitalGovernment;
 use App\Models\MidProjectManagement;
@@ -55,6 +67,8 @@ use App\Models\MidQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use App\Models\TopDigitalGovernment;
 use App\Models\TopQualityManagement;
+use App\Models\CdioDigitalGovernment;
+use App\Models\CdioDigitalInitiative;
 use App\Models\Govorganizationdetail;
 use App\Models\MidDigitalCitizenship;
 use App\Models\OpPersonalDevelopment;
@@ -67,6 +81,7 @@ use App\Models\MidPersonalDevelopment;
 use App\Models\MidWorkplaceManagement;
 use App\Models\TopPersonalDevelopment;
 use App\Models\TopWorkplaceManagement;
+use App\Models\CdioManagingStakeholder;
 use App\Models\OpStakeholderManagement;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\MidInformationManagement;
@@ -75,9 +90,12 @@ use App\Models\OpInformationManagements;
 use App\Models\TopInformationManagement;
 use App\Models\TopPerformanceManagement;
 use App\Models\TopStakeholderManagement;
+use App\Models\CdioDigitalTransformation;
 use App\Models\CdioInformationManagement;
 use App\Models\DeepTechnologyArchitecture;
 use App\Models\TopOrganizationalLeadership;
+use App\Models\CdioManagingEffectiveWorkplace;
+use App\Models\CdioProjectAndProgrammeManagement;
 use App\Models\CdioManagingTechnologicalIntervention;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -393,4 +411,77 @@ class Govofficial extends Model
     public function cdioDigitalCitizenship(){
         return $this->hasOne(CdioDigitalCitizenship::class);
     }
+
+    public function cdioChangeManagement(){
+        return $this->hasOne(CdioChangeManagement::class);
+    }
+
+    public function cdioCollaboration(){
+        return $this->hasOne(CdioCollaboration::class);
+    }
+
+    public function cdioDigitalGovernment(){
+        return $this->hasOne(CdioDigitalGovernment::class);
+    }
+
+    public function cdioDigitalInitiative(){
+        return $this->hasOne(CdioDigitalInitiative::class);
+    }
+
+    public function cdioDriveTheAdoption(){
+        return $this->hasOne(CdioDriveTheAdoption::class);
+    }
+
+    public function cdioManagingQuality(){
+        return $this->hasOne(CdioManagingQuality::class);
+    }
+
+    public function cdioOrientation(){
+        return $this->hasOne(CdioOrientation::class);
+    }
+
+    public function cdioProjectAndProgrammeManagement(){
+        return $this->hasOne(CdioProjectAndProgrammeManagement::class);
+    }
+
+    public function cdioBuildingCapacity(){
+        return $this->hasOne(CdioBuildingCapacity::class);
+    }
+
+    public function cdioCommunication(){
+        return $this->hasOne(CdioCommunication::class);
+    }
+
+    public function cdioDigitalTransformation(){
+        return $this->hasOne(CdioDigitalTransformation::class);
+    }
+
+    public function cdioHumanResource(){
+        return $this->hasOne(CdioHumanResource::class);
+    }
+
+    public function cdioManagement(){
+        return $this->hasOne(CdioManagement::class);
+    }
+
+    public function cdioManagingEffectiveWorkplace(){
+        return $this->hasOne(CdioManagingEffectiveWorkplace::class);
+    }
+
+    public function cdioStakeholder(){
+        return $this->hasOne(CdioStakeholder::class);
+    }
+
+    public function cdioSelfDevelopment(){
+        return $this->hasOne(CdioSelfDevelopment::class);
+    }
+
+    public function cdioTeamwork(){
+        return $this->hasOne(CdioTeamwork::class);
+    }
+
+    public function cdioDecisionMaking(){
+        return $this->hasOne(CdioDecisionMaking::class);
+    }
+
 }

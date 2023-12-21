@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('deep_delivery_governances', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('td12');
+            $table->string('td13');
+            $table->string('td14');
+            $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
 

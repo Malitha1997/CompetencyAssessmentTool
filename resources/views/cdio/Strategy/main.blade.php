@@ -7,7 +7,7 @@
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route('userHome')}}"><h10 id="h4">Home</h10></a></li>
-                    <li class="breadcrumb-item"><a href="{{route('cdioMain')}}"><h10 id="h4">Deep Assessment</h10></a></li>
+                    <li class="breadcrumb-item"><a href="{{route('deepMain')}}"><h10 id="h4">Deep Assessment</h10></a></li>
                     <li class="breadcrumb-item active" aria-current="page"><h10 id="h4">Strategy</h10></li>
                 </ol>
             </nav>
