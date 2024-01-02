@@ -50,6 +50,10 @@ class CdioController extends Controller
         return view('cdio.Strategy.main');
     }
 
+    public function organization(){
+        return view('cdio.Organization & Culture.main');
+    }
+
     public function assessments(){
         $govofficial=Auth::user()->govofficial;
         $ictInWorkplaceExists=$govofficial->cdioIctInWorkplace;

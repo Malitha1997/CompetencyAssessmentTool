@@ -233,7 +233,7 @@
             </div>
 
             
-            <input class="form-control" type="hidden" id="totDeepEmergingTechnology" name="totDeepEmergingTechnology" value="{{$totDeepEmergingTechnology}}" readonly>
+            <!-- <input class="form-control" type="hidden" id="totDeepEmergingTechnology" name="totDeepEmergingTechnology" value="{{$totDeepEmergingTechnology}}" readonly>
             <input class="form-control" type="hidden" id="totDeepDataManagement" name="totDeepDataManagement" value="{{$totDeepDataManagement}}" readonly>
             <input class="form-control" type="hidden" id="totDeepDeliveryGovernance" name="totDeepDeliveryGovernance" value="{{$totDeepDeliveryGovernance}}" readonly>
             <input class="form-control" type="hidden" id="totDeepConnectivity" name="totDeepConnectivity" value="{{$totDeepConnectivity}}" readonly>
@@ -241,7 +241,7 @@
             <input class="form-control" type="hidden" id="totDeepTechnologyArchitecture" name="totDeepTechnologyArchitecture" value="{{$totDeepTechnologyArchitecture}}" readonly>
             <input class="form-control" type="hidden" id="totDeepDataGovernance" name="totDeepDataGovernance" value="{{$totDeepDataGovernance}}" readonly>
             <input class="form-control" type="hidden" id="totDeepDataEngineering" name="totDeepDataEngineering" value="{{$totDeepDataEngineering}}" readonly>
-            <input class="form-control" type="hidden" id="totDeepInteroperability" name="totDeepInteroperability" value="{{$totDeepInteroperability}}" readonly>
+            <input class="form-control" type="hidden" id="totDeepInteroperability" name="totDeepInteroperability" value="{{$totDeepInteroperability}}" readonly> -->
             <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>    
         </div>
             <div class="row" style="margin-top:2%;margin-bottom:2%">

@@ -217,6 +217,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/deep/customer/main', [CdioController::class, 'customer'])->name('deepCustomer');
     Route::get('/deep/operation/main', [CdioController::class, 'operation'])->name('deepOperation');
     Route::get('/deep/strategy/main', [CdioController::class, 'strategy'])->name('deepStrategy');
+    Route::get('/deep/organization/main', [CdioController::class, 'organization'])->name('deepOrganization');
 
     Route::get('/cdio/assessments/main', [CdioController::class, 'assessments'])->name('cdioAssessments');
 
@@ -293,6 +294,18 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('deepDataEngineering', [DeepAssessmentController::class, 'deepDataEngineering'])->name('deepDataEngineering');
     Route::post('deepInteroperability', [DeepAssessmentController::class, 'deepInteroperability'])->name('deepInteroperability');
     Route::post('deepApplication', [DeepAssessmentController::class, 'deepApplication'])->name('deepApplication');
+
+    Route::get('/deep/cus/page01', [DeepAssessmentController::class, 'deepCusPage01'])->name('deepCusPage01');
+    Route::get('/deep/cus/page02', [DeepAssessmentController::class, 'deepCusPage02'])->name('deepCusPage02');
+    Route::get('/deep/cus/page03', [DeepAssessmentController::class, 'deepCusPage03'])->name('deepCusPage03');
+    Route::get('/deep/cus/page04', [DeepAssessmentController::class, 'deepCusPage04'])->name('deepCusPage04');
+    Route::get('/deep/cus/page05', [DeepAssessmentController::class, 'deepCusPage05'])->name('deepCusPage05');
+
+    Route::get('/deep/op/page01', [DeepAssessmentController::class, 'deepOpPage01'])->name('deepOpPage01');
+    Route::get('/deep/op/page02', [DeepAssessmentController::class, 'deepOpPage02'])->name('deepOpPage02');
+    Route::get('/deep/op/page03', [DeepAssessmentController::class, 'deepOpPage03'])->name('deepOpPage03');
+    Route::get('/deep/op/page04', [DeepAssessmentController::class, 'deepOpPage04'])->name('deepOpPage04');
+    
 });
 
 

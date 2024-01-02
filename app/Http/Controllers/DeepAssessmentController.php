@@ -285,26 +285,64 @@ class DeepAssessmentController extends Controller
 
         $deepApplication->save();
 
-        $totDeepApplication=$request->td34+$request->td35;
-        $overall=$request->totDeepEmergingTechnology+$request->totDeepDataManagement+$request->totDeepDeliveryGovernance+$request->totDeepConnectivity+$request->totDeepSecurity+$request->totDeepTechnologyArchitecture+$request->totDeepDataGovernance+$request->totDeepDataEngineering+$request->totDeepInteroperability;
+        // $totDeepApplication=$request->td34+$request->td35;
+        // $overall=$request->totDeepEmergingTechnology+$request->totDeepDataManagement+$request->totDeepDeliveryGovernance+$request->totDeepConnectivity+$request->totDeepSecurity+$request->totDeepTechnologyArchitecture+$request->totDeepDataGovernance+$request->totDeepDataEngineering+$request->totDeepInteroperability;
 
-        $deepTechnology = new DeepTechnology;
+        // $deepTechnology = new DeepTechnology;
 
-        $deepTechnology->deep_emerging_technology=$request->totDeepEmergingTechnology;
-        $deepTechnology->deep_data_management=$request->totDeepDataManagement;
-        $deepTechnology->deep_delivery_governance=$request->totDeepDeliveryGovernance;
-        $deepTechnology->deep_connectivity=$request->totDeepConnectivity;
-        $deepTechnology->deep_security=$request->totDeepSecurity;
-        $deepTechnology->deep_technology_architecture=$request->totDeepTechnologyArchitecture;
-        $deepTechnology->deep_data_governance=$request->totDeepDataGovernance;
-        $deepTechnology->deep_data_engineering=$request->totDeepDataEngineering;
-        $deepTechnology->deep_interoperability=$request->totDeepInteroperability;
-        $deepTechnology->deep_application=$totDeepApplication;
-        $deepTechnology->overall=$overall;
-        $deepTechnology->govofficial_id=$request->govofficial_id;
+        // $deepTechnology->deep_emerging_technology=$request->totDeepEmergingTechnology;
+        // $deepTechnology->deep_data_management=$request->totDeepDataManagement;
+        // $deepTechnology->deep_delivery_governance=$request->totDeepDeliveryGovernance;
+        // $deepTechnology->deep_connectivity=$request->totDeepConnectivity;
+        // $deepTechnology->deep_security=$request->totDeepSecurity;
+        // $deepTechnology->deep_technology_architecture=$request->totDeepTechnologyArchitecture;
+        // $deepTechnology->deep_data_governance=$request->totDeepDataGovernance;
+        // $deepTechnology->deep_data_engineering=$request->totDeepDataEngineering;
+        // $deepTechnology->deep_interoperability=$request->totDeepInteroperability;
+        // $deepTechnology->deep_application=$totDeepApplication;
+        // $deepTechnology->overall=$overall;
+        // $deepTechnology->govofficial_id=$request->govofficial_id;
 
-        $deepTechnology->save();
+        // $deepTechnology->save();
 
         return redirect()->route('deepMain');
     }
+
+    public function deepCusPage01(){
+        return view('cdio.Customer.page01');
+    }
+
+    public function deepCusPage02(){
+        return view('cdio.Customer.page02');
+    }
+
+    public function deepCusPage03(){
+        return view('cdio.Customer.page03');
+    }
+
+    public function deepCusPage04(){
+        return view('cdio.Customer.page04');
+    }
+
+    public function deepCusPage05(){
+        return view('cdio.Customer.page05');
+    }
+
+    public function deepOpPage01(){
+        return view('cdio.Operation.page01');
+    }
+
+    public function deepOpPage02(){
+        return view('cdio.Operation.page02');
+    }
+
+    public function deepOpPage03(){
+        return view('cdio.Operation.page03');
+    }
+
+    public function deepOpPage04(){
+        return view('cdio.Operation.page04');
+    }
+
+
 }

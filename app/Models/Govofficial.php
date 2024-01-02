@@ -7,19 +7,27 @@ use App\Models\OpIct;
 use App\Models\MidIct;
 use App\Models\TopIct;
 use App\Models\CdioIct;
+use App\DeepCitizenTrust;
+use App\Models\DeepPolicy;
 use App\Models\OpTeamwork;
+use App\DeepCitizenInsight;
+use App\Models\DeepFinance;
 use App\Models\MidTeamWork;
 use App\Models\Operational;
 use App\Models\CdioTeamwork;
+use App\Models\DeepCustomer;
 use App\Models\DeepSecurity;
+use App\Models\DeepStrategy;
 use App\Models\OpInitiative;
 use App\Models\OpManagement;
+use App\Models\DeepOperation;
 use App\Models\MidInitiative;
 use App\Models\MidManagement;
 use App\Models\OpOrientation;
 use App\Models\TopLeadership;
 use App\Models\TopManagement;
 use App\Models\CdioManagement;
+use App\Models\DeepLeadership;
 use App\Models\DeepTechnology;
 use App\Models\MidOrientation;
 use App\Models\MidStakeholder;
@@ -29,6 +37,7 @@ use App\Models\DeepApplication;
 use App\Models\OpCollaboration;
 use App\Models\OpCommunication;
 use App\Models\DeepConnectivity;
+use App\Models\DeepLevelOfSkill;
 use App\Models\MidCollaboration;
 use App\Models\MidCommunication;
 use App\Models\OpIctInWorkplace;
@@ -49,7 +58,9 @@ use App\Models\DeepDataManagement;
 use App\Models\OpChangeManagement;
 use App\Models\CdioManagingQuality;
 use App\Models\CdioSelfDevelopment;
+use App\Models\DeepBrandManagement;
 use App\Models\DeepDataEngineering;
+use App\Models\DeepRealTimeInsight;
 use App\Models\Govorganizationname;
 use App\Models\MidCapacityBuilding;
 use App\Models\MidChangeManagement;
@@ -69,19 +80,28 @@ use App\Models\TopDigitalGovernment;
 use App\Models\TopQualityManagement;
 use App\Models\CdioDigitalGovernment;
 use App\Models\CdioDigitalInitiative;
+use App\Models\DeepCitizenEngagement;
+use App\Models\DeepCitizenExperience;
 use App\Models\Govorganizationdetail;
 use App\Models\MidDigitalCitizenship;
 use App\Models\OpPersonalDevelopment;
 use App\Models\OpWorkplaceManagement;
 use App\Models\TopDigitalCitizenship;
+use App\DeepCitizenExperienceStrategy;
 use App\Models\CdioDigitalCitizenship;
+use App\Models\DeepBusinessManagement;
 use App\Models\DeepDeliveryGovernance;
 use App\Models\DeepEmergingTechnology;
+use App\Models\DeepEmployeeEnablement;
+use App\Models\DeepMarketIntelligence;
+use App\Models\DeepOrganizationDesign;
 use App\Models\MidPersonalDevelopment;
 use App\Models\MidWorkplaceManagement;
 use App\Models\TopPersonalDevelopment;
 use App\Models\TopWorkplaceManagement;
 use App\Models\CdioManagingStakeholder;
+use App\Models\DeepEcoSystemManagement;
+use App\Models\DeepStrategicManagement;
 use App\Models\OpStakeholderManagement;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\MidInformationManagement;
@@ -92,9 +112,14 @@ use App\Models\TopPerformanceManagement;
 use App\Models\TopStakeholderManagement;
 use App\Models\CdioDigitalTransformation;
 use App\Models\CdioInformationManagement;
+use App\Models\DeepAgileChangeManagement;
+use App\Models\DeepOrganizationAndCulture;
+use App\Models\DeepSmartProcessManagement;
+use App\Models\DeepStandardsAndGovernance;
 use App\Models\DeepTechnologyArchitecture;
 use App\Models\TopOrganizationalLeadership;
 use App\Models\CdioManagingEffectiveWorkplace;
+use App\Models\DeepIntegratedServiceManagement;
 use App\Models\CdioProjectAndProgrammeManagement;
 use App\Models\CdioManagingTechnologicalIntervention;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -482,6 +507,110 @@ class Govofficial extends Model
 
     public function cdioDecisionMaking(){
         return $this->hasOne(CdioDecisionMaking::class);
+    }
+
+    public function deepAgileChangeManagement(){
+        return $this->hasOne(DeepAgileChangeManagement::class);
+    }
+
+    public function deepBrandManagement(){
+        return $this->hasOne(DeepBrandManagement::class);
+    }
+
+    public function deepBusinessManagement(){
+        return $this->hasOne(DeepBusinessManagement::class);
+    }
+
+    public function deepCitizenEngagement(){
+        return $this->hasOne(DeepCitizenEngagement::class);
+    }
+
+    public function deepCitizenExperience(){
+        return $this->hasOne(DeepCitizenExperience::class);
+    }
+
+    public function deepCitizenExperienceStrategy(){
+        return $this->hasOne(DeepCitizenExperienceStrategy::class);
+    }
+
+    public function deepCitizenInsight(){
+        return $this->hasOne(DeepCitizenInsight::class);
+    }
+
+    public function deepCitizenTrust(){
+        return $this->hasOne(DeepCitizenTrust::class);
+    }
+
+    public function deepCustomer(){
+        return $this->hasOne(DeepCustomer::class);
+    }
+
+    public function deepEcoSystemManagement(){
+        return $this->hasOne(DeepEcoSystemManagement::class);
+    }
+
+    public function deepEmployeeEnablement(){
+        return $this->hasOne(DeepEmployeeEnablement::class);
+    }
+
+    public function deepFinance(){
+        return $this->hasOne(DeepFinance::class);
+    }
+
+    public function deepIntegratedServiceManagement(){
+        return $this->hasOne(DeepIntegratedServiceManagement::class);
+    }
+
+    public function deepInvention(){
+        return $this->hasOne(DeepInvention::class);
+    }
+
+    public function deepLeadership(){
+        return $this->hasOne(DeepLeadership::class);
+    }
+
+    public function deepLevelOfSkill(){
+        return $this->hasOne(DeepLevelOfSkill::class);
+    }
+
+    public function deepMarketIntelligence(){
+        return $this->hasOne(DeepMarketIntelligence::class);
+    }
+
+    public function deepOperation(){
+        return $this->hasOne(DeepOperation::class);
+    }
+
+    public function deepOrganizationAndCulture(){
+        return $this->hasOne(DeepOrganizationAndCulture::class);
+    }
+
+    public function deepOrganizationDesign(){
+        return $this->hasOne(DeepOrganizationDesign::class);
+    }
+
+    public function deepPolicy(){
+        return $this->hasOne(DeepPolicy::class);
+    }
+
+    public function deepRealTimeInsight(){
+        return $this->hasOne(DeepRealTimeInsight::class);
+    }
+
+    public function deepSmartProcessManagement(){
+        return $this->hasOne(DeepSmartProcessManagement::class);
+    }
+
+    public function deepStandardsAndGovernance(){
+        return $this->hasOne(DeepStandardsAndGovernance::class);
+    }
+
+    public function deepStrategicManagement(){
+        return $this->hasOne(DeepStrategicManagement::class);
+    }
+
+    public function deepStrategy(){
+        return $this->hasOne(DeepStrategy::class);
     }
 
 }
