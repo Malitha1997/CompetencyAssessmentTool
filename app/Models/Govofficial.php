@@ -50,6 +50,8 @@ use App\Models\CdioHumanResource;
 use App\Models\MidDecisionMaking;
 use App\Models\MidIctInWorkplace;
 use App\Models\TopDecisionMaking;
+use App\Models\MidDecisionMaking;
+use App\Models\MidIctInWorkplace;
 use App\Models\TopIctInWorkplace;
 use App\Models\CdioDecisionMaking;
 use App\Models\CdioIctInWorkplace;
@@ -77,6 +79,7 @@ use App\Models\MidProjectManagement;
 use App\Models\MidQualityManagement;
 use App\Models\OpDigitalCitizenship;
 use App\Models\TopDigitalGovernment;
+use App\Models\TopProjectManagement;
 use App\Models\TopQualityManagement;
 use App\Models\CdioDigitalGovernment;
 use App\Models\CdioDigitalInitiative;
@@ -612,5 +615,6 @@ class Govofficial extends Model
     public function deepStrategy(){
         return $this->hasOne(DeepStrategy::class);
     }
+
 
 }

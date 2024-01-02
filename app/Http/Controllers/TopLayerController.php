@@ -13,6 +13,9 @@ use App\Models\TopHumanResource;
 use App\Models\TopDecisionMaking;
 use App\Models\TopIctInWorkplace;
 use App\Models\TopCapacityBuilding;
+use App\Models\TopOrientation;
+use App\Models\TopCollaboration;
+use App\Models\TopIctInWorkplace;
 use App\Models\TopChangeManagement;
 use App\Models\TopDigitalGovernment;
 use App\Models\TopProjectManagement;
@@ -24,6 +27,7 @@ use App\Models\TopWorkplaceManagement;
 use App\Models\TopInformationManagement;
 use App\Models\TopStakeholderManagement;
 use App\Models\TopOrganizationalLeadership;
+use App\Models\TopInformationManagement;
 
 class TopLayerController extends Controller
 {
@@ -90,6 +94,7 @@ class TopLayerController extends Controller
         $topInformationManagement=Auth::user()->govofficial->topInformationManagement;
 
         $topDigitalGovernment=Auth::user()->govofficial->topDigitalGovernment;
+
         $topProjectManagement=Auth::user()->govofficial->topProjectManagement;
         $topChangeManagement=Auth::user()->govofficial->topChangeManagement;
         $topCollaboration=Auth::user()->govofficial->topCollaboration;
@@ -106,6 +111,11 @@ class TopLayerController extends Controller
         $topHumanResource=Auth::user()->govofficial->topHumanResource;
 
         return view('govOfficials.Top&2ndTier.main',compact('topHumanResource','topStakeholder','topCapacityBuilding','topDecisionMaking','topWorkplaceManagement','topCommunication','topOrganizationalLeadership','topQualityManagement','topOrientation','topCollaboration','topChangeManagement','topProjectManagement','topInformationManagement','topIctInWorkplace','topIct','topDigitalGovernment','topManagement'));
+
+        $topManagement=Auth::user()->govofficial->topManagement;
+        return view('govOfficials.Top&2ndTier.main',compact('topIct','topDigitalGovernment','topManagement'));
+
+        return view('govOfficials.Top&2ndTier.main',compact('topIct','topDigitalGovernment'));
     }
 
     public function topIctPage01(){
@@ -578,6 +588,7 @@ class TopLayerController extends Controller
     public function topManagementPage04(){
         return view('govOfficials.Top&2ndTier.Management.page04');
     }
+
 
     public function topManagementPage05(){
         return view('govOfficials.Top&2ndTier.Management.page05');
@@ -1216,3 +1227,6 @@ class TopLayerController extends Controller
 
 
 }
+
+} 
+

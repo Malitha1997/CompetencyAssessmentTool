@@ -187,6 +187,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/management/page02', [TopLayerController::class, 'topManagementPage02'])->name('topManagementPage02');
     Route::get('/top/management/page03', [TopLayerController::class, 'topManagementPage03'])->name('topManagementPage03');
     Route::get('/top/management/page04', [TopLayerController::class, 'topManagementPage04'])->name('topManagementPage04');
+
     Route::get('/top/management/page05', [TopLayerController::class, 'topManagementPage05'])->name('topManagementPage05');
     Route::get('/top/management/page06', [TopLayerController::class, 'topManagementPage06'])->name('topManagementPage06');
     Route::get('/top/management/page07', [TopLayerController::class, 'topManagementPage07'])->name('topManagementPage07');
@@ -203,6 +204,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/top/mgt/result', [TopLayerController::class, 'topManagementResult'])->name('topManagementResult');
     Route::get('/top/mgt/report', [TopLayerController::class, 'topManagementReport'])->name('topManagementReport');
+
     Route::get('/top/overallResults', [TopLayerController::class, 'overalresult'])->name('topOverallResults');
     Route::get('/top/overallReport', [TopLayerController::class, 'overalreport'])->name('topOverallReport');
 
@@ -212,12 +214,24 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('change-password', [ChangePasswordController::class, 'index']);
     Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
 
+
     Route::get('/deep/main', [CdioController::class, 'main'])->name('deepMain');
     Route::get('/deep/technology/main', [CdioController::class, 'technology'])->name('deepTechnology');
     Route::get('/deep/customer/main', [CdioController::class, 'customer'])->name('deepCustomer');
     Route::get('/deep/operation/main', [CdioController::class, 'operation'])->name('deepOperation');
     Route::get('/deep/strategy/main', [CdioController::class, 'strategy'])->name('deepStrategy');
     Route::get('/deep/organization/main', [CdioController::class, 'organization'])->name('deepOrganization');
+
+
+
+    Route::get('/edit', [GovofficialController::class, 'updateProfile'])->name('edit');
+
+
+    Route::get('/cdio/main', [CdioController::class, 'main'])->name('cdioMain');
+    Route::get('/cdio/technology/main', [CdioController::class, 'technology'])->name('cdioTechnology');
+    Route::get('/cdio/customer/main', [CdioController::class, 'customer'])->name('cdioCustomer');
+    Route::get('/cdio/operation/main', [CdioController::class, 'operation'])->name('cdioOperation');
+    Route::get('/cdio/strategy/main', [CdioController::class, 'strategy'])->name('cdioStrategy');
 
     Route::get('/cdio/assessments/main', [CdioController::class, 'assessments'])->name('cdioAssessments');
 
@@ -305,7 +319,6 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/deep/op/page02', [DeepAssessmentController::class, 'deepOpPage02'])->name('deepOpPage02');
     Route::get('/deep/op/page03', [DeepAssessmentController::class, 'deepOpPage03'])->name('deepOpPage03');
     Route::get('/deep/op/page04', [DeepAssessmentController::class, 'deepOpPage04'])->name('deepOpPage04');
-    
 });
 
 
