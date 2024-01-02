@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('managing_quality');
             $table->string('drive_the_adoption');
             $table->string('digital_initiative');
+            $table->string('overall');
             $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }

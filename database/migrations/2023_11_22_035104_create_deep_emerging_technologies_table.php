@@ -14,6 +14,13 @@ return new class extends Migration
         Schema::create('deep_emerging_technologies', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('td1');
+            $table->string('td2');
+            $table->string('td3');
+            $table->string('td4');
+            $table->string('td5');
+            $table->string('td6');
+            $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
 

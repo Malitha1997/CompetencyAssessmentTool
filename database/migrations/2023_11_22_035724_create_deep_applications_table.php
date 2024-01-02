@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('deep_applications', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('td34');
+            $table->string('td35');
+            $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
 

@@ -1,7 +1,7 @@
 @extends('layouts.cdionavbar')
 
 @section('content')
-<form method="POST" action="">
+<form method="POST" action="{{route('storeCdioDigitalInitiative')}}">
     {{csrf_field()}}
     <div class="container" data-aos="fade-down" style="font-family: Poppins, sans-serif;margin-bottom:2%">
         <div class="row" style="text-align:center">
@@ -44,7 +44,7 @@
 
             <div class="row" style="margin-top:1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="dg26" id="dg26_3" value="6">
+                    <input type="radio" name="dg26" id="dg26_3" value="0">
                 </div>  
                 <div class="col-11" style="text-align:left">
                     <label for="dg26_3" style="color: var(--bs-emphasis-color);"><h5 id="h4">c) Right stakeholders</h5></label>
@@ -53,7 +53,7 @@
 
             <div class="row" style="margin-top:1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="dg26" id="dg26_4" value="0">
+                    <input type="radio" name="dg26" id="dg26_4" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="dg26_4" style="color: var(--bs-emphasis-color);"><h5 id="h4">d) All of the above</h5></label>
@@ -70,7 +70,7 @@
 
             <div class="row" style="margin-top:1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="dg27" id="dg27_1" value="5">
+                    <input type="radio" name="dg27" id="dg27_1" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="dg27_1" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);">
@@ -123,7 +123,7 @@
 
             <div class="row" style="margin-top:1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="dg28" id="dg28_1" value="5">
+                    <input type="radio" name="dg28" id="dg28_1" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="dg28_1" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);">
@@ -156,7 +156,7 @@
 
             <div class="row" style="margin-top:1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="dg28" id="dg28_4" value="0">
+                    <input type="radio" name="dg28" id="dg28_4" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="dg28_4" style="color: var(--bs-emphasis-color);">
@@ -175,7 +175,7 @@
 
             <div class="row" style="margin-top:1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="dg29" id="dg29_1" value="5">
+                    <input type="radio" name="dg29" id="dg29_1" value="0">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="dg29_1" style="font-family: Poppins, sans-serif;color: var(--bs-emphasis-color);">
@@ -186,7 +186,7 @@
 
             <div class="row" style="margin-top:1%">
                 <div class="col-1" style="text-align:right">
-                    <input type="radio" name="dg29" id="dg29_2" value="0">
+                    <input type="radio" name="dg29" id="dg29_2" value="3">
                 </div>
                 <div class="col-11" style="text-align:left">
                     <label for="dg29_2" style="color: var(--bs-emphasis-color);">
@@ -216,7 +216,12 @@
                     </label>
                 </div>
             </div>
-            <input class="form-control" type="hidden" id="govofficial_id" name="govofficial_id" value="{{Auth::user()->govofficial->id}}" readonly>
+            <input class="form-control" type="hidden" id="totCdioProjectAndProgrammeManagement" name="totCdioProjectAndProgrammeManagement" value="{{$totCdioProjectAndProgrammeManagement}}" readonly>
+            <input class="form-control" type="hidden" id="totCdioChangeManagement" name="totCdioChangeManagement" value="{{$totCdioChangeManagement}}" readonly>
+            <input class="form-control" type="hidden" id="totCdioCollaboration" name="totCdioCollaboration" value="{{$totCdioCollaboration}}" readonly>
+            <input class="form-control" type="hidden" id="totCdioOrientation" name="totCdioOrientation" value="{{$totCdioOrientation}}" readonly>
+            <input class="form-control" type="hidden" id="totCdioManagingQuality" name="totCdioManagingQuality" value="{{$totCdioManagingQuality}}" readonly>
+            <input class="form-control" type="hidden" id="totCdioDriveTheAdoption" name="totCdioDriveTheAdoption" value="{{$totCdioDriveTheAdoption}}" readonly>
         </div>
     </div>
     <div class="row" style="margin-top:2%;margin-bottom:2%">

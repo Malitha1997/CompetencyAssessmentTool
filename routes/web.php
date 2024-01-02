@@ -8,6 +8,7 @@ use App\Http\Controllers\TopLayerController;
 use App\Http\Controllers\GovofficialController;
 use App\Http\Controllers\MiddleLayerController;
 use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\DeepAssessmentController;
 use App\Http\Controllers\OperationalLayerController;
 
 
@@ -214,6 +215,14 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
 
 
+    Route::get('/deep/main', [CdioController::class, 'main'])->name('deepMain');
+    Route::get('/deep/technology/main', [CdioController::class, 'technology'])->name('deepTechnology');
+    Route::get('/deep/customer/main', [CdioController::class, 'customer'])->name('deepCustomer');
+    Route::get('/deep/operation/main', [CdioController::class, 'operation'])->name('deepOperation');
+    Route::get('/deep/strategy/main', [CdioController::class, 'strategy'])->name('deepStrategy');
+    Route::get('/deep/organization/main', [CdioController::class, 'organization'])->name('deepOrganization');
+
+
 
     Route::get('/edit', [GovofficialController::class, 'updateProfile'])->name('edit');
 
@@ -254,6 +263,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/cdio/mgt/page06', [CdioController::class, 'cdioManagementPage06'])->name('cdioManagementPage06');
     Route::get('/cdio/mgt/page07', [CdioController::class, 'cdioManagementPage07'])->name('cdioManagementPage07');
     Route::get('/cdio/mgt/page08', [CdioController::class, 'cdioManagementPage08'])->name('cdioManagementPage08');
+    Route::get('/cdio/mgt/page09', [CdioController::class, 'cdioManagementPage09'])->name('cdioManagementPage09');
 
     Route::post('storeCdioProjectAndProgrammeManagement', [CdioController::class, 'storeCdioProjectAndProgrammeManagement'])->name('storeCdioProjectAndProgrammeManagement');
     Route::post('storeCdioChangeManagement', [CdioController::class, 'storeCdioChangeManagement'])->name('storeCdioChangeManagement');
@@ -261,8 +271,54 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::post('storeCdioOrientation', [CdioController::class, 'storeCdioOrientation'])->name('storeCdioOrientation');
     Route::post('storeCdioManagingQuality', [CdioController::class, 'storeCdioManagingQuality'])->name('storeCdioManagingQuality');
     Route::post('storeCdioDriveTheAdoption', [CdioController::class, 'storeCdioDriveTheAdoption'])->name('storeCdioDriveTheAdoption');
+    Route::post('storeCdioDigitalInitiative', [CdioController::class, 'storeCdioDigitalInitiative'])->name('storeCdioDigitalInitiative');
+    Route::get('/cdio/dg/results', [CdioController::class, 'cdioDigitalGovernmentResults'])->name('cdioDigitalGovernmentResults');
+    Route::get('/cdio/dg/report', [CdioController::class, 'cdioDigitalGovernmentReport'])->name('cdioDigitalGovernmentReport');
 
+    Route::post('storeCdioCommunication', [CdioController::class, 'storeCdioCommunication'])->name('storeCdioCommunication');
+    Route::post('storeCdioManagingEffectiveWorkplace', [CdioController::class, 'storeCdioManagingEffectiveWorkplace'])->name('storeCdioManagingEffectiveWorkplace');
+    Route::post('storeCdioDecisionMaking', [CdioController::class, 'storeCdioDecisionMaking'])->name('storeCdioDecisionMaking');
+    Route::post('storeCdioBuildingCapacity', [CdioController::class, 'storeCdioBuildingCapacity'])->name('storeCdioBuildingCapacity');
+    Route::post('storeCdioStakeholder', [CdioController::class, 'storeCdioStakeholder'])->name('storeCdioStakeholder');
+    Route::post('storeCdioHumanResource', [CdioController::class, 'storeCdioHumanResource'])->name('storeCdioHumanResource');
+    Route::post('storeCdioTeamwork', [CdioController::class, 'storeCdioTeamwork'])->name('storeCdioTeamwork');
+    Route::post('storeCdioSelfDevelopment', [CdioController::class, 'storeCdioSelfDevelopment'])->name('storeCdioSelfDevelopment');
+    Route::post('storeCdioDigitalTransformation', [CdioController::class, 'storeCdioDigitalTransformation'])->name('storeCdioDigitalTransformation');
+    Route::get('/cdio/mgt/results', [CdioController::class, 'cdioManagementResults'])->name('cdioManagementResults');
+    Route::get('/cdio/mgt/report', [CdioController::class, 'cdioManagementReport'])->name('cdioManagementReport');
 
+    Route::get('/deep/td/page01', [DeepAssessmentController::class, 'deepTdPage01'])->name('deepTdPage01');
+    Route::get('/deep/td/page02', [DeepAssessmentController::class, 'deepTdPage02'])->name('deepTdPage02');
+    Route::get('/deep/td/page03', [DeepAssessmentController::class, 'deepTdPage03'])->name('deepTdPage03');
+    Route::get('/deep/td/page04', [DeepAssessmentController::class, 'deepTdPage04'])->name('deepTdPage04');
+    Route::get('/deep/td/page05', [DeepAssessmentController::class, 'deepTdPage05'])->name('deepTdPage05');
+    Route::get('/deep/td/page06', [DeepAssessmentController::class, 'deepTdPage06'])->name('deepTdPage06');
+    Route::get('/deep/td/page07', [DeepAssessmentController::class, 'deepTdPage07'])->name('deepTdPage07');
+    Route::get('/deep/td/page08', [DeepAssessmentController::class, 'deepTdPage08'])->name('deepTdPage08');
+    Route::get('/deep/td/page09', [DeepAssessmentController::class, 'deepTdPage09'])->name('deepTdPage09');
+    Route::get('/deep/td/page10', [DeepAssessmentController::class, 'deepTdPage10'])->name('deepTdPage10');
+
+    Route::post('deepEmergingTechnology', [DeepAssessmentController::class, 'deepEmergingTechnology'])->name('deepEmergingTechnology');
+    Route::post('deepDataManagement', [DeepAssessmentController::class, 'deepDataManagement'])->name('deepDataManagement');
+    Route::post('deepDeliveryGovernance', [DeepAssessmentController::class, 'deepDeliveryGovernance'])->name('deepDeliveryGovernance');
+    Route::post('deepConnectivity', [DeepAssessmentController::class, 'deepConnectivity'])->name('deepConnectivity');
+    Route::post('deepSecurity', [DeepAssessmentController::class, 'deepSecurity'])->name('deepSecurity');
+    Route::post('deepTechnologyArchitecture', [DeepAssessmentController::class, 'deepTechnologyArchitecture'])->name('deepTechnologyArchitecture');
+    Route::post('deepDataGovernance', [DeepAssessmentController::class, 'deepDataGovernance'])->name('deepDataGovernance');
+    Route::post('deepDataEngineering', [DeepAssessmentController::class, 'deepDataEngineering'])->name('deepDataEngineering');
+    Route::post('deepInteroperability', [DeepAssessmentController::class, 'deepInteroperability'])->name('deepInteroperability');
+    Route::post('deepApplication', [DeepAssessmentController::class, 'deepApplication'])->name('deepApplication');
+
+    Route::get('/deep/cus/page01', [DeepAssessmentController::class, 'deepCusPage01'])->name('deepCusPage01');
+    Route::get('/deep/cus/page02', [DeepAssessmentController::class, 'deepCusPage02'])->name('deepCusPage02');
+    Route::get('/deep/cus/page03', [DeepAssessmentController::class, 'deepCusPage03'])->name('deepCusPage03');
+    Route::get('/deep/cus/page04', [DeepAssessmentController::class, 'deepCusPage04'])->name('deepCusPage04');
+    Route::get('/deep/cus/page05', [DeepAssessmentController::class, 'deepCusPage05'])->name('deepCusPage05');
+
+    Route::get('/deep/op/page01', [DeepAssessmentController::class, 'deepOpPage01'])->name('deepOpPage01');
+    Route::get('/deep/op/page02', [DeepAssessmentController::class, 'deepOpPage02'])->name('deepOpPage02');
+    Route::get('/deep/op/page03', [DeepAssessmentController::class, 'deepOpPage03'])->name('deepOpPage03');
+    Route::get('/deep/op/page04', [DeepAssessmentController::class, 'deepOpPage04'])->name('deepOpPage04');
 });
 
 

@@ -161,7 +161,7 @@
                         <h3 data-aos="fade-down" id="click" style="font-family: Poppins, sans-serif;color:#fff;text-align: center;">Click on the 'Assessments' button to start the <br>Competency Assessment.&nbsp;</h3>
                     </div>
                     <div class="row" style="text-align:center">  
-                        <a class="btn btn-primary" id="layerButton" href="{{route('cdioMain')}}" type="button" style="margin-left:30%;margin-top:10%;text-align:center;width:40%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 0px;font-family: Poppins, sans-serif;"><h5>Deep Assessment</h5></a>
+                        <a class="btn btn-primary" id="layerButton" href="{{route('deepMain')}}" type="button" style="margin-left:30%;margin-top:10%;text-align:center;width:40%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 0px;font-family: Poppins, sans-serif;"><h5>Deep Assessment</h5></a>
                     </div>
                     <div class="row" style="text-align:center">  
                         <a class="btn btn-primary" id="layerButton" href="{{route('cdioAssessments')}}" type="button" style="margin-left:30%;margin-top:10%;text-align:center;width:40%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);border-width: 0px;font-family: Poppins, sans-serif;"><h5>Assessments</h5></a>

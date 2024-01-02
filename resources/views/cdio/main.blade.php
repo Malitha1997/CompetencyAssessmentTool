@@ -51,7 +51,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <a class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);" href="{{route('cdioTechnology')}}"><h6 id="h5">Continue</h6></a>
+                            <a class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);" href="{{route('deepTechnology')}}"><h6 id="h5">Continue</h6></a>
                         </div>
                         
                     </div>
@@ -78,7 +78,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <a class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);" href="{{route('cdioCustomer')}}"><h6 id="h5">Continue</h6></a>
+                            <a class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);" href="{{route('deepCustomer')}}"><h6 id="h5">Continue</h6></a>
                         </div>
                         
                     </div>
@@ -108,7 +108,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <a class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);" href="{{route('cdioOperation')}}"><h6 id="h5">Continue</h6></a>
+                            <a class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);" href="{{route('deepOperation')}}"><h6 id="h5">Continue</h6></a>
                         </div>
                         
                     </div>
@@ -135,7 +135,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <a class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);" href="{{route('cdioStrategy')}}"><h6 id="h5">Continue</h6></a>
+                            <a class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);" href="{{route('deepStrategy')}}"><h6 id="h5">Continue</h6></a>
                         </div>
                         
                     </div>
@@ -164,7 +164,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <button class="btn btn-primary" id="continue_btn" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);"><h6 id="h5">Continue</h6></button>
+                            <a class="btn btn-primary" id="continue_btn" href="{{route('deepOrganization')}}" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);"><h6 id="h5">Continue</h6></a>
                         </div>
                         
                     </div>

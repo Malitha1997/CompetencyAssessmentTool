@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('deep_technology_architectures', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('td23');
+            $table->string('td24');
+            $table->string('td25');
+            $table->string('td26');
+            $table->string('td27');
+            $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
         });
     }
 

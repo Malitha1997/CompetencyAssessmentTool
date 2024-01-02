@@ -67,9 +67,23 @@
                         <h7 id="h4" style="text-align: justify;font-family: poppins;">Required knowledge and capabilities to drive an ICT-enabled transformation of the public sector. And making it possible to carry out the public sector’s tasks more efficiently and effectively.<br><br></h7>
                     </div>
                     <div class="row">
-                       
+                    @if($digitalInitiative && $driveTheAdoption && $managingQuality && $orientation && $collaboration && $changeManagement && $projectAndProgrammeManagement)  
+                    <a class="btn btn-primary" href="{{route('cdioDigitalGovernmentResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
+                    @elseif($driveTheAdoption)  
+                    <a class="btn btn-primary" href="{{route('cdioDigitalGovernmentPage07')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($managingQuality)  
+                    <a class="btn btn-primary" href="{{route('cdioDigitalGovernmentPage06')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($orientation)  
+                    <a class="btn btn-primary" href="{{route('cdioDigitalGovernmentPage05')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($collaboration)  
+                    <a class="btn btn-primary" href="{{route('cdioDigitalGovernmentPage04')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($changeManagement)  
+                    <a class="btn btn-primary" href="{{route('cdioDigitalGovernmentPage03')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($projectAndProgrammeManagement)  
+                    <a class="btn btn-primary" href="{{route('cdioDigitalGovernmentPage02')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @else
                     <a class="btn btn-primary" href="{{route('cdioDigitalGovernmentPage01')}}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
-                        
+                    @endif    
                     </div>
                     
                 </div>
@@ -91,9 +105,27 @@
                     <div class="row">
                         <h7 id="h4" style="text-align: justify;font-family: poppins;">Are the skills, habits, motives, knowledge, and attitudes necessary to successfully manage people or the knowledge and skills that contribute to workplace productivity<br><br><br></h7>
                     </div>
-
+                    @if($selfDevelopment && $teamwork && $humanResource && $stakeholder && $buildingCapacity && $decisionMaking && $managingEffectiveWorkplace && $communication && $digitalTransformation)
+                    <a class="btn btn-primary" href="{{route('cdioManagementResults')}}" type="button" style="width: 50%;margin-left:25%;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323; border-radius: 10px;font-family: poppins;"><h5 id="h4">View Results</h5></a>
+                    @elseif($selfDevelopment)
+                    <a class="btn btn-primary" href="{{route ('cdioManagementPage09') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($teamwork)
+                    <a class="btn btn-primary" href="{{route ('cdioManagementPage08') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($humanResource)
+                    <a class="btn btn-primary" href="{{route ('cdioManagementPage07') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($stakeholder)
+                    <a class="btn btn-primary" href="{{route ('cdioManagementPage06') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($buildingCapacity)
+                    <a class="btn btn-primary" href="{{route ('cdioManagementPage05') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($decisionMaking)
+                    <a class="btn btn-primary" href="{{route ('cdioManagementPage04') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($managingEffectiveWorkplace)
+                    <a class="btn btn-primary" href="{{route ('cdioManagementPage03') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @elseif($communication)
+                    <a class="btn btn-primary" href="{{route ('cdioManagementPage02') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
+                    @else
                     <a class="btn btn-primary" href="{{route ('cdioManagementPage01') }}" type="button" style="width:50%;margin-left:28%;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);font-weight: bold;border-style: none;font-family: poppins;"><h5 id="h4">Get Started</h5></a>
-                   
+                    @endif
                 </div>
             </div> 
         </div>

@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Govofficial;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class CdioDriveTheAdoption extends Model
 {
     use HasFactory;
+    
+    public function govofficial(){
+        return $this->belongsTo(Govofficial::class);
+    }
 }

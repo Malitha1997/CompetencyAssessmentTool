@@ -7,7 +7,7 @@
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route('userHome')}}"><h10 id="h4">Home</h10></a></li>
-                    <li class="breadcrumb-item"><a href="{{route('cdioMain')}}"><h10 id="h4">Deep Assessment</h10></a></li>
+                    <li class="breadcrumb-item"><a href="{{route('deepMain')}}"><h10 id="h4">Deep Assessment</h10></a></li>
                     <li class="breadcrumb-item active" aria-current="page"><h10 id="h4">Operation</h10></li>
                 </ol>
             </nav>
@@ -42,7 +42,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <button class="btn btn-primary" id="btn2" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);">Continue</button>
+                            <a class="btn btn-primary" href="{{route('deepOpPage01')}}" id="btn2" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);">Continue</a>
                         </div>
                         
                     </div>
@@ -69,7 +69,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <button class="btn btn-primary" id="btn2" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);">Continue</button>
+                            <a class="btn btn-primary" id="btn2" href="{{route('deepOpPage02')}}" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);">Continue</a>
                         </div>
                         
                     </div>
@@ -99,7 +99,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <button class="btn btn-primary" id="btn2" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);">Continue</button>
+                            <a class="btn btn-primary" id="btn2" type="button" href="{{route('deepOpPage03')}}" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);">Continue</a>
                         </div>
                         
                     </div>
@@ -126,7 +126,7 @@
                            <p id="para" style="margin-top: 2%;">You can continue the assessment</p>
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <button class="btn btn-primary" id="btn2" type="button" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);">Continue</button>
+                            <a class="btn btn-primary" id="btn2" type="button" href="{{route('deepOpPage04')}}" style="font-family: 'Poppins';border-style: none;background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);">Continue</a>
                         </div>
                         
                     </div>
