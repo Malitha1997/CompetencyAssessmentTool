@@ -35,22 +35,23 @@
                     <h3 id="h3-1" style="color: #f01f75;text-align: center;font-family: Poppins, sans-serif;margin-top: 5%;font-weight:bold">Login Your Account</h3>
                     <div class="container justify-content-center" style="margin-left:8%">
                         <div class="row">
-                            
-                            <input class="form-control-lg" id="username" type="username" style="font-family: Poppins, sans-serif;width: 80%;height: 10%;margin-top: 10%;" name="username" value="{{ old('username') }}" placeholder="Username" required>
-                            @if($errors->has('username'))
-                                    <p class="text-danger"><b>{{ $errors->first('username') }}</b></p>
-                            @endif
-                        </div>
-                        <div class="row">
-                            
-                            <input class="form-control-lg @error('password') is-invalid @enderror" id="password" type="password" style="font-family: Poppins, sans-serif;width: 80%;height: 10%;margin-top: 10%;" name="password" value="{{ old('password') }}" placeholder="Password" required autocomplete="current-password">
-                            @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                            <input class="form-control-lg @error('username') is-invalid @enderror" id="username" type="text" style="font-family: Poppins, sans-serif; width: 80%; height: 10%; margin-top: 10%;" name="username" value="{{ old('username') }}" placeholder="Username" required>
+                            @error('username')
+                                <span class="invalid-feedback" role="alert" style="font-family: Poppins, sans-serif;">
+                                    <b>{{ $message }}</b>
+                                </span>
                             @enderror
-                            </div>
                         </div>
+
+                        <div class="row">
+                            <input class="form-control-lg @error('password') is-invalid @enderror" id="password" type="password" style="font-family: Poppins, sans-serif; width: 80%; height: 10%; margin-top: 10%;" name="password" placeholder="Password" required autocomplete="current-password">
+                            @error('password')
+                                <span class="invalid-feedback" role="alert" style="font-family: Poppins, sans-serif;">
+                                    <b>{{ $message }}</b>
+                                </span>
+                            @enderror
+                        </div>
+
                         <div class="row">
                             <a href="" style="color: rgb(0,0,0);margin-top:10%">Forgot Password</a>
                         </div>  

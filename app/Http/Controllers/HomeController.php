@@ -38,24 +38,62 @@ class HomeController extends Controller
 
      */
 
-    public function index(): View
+    public function index()
     {
-        $layer=Auth::user()->govofficial->employment_layer;
-        $govofficial=Auth::user()->govofficial;
-        // dd($govofficial);
-        $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
-        $ictDataExists = Auth::user()->govofficial->opIct;
-        $managementDataExists = Auth::user()->govofficial->opManagement;
-        if($layer=='cdio'){
-            return view('cdio.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists'));
+        if(Auth::user()->govofficial == NULL){
+            return view('govofficials.create');
+        }else{
+            $layer=Auth::user()->govofficial->employment_layer;
+            $govofficialExists=Auth::user()->govofficial->exists();
+            $govofficial=Auth::user()->govofficial;
+            // dd($govofficial);
+            $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
+            $ictDataExists = Auth::user()->govofficial->opIct;
+            $managementDataExists = Auth::user()->govofficial->opManagement;
+            if($layer=='cdio'){
+                return view('cdio.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists','govofficialExists'));
+            }
+            else{
+                return view('govOfficials.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists','govofficialExists'));
+            }
         }
-        else{
-            return view('govOfficials.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists'));
-        }
+
+        // $layer=Auth::user()->govofficial->employment_layer;
+        // $govofficial=Auth::user()->govofficial;
+        // // dd($govofficial);
+        // $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
+        // $ictDataExists = Auth::user()->govofficial->opIct;
+        // $managementDataExists = Auth::user()->govofficial->opManagement;
+        // if($layer=='cdio'){
+        //     return view('cdio.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists'));
+        // }
+        // else{
+        //     return view('govOfficials.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists'));
+        // }
         
     }
 
-
+    public function registered(){
+        if(Auth::user()->govofficial == NULL){
+            $govofficialExists=Auth::user()->govofficial;
+            // dd($govofficialExists);
+            return view('govOfficials.userHome',compact('govofficialExists'));
+        }else{
+            $layer=Auth::user()->govofficial->employment_layer;
+            $govofficialExists=Auth::user()->govofficial->exists();
+            $govofficial=Auth::user()->govofficial;
+            // dd($govofficial);
+            $digitalGovDataExists = Auth::user()->govofficial->opInitiative;
+            $ictDataExists = Auth::user()->govofficial->opIct;
+            $managementDataExists = Auth::user()->govofficial->opManagement;
+            if($layer=='cdio'){
+                return view('cdio.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists','govofficialExists'));
+            }
+            else{
+                return view('govOfficials.userHome',compact('layer','govofficial','digitalGovDataExists','ictDataExists','managementDataExists','govofficialExists'));
+            }
+        }
+    }
 
     /**
 

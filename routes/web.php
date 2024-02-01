@@ -45,6 +45,7 @@ Route::get('/test', function () {
 
 Auth::routes();
 
+
 Route::resource('govofficials', GovofficialController::class);
 
 /*------------------------------------------
@@ -59,6 +60,7 @@ All Normal Users Routes List
 
 Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('userHome');
+    Route::get('/registered/user', [HomeController::class, 'registered'])->name('registered');
     Route::get('/signup', [GovofficialController::class, 'create'])->name('signup');
     Route::get('/toplayer', [TopLayerController::class, 'top'])->name('toplayer');
 

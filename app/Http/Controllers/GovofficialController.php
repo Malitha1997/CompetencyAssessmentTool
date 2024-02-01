@@ -43,9 +43,9 @@ class GovofficialController extends Controller
             'email'=> 'required|string',
             'employment_layer'=> 'required|string',
             'date_of_birth'=> 'required|string',
-            'linkedin'=> 'required|string',
-            'facebook'=> 'required|string',
-            'instagram'=> 'required|string',
+            // 'linkedin'=> 'required|string',
+            // 'facebook'=> 'required|string',
+            // 'instagram'=> 'required|string',
         ]);
 //dd($request);
         $govofficial=new Govofficial;
@@ -59,23 +59,23 @@ class GovofficialController extends Controller
         $govofficial->email=$request->email;
         $govofficial->employment_layer=$request->employment_layer;
         $govofficial->date_of_birth=$request->date_of_birth;
-        $govofficial->linkedin=$request->linkedin;
-        $govofficial->facebook=$request->facebook;
-        $govofficial->instagram=$request->instagram;
+        $govofficial->linkedin = $request->filled('linkedin') ? $request->linkedin : 'No Data';
+        $govofficial->facebook = $request->filled('facebook') ? $request->facebook : 'No Data';
+        $govofficial->instagram = $request->filled('instagram') ? $request->instagram : 'No Data';
 
         $govofficial->save();
 
-        $cdio=new Cdio;
+        // $cdio=new Cdio;
 
-        if($request->employment_layer=='cdio'){
+        // if($request->employment_layer=='cdio'){
 
-        }
+        // }
 
-        $user=new User;
+        // $user=new User;
 
-        Auth::login($user);
+        // Auth::login($user);
 
-        return redirect("login");
+        return redirect()->route('registered');
 
     }
 

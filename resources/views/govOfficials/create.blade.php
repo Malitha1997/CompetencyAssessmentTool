@@ -1,4 +1,4 @@
-@extends('layouts.govofficialnavbar')
+@extends('layouts.registernavbar')
 
 @section('content')
 <style>
@@ -89,7 +89,7 @@
                     <h5 id="h4" style="color:#000000">Email address</h5>
                 </div>
                 <div class="row">
-                    <input class="form-control-lg" id="email" name="email" type="text" placeholder="Enter the email address" style="width:80%;margin-left:10%" value="">
+                    <input class="form-control-lg" id="email" name="email" type="text" placeholder="Enter the email address" style="width:80%;margin-left:10%" value="{{Auth::user()->email}}" readonly>
                 </div>
             </div>
         </div>
@@ -195,7 +195,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
-            <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;" href="{{route('userHome')}}">Yes</a>
+            <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;" href="{{route('registered')}}">Yes</a>
         </div>
         </div>
     </div>

@@ -55,7 +55,7 @@ class LoginController extends Controller
 
      */
 
-     protected $redirectTo = '/home';
+    //  protected $redirectTo = '/home';
 
      //protected $redirectTo2 = '/home2';
 
@@ -90,32 +90,36 @@ class LoginController extends Controller
 
      */
 
-    public function login(Request $request): RedirectResponse
-    {
-        $input = $request->all();
-
-        $this->validate($request, [
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-
-
-
-        if(auth()->attempt(array('username' => $input['username'], 'password' => $input['password'])))
-        {
-            if (auth()->user()->type == 'admin') {
-                return redirect()->route('home');
-            }else if (auth()->user()->type == 'manager') {
-                return redirect()->route('govofficial.home');
-            }else{
-                return redirect()->route('userHome');
-            }
-        }else{
-            return redirect()->route('login')
-                ->with('error','Username And Password Are Wrong.');
-        }
-    }
-
+     public function login(Request $request)
+     {
+         $this->validate($request, [
+             'username' => 'required',
+             'password' => 'required',
+         ]);
+     
+         $credentials = $request->only('username', 'password');
+     
+         if (auth()->attempt($credentials)) {
+             $user = auth()->user();
+             
+             switch ($user->type) {
+                 case 'admin':
+                     return redirect()->route('home');
+                     break;
+                 case 'manager':
+                     return redirect()->route('govofficial.home');
+                     break;
+                 default:
+                     return redirect()->route('userHome');
+                     break;
+             }
+         }
+     
+         return redirect()->route('login')
+             ->withErrors(['username' => 'Invalid credentials'])
+             ->withInput($request->except('password')); // Except password for security reasons
+     }
+     
     public function logout(){
         Auth::logout();
         Session::flush();
