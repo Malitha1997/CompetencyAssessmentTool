@@ -30,7 +30,7 @@
             </div>
             <!-- <img src="{{ asset('img/Mask group 276.png') }}" style="margin-right: 2%;"> -->
             <!-- <a class="btn btn-primary" style="border-width:0px;font-family: Poppins,san-serif;background: url(&quot;{{ asset('img/Mask group 276.png') }}&quot;);" href="{{route('userHome')}}"></a>   -->
-            <a class="btn btn-primary" style="font-family: Poppins,san-serif;margin-right:1%;border-width:0px;background: linear-gradient(to bottom, #660066 70%, #FF6699 100%);" href="{{route('registered')}}"> Skip</a>
+            <a class="btn btn-primary" style="font-family: Poppins,san-serif;margin-right:1%;border-width:0px;background: linear-gradient(to bottom, #660066 70%, #FF6699 100%);" href="{{route('registered')}}">Skip <i class="fa fa-fast-forward"></i></a>
             
             <!-- <a class="btn btn-danger" type="button" style="font-family: Poppins;border-width:0px;background: linear-gradient(to bottom, #F44567 0%, #F97B5F 49%)" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
