@@ -41,7 +41,7 @@ class HomeController extends Controller
     public function index()
     {
         if(Auth::user()->govofficial == NULL){
-            return view('govofficials.create');
+            return view('govOfficials.create');
         }else{
             $layer=Auth::user()->govofficial->employment_layer;
             $govofficialExists=Auth::user()->govofficial->exists();
